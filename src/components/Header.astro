@@ -1,0 +1,14 @@
+---
+import { translations } from "../locales.js";
+
+const lang = Astro.props.lang || "es";
+const t = translations[lang];
+---
+
+<header>
+  <nav>
+    <a href="/es/">Español</a> | <a href="/en/">English</a>
+    <a href={`/${lang}/`}>🏠 {t.menu.home}</a> |
+    <a href={`/${lang}/about/`}>ℹ️ {t.menu.about}</a>
+  </nav>
+</header>

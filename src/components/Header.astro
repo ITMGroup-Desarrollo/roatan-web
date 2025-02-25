@@ -1,30 +1,31 @@
 ---
 import { translations } from "../locales.js";
 import "../../public/css/main.css";
-const lang = Astro.props.lang || "es";
-const t = translations[lang];
-import { Image } from "astro:assets";
+
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"]; 
 ---
 
 <header>
   <div class="container flex flex-row-reverse justify-between p-1 bg-primary-color items-center">
-    
-    <nav class="text-white ">
+    <nav class="text-white">
       <a class="px-3 hover:text-black" href="/es/home">Español</a> | 
       <a class="px-3 hover:text-black" href="/en/home">English</a>
-      <a class="px-3 hover:text-black" href={`/${lang}/home`}> {t.menu.home}</a>
-      <a class="px-3 hover:text-black" href={`/${lang}/port-experience/`}>{t.menu.portExperience}</a>
-      <a class="px-3 hover:text-black" href={`/${lang}/discover-beyond/`}>{t.menu.discoverBeyond}</a>
-      <a class="px-3 hover:text-black" href={`/${lang}/map/`}>{t.menu.map}</a>
-      <a class="px-3 hover:text-black" href={`/${lang}/faqs/`}>{t.menu.faqs}</a>
-      <a class="px-3 hover:text-black" href={`/${lang}/contact/`}>{t.menu.contact}</a>
+
+      {t.menu ? (
+        <>
+          <a class="px-3 hover:text-black" href={`/${lang}/home`}>{t.menu.home ?? "Inicio"}</a>
+          <a class="px-3 hover:text-black" href={`/${lang}/port-experience/`}>{t.menu.portExperience ?? "Experiencia Portuaria"}</a>
+          <a class="px-3 hover:text-black" href={`/${lang}/discover-beyond/`}>{t.menu.discoverBeyond ?? "Descubre Más"}</a>
+          <a class="px-3 hover:text-black" href={`/${lang}/map/`}>{t.menu.map ?? "Mapa"}</a>
+          <a class="px-3 hover:text-black" href={`/${lang}/faqs/`}>{t.menu.faqs ?? "FAQs"}</a>
+          <a class="px-3 hover:text-black" href={`/${lang}/contact/`}>{t.menu.contact ?? "Contacto"}</a>
+        </>
+      ) : (
+        <p class="text-red-500">Menú no disponible</p>
+      )}
     </nav>
-    <Image class="h-10 px-3" src="/img/logo/Roatan-LogoBlanco.png" alt="logo" width="80" height="70" loading="eager" />
+
+    <img class="h-10 px-3" src="/img/logo/Roatan-LogoBlanco.png" alt="logo" width="80" height="70" loading="eager" />
   </div>
 </header>
-
-<style>
-  .container {
-    /* background-color: var(--primary-color); */
-  }
-</style>

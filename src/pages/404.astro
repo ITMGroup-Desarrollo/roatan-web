@@ -1,20 +1,7 @@
----
-import Layout from "../layouts/Layout.astro";
-import { translations } from "../locales.js";
 
-export function getStaticPaths() {
-  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
-}
-
-const { pathname } = Astro.url;
-const lang = pathname.split('/')[1] || "es"; // Extrae el primer segmento de la URL
-const t = translations[lang];
----
-<Layout lang={lang}>
-  <html>
+<html>
   <body>
     <h1>404 - Página no encontrada</h1>
-    <a href={`/${lang}/home`}><p>Te redirigiremos a la página de inicio...</p></a>
+    <a href="/es/home"><p>Te redirigiremos a la página de inicio...</p></a>
   </body>
 </html>
-</Layout>

@@ -9,5 +9,5 @@ const t = translations[lang] ?? translations["es"];
 
 <Layout lang={lang}>
   <h1>404 - {t?.notFound ?? "Página no encontrada"}</h1>
-  <a href={`/${lang}/home`}>Te redirigiremos a la página de inicio...</a>
+  <a href={`/${lang}/home`}>Te redirigiremos a la página de inicio...{lang}</a>
 </Layout>

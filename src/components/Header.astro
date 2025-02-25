@@ -1,7 +1,7 @@
 ---
 import { translations } from "../locales.js";
 import "../../public/css/main.css";
-
+import { Image } from "astro:assets";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"]; 
 ---
@@ -26,6 +26,6 @@ const t = translations[lang] ?? translations["es"];
       )}
     </nav>
 
-    <img class="h-10 px-3" src="/img/logo/Roatan-LogoBlanco.png" alt="logo" width="80" height="70" loading="eager" />
+    <Image class="h-10 px-3" src="/img/logo/Roatan-LogoBlanco.png" alt="logo" width="80" height="70" loading="eager" />
   </div>
 </header>

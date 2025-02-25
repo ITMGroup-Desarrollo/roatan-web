@@ -2,12 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import { translations } from "../locales.js";
 
-const url = new URL(Astro.request.url);
-const lang = url.pathname.split("/")[1] ?? "es";
-const t = translations[lang] ?? translations["es"];
+export function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+
+const lang = Astro.params?.lang || "es"; 
+const t = translations[lang];
 ---
 
 <Layout lang={lang}>
-  <h1>404 - {t?.notFound ?? "Página no encontrada"}</h1>
+  <h1>404 - {t?.notFound || "Página no encontrada"}</h1>
   <a href={`/${lang}/home`}>Te redirigiremos a la página de inicio...{lang}</a>
 </Layout>

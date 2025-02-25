@@ -5,7 +5,9 @@ module.exports = {
     "./public/**/*.html", // Si tienes archivos HTML en public/
   ],
   theme: {
-    extend: {},
+    extend: {colors: {
+      'primary-color': 'var(--primary-color)',
+    },},
   },
   plugins: [],
 };

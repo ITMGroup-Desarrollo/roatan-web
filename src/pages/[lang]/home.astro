@@ -1,14 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { translations } from "../../locales.js";
 
 export function getStaticPaths() {
-    return [
-      { params: { lang: "es" } },
-      { params: { lang: "en" } },
-    ];
-  }
-  
-  const lang = Astro.params.lang || "es";
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
 
+const lang = Astro.params.lang || "es";
+const t = translations[lang];
 ---
-<Layout lang={lang} />
+
+<Layout lang={lang}>
+  <h1>{t.menu.home}</h1>
+</Layout>

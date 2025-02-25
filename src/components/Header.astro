@@ -1,14 +1,31 @@
 ---
 import { translations } from "../locales.js";
-
+import "../../public/css/main.css";
 const lang = Astro.props.lang || "es";
 const t = translations[lang];
+import { Image } from "astro:assets";
+import logo from "../assets/img/logo/Roatan-LogoBlanco.png";
 ---
 
 <header>
-  <nav>
-    <a href="/es/home">Español</a> | <a href="/en/home">English</a>
-    <a href={`/${lang}/home`}>🏠 {t.menu.home}</a> |
-    <a href={`/${lang}/about/`}>ℹ️ {t.menu.about}</a>
-  </nav>
+  <div class="container flex flex-row-reverse justify-between p-1 bg-primary-color items-center">
+    
+    <nav class="text-white ">
+      <a class="px-3 hover:text-black" href="/es/home">Español</a> | 
+      <a class="px-3 hover:text-black" href="/en/home">English</a>
+      <a class="px-3 hover:text-black" href={`/${lang}/home`}> {t.menu.home}</a>
+      <a class="px-3 hover:text-black" href={`/${lang}/port-experience/`}>{t.menu.portExperience}</a>
+      <a class="px-3 hover:text-black" href={`/${lang}/discover-beyond/`}>{t.menu.discoverBeyond}</a>
+      <a class="px-3 hover:text-black" href={`/${lang}/map/`}>{t.menu.map}</a>
+      <a class="px-3 hover:text-black" href={`/${lang}/faqs/`}>{t.menu.faqs}</a>
+      <a class="px-3 hover:text-black" href={`/${lang}/contact/`}>{t.menu.contact}</a>
+    </nav>
+    <Image class="h-10 px-3" src={logo} alt="logo" width="60" height="50" />
+  </div>
 </header>
+
+<style>
+  .container {
+    /* background-color: var(--primary-color); */
+  }
+</style>

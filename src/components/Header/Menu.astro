@@ -1,0 +1,45 @@
+---
+import { translations } from "../../locales.js";
+import "../../assets/css/main.css";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+// import { Image } from "astro:assets";
+---
+<div
+    class="flex flex-row-reverse justify-between p-6 bg-transparent items-center"
+  >
+    <nav class="text-white flex items-center mx-10">
+      
+
+      <a class="menu_element underline-grow" href={`/${lang}/home`}
+        >{t.menu.home ?? ""}</a
+      >
+      <a class="menu_element underline-grow" href={`/${lang}/port-experience/`}
+        >{t.menu.portExperience ?? "Experiencia Portuaria"}</a
+      >
+      <a class="menu_element underline-grow" href={`/${lang}/discover-beyond/`}
+        >{t.menu.discoverBeyond ?? "Descubre Más"}</a
+      >
+      <a class="menu_element underline-grow" href={`/${lang}/map/`}
+        >{t.menu.map ?? "Mapa"}</a
+      >
+      <a class="menu_element underline-grow" href={`/${lang}/faqs/`}
+        >{t.menu.faqs ?? "FAQs"}</a
+      >
+      <a class="menu_element underline-grow" href={`/${lang}/contact/`}
+        >{t.menu.contact ?? "Contacto"}</a
+      >
+      <input class="text-xs italic uppercase mx-3 rounded-full bg-transparent border-2 border-white w-auto px-2" placeholder=`${t.menu.search ?? "What to find"}`></input>
+      <a class="uppercase mx-1 hover:font-semibold underline-grow" href="/es/home">ES</a> |
+      <a class="uppercase mx-1 hover:font-semibold underline-grow" href="/en/home">ENG</a>
+    </nav>
+
+    <!-- <Image
+      class="h-10 px-3"
+      src="/img/logo/Roatan-LogoBlanco.png"
+      alt="logo"
+      width="80"
+      height="70"
+      loading="eager"
+    /> -->
+  </div>

@@ -1,5 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-    --primary-color: #006ab8;
-    --secondary-color: #17d1fd;
-    --redSocial-color: #50c0e8;
+  --primary-color: #006ab7;
+  --secondary-color: #54c8e0;
+  --redSocial-color: #f2f2f2;
+}
+@layer utilities {
+  .underline-grow {
+    position: relative;
+  }
+
+  .underline-grow::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajusta según la distancia del subrayado */
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .underline-grow:hover::after {
+    width: 100%;
+  }
+}
+
+.menu_element {
+  margin-left: 0.75rem /* 12px */;
+  margin-right: 0.75rem /* 12px */;
+  text-transform: uppercase;
+}
+.menu_element:hover {
+  font-weight: 600;
+  
+}
+.bg-image-header{
+    background-image: url('/img/home/recursos/bg_header.webp');
+    background-size: cover;
+    background-position: center;
+    
+}
+.bg-gradient-header{
+    background: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%);
 }

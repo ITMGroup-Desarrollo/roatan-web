@@ -1,0 +1,10 @@
+---
+import Menu from "../Header/Menu.astro";
+const lang = Astro.props?.lang ?? "es";
+---
+
+<header class="bg-image-header md:w-screen h-1/2 md:h-screen">
+  <div class="bg-gradient-header md:w-screen h1/2 md:h-screen">
+    <Menu lang={lang} />
+  </div>
+</header>

@@ -8,6 +8,11 @@ module.exports = {
     extend: {colors: {
       'primary-color': 'var(--primary-color)',
     },},
+    fontFamily: {
+      lindsey: ['"lindsey-signature"', 'sans-serif'],
+      alverata: ['"alverata"', 'sans-serif'],
+      bebas: ['"bebas-neue"', 'sans-serif'],
+    },
   },
   plugins: [],
 };

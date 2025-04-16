@@ -3,38 +3,90 @@ import { translations } from "../../locales.js";
 import "../../assets/css/main.css";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
-// import { Image } from "astro:assets";
+import { Image } from "astro:assets";
 ---
+
 <div
-    class="flex flex-row-reverse justify-between p-6 bg-transparent items-center"
-  >
-    <nav class="text-white flex items-center mx-10">
-      
+  class="flex flex-row-reverse justify-between p-6 bg-transparent items-center"
+>
+  <nav class="text-white flex items-center mx-6">
+    <a class="menu_element underline-grow" href={`/${lang}/home`}
+      >{t.menu.home ?? ""}</a
+    >
+    <a class="menu_element underline-grow" href={`/${lang}/port-experience/`}
+      >{t.menu.portExperience ?? "Experiencia Portuaria"}</a
+    >
+    <a class="menu_element underline-grow" href={`/${lang}/discover-beyond/`}
+      >{t.menu.discoverBeyond ?? "Descubre Más"}</a
+    >
+    <a class="menu_element underline-grow" href={`/${lang}/map/`}
+      >{t.menu.map ?? "Mapa"}</a
+    >
+    <a class="menu_element underline-grow" href={`/${lang}/faqs/`}
+      >{t.menu.faqs ?? "FAQs"}</a
+    >
+    <a class="menu_element underline-grow" href={`/${lang}/contact/`}
+      >{t.menu.contact ?? "Contacto"}</a
+    >
+    <div class="pb-1 relative search_container">
+      <input
+        class="search_input font text-xs italic uppercase mx-3 rounded-full border-2 border-white w-auto py-1 px-2"
+        placeholder="What to find"
+      /><Image
+        class="absolute right-6 top-1.5"
+        src="/img/iconos/lupa.svg"
+        alt="logo"
+        width="15"
+        height="15"
+        loading="eager"
+      />
+    </div>
+    <div class="flex flex-row items-center social_media_container gap-2 mx-3">
+      <a href="https://www.facebook.com/PortRoatan" target="_blank"
+        ><Image
+          class=""
+          src="/img/iconos/menu-face.svg"
+          alt="logo"
+          width="8"
+          height="8"
+          loading="eager"
+        /></a
+      >
+      <a href="https://www.instagram.com/portroatan" target="_blank"
+        ><Image
+          class=""
+          src="/img/iconos/menu-ig.svg"
+          alt="logo"
+          width="15"
+          height="15"
+          loading="eager"
+        /></a
+      >
 
-      <a class="menu_element underline-grow" href={`/${lang}/home`}
-        >{t.menu.home ?? ""}</a
+      <a
+        href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html" target="_blank"
+        ><Image
+          class=""
+          src="/img/iconos/menu-trip.svg"
+          alt="logo"
+          width="20"
+          height="20"
+          loading="eager"
+        /></a
       >
-      <a class="menu_element underline-grow" href={`/${lang}/port-experience/`}
-        >{t.menu.portExperience ?? "Experiencia Portuaria"}</a
-      >
-      <a class="menu_element underline-grow" href={`/${lang}/discover-beyond/`}
-        >{t.menu.discoverBeyond ?? "Descubre Más"}</a
-      >
-      <a class="menu_element underline-grow" href={`/${lang}/map/`}
-        >{t.menu.map ?? "Mapa"}</a
-      >
-      <a class="menu_element underline-grow" href={`/${lang}/faqs/`}
-        >{t.menu.faqs ?? "FAQs"}</a
-      >
-      <a class="menu_element underline-grow" href={`/${lang}/contact/`}
-        >{t.menu.contact ?? "Contacto"}</a
-      >
-      <input class="text-xs italic uppercase mx-3 rounded-full bg-transparent border-2 border-white w-auto px-2" placeholder=`${t.menu.search ?? "What to find"}`></input>
-      <a class="uppercase mx-1 hover:font-semibold underline-grow" href="/es/home">ES</a> |
-      <a class="uppercase mx-1 hover:font-semibold underline-grow" href="/en/home">ENG</a>
-    </nav>
+    </div>
+    <a
+      class="uppercase mx-1 hover:font-medium underline-grow font-bebas text-2xl ml-3"
+      href="/es/home">ES</a
+    >
+    <span class="text-2xl pb-2">|</span>
+    <a
+      class="uppercase mx-1 hover:font-medium underline-grow font-bebas text-2xl"
+      href="/en/home">ENG</a
+    >
+  </nav>
 
-    <!-- <Image
+  <!-- <Image
       class="h-10 px-3"
       src="/img/logo/Roatan-LogoBlanco.png"
       alt="logo"
@@ -42,4 +94,4 @@ const t = translations[lang] ?? translations["es"];
       height="70"
       loading="eager"
     /> -->
-  </div>
+</div>

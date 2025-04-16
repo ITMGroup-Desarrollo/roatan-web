@@ -16,7 +16,7 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
   <nav class="text-white flex items-center mx-6">
     {
       menuItems.map(item => (
-        <a class="menu_element underline-grow" href={`/${lang}/${item.path}/`}>
+        <a class="menu_element underline-grow text-2xl xl:text-4xl" href={`/${lang}/${item.path}/`}>
           {item.label}
         </a>
       ))
@@ -35,7 +35,7 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
         loading="eager"
       />
     </div>
-    <div class="flex flex-row items-center social_media_container gap-2 mx-3 pt-1">
+    <div class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1">
       <a href="https://www.facebook.com/PortRoatan" target="_blank"
         ><div class="icon-mask icon-mask-face"></div></a
       >
@@ -49,12 +49,12 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
       >
     </div>
     <a
-      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl ml-3"
+      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl ml-3"
       href="/es/home">ES</a
     >
     <span class="text-2xl pb-2">|</span>
     <a
-      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl"
+      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
       href="/en/home">ENG</a
     >
   </nav>

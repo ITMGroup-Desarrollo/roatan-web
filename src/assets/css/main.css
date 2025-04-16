@@ -13,6 +13,9 @@
   font-weight: normal;
   font-style: normal;
 }
+body{
+  overflow-x: hidden;
+}
 @layer utilities {
   .underline-grow {
     position: relative;
@@ -73,4 +76,49 @@
 .search_input {
   background-image: url('img/iconos/lupa.svg');
   background-repeat: no-repeat;
+}
+.menu_social_element {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.menu_social_element:hover {
+  color: var(--primary-color);
+}
+.icon-mask {
+  background-color: white;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.icon-mask:hover {
+  background-color: var(--primary-color);
+}
+
+/* Variantes */
+.icon-mask-face {
+  width: 1.2rem;
+  height: 1.2rem;
+  -webkit-mask-image: url('/img/iconos/menu-face.svg');
+  mask-image: url('/img/iconos/menu-face.svg');
+}
+
+.icon-mask-ig {
+  width: 1.2rem;
+  height: 1.2rem;
+  -webkit-mask-image: url('/img/iconos/menu-ig.svg');
+  mask-image: url('/img/iconos/menu-ig.svg');
+}
+
+.icon-mask-trip {
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-mask-image: url('/img/iconos/menu-trip.svg');
+  mask-image: url('/img/iconos/menu-trip.svg');
 }

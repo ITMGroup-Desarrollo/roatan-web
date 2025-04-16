@@ -10,8 +10,14 @@
 @font-face {
   font-family: 'bebas-neue';
   src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+}
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../fonts/Lato-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'lato';
+  src: url('../fonts/Lato-Regular.ttf') format('truetype');
 }
 body{
   overflow-x: hidden;
@@ -25,7 +31,7 @@ body{
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; /* Ajusta según la distancia del subrayado */
+    bottom: -2px;
     width: 0%;
     height: 2px;
     background-color: white;
@@ -38,12 +44,11 @@ body{
 }
 
 .menu_element {
-  margin-left: 0.75rem /* 12px */;
-  margin-right: 0.75rem /* 12px */;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
   text-transform: uppercase;
   font-family: "bebas-neue", sans-serif;
   font-size: 1.5rem;
-  /* font-family: "lindsey-signature", sans-serif; */
 }
 .menu_element:hover {
   font-weight: 600;

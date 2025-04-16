@@ -9,6 +9,11 @@ export const translations = {
       "faqs": "Faqs",
       "contact": "Contacto",
     },
+    header: {
+      "title": "Port Experience",
+      "subtitle": "Lorem ipsum dolor sit amet yolo consectetur adipisicing elit. Et enim  ",
+      "button": "leer más",
+    },
   },
   //endregion
 
@@ -21,6 +26,11 @@ export const translations = {
       "map": "Map",
       "faqs": "Faqs",
       "contact": "Contact",
+    },
+    header: {
+      "title": "Happines comes <br> in port roatan",
+      "subtitle": "Lorem ipsum dolor sit amet yolo consectetur adipisicing elit. Et enim  ",
+      "button": "read more",
     },
   },
   //endregion

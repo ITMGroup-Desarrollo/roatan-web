@@ -10,7 +10,7 @@ export const translations = {
       "contact": "Contacto",
     },
     header: {
-      "title": "Port Experience",
+      "title": "Happines comes <br> in port roatan",
       "subtitle": "Lorem ipsum dolor sit amet yolo consectetur adipisicing elit. Et enim  ",
       "button": "leer más",
     },

@@ -1,0 +1,30 @@
+---
+import { translations } from "../../locales.js";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+---
+
+<footer class="relative">
+    <div class="bg-redSocial-color w-full h-60">
+
+    </div>
+    <video 
+  src="/src/assets/video/fondo-footer.mp4"
+  class="w-full h-auto block"
+  autoplay 
+  muted 
+  loop 
+  playsinline
+></video>
+</footer>
+<footer class="relative overflow-hidden">
+    <video 
+      src="/src/assets/video/fondo-footer.mp4"
+      class="absolute inset-0 w-full h-full object-cover"
+      autoplay 
+      muted 
+      loop 
+      playsinline
+    ></video>
+  </footer>
+  

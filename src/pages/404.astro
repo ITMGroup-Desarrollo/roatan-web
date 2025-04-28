@@ -5,11 +5,13 @@ import Menu from "../components/Header/Menu.astro";
 import error404 from "../assets/img/iconos/error404.png";
 import roatanLogo from "../assets/img/logo/Roatan-LogoBlanco.png";
 import { Image } from "astro:assets";
+import Footer from "../components/Footer/Footer.astro";
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
 const lang = Astro.params.lang || "en";
 const t = translations[lang];
+
 ---
 
 <Layout lang={lang}>
@@ -37,4 +39,5 @@ const t = translations[lang];
       </div>
     </div>
   </div>
+  <Footer lang={lang}/>
 </Layout>

@@ -13,6 +13,8 @@ module.exports = {
     },
     extend: {colors: {
       'primary-color': 'var(--primary-color)',
+      'secondary-color': 'var(--secondary-color)',
+      'redSocial-color': 'var(--redSocial-color)',
     },},
     fontFamily: {
       lindsey: ['"lindsey-signature"', 'sans-serif'],

@@ -2,6 +2,7 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
+import footerVideo from "../../assets/video/fondo-footer.mp4";
 ---
 
 <footer class="relative">
@@ -9,7 +10,7 @@ const t = translations[lang] ?? translations["es"];
 
     </div>
     <video 
-  src="/src/assets/video/fondo-footer.mp4"
+  src={footerVideo}
   class="w-full h-auto block"
   autoplay 
   muted 
@@ -17,14 +18,4 @@ const t = translations[lang] ?? translations["es"];
   playsinline
 ></video>
 </footer>
-<footer class="relative overflow-hidden">
-    <video 
-      src="/src/assets/video/fondo-footer.mp4"
-      class="absolute inset-0 w-full h-full object-cover"
-      autoplay 
-      muted 
-      loop 
-      playsinline
-    ></video>
-  </footer>
   

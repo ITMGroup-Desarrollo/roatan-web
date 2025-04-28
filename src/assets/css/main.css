@@ -67,6 +67,15 @@ body{
     background: var(--primary-color);
     background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%);
 }
+.bg-image-header-404{
+    background-image: url('/img/home/recursos/bg_404.webp');
+    background-size: cover;
+    background-position: center;
+    
+}
+.bg-gradient-header-404{
+    background: rgba(0, 0, 0, 0.3);
+}
 .search_input{
     background-color: rgba(255, 255, 255, 0.5);
     transition: background-color 0.3s ease;

@@ -1,3 +1,5 @@
+
+
 export const translations = {
   //region Español
   es: {
@@ -14,6 +16,10 @@ export const translations = {
       "subtitle": "Lorem ipsum dolor sit amet yolo consectetur adipisicing elit. Et enim  ",
       "button": "leer más",
     },
+    notFound:{
+      "notFound": "Ups! parece que te has perdido",
+      "back": "Regreso al inicio",
+    }
   },
   //endregion
 
@@ -32,6 +38,10 @@ export const translations = {
       "subtitle": "Lorem ipsum dolor sit amet yolo consectetur adipisicing elit. Et enim  ",
       "button": "read more",
     },
+    notFound:{
+      "notFound": "Ups! it looks like you\'re lost",
+      "back": "Back to home",
+    }
   },
   //endregion
 };

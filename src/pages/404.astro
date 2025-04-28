@@ -1,16 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { translations } from "../locales.js";
-
+import Menu from "../components/Header/Menu.astro";
+import error404 from "../assets/img/iconos/error404.png";
+import roatanLogo from "../assets/img/logo/Roatan-LogoBlanco.png";
+import { Image } from "astro:assets";
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
-
-const lang = Astro.params?.lang || "es"; 
+const lang = Astro.params.lang || "en";
 const t = translations[lang];
 ---
 
 <Layout lang={lang}>
-  <h1>404 - {t?.notFound || "Página no encontrada"}</h1>
-  <a href={`/${lang}/home`}>Te redirigiremos a la página de inicio...{lang}</a>
+  <div class="bg-image-header-404 md:w-screen h-96 md:h-screen">
+    <div class="bg-gradient-header-404 md:w-screen h-96 md:h-screen">
+      <Menu />
+
+      <Image
+        class="left-24 absolute top-10 md:top-10 w-24 h-24 xl:w-36 xl:h-36"
+        src={roatanLogo}
+        alt="logo"
+        loading="eager"
+      />
+      
+      <div class="title-container-404 flex flex-col text-center justify-center items-center gap-3 mt-20">
+        <Image
+        class=" w-56 h-48 xl:w-64 xl:h-56"
+        src={error404}
+        alt="logo"
+        loading="eager"
+      />
+        <h1 class="text-white text-lg xl:text-2xl font-lato">{t.notFound.notFound || "Ups! parece que te has perdido"}</h1>
+        <a class="rounded font-latoBold text-primary-color p-2 bg-white" href={`/${lang}/home`}
+          >{t.notFound.back || "Ups! parece que te has perdido"}-{lang}</a>
+      </div>
+    </div>
+  </div>
 </Layout>

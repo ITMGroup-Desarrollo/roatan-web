@@ -136,3 +136,12 @@ body{
   -webkit-mask-image: url('/img/iconos/menu-trip.svg');
   mask-image: url('/img/iconos/menu-trip.svg');
 }
+.title_container h1, h2{
+  font-size: 6rem;
+}
+@media screen and (min-width: 1600px) {
+  .title_container h1, h2{
+    font-size: 9rem;
+  }
+  
+}

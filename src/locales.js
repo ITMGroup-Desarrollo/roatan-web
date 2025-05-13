@@ -13,7 +13,7 @@ export const translations = {
     },
     header: {
       "title": "Roatan es",
-      "subtitle": "Connection|Human|Transformation|Emotion|Impact|Storytelling|Energy|Inspiration|Sensation|Creativity|Immersion|Innovation|Engagement|Discovery|Life|Movement|Evolution|Everywhere|Everything",
+      "subtitle": "Conexión|Humano|Transformación|Emoción|Impacto|Narrativa|Energía|Inspiración|Sensación|Creatividad|Inmersión|Innovación|Compromiso|Descubrimiento|Vida|Movimiento|Evolución|Todo",
       "button": "leer más",
     },
     notFound:{

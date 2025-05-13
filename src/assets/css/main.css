@@ -50,19 +50,17 @@ body{
 .menu_element {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
-  text-transform: uppercase;
-  font-family: "bebas", sans-serif;
   font-size: 1.5rem;
 }
-.menu_element:hover {
+/* .menu_element:hover {
   font-family: "bebas-bold", sans-serif;
-}
-.bg-image-header{
+} */
+/* .bg-image-header{
     background-image: url('/img/home/recursos/bg_header.webp');
     background-size: cover;
     background-position: center;
     
-}
+} */
 .bg-gradient-header{
     background: var(--primary-color);
     background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%);

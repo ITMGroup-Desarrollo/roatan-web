@@ -2,29 +2,34 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
+import footerVideo from "../../assets/video/fondo-footer.mp4";
+import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
+import { Image } from "astro:assets";
 ---
 
 <footer class="relative">
-    <div class="bg-redSocial-color w-full h-60">
-
+  <div class="bg-white w-full h-60"></div>
+  <div class="relative">
+    <video
+      src={footerVideo}
+      class="w-full h-auto block"
+      autoplay
+      muted
+      loop
+      playsinline></video>
+    <div
+      class="absolute top-2/3 grid grid-cols-3 items-center justify-center w-full gap-3"
+    >
+      <div></div>
+      <div class="flex flex-col justify-center items-center">
+        <Image
+          class="w-32 h-auto xl:w-36 xl:h-auto"
+          src={roatanLogo}
+          alt="logo"
+          loading="eager"
+        />
+      </div>
+      <div></div>
     </div>
-    <video 
-  src="/src/assets/video/fondo-footer.mp4"
-  class="w-full h-auto block"
-  autoplay 
-  muted 
-  loop 
-  playsinline
-></video>
+  </div>
 </footer>
-<footer class="relative overflow-hidden">
-    <video 
-      src="/src/assets/video/fondo-footer.mp4"
-      class="absolute inset-0 w-full h-full object-cover"
-      autoplay 
-      muted 
-      loop 
-      playsinline
-    ></video>
-  </footer>
-  

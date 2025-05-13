@@ -12,8 +12,8 @@ export const translations = {
       "contact": "Contacto",
     },
     header: {
-      "title": "Happiness comes <br> in port roatan",
-      "subtitle": "Lorem ipsum dolor sit amet yolo consectetur adipisicing elit. Et enim  ",
+      "title": "Roatan es",
+      "subtitle": "Connection|Human|Transformation|Emotion|Impact|Storytelling|Energy|Inspiration|Sensation|Creativity|Immersion|Innovation|Engagement|Discovery|Life|Movement|Evolution|Everywhere|Everything",
       "button": "leer más",
     },
     notFound:{
@@ -34,8 +34,8 @@ export const translations = {
       "contact": "Contact",
     },
     header: {
-      "title": "Happiness comes <br> in port roatan",
-      "subtitle": "Lorem ipsum dolor sit amet yolo consectetur adipisicing elit. Et enim  ",
+      "title": "Roatan is",
+      "subtitle": "Connection|Human|Transformation|Emotion|Impact|Storytelling|Energy|Inspiration|Sensation|Creativity|Immersion|Innovation|Engagement|Discovery|Life|Movement|Evolution|Everywhere|Everything",
       "button": "read more",
     },
     notFound:{

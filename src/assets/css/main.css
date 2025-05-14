@@ -139,6 +139,9 @@ body{
 .title_container h1, h2{
   font-size: 6rem;
 }
+.headerSubtitle{
+    margin-top: -3rem;
+  }
 @media screen and (min-width: 1600px) {
   .title_container h1, h2{
     font-size: 9rem;

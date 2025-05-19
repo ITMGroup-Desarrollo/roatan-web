@@ -4,6 +4,7 @@ import "../../assets/css/main.css";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 import { Image } from "astro:assets";
+import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
 const menuItems = Object.entries(t.menu).map(([key, label]) => ({
   path: key,
   label,
@@ -12,9 +13,16 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
 
 <div
 id="menu_desktop"
-  class=" hidden md:flex md:sticky flex-row-reverse top-0 justify-between p-6 bg-transparent items-center z-10 transition-colors duration-300 ease-in-out
+  class=" hidden lg:flex lg:sticky flex-row-reverse top-0 justify-between p-6 bg-transparent items-center z-30 transition-colors duration-300 ease-in-out
 "
 >
+<Image
+id="logo_menu"
+      class="absolute hidden lg:left-24 xl:left-48 md:top-2 md:w-20 md:h-auto transition-colors duration-300 ease-in-out"
+      src={roatanLogo}
+      alt="logo"
+      loading="eager"
+    />
   <nav class="text-white flex items-center mx-6">
     {
       menuItems.map(item => (
@@ -72,12 +80,12 @@ id="menu_desktop"
 </div>
 <div
 id="menu_movil"
-  class="flex md:hidden flex-row-reverse justify-between p-6 bg-transparent items-center z-10"
+  class="flex lg:hidden flex-row-reverse justify-between p-6 bg-transparent items-center z-30"
 >
   <nav class="text-white flex items-center mx-6">
     {
       menuItems.map(item => (
-        <a class="menu_element uppercase font-bebas underline-grow text-2xl xl:text-4xl hover:font-bebasBold"  href={`/${lang}/${item.path}/`}>
+        <a class="menu_element uppercase font-bebas underline-grow text-2xl xl:text-4xl hover:font-bebasBold z-30"  href={`/${lang}/${item.path}/`}>
           {item.label}
         </a>
       ))
@@ -119,28 +127,24 @@ id="menu_movil"
       href="/en/home">ENG</a
     >
   </nav>
-
-  <!-- <Image
-      class="h-10 px-3"
-      src="/img/logo/Roatan-LogoBlanco.png"
-      alt="logo"
-      width="80"
-      height="70"
-      loading="eager"
-    /> -->
 </div>
 <script>
   window.addEventListener('scroll', function () {
     const menu = document.getElementById('menu_desktop');
+    const logo = document.getElementById('logo_menu');
     if (!menu) return;
-    if (window.scrollY > 200) {
-      // Cambia a fondo negro sólido
+    if (window.scrollY > 400) {
       menu.classList.remove('bg-transparent');
       menu.classList.add('bg-[var(--primary-color)]');
+      if (logo) {
+        logo.classList.remove('hidden');
+      }
     } else {
-      // Restaura el fondo transparente
       menu.classList.remove('bg-[var(--primary-color)]');
       menu.classList.add('bg-transparent');
+      if (logo) {
+        logo.classList.add('hidden');
+      }
     }
   });
 </script>

@@ -1,5 +1,5 @@
 ---
-import Menu from "../Header/Menu.astro";
+
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
@@ -10,7 +10,7 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
 ---
 
 <header class="bg-image-header md:w-screen h-96 md:h-screen">
-  <div class="relative w-full h-full z-0">
+  <div class="absolute -top-0 w-full h-full z-0">
     <video
       src={headerVideo}
       class="absolute w-full h-full object-cover"
@@ -19,18 +19,18 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
       loop
       playsinline></video>
     <div class="absolute w-full h-full bg-gradient-header"></div>
-    <Menu lang={lang} />
+    
   </div>
 
   <div class="absolute top-28 md:top-0 h-96 md:h-screen w-screen z-10">
     <Image
-      class="absolute left-10 -top-20 md:top-10 w-24 h-auto xl:w-36 xl:h-auto"
+      class="absolute left-5 md:left-24 -top-20 md:top-10 w-24 h-auto xl:w-36 xl:h-auto"
       src={roatanLogo}
       alt="logo"
       loading="eager"
     />
     <div
-      class="title_container w-full md:w-2/5 flex flex-col items-left lg:top-1/3 xl:top-1/3 left-10 md:left-24 absolute gap-1"
+      class="title_container w-full md:w-2/5 flex flex-col items-left lg:top-1/3 xl:top-1/3 left-5 md:left-24 absolute gap-1"
     >
       <h1
         class="text-white font-bebas font-bold headerTitle"

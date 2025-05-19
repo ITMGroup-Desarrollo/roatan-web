@@ -11,7 +11,9 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
 ---
 
 <div
-  class="flex flex-row-reverse justify-between p-6 bg-transparent items-center z-10"
+id="menu_desktop"
+  class=" hidden md:flex md:sticky flex-row-reverse top-0 justify-between p-6 bg-transparent items-center z-10 transition-colors duration-300 ease-in-out
+"
 >
   <nav class="text-white flex items-center mx-6">
     {
@@ -68,3 +70,77 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
       loading="eager"
     /> -->
 </div>
+<div
+id="menu_movil"
+  class="flex md:hidden flex-row-reverse justify-between p-6 bg-transparent items-center z-10"
+>
+  <nav class="text-white flex items-center mx-6">
+    {
+      menuItems.map(item => (
+        <a class="menu_element uppercase font-bebas underline-grow text-2xl xl:text-4xl hover:font-bebasBold"  href={`/${lang}/${item.path}/`}>
+          {item.label}
+        </a>
+      ))
+    }
+    <div class="pb-1 relative search_container">
+      <input
+        class="search_input font text-xs italic uppercase mx-3 rounded-full border-2 border-white w-auto py-1 px-2"
+        placeholder="What to find?"
+      />
+      <Image
+        class="absolute right-6 top-1.5"
+        src="/img/iconos/lupa.svg"
+        alt="logo"
+        width="15"
+        height="15"
+        loading="eager"
+      />
+    </div>
+    <div class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1">
+      <a href="https://www.facebook.com/PortRoatan" target="_blank"
+        ><div class="icon-mask icon-mask-face"></div></a
+      >
+      <a href="https://www.instagram.com/portroatan" target="_blank"
+        ><div class="icon-mask icon-mask-ig"></div></a
+      >
+
+      <a
+        href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
+        target="_blank"><div class="icon-mask icon-mask-trip"></div></a
+      >
+    </div>
+    <a
+      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl ml-3"
+      href="/es/home">ES</a
+    >
+    <span class="text-2xl pb-2">|</span>
+    <a
+      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
+      href="/en/home">ENG</a
+    >
+  </nav>
+
+  <!-- <Image
+      class="h-10 px-3"
+      src="/img/logo/Roatan-LogoBlanco.png"
+      alt="logo"
+      width="80"
+      height="70"
+      loading="eager"
+    /> -->
+</div>
+<script>
+  window.addEventListener('scroll', function () {
+    const menu = document.getElementById('menu_desktop');
+    if (!menu) return;
+    if (window.scrollY > 200) {
+      // Cambia a fondo negro sólido
+      menu.classList.remove('bg-transparent');
+      menu.classList.add('bg-[var(--primary-color)]');
+    } else {
+      // Restaura el fondo transparente
+      menu.classList.remove('bg-[var(--primary-color)]');
+      menu.classList.add('bg-transparent');
+    }
+  });
+</script>

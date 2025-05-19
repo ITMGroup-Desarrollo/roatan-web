@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 
 <footer class="relative">
   <div class="bg-white w-full h-60"></div>
-  <div class="relative">
+  <div class="md:relative">
     <video
       src={footerVideo}
       class="w-full h-auto block"
@@ -18,7 +18,7 @@ import { Image } from "astro:assets";
       loop
       playsinline></video>
     <div
-      class="absolute top-2/3 grid grid-cols-3 items-center justify-center w-full gap-3"
+      class="md:absolute md:top-2/3 flex flex-col md:grid md:grid-cols-3 items-center justify-center w-full gap-3"
     >
       <div></div>
       <div class="flex flex-col justify-center items-center">

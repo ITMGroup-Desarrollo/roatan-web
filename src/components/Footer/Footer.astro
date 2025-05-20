@@ -7,23 +7,23 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
 import { Image } from "astro:assets";
 ---
 
-<footer class="relative">
-  <div class="bg-white w-full h-60"></div>
-  <div class="md:relative">
+<footer class="relative w-full h-[50vh] lg:h-full bg-transparent">
+  <div class="bg-white w-full h-64"></div>
+  <div class="relative bg-transparent h-full">
     <video
       src={footerVideo}
-      class="w-full h-auto block"
+      class="absolute w-full h-auto lg:relative bottom-0 z-2"
       autoplay
       muted
       loop
       playsinline></video>
     <div
-      class="md:absolute md:top-2/3 flex flex-col md:grid md:grid-cols-3 items-center justify-center w-full gap-3"
+      class="absolute z-10 bottom-0 lg:bottom-60 flex flex-col md:grid md:grid-cols-3 items-center justify-center w-full gap-3"
     >
       <div></div>
       <div class="flex flex-col justify-center items-center">
         <Image
-          class="w-32 h-auto xl:w-36 xl:h-auto"
+          class="w-20 lg:w-32 xl:w-36 h-auto "
           src={roatanLogo}
           alt="logo"
           loading="eager"

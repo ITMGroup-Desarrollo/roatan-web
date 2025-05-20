@@ -47,20 +47,6 @@ body{
   }
 }
 
-.menu_element {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-  font-size: 1.5rem;
-}
-/* .menu_element:hover {
-  font-family: "bebas-bold", sans-serif;
-} */
-/* .bg-image-header{
-    background-image: url('/img/home/recursos/bg_header.webp');
-    background-size: cover;
-    background-position: center;
-    
-} */
 .bg-gradient-header{
     background: var(--primary-color);
     background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%);
@@ -74,74 +60,18 @@ body{
 .bg-gradient-header-404{
     background: rgba(0, 0, 0, 0.3);
 }
-.search_input{
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.3s ease;
-}
-.search_input::placeholder{
-    color: #ffffff;
-    opacity: 1;
-}
-.search_input:focus-visible{
-    background-color: rgba(255, 255, 255, 1);
-    color: #000;
-    outline: none;
-}
-.search_input {
-  background-image: url('img/iconos/lupa.svg');
-  background-repeat: no-repeat;
-}
-.menu_social_element {
-  color: white;
-  transition: color 0.3s ease;
-}
 
-.menu_social_element:hover {
-  color: var(--primary-color);
-}
-.icon-mask {
-  background-color: white;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-position: center;
-  mask-position: center;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-}
-
-.icon-mask:hover {
-  background-color: var(--primary-color);
-}
-
-/* Variantes */
-.icon-mask-face {
-  width: 1.2rem;
-  height: 1.2rem;
-  -webkit-mask-image: url('/img/iconos/menu-face.svg');
-  mask-image: url('/img/iconos/menu-face.svg');
-}
-
-.icon-mask-ig {
-  width: 1.2rem;
-  height: 1.2rem;
-  -webkit-mask-image: url('/img/iconos/menu-ig.svg');
-  mask-image: url('/img/iconos/menu-ig.svg');
-}
-
-.icon-mask-trip {
-  width: 1.5rem;
-  height: 1.5rem;
-  -webkit-mask-image: url('/img/iconos/menu-trip.svg');
-  mask-image: url('/img/iconos/menu-trip.svg');
-}
 .title_container h1, h2{
   font-size: 4rem;
 }
 .headerSubtitle{
     margin-top: -2rem;
   }
+/* @media screen and (max-width: 768px) {
+  #header-container{
+    position: relative;
+  }
+} */
 @media screen and (min-width: 768px) {
   .title_container h1, h2{
     font-size: 6rem;

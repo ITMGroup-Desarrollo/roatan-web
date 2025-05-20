@@ -70,12 +70,12 @@ id="logo_menu"
     >
   </nav>
 </div>
-<div id="burger_menu" class="absolute lg:hidden bg-transparent top-12 right-12 z-40">
+<div id="burger_menu" class="absolute lg:hidden bg-transparent top-10 right-10 z-40">
   <label class="burger z-40" for="burger">
   <input type="checkbox" id="burger">
-  <span></span>
-  <span></span>
-  <span></span>
+  <span class="burger-line bg-white "></span>
+  <span class="burger-line bg-white "></span>
+  <span class="burger-line bg-white "></span>
 </label>
 </div>
 <div
@@ -118,6 +118,7 @@ id="menu_movil"
 <script>
 const burger = document.getElementById('burger');
 const menuMovil = document.getElementById('menu_movil');
+const burgerLines = document.querySelectorAll('#burger_menu .burger-line');
 
 if (burger) {
   burger.addEventListener('click', () => {
@@ -129,42 +130,64 @@ if (burger) {
       menuMovil.classList.remove('hidden');
       menuMovil.classList.add('flex');
       document.body.classList.add('overflow-hidden');
+
+      // Cambiar líneas a negro
+      burgerLines.forEach(line => {
+        line.classList.remove('bg-white');
+        line.classList.add('bg-[var(--secondary-color)]');
+      });
+
     } else {
       menuMovil.classList.remove('flex');
       menuMovil.classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
+
+      // Restaurar líneas a blanco
+      burgerLines.forEach(line => {
+        line.classList.remove('bg-[var(--secondary-color)]');
+        line.classList.add('bg-white');
+      });
     }
   });
 
-  // También cerrar el menú y restaurar el scroll al hacer clic en un enlace
+  // Cerrar menú y restaurar scroll y color de líneas al hacer clic en enlace
   document.querySelectorAll('#menu_movil a').forEach(link => {
     link.addEventListener('click', () => {
       if (menuMovil) {
         menuMovil.classList.remove('flex');
         menuMovil.classList.add('hidden');
         document.body.classList.remove('overflow-hidden');
+
+        // Restaurar líneas a blanco
+        burgerLines.forEach(line => {
+          line.classList.remove('bg-black');
+          line.classList.add('bg-white');
+        });
       }
+
+      // Desactivar el checkbox visualmente
       (burger as HTMLInputElement).checked = false;
     });
   });
 }
 
-  window.addEventListener('scroll', function () {
-    const menu = document.getElementById('menu_desktop');
-    const logo = document.getElementById('logo_menu');
-    if (!menu) return;
-    if (window.scrollY > 400) {
-      menu.classList.remove('bg-transparent');
-      menu.classList.add('bg-[var(--primary-color)]');
-      if (logo) {
-        logo.classList.remove('hidden');
-      }
-    } else {
-      menu.classList.remove('bg-[var(--primary-color)]');
-      menu.classList.add('bg-transparent');
-      if (logo) {
-        logo.classList.add('hidden');
-      }
+window.addEventListener('scroll', function () {
+  const menu = document.getElementById('menu_desktop');
+  const logo = document.getElementById('logo_menu');
+  if (!menu) return;
+  if (window.scrollY > 400) {
+    menu.classList.remove('bg-transparent');
+    menu.classList.add('bg-[var(--primary-color)]');
+    if (logo) {
+      logo.classList.remove('hidden');
     }
-  });
+  } else {
+    menu.classList.remove('bg-[var(--primary-color)]');
+    menu.classList.add('bg-transparent');
+    if (logo) {
+      logo.classList.add('hidden');
+    }
+  }
+});
+
 </script>

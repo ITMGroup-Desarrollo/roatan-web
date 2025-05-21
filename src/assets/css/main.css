@@ -25,6 +25,7 @@
 }
 body{
   overflow-x: hidden;
+  font-family: 'lato', sans-serif;
 }
 @layer utilities {
   .underline-grow {

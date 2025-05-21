@@ -19,6 +19,10 @@ export const translations = {
     notFound:{
       "notFound": "Ups! parece que te has perdido",
       "back": "Regreso al inicio",
+    },
+    footer:{
+      "textboxPlaceholder": "!Unete a nuestro newsletter!",
+      "textboxButton": "suscríbete",
     }
   },
   //endregion
@@ -41,6 +45,10 @@ export const translations = {
     notFound:{
       "notFound": "Ups! it looks like you\'re lost",
       "back": "Back to home",
+    },
+    footer:{
+      "textboxPlaceholder": "Join our newsletter!",
+      "textboxButton": "subscribe",
     }
   },
   //endregion

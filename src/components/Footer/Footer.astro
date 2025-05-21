@@ -1,9 +1,13 @@
 ---
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
+import "../../assets/css/footer.css";
 const t = translations[lang] ?? translations["es"];
 import footerVideo from "../../assets/video/fondo-footer.mp4";
 import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
+import faceIcon from "../../assets/img/iconos/footer/facebook.svg";
+import igIcon from "../../assets/img/iconos/footer/ig.svg";
+import tripIcon from "../../assets/img/iconos/footer/trip.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -18,35 +22,66 @@ import { Image } from "astro:assets";
       loop
       playsinline></video>
     <div
-      class="absolute z-10 bottom-0 lg:bottom-10 flex flex-col md:grid md:grid-cols-4 items-center justify-center w-full gap-3"
+      class="absolute z-10 bottom-2 lg:bottom-10 flex flex-col lg:grid lg:grid-cols-4 items-center justify-center gap-3 w-screen"
     >
-      <div class="col-span-1"></div>
-      <div class="col-span-2 flex flex-col justify-center items-center gap-10">
+      <div class="lg:col-span-1"></div>
+      <div
+        class="lg:col-span-2 flex flex-col justify-center items-center gap-3 lg:gap-10"
+      >
         <Image
-          class="w-20 lg:w-32 xl:w-36 h-auto"
+          class="w-14 lg:w-32 xl:w-36 h-auto pb-24"
           src={roatanLogo}
           alt="logo"
           loading="eager"
         />
-        <div class="footer-textbox-container w-5/6 h-auto">
-          <div class="footer-textbox flex">
+        <div class="footer-textbox-container w-screen lg:w-5/6 h-auto flex flex-row gap-5 px-4">
+          <div class="footer-textbox flex w-full">
             <input
               type="text"
-              class="form-control uppercase h-10 w-2/3 pl-4 bg-transparent text-white placeholder:text-white  border-2 border-white rounded-s-full focus:outline-none focus:border-[--secondary-color] focus:text-black focus:pl-4 focus:bg-white transition-all duration-300 ease-in-out"
+              class="form-control italic uppercase h-6 lg:h-10 w-2/3 pl-4 bg-transparent text-white placeholder:text-white border-2 border-white rounded-s-full focus:outline-none focus:border-[--secondary-color] focus:text-black focus:pl-4 focus:bg-white transition-all duration-300 ease-in-out"
               placeholder={t.footer.textboxPlaceholder}
             />
             <div
-              class="button-container uppercase cursor-pointer flex items-center justify-center h-10 w-1/3 border-2 rounded-e-full bg-white hover:bg-[var(--secondary-color)] outline-none border-white hover:border-[var(--secondary-color)] transition-all duration-300 ease-in-out"
+              class="button-container uppercase cursor-pointer flex items-center justify-center h-6 lg:h-10 w-1/3 border-2 rounded-e-full bg-white hover:bg-[var(--secondary-color)] outline-none border-white hover:border-[var(--secondary-color)] transition-all duration-300 ease-in-out"
             >
               <a class="button-sub">{t.footer.textboxButton}</a>
             </div>
           </div>
+          <div class="lg:hidden flex flex-row gap-2 items-center">
+            <a href="https://www.facebook.com/PortRoatan" target="_blank"
+              ><Image
+                class="w-8"
+                src={faceIcon}
+                alt="facebook"
+                loading="eager"
+              /></a
+            >
+            <a href="https://www.instagram.com/portroatan" target="_blank"
+              ><Image
+                class="w-8"
+                src={igIcon}
+                alt="instagram"
+                loading="eager"
+              /></a
+            >
+
+            <a
+              href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
+              target="_blank"
+              ><Image
+                class="w-8"
+                src={tripIcon}
+                alt="tripadvisor"
+                loading="eager"
+              /></a
+            >
+          </div>
         </div>
-        <div class="text-white">
-          <p> Copyright © 2025 │ By ITM Group</p>
+        <div class="text-copyright text-white text-xs">
+          <p>Copyright © 2025 │ By ITM Group</p>
         </div>
       </div>
-      <div class="col-span-1"></div>
+      <div class="lg:col-span-1"></div>
     </div>
   </div>
 </footer>

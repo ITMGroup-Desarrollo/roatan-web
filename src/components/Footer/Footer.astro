@@ -2,6 +2,8 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 import "../../assets/css/footer.css";
+import "../../assets/css/menu.css";
+import "../../assets/css/main.css";
 const t = translations[lang] ?? translations["es"];
 import footerVideo from "../../assets/video/fondo-footer.mp4";
 import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
@@ -11,31 +13,45 @@ import tripIcon from "../../assets/img/iconos/footer/trip.svg";
 import { Image } from "astro:assets";
 ---
 
-<footer class="relative w-full h-[50vh] lg:h-full bg-transparent">
+<footer class="relative w-full h-[50vh] md:h-full lg:h-full bg-transparent">
   <!-- <div class="bg-white w-full h-64"></div> -->
   <div class="relative bg-transparent h-full">
     <video
       src={footerVideo}
-      class="absolute w-full h-auto lg:relative bottom-0 z-2"
+      class="absolute w-full h-auto md:relative bottom-0 z-2"
       autoplay
       muted
       loop
       playsinline></video>
     <div
-      class="absolute z-10 bottom-2 lg:bottom-10 flex flex-col lg:grid lg:grid-cols-4 items-center justify-center gap-3 w-screen"
+      class="absolute z-10 bottom-2 lg:bottom-10 flex flex-col lg:grid lg:grid-cols-4 gap-3 w-screen items-end"
     >
-      <div class="lg:col-span-1"></div>
+      <div class="lg:col-span-1 lg:flex lg:justify-center">
+        <nav class="flex flex-col absolute left-4 md:left-44 text-left top-10 md:top-20 text-white lg:hidden">
+          <a href={`/${lang}/port-experience/`}>{t.menu["port-experience"]}</a>
+          <a href={`/${lang}/discover-beyond/`}>{t.menu["discover-beyond"]}</a>
+          <a href={`/${lang}/blog/`}>{t.menu.blog}</a>
+        </nav>
+        <nav class="hidden text-white lg:flex flex-col text-left text-xl lg:gap-5">
+          <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/port-experience/`}>{t.menu["port-experience"]}</a>
+          <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/discover-beyond/`}>{t.menu["discover-beyond"]}</a>
+          <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/blog/`}>{t.menu.blog}</a>
+          <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/faqs/`}>{t.menu.faqs}</a>
+        </nav>
+      </div>
       <div
         class="lg:col-span-2 flex flex-col justify-center items-center gap-3 lg:gap-10"
       >
         <Image
-          class="w-14 lg:w-32 xl:w-36 h-auto pb-24"
+          class="w-16 md:w-24 lg:w-36 xl:w-36 pb-14 md:pb-20 lg:pb-14 h-auto"
           src={roatanLogo}
           alt="logo"
           loading="eager"
         />
-        <div class="footer-textbox-container w-screen lg:w-5/6 h-auto flex flex-row gap-5 px-4">
-          <div class="footer-textbox flex w-full">
+        <div
+          class="footer-textbox-container w-screen lg:w-5/6 h-auto flex flex-row gap-5 px-4 justify-center"
+        >
+          <div class="footer-textbox flex w-full md:w-1/2 lg:w-full">
             <input
               type="text"
               class="form-control lg:text-base italic uppercase h-6 lg:h-10 w-2/3 pl-4 bg-transparent text-white placeholder:text-white border-2 border-white rounded-s-full focus:outline-none focus:border-[--secondary-color] focus:text-black focus:pl-4 focus:bg-white transition-all duration-300 ease-in-out"
@@ -81,7 +97,46 @@ import { Image } from "astro:assets";
           <p>Copyright © 2025 │ By ITM Group</p>
         </div>
       </div>
-      <div class="lg:col-span-1"></div>
+      <div class="lg:col-span-1 lg:flex lg:justify-center flex-col gap-10">
+        <nav class="flex flex-col lg:hidden absolute right-4  md:right-44 text-right top-10 md:top-20 text-white">
+          <a href={`/${lang}/faqs/`}>{t.menu.faqs}</a>
+          <a href={`/${lang}/contact/`}>{t.menu.contact}</a>
+          <a href={`/${lang}/policy/`}>{t.footer.policy}</a>
+        </nav>
+        <nav class="hidden text-white lg:flex flex-col self-center text-right text-xl lg:gap-5">
+          <a href={`/${lang}/contact/`}>{t.menu.contact}</a>
+          <a href={`/${lang}/policy/`}>{t.footer.policy}</a>
+        </nav>
+        <div class="hidden lg:flex flex-row gap-2 justify-center pl-16">
+            <a href="https://www.facebook.com/PortRoatan" target="_blank"
+              ><Image
+                class="w-8"
+                src={faceIcon}
+                alt="facebook"
+                loading="eager"
+              /></a
+            >
+            <a href="https://www.instagram.com/portroatan" target="_blank"
+              ><Image
+                class="w-8"
+                src={igIcon}
+                alt="instagram"
+                loading="eager"
+              /></a
+            >
+
+            <a
+              href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
+              target="_blank"
+              ><Image
+                class="w-8"
+                src={tripIcon}
+                alt="tripadvisor"
+                loading="eager"
+              /></a
+            >
+          </div>
+      </div>
     </div>
   </div>
 </footer>

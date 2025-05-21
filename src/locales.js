@@ -7,8 +7,8 @@ export const translations = {
       "home": "Inicio",
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
-      "map": "Mapa",
-      "faqs": "Faqs",
+      "blog": "Blog",
+      "faqs": "FAQ\'s",
       "contact": "Contacto",
     },
     header: {
@@ -23,6 +23,7 @@ export const translations = {
     footer:{
       "textboxPlaceholder": "!Unete a nuestro newsletter!",
       "textboxButton": "suscríbete",
+      "policy": "Política de privacidad",
     }
   },
   //endregion
@@ -33,8 +34,8 @@ export const translations = {
       "home": "Home",
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
-      "map": "Map",
-      "faqs": "Faqs",
+      "blog": "Blog",
+      "faqs": "FAQ\'s",
       "contact": "Contact",
     },
     header: {
@@ -49,6 +50,7 @@ export const translations = {
     footer:{
       "textboxPlaceholder": "Join our newsletter!",
       "textboxButton": "subscribe",
+      "policy": "Privacy Policy",
     }
   },
   //endregion

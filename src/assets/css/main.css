@@ -73,7 +73,7 @@ body{
     position: relative;
   }
 } */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .title_container h1, h2{
     font-size: 6rem;
   }

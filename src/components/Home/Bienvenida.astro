@@ -11,11 +11,11 @@ import "../../assets/css/home.css";
 ---
 
 <div
-  class="welcome-container w-screen xl:-top-24 h-[16rem] md:h-[36rem] flex items-center justify-center relative border-b-2"
+  class="welcome-container w-screen h-[16rem] md:h-[36rem] flex items-center justify-center relative border-b-2 overflow-hidden"
 >
-  <div class="images-container absolute h-full w-screen flex flex-row">
+<div class="images-container absolute h-full w-screen flex flex-row">
     <Image
-      class="chica absolute w-28 md:w-60 lg:w-80 h-auto  bottom-0 z-0"
+      class="chica absolute w-28 md:w-60 lg:w-80 h-auto bottom-0 z-0"
       src={chica}
       alt="logo"
       loading="eager"
@@ -26,18 +26,19 @@ import "../../assets/css/home.css";
       alt="logo"
       loading="eager"
     />
-  </div>
-  <div class="text-container w-2/3 lg:w-1/2 text-center flex flex-col lg:block">
+    
+</div>
+  <div class="text-container w-2/3  lg:w-1/2 text-center flex flex-col lg:block ">
     <p class="text-2xl md:text-6xl font-bebas text-[var(--secondary-color)]">
       {t.homeWelcome.title}
     </p>
     <h2 class="text-5xl md:text-9xl font-bebasBold text-[var(--primary-color)]">
       {t.homeWelcome.subtitle}
     </h2>
-    <p class="text-[8px] md:text-xl text-black">{t.homeWelcome.text}</p>
+    <p class="text-[8px] md:text-xl text-black ">{t.homeWelcome.text}</p>
   </div>
   <div
-    class="wave-container w-[26%] h-[24%] md:w-[24%] md:h-[28%] lg:w-[28%] xl:w-[35%] xl:mb-5 mb-5 md:mb-14 right-0 bg-white absolute z-1 overflow-hidden"
+    class="wave-container w-[26%] h-[24%] md:w-[24%] md:h-[28%] lg:w-[28%] xl:w-[35%]  xl:mb-5 mb-5 md:mb-14 right-0 bg-white absolute z-1 overflow-hidden"
   >
     <Image
       class="wave absolute w-[100%] h-[100%] right-0 top-0 object-fill"
@@ -47,46 +48,57 @@ import "../../assets/css/home.css";
     />
     <div class="wave-cover"></div>
   </div>
+ 
 </div>
+ <div class="h-96 w-screen bg-slate-400"></div>
 <script>
-  window.addEventListener("load", function () {
-    const isMobile = window.innerWidth <= 1024;
+  const isMobile = window.innerWidth <= 1025;
+  const isdesktop = window.innerWidth <= 1600 && window.innerWidth > 1025;
+  const isLargdesktop = window.innerWidth > 1600;
+  const cover = document.querySelector(".wave-cover");
+  const chica = document.querySelector(".chica");
+  const ave = document.querySelector(".ave");
 
-    const cover = document.querySelector(".wave-cover");
-    const chica = document.querySelector(".chica");
-    const ave = document.querySelector(".ave");
-
-
-
-if (!isMobile) {
-    
-  window.addEventListener("scroll", function () {
-    if (!cover) return;
-    if (window.scrollY > 500) {
-      cover.classList.add("shrink");
-      if (chica) chica.classList.add("animate-in");
-      if (ave) ave.classList.add("animate-in");
-    } else {
-      cover.classList.remove("shrink");
-      if (chica) chica.classList.remove("animate-in");
-      if (ave) ave.classList.remove("animate-in");
-    }
-    
-  });
-}
-else{
+  if (isMobile) {
     window.addEventListener("scroll", function () {
-    if (!cover) return;
-    if (window.scrollY > 50) {
-      cover.classList.add("shrink");
-      if (chica) chica.classList.add("animate-in");
-      if (ave) ave.classList.add("animate-in");
-    } else {
-      cover.classList.remove("shrink");
-      if (chica) chica.classList.remove("animate-in");
-      if (ave) ave.classList.remove("animate-in");
-    }
-  });
-}
-  });
+      if (!cover) return;
+      if (window.scrollY > 50) {
+        cover.classList.add("shrink");
+        if (chica) chica.classList.add("animate-in");
+        if (ave) ave.classList.add("animate-in");
+      } else {
+        cover.classList.remove("shrink");
+        if (chica) chica.classList.remove("animate-in");
+        if (ave) ave.classList.remove("animate-in");
+      }
+    });
+  } else 
+  if (isdesktop) {
+    window.addEventListener("scroll", function () {
+      if (!cover) return;
+      if (window.scrollY > 400) {
+        cover.classList.add("shrink");
+        if (chica) chica.classList.add("animate-in");
+        if (ave) ave.classList.add("animate-in");
+      } else {
+        cover.classList.remove("shrink");
+        if (chica) chica.classList.remove("animate-in");
+        if (ave) ave.classList.remove("animate-in");
+      }
+    });
+  }
+  if (isLargdesktop) {
+    window.addEventListener("scroll", function () {
+      if (!cover) return;
+      if (window.scrollY > 800) {
+        cover.classList.add("shrink");
+        if (chica) chica.classList.add("animate-in");
+        if (ave) ave.classList.add("animate-in");
+      } else {
+        cover.classList.remove("shrink");
+        if (chica) chica.classList.remove("animate-in");
+        if (ave) ave.classList.remove("animate-in");
+      }
+    });
+  }
 </script>

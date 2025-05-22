@@ -1,0 +1,62 @@
+---
+import { translations } from "../../locales.js";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+import { Image } from "astro:assets";
+import "aos/dist/aos.css";
+import olas from "../../assets/img/iconos/home/olas.svg";
+import "../../assets/css/home.css";
+---
+
+<div
+  class="welcome-container w-screen h-56 lg:h-96 flex items-center justify-center relative"
+>
+<div class="text-container w-2/3 lg:w-1/2 text-center">
+    <p class="text-2xl lg:text-6xl font-bebas text-[var(--secondary-color)]">{t.homeWelcome.title}</p>
+    <h2 class="text-5xl lg:text-9xl font-bebasBold text-[var(--primary-color)]">{t.homeWelcome.subtitle}</h2>
+    <p class="text-[8px] lg:text-base text-black">{t.homeWelcome.text}</p>
+</div>
+  <div class="wave-container w-[26%] h-[25%] lg:w-[30%] lg:h-[39%]  lg:mb-16 right-0 bg-white absolute z-1 overflow-hidden">
+    <Image
+      class="wave absolute w-full h-auto right-0 top-0"
+      src={olas}
+      alt="logo"
+      loading="eager"
+    />
+    <div class="wave-cover"></div>
+  </div>
+</div>
+
+<script>
+  const isMobile = window.innerWidth <= 1024;
+  const cover = document.querySelector(".wave-cover");
+  //   let isShrunk = false;
+
+  //   setInterval(() => {
+  //     if (cover) {
+  //       cover.classList.toggle("shrink");
+  //       isShrunk = !isShrunk;
+  //     }
+  //   }, 3000);
+if (!isMobile) {
+    
+  window.addEventListener("scroll", function () {
+    if (!cover) return;
+    if (window.scrollY > 500) {
+      cover.classList.add("shrink");
+    } else {
+      cover.classList.remove("shrink");
+    }
+  });
+}
+else{
+    window.addEventListener("scroll", function () {
+    if (!cover) return;
+    if (window.scrollY > 50) {
+      cover.classList.add("shrink");
+    } else {
+      cover.classList.remove("shrink");
+    }
+  });
+}
+</script>

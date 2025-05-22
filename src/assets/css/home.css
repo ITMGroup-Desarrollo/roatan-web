@@ -1,0 +1,13 @@
+.wave-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff; /* bg-slate-300 */
+  z-index: 2;
+  transition: width 1.5s ease-in-out;
+}
+.wave-cover.shrink {
+  width: 0;
+}

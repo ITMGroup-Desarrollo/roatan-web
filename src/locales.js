@@ -24,7 +24,12 @@ export const translations = {
       "textboxPlaceholder": "!Unete a nuestro newsletter!",
       "textboxButton": "suscríbete",
       "policy": "Política de privacidad",
-    }
+    },
+    homeWelcome:{
+      "title": "WELCOME TO",
+      "subtitle": "PORT ROATAN",
+      "text": "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+    },
   },
   //endregion
 
@@ -51,7 +56,12 @@ export const translations = {
       "textboxPlaceholder": "Join our newsletter!",
       "textboxButton": "subscribe",
       "policy": "Privacy Policy",
-    }
+    },
+    homeWelcome:{
+      "title": "WELCOME TO",
+      "subtitle": "PORT ROATAN",
+      "text": "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum. ",
+    },
   },
   //endregion
 };

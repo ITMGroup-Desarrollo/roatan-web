@@ -1,0 +1,34 @@
+.wave-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff; /* bg-slate-300 */
+  z-index: 2;
+  transition: width 1.5s ease-in-out;
+}
+.wave-cover.shrink {
+  width: 0;
+}
+.chica,
+.ave {
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  will-change: transform, opacity;
+}
+
+.chica {
+  transform: translateX(-150%);
+}
+
+.ave {
+  transform: translateX(150%);
+}
+
+.chica.animate-in,
+.ave.animate-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+

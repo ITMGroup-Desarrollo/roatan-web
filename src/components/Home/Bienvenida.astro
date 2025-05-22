@@ -11,7 +11,7 @@ import "../../assets/css/home.css";
 ---
 
 <div
-  class="welcome-container w-screen h-[16rem] md:h-[36rem] flex items-center justify-center relative border-b-2"
+  class="welcome-container w-screen h-[16rem] md:h-[36rem] flex items-center justify-center relative border-b-2 overflow-hidden"
 >
 <div class="images-container absolute h-full w-screen flex flex-row">
     <Image
@@ -56,24 +56,34 @@ import "../../assets/css/home.css";
   const isdesktop = window.innerWidth <= 1600 && window.innerWidth > 1025;
   const isLargdesktop = window.innerWidth > 1600;
   const cover = document.querySelector(".wave-cover");
+  const chica = document.querySelector(".chica");
+  const ave = document.querySelector(".ave");
 
   if (isMobile) {
     window.addEventListener("scroll", function () {
       if (!cover) return;
       if (window.scrollY > 50) {
         cover.classList.add("shrink");
+        if (chica) chica.classList.add("animate-in");
+        if (ave) ave.classList.add("animate-in");
       } else {
         cover.classList.remove("shrink");
+        if (chica) chica.classList.remove("animate-in");
+        if (ave) ave.classList.remove("animate-in");
       }
     });
   } else 
   if (isdesktop) {
     window.addEventListener("scroll", function () {
       if (!cover) return;
-      if (window.scrollY > 450) {
+      if (window.scrollY > 400) {
         cover.classList.add("shrink");
+        if (chica) chica.classList.add("animate-in");
+        if (ave) ave.classList.add("animate-in");
       } else {
         cover.classList.remove("shrink");
+        if (chica) chica.classList.remove("animate-in");
+        if (ave) ave.classList.remove("animate-in");
       }
     });
   }
@@ -82,8 +92,12 @@ import "../../assets/css/home.css";
       if (!cover) return;
       if (window.scrollY > 800) {
         cover.classList.add("shrink");
+        if (chica) chica.classList.add("animate-in");
+        if (ave) ave.classList.add("animate-in");
       } else {
         cover.classList.remove("shrink");
+        if (chica) chica.classList.remove("animate-in");
+        if (ave) ave.classList.remove("animate-in");
       }
     });
   }

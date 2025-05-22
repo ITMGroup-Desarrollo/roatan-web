@@ -11,3 +11,24 @@
 .wave-cover.shrink {
   width: 0;
 }
+.chica,
+.ave {
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  will-change: transform, opacity;
+}
+
+.chica {
+  transform: translateX(-150%);
+}
+
+.ave {
+  transform: translateX(150%);
+}
+
+.chica.animate-in,
+.ave.animate-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+

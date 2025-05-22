@@ -56,14 +56,7 @@ import "../../assets/css/home.css";
   const isdesktop = window.innerWidth <= 1600 && window.innerWidth > 1025;
   const isLargdesktop = window.innerWidth > 1600;
   const cover = document.querySelector(".wave-cover");
-  //   let isShrunk = false;
 
-  //   setInterval(() => {
-  //     if (cover) {
-  //       cover.classList.toggle("shrink");
-  //       isShrunk = !isShrunk;
-  //     }
-  //   }, 3000);
   if (isMobile) {
     window.addEventListener("scroll", function () {
       if (!cover) return;
@@ -77,7 +70,7 @@ import "../../assets/css/home.css";
   if (isdesktop) {
     window.addEventListener("scroll", function () {
       if (!cover) return;
-      if (window.scrollY > 500) {
+      if (window.scrollY > 450) {
         cover.classList.add("shrink");
       } else {
         cover.classList.remove("shrink");

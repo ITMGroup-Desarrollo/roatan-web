@@ -6,13 +6,14 @@ import { Image } from "astro:assets";
 import "aos/dist/aos.css";
 import olas from "../../assets/img/iconos/home/olas-white.png";
 import "../../assets/css/home.css";
-
+import WaveObserver from "../../components/js/WaveObserverPort.jsx";
 import SwiperClient from "../../components/js/SwiperClientPort";
 ---
-
+<WaveObserver client:visible />
 <div
   class="port-container w-screen h-[34rem] flex flex-col lg:flex-row items-start justify-center relative border-b-2 overflow-hidden bg-[var(--secondary-color)]"
 >
+
   <div
     class="text-container w-full lg:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
   >
@@ -45,39 +46,3 @@ import SwiperClient from "../../components/js/SwiperClientPort";
   </div>
 </div>
 
-<script>
-    const isMobile = window.innerWidth <= 1025;
-  const isdesktop = window.innerWidth <= 1600 && window.innerWidth > 1025;
-  const isLargdesktop = window.innerWidth > 1600;
-  const cover = document.querySelector(".wave-cover-port");
-  if (isMobile) {
-    window.addEventListener("scroll", function () {
-      if (!cover) return;
-      if (window.scrollY > 150) {
-        cover.classList.add("shrink");
-      } else {
-        cover.classList.remove("shrink");
-      }
-    });
-  } else 
-  if (isdesktop) {
-    window.addEventListener("scroll", function () {
-      if (!cover) return;
-      if (window.scrollY > 600) {
-        cover.classList.add("shrink");
-      } else {
-        cover.classList.remove("shrink");
-      }
-    });
-  }
-  if (isLargdesktop) {
-    window.addEventListener("scroll", function () {
-      if (!cover) return;
-      if (window.scrollY > 1000) {
-        cover.classList.add("shrink");
-      } else {
-        cover.classList.remove("shrink");
-      }
-    });
-  }
-</script>

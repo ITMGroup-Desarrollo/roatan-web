@@ -8,13 +8,15 @@ import olas from "../../assets/img/iconos/home/olas-blue.png";
 import ave from "../../assets/img/iconos/home/ave.png";
 import chica from "../../assets/img/iconos/home/chica.png";
 import WaveObserver from "../../components/js/WaveObserver.jsx";
+import WaveObserverPort from "../../components/js/WaveObserverPort.jsx";
 import "../../assets/css/home.css";
 ---
-<WaveObserver client:visible />
+
 <div
   class="welcome-container w-screen h-[16rem] md:h-[36rem] flex items-center justify-center relative overflow-hidden"
 >
 
+<WaveObserver client:visible />
 <div class="images-container absolute h-full w-screen flex flex-row">
     <Image
       class="chica absolute w-20 md:w-60 lg:w-80 h-auto bottom-0 z-0"
@@ -50,5 +52,5 @@ import "../../assets/css/home.css";
     />
     <div class="wave-cover"></div>
   </div>
- 
+ <WaveObserverPort client:visible />
 </div>

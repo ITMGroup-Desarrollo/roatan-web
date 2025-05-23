@@ -15,13 +15,13 @@ export default function WaveObserver() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          cover?.classList.remove("shrink");
-          chica?.classList.remove("animate-in");
-          ave?.classList.remove("animate-in");
-        } else {
           cover?.classList.add("shrink");
           chica?.classList.add("animate-in");
           ave?.classList.add("animate-in");
+        } else {
+          cover?.classList.remove("shrink");
+          chica?.classList.remove("animate-in");
+          ave?.classList.remove("animate-in");
         }
       },
       { threshold: 0.1 }

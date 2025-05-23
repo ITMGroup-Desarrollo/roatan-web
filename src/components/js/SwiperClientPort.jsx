@@ -52,7 +52,7 @@ export default function SwiperClient() {
       <div className="hidden md:block swiper-button-next custom-nav"></div>
 
       {/* Pagination bullets */}
-      <div className=" swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10 " />
+      <div className=" swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10" />
     </div>
   );
 }

@@ -11,7 +11,7 @@ import "../../assets/css/home.css";
 ---
 
 <div
-  class="welcome-container w-screen h-[16rem] md:h-[36rem] flex items-center justify-center relative border-b-2 overflow-hidden"
+  class="welcome-container w-screen h-[16rem] md:h-[36rem] flex items-center justify-center relative overflow-hidden"
 >
 <div class="images-container absolute h-full w-screen flex flex-row">
     <Image
@@ -26,14 +26,14 @@ import "../../assets/css/home.css";
       alt="logo"
       loading="eager"
     />
-    
 </div>
   <div class="text-container w-2/3  lg:w-1/2 text-center flex flex-col lg:block ">
     <p class="text-2xl md:text-6xl font-bebas text-[var(--secondary-color)]">
       {t.homeWelcome.title}
     </p>
-    <h2 class="text-5xl md:text-9xl font-bebasBold text-[var(--primary-color)]">
+    <h2 class="text-5xl flex  flex-col md:text-9xl font-bebasBold text-[var(--primary-color)]">
       {t.homeWelcome.subtitle}
+      <div class="w-16 self-center border-b-4 border-[var(--primary-color)] mb-2"></div>
     </h2>
     <p class="text-[8px] md:text-xl text-black ">{t.homeWelcome.text}</p>
   </div>
@@ -50,7 +50,6 @@ import "../../assets/css/home.css";
   </div>
  
 </div>
- <div class="h-96 w-screen bg-slate-400"></div>
 <script>
   const isMobile = window.innerWidth <= 1025;
   const isdesktop = window.innerWidth <= 1600 && window.innerWidth > 1025;

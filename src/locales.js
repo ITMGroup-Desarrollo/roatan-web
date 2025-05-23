@@ -21,7 +21,7 @@ export const translations = {
       "back": "Regreso al inicio",
     },
     footer:{
-      "textboxPlaceholder": "!Unete a nuestro newsletter!",
+      "textboxPlaceholder": "¡Unete al newsletter!",
       "textboxButton": "suscríbete",
       "policy": "Política de privacidad",
     },

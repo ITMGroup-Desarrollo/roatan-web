@@ -30,16 +30,54 @@ import SwiperClient from "../../components/js/SwiperClientPort";
       class="text-black border-2 border-black self-center p-2 rounded-lg w-fit uppercase text-base font"
       >{t.homePort.button}</a
     >
-    <div class="w-full h-16 lg:h-24">
+    <div class="w-full h-16 lg:h-24 relative">
       <Image
         class="w-[100%] h-[100%] object-fill"
         src={olas}
-        alt="logo"
+        alt="olas blancas"
         loading="eager"
       />
+      <div class="wave-cover-port "></div>
     </div>
   </div>
   <div class="swiper-container w-full h-full lg:w-1/2 text-center flex flex-col">
     <SwiperClient client:only="react" />
   </div>
 </div>
+
+<script>
+    const isMobile = window.innerWidth <= 1025;
+  const isdesktop = window.innerWidth <= 1600 && window.innerWidth > 1025;
+  const isLargdesktop = window.innerWidth > 1600;
+  const cover = document.querySelector(".wave-cover-port");
+  if (isMobile) {
+    window.addEventListener("scroll", function () {
+      if (!cover) return;
+      if (window.scrollY > 150) {
+        cover.classList.add("shrink");
+      } else {
+        cover.classList.remove("shrink");
+      }
+    });
+  } else 
+  if (isdesktop) {
+    window.addEventListener("scroll", function () {
+      if (!cover) return;
+      if (window.scrollY > 600) {
+        cover.classList.add("shrink");
+      } else {
+        cover.classList.remove("shrink");
+      }
+    });
+  }
+  if (isLargdesktop) {
+    window.addEventListener("scroll", function () {
+      if (!cover) return;
+      if (window.scrollY > 1000) {
+        cover.classList.add("shrink");
+      } else {
+        cover.classList.remove("shrink");
+      }
+    });
+  }
+</script>

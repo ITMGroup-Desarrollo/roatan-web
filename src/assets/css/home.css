@@ -84,8 +84,8 @@
 }
 @media screen and (max-width: 768px) {
   .swiper-pagination-bullet {
-    width: 0.5rem !important;
-    height: 0.5rem !important;
+    width: 0.8rem !important;
+    height: 0.8rem !important;
     padding: 0.25rem;
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px) !important;
 ;

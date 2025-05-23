@@ -3,17 +3,18 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header/Header.astro";
 import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Header/Menu.astro";
-import Bienvenida from "../../components/Home/Bienvenida.astro"
+import Bienvenida from "../../components/Home/Bienvenida.astro";
+import PortExperience from "../../components/Home/PortExperience.astro";
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
 const lang = Astro.params.lang || "es";
 ---
+
 <Layout lang={lang}>
   <Menu lang={lang} />
-  <Header lang={lang}  />
-  <Bienvenida lang={lang}  />
-
-  <Footer lang={lang}/>
+  <Header lang={lang} />
+  <Bienvenida lang={lang} />
+  <PortExperience lang={lang} />
+  <Footer lang={lang} />
 </Layout>
- 

@@ -32,3 +32,40 @@
   opacity: 1;
 }
 
+.custom-nav {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.swiper-button-prev.custom-nav {
+  left: 5%;
+  color: white;
+}
+
+.swiper-button-next.custom-nav {
+  right: 5%;
+  color: white;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5) !important; 
+  border: 2px solid white !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 9999px !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+

@@ -30,6 +30,12 @@ export const translations = {
       "subtitle": "PORT ROATAN",
       "text": "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
+    homePort:{
+      "title": "Port Experience",
+      "subtitle": "lorem ipsum dolor sit amet",
+      "button": "leer más",
+      "text": "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+    },
   },
   //endregion
 
@@ -61,6 +67,12 @@ export const translations = {
       "title": "WELCOME TO",
       "subtitle": "PORT ROATAN",
       "text": "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum. ",
+    },
+    homePort:{
+      "title": "Port Experience",
+      "subtitle": "lorem ipsum dolor sit amet",
+      "button": "Read more",
+      "text": "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
   },
   //endregion

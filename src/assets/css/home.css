@@ -93,6 +93,7 @@
   opacity: 1 !important;
   transform: scale(1.2);
 }
+
 @media screen and (max-width: 768px) {
   .swiper-pagination-bullet {
     width: 1rem !important;

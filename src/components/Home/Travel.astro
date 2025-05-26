@@ -10,15 +10,15 @@ import WaveObserverDiscover from "../../components/js/WaveObserverDiscover.jsx";
   class="travel-container w-screen h-[8rem] flex flex-col items-center justify-center relative overflow-hidden bg-white"
 >
 <WaveObserverDiscover client:visible />
-  <div class="items-container w-1/2 h-full flex flex-row justify-center pt-3">
+  <div class="items-container w-full md:w-1/2 h-full flex flex-row justify-center">
     <div
-      class="text-container flex flex-col h-full  justify-start "
+      class="text-container flex flex-col h-full  justify-center "
     >
       <h2 class="text-3xl md:text-6xl font-bold text-[var(--primary-color)]">{t.homeTravel.title}</h2>
       <p class="text-xl md:text-3xl text-[var(--primary-color)]">{t.homeTravel.subtitle}</p>
     </div>
     <div
-      class="go-container flex items-center h-full justify-center  ml-6"
+      class="go-container flex items-center h-full justify-center ml-3  md:ml-6"
     >
     <a href={`/${lang}/faqs/`} class="border-2 p-2 text-2xl rounded-lg text-[var(--primary-color)] border-[var(--primary-color)]">Go!</a>
     </div>

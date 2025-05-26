@@ -7,42 +7,42 @@ import "aos/dist/aos.css";
 import olas from "../../assets/img/iconos/home/olas-white.png";
 import "../../assets/css/home.css";
 
-import SwiperClient from "../../components/js/SwiperClientPort";
+import SwiperClient from "../../components/js/SwiperClientDiscover";
 ---
 
 <div
-  class="port-container w-screen h-[34rem] flex flex-col lg:flex-row items-start justify-center relative overflow-hidden bg-[var(--primary-color)]"
+  class="discover-container w-screen h-[34rem] flex flex-col lg:flex-row items-start justify-center relative overflow-hidden bg-[var(--primary-color)]"
 >
-
-<div class="swiper-container w-full h-full lg:w-1/2 text-center flex flex-col">
+  <div
+    class="swiper-container w-full h-full lg:w-1/2 text-center flex flex-col"
+  >
     <SwiperClient client:only="react" />
-</div>
-<div
-  class="text-container w-full lg:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
->
-  <h2
-    class="capitalize text-3xl flex flex-col md:text-6xl mx-auto max-w-[90%] font-alverata  font-bold text-white"
+  </div>
+  <div
+    class="text-container w-full lg:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
   >
-    {t.homeDiscover.title}
-  </h2>
-  <div class="w-16 self-center border-b-2 border-white"></div>
-  <p class="text-xl md:text-4xl text-white">
-    {t.homeDiscover.subtitle}
-  </p>
-  <a
-    href={`/${lang}/port-experience/`}
-    class="text-[#003a5d] border-2 border-[#003a5d] self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
-    >{t.homeDiscover.button}</a
-  >
-  <div class="w-full h-16 lg:h-24 relative">
-    <Image
-      class="w-[100%] h-[100%] object-fill"
-      src={olas}
-      alt="olas blancas"
-      loading="eager"
-    />
-    <div class="wave-cover-discover "></div>
+    <h2
+      class="capitalize text-3xl flex flex-col md:text-6xl mx-auto max-w-[90%] font-alverata font-bold text-white"
+    >
+      {t.homeDiscover.title}
+    </h2>
+    <div class="w-16 self-center border-b-2 border-white"></div>
+    <p class="text-xl md:text-4xl text-white">
+      {t.homeDiscover.subtitle}
+    </p>
+    <a
+      href={`/${lang}/discover-beyond/`}
+      class="text-[#003a5d] border-2 border-[#003a5d] self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
+      >{t.homeDiscover.button}</a
+    >
+    <div class="w-full h-16 lg:h-24 relative">
+      <Image
+        class="w-[100%] h-[100%] object-fill"
+        src={olas}
+        alt="olas blancas"
+        loading="eager"
+      />
+      <div class="wave-cover-discover"></div>
+    </div>
   </div>
 </div>
-</div>
-

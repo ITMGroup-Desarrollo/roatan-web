@@ -8,15 +8,15 @@ export default function WaveObserver() {
     const el = ref.current;
     if (!el) return;
 
-    const coverport = document.querySelector(".wave-cover-discover");
-    if (!coverport) return;
+    const coverdiscover = document.querySelector(".wave-cover-discover");
+    if (!coverdiscover) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          coverport.classList.remove("shrink");
+          coverdiscover.classList.remove("shrink");
         } else {
-          coverport.classList.add("shrink");
+          coverdiscover.classList.add("shrink");
         }
       },
       {

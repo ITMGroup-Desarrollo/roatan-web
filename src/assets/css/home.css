@@ -36,14 +36,14 @@
 .wave-cover-discover.shrink {
   width: 0%;
 }
-.chica,
+.chica,.chica-port,
 .ave {
   opacity: 0;
   transition: transform 1.5s ease-out, opacity 1s ease-out;
   will-change: transform, opacity;
 }
 
-.chica {
+.chica,.chica-port {
   transform: translateX(-150%);
 }
 
@@ -51,12 +51,11 @@
   transform: translateX(150%);
 }
 
-.chica.animate-in,
+.chica.animate-in,.chica-port.animate-in,
 .ave.animate-in {
   transform: translateX(0);
   opacity: 1;
 }
-
 .custom-nav {
   color: white;
   font-size: 2rem;

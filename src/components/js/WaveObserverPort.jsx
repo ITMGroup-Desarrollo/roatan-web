@@ -9,14 +9,17 @@ export default function WaveObserver() {
     if (!el) return;
 
     const coverport = document.querySelector(".wave-cover-port");
+    const chicaport = document.querySelector(".chica-port");
     if (!coverport) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           coverport.classList.remove("shrink");
+          chicaport?.classList.remove("animate-in");
         } else {
           coverport.classList.add("shrink");
+          chicaport?.classList.add("animate-in");
         }
       },
       {

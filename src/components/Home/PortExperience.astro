@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import "aos/dist/aos.css";
 import olas from "../../assets/img/iconos/home/olas-white.png";
 import "../../assets/css/home.css";
-
+import chica from "../../assets/img/iconos/home/chica.png";
 import SwiperClient from "../../components/js/SwiperClientPort";
 ---
 
@@ -31,6 +31,7 @@ import SwiperClient from "../../components/js/SwiperClientPort";
       class="text-[#003a5d] border-2 border-[#003a5d] self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white"
       >{t.homePort.button}</a
     >
+    
     <div class="w-full h-16 lg:h-24 relative">
       <Image
         class="w-[100%] h-[100%] object-fill"
@@ -38,8 +39,17 @@ import SwiperClient from "../../components/js/SwiperClientPort";
         alt="olas blancas"
         loading="eager"
       />
-      <div class="wave-cover-port "></div>
+      <Image
+      class="block md:hidden chica-port absolute w-28 md:w-60 lg:w-80 h-auto -bottom-5 z-50"
+      src={chica}
+      alt="logo"
+      loading="eager"
+    />
+      <div class="wave-cover-port ">
+        
+      </div>
     </div>
+    
   </div>
   <div class="swiper-container w-full h-full lg:w-1/2 text-center flex flex-col">
     <SwiperClient client:only="react" />

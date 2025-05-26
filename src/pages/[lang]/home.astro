@@ -5,6 +5,8 @@ import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Header/Menu.astro";
 import Bienvenida from "../../components/Home/Bienvenida.astro";
 import PortExperience from "../../components/Home/PortExperience.astro";
+import Travel from "../../components/Home/Travel.astro";
+import Discover from "../../components/Home/Discover.astro";
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
@@ -16,5 +18,7 @@ const lang = Astro.params.lang || "es";
   <Header lang={lang} />
   <Bienvenida lang={lang} />
   <PortExperience lang={lang} />
+  <Travel lang={lang} />
+  <Discover lang={lang} />
   <Footer lang={lang} />
 </Layout>

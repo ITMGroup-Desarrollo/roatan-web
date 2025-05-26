@@ -24,6 +24,18 @@
 .wave-cover-port.shrink {
   width: 0%;
 }
+.wave-cover-discover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  top: 0;
+  left: 0;
+  transition: width 1.5s ease-in-out;
+}
+.wave-cover-discover.shrink {
+  width: 0%;
+}
 .chica,
 .ave {
   opacity: 0;

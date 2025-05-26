@@ -39,6 +39,12 @@ export const translations = {
       title: "Viajar para crear",
       subtitle: "memorias alrededor del mundo",
     },
+    homeDiscover: {
+      title: "Discover Beyond the cruise",
+      subtitle: "lorem ipsum dolor sit amet",
+      button: "Read more",
+      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+    },
   },
   //endregion
 
@@ -81,6 +87,12 @@ export const translations = {
     homeTravel: {
       title: "Travel to make",
       subtitle: "memories all around the world",
+    },
+    homeDiscover: {
+      title: "Discover Beyond the cruise",
+      subtitle: "lorem ipsum dolor sit amet",
+      button: "Read more",
+      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
   },
   //endregion

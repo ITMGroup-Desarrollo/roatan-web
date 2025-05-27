@@ -77,6 +77,15 @@
   right: 5%;
   color: white;
 }
+.trip-container .swiper-button-prev.custom-nav {
+  left: 8%;
+  color: white;
+}
+
+.trip-container .swiper-button-next.custom-nav {
+  right: 8%;
+  color: white;
+}
 .swiper-pagination-bullet {
   background-color: rgba(255, 255, 255, 0.5) !important;
   border: 2px solid white !important;
@@ -93,7 +102,10 @@
   opacity: 1 !important;
   transform: scale(1.2);
 }
-
+.logo-trip-container{
+  margin-top: 0rem !important;
+  margin-bottom: 1rem !important;
+}
 @media screen and (max-width: 768px) {
   .swiper-pagination-bullet {
     width: 1rem !important;
@@ -109,4 +121,10 @@
   .swiper-button-next.custom-nav {
     display: none;
   }
+}
+@media screen and (min-width: 1025px) {
+  .logo-trip-container{
+  margin-top: 5rem !important;
+  margin-bottom: 1rem !important;
+}
 }

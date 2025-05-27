@@ -42,7 +42,7 @@ const slidesData = [
 
 function Slide({ img, name, text }) {
   return (
-    <div className="swiper-slide h-auto flex justify-center items-center p-4 content-center">
+    <div className="swiper-slide h-full flex justify-center items-center  content-center">
       <div className="slide-content relative justify-self-center bg-white rounded-3xl p-6 shadow-lg text-center w-72 transition-transform duration-300">
         <img
           src={`/img/home/recursos/swiperTrip/${img}`}
@@ -65,27 +65,34 @@ function Slide({ img, name, text }) {
 }
 
 export default function SwiperClient() {
-  useEffect(() => {
-    new Swiper(".Trip-swiper", {
-      modules: [Navigation, Pagination],
-      loop: true,
-      slidesPerView: 3,
-      slidesPerGroup: 1,
-      centeredSlides: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+useEffect(() => {
+  new Swiper(".Trip-swiper", {
+    modules: [Navigation, Pagination],
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
       },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  }, []);
+      1025: {
+        slidesPerView: 3,
+        centeredSlides: true,
+      }
+    }
+  });
+}, []);
+
 
   return (
-    <div className="Trip-swiper justify-center w-full h-full ">
-      <div className="swiper-wrapper items-end  h-full w-full flex-col lg:flex-row gap-10 lg:gap-0">
+    <div className="Trip-swiper w-full h-full ">
+      <div className="swiper-wrapper  items-center ">
         {slidesData.map((slide, index) => (
           <Slide
             key={index}
@@ -101,34 +108,30 @@ export default function SwiperClient() {
 
       <style>
         {`
+        .swiper-button-prev.custom-nav {
+  
+  color: var(--primary-color) !important;
+}
+
+.swiper-button-next.custom-nav {
+  
+  color: var(--primary-color) !important;
+}
+    
          .swiper-slide{
           display: flex !important;
         }
 @media screen and (min-width: 1025px) {
+.trip-swiper {
+
+}
   .swiper-slide {
             transition: transform 0.3s ease;
-            min-width: 0;
+            
           }
 
             .swiper-slide-active .slide-content {
-            -webkit-transform: scale(1.2) translateY(-6rem);
-            transform: scale(1.2) translateY(-6rem);
-          }
-            .Trip-swiper {
-            overflow: visible;
-          }
-          @supports (-webkit-touch-callout: none) {
-            .Trip-swiper .swiper-wrapper {
-              justify-content: center !important;
-              margin-left: auto !important;
-              margin-right: auto !important;
-            }
-          }
-          @supports (-webkit-touch-callout: none) {
-            .Trip-swiper {
-              padding-left: 0 !important;
-              padding-right: 0 !important;
-            }
+            transform: scale(1.1) translateY(-6rem);
           }
 }
         `}

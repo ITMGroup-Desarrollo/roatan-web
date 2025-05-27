@@ -3,14 +3,23 @@ import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 import { Image } from "astro:assets";
-
+import trip from "../../assets/img/iconos/home/trip.svg";
 import "aos/dist/aos.css";
 import SwiperClient from "../../components/js/SwiperClientTrip";
 ---
 
 <div
-  class="trip-container w-screen h-[34rem] flex items-start justify-center relative overflow-y-visible overflow-x-hidden bg-[var(--redSocial-color)]"
+  class="trip-container w-screen h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center relative overflow-y-visible overflow-x-hidden bg-[var(--redSocial-color)] "
 >
-  <div class="swiper-container justify-center  h-full"></div>
-  <SwiperClient client:only="react" />
+  <div class="logo-trip-container  w-full  flex justify-center">
+    <Image
+        class="w-32 h-32"
+        src={trip}
+        alt="logo-tripadvisor"
+        loading="eager"
+      />
+  </div>
+  <div class="swiper-container w-4/5 h-96 lg:h-full  overflow-hidden ">
+    <SwiperClient client:only="react" />
+  </div>
 </div>

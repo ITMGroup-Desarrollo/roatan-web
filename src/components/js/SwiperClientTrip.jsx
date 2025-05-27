@@ -101,7 +101,9 @@ export default function SwiperClient() {
 
       <style>
         {`
-         
+         .swiper-slide{
+          display: flex !important;
+        }
 @media screen and (min-width: 1025px) {
   .swiper-slide {
             transition: transform 0.3s ease;

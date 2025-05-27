@@ -62,7 +62,7 @@ export default function SwiperClient() {
   }, []);
 
   return (
-    <div className="Trip-swiper w-screen h-full px-20 mt-24 xl:9x-32 relative">
+    <div className="Trip-swiper w-full h-full px-20 pt-48 xl:mx-32 relative">
       <div className="swiper-wrapper h-full w-full">
         {slidesData.map((slide, index) => (
           <Slide key={index} img={slide.img} name={slide.name} text={slide.text} />

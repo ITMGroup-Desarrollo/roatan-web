@@ -84,7 +84,7 @@ export default function SwiperClient() {
   }, []);
 
   return (
-    <div className="Trip-swiper w-full h-full px-20 pt-48 xl:mx-32 relative">
+    <div className="Trip-swiper w-full h-full pt-48 relative">
       <div className="swiper-wrapper h-full w-full">
         {slidesData.map((slide, index) => (
           <Slide
@@ -113,6 +113,13 @@ export default function SwiperClient() {
             .Trip-swiper {
             overflow: visible;
           }
+          @supports (-webkit-touch-callout: none) {
+  .Trip-swiper .swiper-wrapper {
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
 
         `}
       </style>

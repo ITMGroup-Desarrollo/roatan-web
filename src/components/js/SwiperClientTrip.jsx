@@ -8,12 +8,36 @@ import "swiper/css/pagination";
 import "../../assets/css/home.css";
 
 const slidesData = [
-  { img: "1.png", text:"Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",  name: "Isabelle Layson" },
-  { img: "2.png", text:"Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",  name: "Isabelle Layson" },
-  { img: "3.png", text:"Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",  name: "Isabelle Layson" },
-  { img: "1.png", text:"Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",  name: "Isabelle Layson" },
-  { img: "2.png", text:"Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",  name: "Isabelle Layson" },
-  { img: "3.png", text:"Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",  name: "Isabelle Layson" },
+  {
+    img: "1.png",
+    text: "Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",
+    name: "Isabelle Layson",
+  },
+  {
+    img: "2.png",
+    text: "Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",
+    name: "Isabelle Layson",
+  },
+  {
+    img: "3.png",
+    text: "Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",
+    name: "Isabelle Layson",
+  },
+  {
+    img: "1.png",
+    text: "Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",
+    name: "Isabelle Layson",
+  },
+  {
+    img: "2.png",
+    text: "Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",
+    name: "Isabelle Layson",
+  },
+  {
+    img: "3.png",
+    text: "Sodales ut etiam sit amet nisi. Semper feugiat nibh sed pulvinarproin amet nulla morbi.",
+    name: "Isabelle Layson",
+  },
 ];
 
 function Slide({ img, name, text }) {
@@ -32,9 +56,7 @@ function Slide({ img, name, text }) {
             className="w-32"
           />
         </div>
-        <p className="text-gray-600 text-sm mb-2">
-          {text}
-        </p>
+        <p className="text-gray-600 text-sm mb-2">{text}</p>
         <p className="font-semibold font-lindsey text-gray-800">{name}</p>
         <div className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white rotate-45" />
       </div>
@@ -65,7 +87,12 @@ export default function SwiperClient() {
     <div className="Trip-swiper w-full h-full px-20 pt-48 xl:mx-32 relative">
       <div className="swiper-wrapper h-full w-full">
         {slidesData.map((slide, index) => (
-          <Slide key={index} img={slide.img} name={slide.name} text={slide.text} />
+          <Slide
+            key={index}
+            img={slide.img}
+            name={slide.name}
+            text={slide.text}
+          />
         ))}
       </div>
 
@@ -76,12 +103,17 @@ export default function SwiperClient() {
         {`
           .swiper-slide {
             transition: transform 0.3s ease;
+            min-width: 0;
           }
 
-          .swiper-slide-active .slide-content {
-            transform: scale(1.20);
-            margin-top: -6rem;
+            .swiper-slide-active .slide-content {
+            -webkit-transform: scale(1.2) translateY(-6rem);
+            transform: scale(1.2) translateY(-6rem);
           }
+            .Trip-swiper {
+            overflow: visible;
+          }
+
         `}
       </style>
     </div>

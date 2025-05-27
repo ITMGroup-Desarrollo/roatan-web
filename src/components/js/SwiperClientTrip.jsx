@@ -110,9 +110,9 @@ useEffect(() => {
           />
         ))}
       </div>
-
+{/* 
       <div className="block swiper-button-prev custom-nav"></div>
-      <div className="block swiper-button-next custom-nav"></div>
+      <div className="block swiper-button-next custom-nav"></div> */}
 
       <style>
         {`

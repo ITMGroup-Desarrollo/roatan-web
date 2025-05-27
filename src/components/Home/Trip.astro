@@ -4,22 +4,43 @@ const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 import { Image } from "astro:assets";
 import trip from "../../assets/img/iconos/home/tripadvisor.png";
+import cocktel from "../../assets/img/iconos/home/cocktel.png";
+import platanitos from "../../assets/img/iconos/home/platanitos.png";
 import "aos/dist/aos.css";
 import SwiperClient from "../../components/js/SwiperClientTrip";
+import WaveObserverTrip from "../../components/js/WaveObserverTrip";
 ---
 
 <div
-  class="trip-container w-screen h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center relative overflow-y-visible overflow-x-hidden bg-[var(--redSocial-color)] "
+
+  
+  class="trip-container w-screen h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center relative overflow-y-visible overflow-x-hidden bg-[var(--redSocial-color)]"
 >
-  <div class="logo-trip-container  w-full  flex justify-center">
+
+  <Image
+    class="platanito-trip  w-48 top-10 md:top-20 left-0 absolute md:w-96 h-auto z-0"
+    src={platanitos}
+    alt="platanitos"
+    loading="eager"
+  />
+  <div class="logo-trip-container w-full flex justify-center z-10">
+    <WaveObserverTrip client:visible/>
     <Image
-        class="w-24 md:w-36 h-auto"
-        src={trip}
-        alt="logo-tripadvisor"
-        loading="eager"
-      />
+      class="w-24 md:w-36 h-auto z-10"
+      src={trip}
+      alt="logo-tripadvisor"
+      loading="eager"
+    />
   </div>
-  <div class="swiper-container w-full lg:w-4/5 h-96 lg:h-full  overflow-hidden ">
+  <div
+    class="swiper-container z-10 w-full lg:w-4/5 h-96 lg:h-full overflow-hidden"
+  >
     <SwiperClient client:only="react" />
   </div>
+  <Image
+    class="cocktel-trip w-48 md:w-80 absolute bottom-0 md:bottom-auto md:top-10 right-0 h-auto z-0"
+    src={cocktel}
+    alt="cocktel"
+    loading="eager"
+  />
 </div>

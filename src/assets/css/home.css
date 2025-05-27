@@ -4,7 +4,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #ffffff; /* bg-slate-300 */
+  background-color: #ffffff;
   z-index: 2;
   transition: width 1.5s ease-in-out;
 }
@@ -37,6 +37,8 @@
 }
 .chica,
 .chica-port,
+.platanito-trip,
+.cocktel-trip,
 .ave {
   opacity: 0;
   transition: transform 1.5s ease-out, opacity 1s ease-out;
@@ -44,16 +46,18 @@
 }
 
 .chica,
-.chica-port {
+.chica-port, .platanito-trip {
   transform: translateX(-150%);
 }
 
-.ave {
+.ave, .cocktel-trip {
   transform: translateX(150%);
 }
 
 .chica.animate-in,
 .chica-port.animate-in,
+.platanito-trip.animate-in,
+.cocktel-trip.animate-in,
 .ave.animate-in {
   transform: translateX(0);
   opacity: 1;

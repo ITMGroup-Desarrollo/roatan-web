@@ -108,32 +108,7 @@ useEffect(() => {
 
       <style>
         {`
-        .swiper-button-prev.custom-nav {
-  
-  color: var(--primary-color) !important;
-}
-
-.swiper-button-next.custom-nav {
-  
-  color: var(--primary-color) !important;
-}
-    
-         .swiper-slide{
-          display: flex !important;
-        }
-@media screen and (min-width: 1025px) {
-.trip-swiper {
-
-}
-  .swiper-slide {
-            transition: transform 0.3s ease;
-            
-          }
-
-            .swiper-slide-active .slide-content {
-            transform: scale(1.1) translateY(-6rem);
-          }
-}
+          
         `}
       </style>
     </div>

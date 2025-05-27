@@ -114,12 +114,18 @@ export default function SwiperClient() {
             overflow: visible;
           }
           @supports (-webkit-touch-callout: none) {
-  .Trip-swiper .swiper-wrapper {
-    justify-content: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}
+            .Trip-swiper .swiper-wrapper {
+              justify-content: center !important;
+              margin-left: auto !important;
+              margin-right: auto !important;
+            }
+          }
+          @supports (-webkit-touch-callout: none) {
+            .Trip-swiper {
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+          }
 
         `}
       </style>

@@ -42,7 +42,7 @@ const slidesData = [
 
 function Slide({ img, name, text }) {
   return (
-    <div className="swiper-slide flex justify-center items-center p-4 content-center">
+    <div className="swiper-slide h-auto flex justify-center items-center p-4 content-center">
       <div className="slide-content relative justify-self-center bg-white rounded-3xl p-6 shadow-lg text-center w-72 transition-transform duration-300">
         <img
           src={`/img/home/recursos/swiperTrip/${img}`}
@@ -84,8 +84,8 @@ export default function SwiperClient() {
   }, []);
 
   return (
-    <div className="Trip-swiper w-full h-full pt-48 relative">
-      <div className="swiper-wrapper h-full w-full">
+    <div className="Trip-swiper justify-center w-full h-full ">
+      <div className="swiper-wrapper items-end  h-full w-full flex-col lg:flex-row gap-10 lg:gap-0">
         {slidesData.map((slide, index) => (
           <Slide
             key={index}
@@ -96,12 +96,14 @@ export default function SwiperClient() {
         ))}
       </div>
 
-      <div className="hidden md:block swiper-button-prev custom-nav"></div>
-      <div className="hidden md:block swiper-button-next custom-nav"></div>
+      <div className="block swiper-button-prev custom-nav"></div>
+      <div className="block swiper-button-next custom-nav"></div>
 
       <style>
         {`
-          .swiper-slide {
+         
+@media screen and (min-width: 1025px) {
+  .swiper-slide {
             transition: transform 0.3s ease;
             min-width: 0;
           }
@@ -126,7 +128,7 @@ export default function SwiperClient() {
               padding-right: 0 !important;
             }
           }
-
+}
         `}
       </style>
     </div>

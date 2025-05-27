@@ -81,6 +81,10 @@ useEffect(() => {
       0: {
         slidesPerView: 1
       },
+      769: {
+        slidesPerView: 1,
+        centeredSlides: true,
+      },
       1025: {
         slidesPerView: 3,
         centeredSlides: true,

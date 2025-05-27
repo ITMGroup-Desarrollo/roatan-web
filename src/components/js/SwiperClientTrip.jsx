@@ -27,7 +27,7 @@ export default function SwiperClient() {
   }, []);
 
   return (
-    <div className="Trip-swiper w-full h-full px-20 mt-24 xl:9x-32 relative">
+    <div className="Trip-swiper w-screen h-full px-20 mt-24 xl:9x-32 relative">
       <div className="swiper-wrapper h-full w-full">
         <div className="swiper-slide flex justify-center items-center p-4 content-center">
           <div className="slide-content relative justify-self-center bg-white rounded-3xl p-6 shadow-lg text-center w-72 transition-transform duration-300">

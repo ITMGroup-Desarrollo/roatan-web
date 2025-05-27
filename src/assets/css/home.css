@@ -99,9 +99,17 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: white !important;
+  background-color: var() !important;
   opacity: 1 !important;
   transform: scale(1.2);
+}
+.trip-container .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.trip-container .swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
 }
 .logo-trip-container {
   margin-top: 0rem !important;

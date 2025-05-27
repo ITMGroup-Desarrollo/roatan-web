@@ -1,7 +1,7 @@
 // src/components/SwiperClient.jsx
 import React, { useEffect } from "react";
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,7 +10,7 @@ import "../../assets/css/home.css";
 export default function SwiperClient() {
   useEffect(() => {
     new Swiper(".swiper", {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Autoplay],
       loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -20,6 +20,10 @@ export default function SwiperClient() {
         el: ".swiper-pagination",
         clickable: true,
       },
+      autoplay: {
+      delay: 3000, 
+      disableOnInteraction: false, 
+    },
     });
   }, []);
 

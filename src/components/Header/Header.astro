@@ -83,11 +83,8 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
-
-    // Intenta reproducirlo automáticamente
     window.addEventListener("load", () => {
       video.play().catch(() => {
-        // En algunos casos Safari aún requiere interacción
       });
     });
   }

@@ -42,12 +42,12 @@ const PreguntasYRespuestas = ({ t }) => {
               }`}
             >
               <img
-                className={`mas-icon w-10 ${activa === id ? "hidden" : ""}`}
+                className={`mas-icon w-8 md:w-10 ${activa === id ? "hidden" : ""}`}
                 src={mas.src}
                 alt="mas"
               />
               <img
-                className={`menos-icon w-10 ${activa === id ? "" : "hidden"}`}
+                className={`menos-icon w-8 md:w-10 ${activa === id ? "" : "hidden"}`}
                 src={menos.src}
                 alt="menos"
               />

@@ -2,25 +2,73 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
-import { Image } from "astro:assets";
+import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
 import "aos/dist/aos.css";
 ---
-<faqs class="faqs w-screen h-[20rem] md:h-[48rem] relative">
-    <div class="space-container w-screen h-[8rem] md:h-[20rem] bg-[var(--redSocial-color)]">
 
-</div>
-<div
-  class="faqs-container absolute top-0  lg:-top-28 w-screen h-[20rem] md:h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center  overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
->
-<div class="title-container justify-center items-center flex flex-col z-15 ">
-    <h2 class="title text-4xl md:text-8xl font-bebasBold text-[var(--primary-color)]">{t.homeFaqs.title}</h2>
-    <p class="subtitle text-2xl md:text-4xl font-bebas uppercase text-[var(--secondary-color)] md:mb-12">{t.homeFaqs.subtitle}</p>
-    <span class="w-[2px] h-[24rem] bg-[var(--primary-color)] "></span>
-    <a
-      href={`/${lang}/port-experience/`}
-      class="text-[var(--primary-color)] border-2 border-[var(--primary-color)] self-center py-2 px-6 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
-      >{t.homePort.button}</a
-    >
-</div>
-</div>
+<faqs class="faqs w-screen h-[20rem] md:h-[48rem] relative">
+  <div
+    class="space-container w-screen h-[8rem] md:h-[20rem] bg-[var(--redSocial-color)]"
+  >
+  </div>
+  <div
+    class="faqs-container absolute top-0 lg:-top-28 w-screen h-[20rem] md:h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
+  >
+    <div class="title-container justify-center items-center flex flex-col z-15">
+      <h2
+        class="title text-4xl md:text-8xl font-bebasBold text-[var(--primary-color)]"
+      >
+        {t.homeFaqs.title}
+      </h2>
+      <p
+        class="subtitle text-2xl md:text-4xl font-bebas uppercase text-[var(--secondary-color)] md:mb-12"
+      >
+        {t.homeFaqs.subtitle}
+      </p>
+      <span class="w-[2px] h-[24rem] xl:h-[32rem] bg-[var(--primary-color)]"
+      ></span>
+      <PreguntasYRespuestas client:only="react" t={t} />
+      <a
+        href={`/${lang}/port-experience/`}
+        class="text-[var(--primary-color)] border-2 border-[var(--primary-color)] self-center py-2 px-6 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
+        >{t.homePort.button}</a
+      >
+    </div>
+  </div>
 </faqs>
+<script>
+  function toggleRespuesta(idRespuesta) {
+    const respuestas = document.querySelectorAll(".respuesta");
+    const preguntas = document.querySelectorAll(".pregunta");
+
+    respuestas.forEach((respuesta) => {
+      if (respuesta.id === idRespuesta) {
+        
+        const isHidden = respuesta.classList.contains("hidden");
+        respuestas.forEach(r => r.classList.add("hidden")); // Oculta todas las respuestas
+        preguntas.forEach(p => {
+          p.querySelector(".mas-icon")?.classList.remove("hidden");
+          p.querySelector(".menos-icon")?.classList.add("hidden");
+        });
+
+        if (isHidden) {
+          respuesta.classList.remove("hidden");
+          
+          const preguntaId = "pregunta" + idRespuesta.replace("respuesta", "");
+          const pregunta = document.getElementById(preguntaId);
+          if (pregunta) {
+            pregunta.querySelector(".mas-icon")?.classList.add("hidden");
+            pregunta.querySelector(".menos-icon")?.classList.remove("hidden");
+          }
+        }
+      } else {
+        respuesta.classList.add("hidden"); 
+      }
+    });
+  }
+
+  // Oculta todas las respuestas al inicio
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".respuesta").forEach(r => r.classList.add("hidden"));
+  });
+</script>

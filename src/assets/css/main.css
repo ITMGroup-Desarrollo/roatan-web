@@ -88,3 +88,7 @@ body{
   }
   
 }
+video::-webkit-media-controls {
+  display: none !important;
+  opacity: 0;
+}

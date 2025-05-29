@@ -17,7 +17,8 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
       class="absolute w-full h-full object-cover"
       autoplay
       muted
-      loop
+      loop  
+      preload="auto"
       playsinline></video>
     <div class="absolute w-full h-full bg-gradient-header"></div>
     
@@ -77,12 +78,17 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
   });
 </script>
 <script is:inline>
-  window.addEventListener("load", () => {
-    const video = document.getElementById("headerVideo");
-    if (video) {
+  const video = document.getElementById("headerVideo");
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
+    // Intenta reproducirlo automáticamente
+    window.addEventListener("load", () => {
       video.play().catch(() => {
-        // Safari podría bloquearlo si no se cumple alguna condición
+        // En algunos casos Safari aún requiere interacción
       });
-    }
-  });
+    });
+  }
 </script>

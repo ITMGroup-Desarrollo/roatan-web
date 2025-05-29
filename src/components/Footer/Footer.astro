@@ -22,7 +22,9 @@ import { Image } from "astro:assets";
   muted
   loop
   playsinline
+  preload="auto"
 ></video>
+
 
     <div
       class="absolute z-10 bottom-2 lg:bottom-10 flex flex-col lg:grid lg:grid-cols-4 gap-3 w-screen items-end"
@@ -165,12 +167,17 @@ import { Image } from "astro:assets";
   </div>
 </footer>
 <script is:inline>
-  window.addEventListener("load", () => {
-    const video = document.getElementById("footerVideo");
-    if (video) {
+  const video = document.getElementById("footerVideo");
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
+    // Intenta reproducirlo automáticamente
+    window.addEventListener("load", () => {
       video.play().catch(() => {
-        // Safari podría bloquearlo si no se cumple alguna condición
+        // En algunos casos Safari aún requiere interacción
       });
-    }
-  });
+    });
+  }
 </script>

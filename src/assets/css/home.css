@@ -151,6 +151,9 @@
 .trip-container .swiper-slide {
   display: flex !important;
 }
+.trip-container .swiper-pagination{
+width: 100% !important;
+}
 @media screen and (min-width: 1025px) {
   .trip-container .swiper-slide {
     transition: transform 0.3s ease;

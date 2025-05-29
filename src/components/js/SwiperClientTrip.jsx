@@ -65,41 +65,40 @@ function Slide({ img, name, text }) {
 }
 
 export default function SwiperClient() {
-useEffect(() => {
-  new Swiper(".Trip-swiper", {
-    modules: [Navigation, Pagination, Autoplay],
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1
+  useEffect(() => {
+    new Swiper("#Trip-swiper", {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      769: {
-        slidesPerView: 1,
-        centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-      1025: {
-        slidesPerView: 3,
-        centeredSlides: true,
-      }
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
-}, []);
-
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        769: {
+          slidesPerView: 1,
+          centeredSlides: true,
+        },
+        1025: {
+          slidesPerView: 3,
+          centeredSlides: true,
+        },
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  }, []);
 
   return (
-    <div className="Trip-swiper w-full h-full ">
+    <div id="Trip-swiper" className="swiper w-full h-full justify-center content-center">
       <div className="swiper-wrapper  items-center ">
         {slidesData.map((slide, index) => (
           <Slide
@@ -110,16 +109,11 @@ useEffect(() => {
           />
         ))}
       </div>
-{/* 
+      {/* 
       <div className="block swiper-button-prev custom-nav"></div>
       <div className="block swiper-button-next custom-nav"></div> */}
-
-      <style>
-        {`
-          
-        `}
-      </style>
-      <div className=" swiper-pagination  z-10 mb-4" />
+      <div className="swiper-pagination absolute right-0"></div>
+      {/* <div className=" swiper-pagination relative  left-1/2 -translate-x-1/2 z-10 " /> */}
     </div>
   );
 }

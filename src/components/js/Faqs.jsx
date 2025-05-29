@@ -28,7 +28,7 @@ const PreguntasYRespuestas = ({ t }) => {
   ];
 
   return (
-    <div className="preguntasyrespuestas-container w-screen absolute top-52 lg:top-72 xl:top-60 px-20 grid grid-cols-2">
+    <div className="preguntasyrespuestas-container w-screen absolute top-52 lg:top-80 xl:top-60 px-20 grid grid-cols-2">
       <div className="preguntas-container col-span-1 flex flex-col gap-10 text-center">
         {faqs.map(({ id, pregunta }) => (
           <div
@@ -48,7 +48,9 @@ const PreguntasYRespuestas = ({ t }) => {
               src={menos.src}
               alt="menos"
             />
-            <p className="pregunta-texto pl-6 text-lg md:text-xl text-[var(--primary-color)]">
+            <p className={`pregunta-texto pl-6 text-lg md:text-xl  ${
+              activa === id ? "text-[var(--darkblue-color)]" : "text-[var(--primary-color)]"
+            }`}>
               {pregunta}
             </p>
           </div>

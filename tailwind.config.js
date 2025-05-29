@@ -15,6 +15,7 @@ module.exports = {
       'primary-color': 'var(--primary-color)',
       'secondary-color': 'var(--secondary-color)',
       'redSocial-color': 'var(--redSocial-color)',
+      'darkblue-color': 'var(--darkblue-color)',
     },},
     fontFamily: {
       lindsey: ['"lindsey-signature"', 'sans-serif'],

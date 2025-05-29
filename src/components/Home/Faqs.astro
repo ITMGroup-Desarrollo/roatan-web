@@ -5,13 +5,13 @@ const t = translations[lang] ?? translations["es"];
 import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
 ---
 
-<div class="faqs relative">
+<div class="faqs h-[32rem] md:h-auto relative">
   <div
     class="space-container w-screen md:h-[20rem] bg-[var(--redSocial-color)]"
   >
   </div>
   <div
-    class="faqs-container md:absolute mt-8 md:mt-0 top-0 lg:-top-28 w-screen h-auto md:h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
+    class="faqs-container md:absolute mt-8 md:mt-0 top-0 lg:-top-28 xl:top-0 w-screen h-auto md:h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
   >
     <div class="title-container justify-center items-center flex flex-col z-15">
       <h2
@@ -24,7 +24,7 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
       >
         {t.homeFaqs.subtitle}
       </p>
-      <span class="hidden md:block w-[2px] h-[24rem] xl:h-[32rem] bg-[var(--primary-color)]"
+      <span class="hidden md:block w-[2px] h-[20rem] xl:h-[20rem] bg-[var(--primary-color)]"
       ></span>
       <PreguntasYRespuestas client:only="react" t={t} />
       <a

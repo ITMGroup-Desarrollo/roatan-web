@@ -29,7 +29,7 @@ const PreguntasYRespuestas = ({ t }) => {
   ];
 
   return (
-    <div className="preguntasyrespuestas-container w-screen md:absolute top-52 lg:top-80 xl:top-60 md:px-20 flex flex-col md:grid md:grid-cols-2">
+    <div className="preguntasyrespuestas-container w-screen md:absolute top-60 lg:top-80 xl:top-80 md:px-20 flex flex-col md:grid md:grid-cols-2">
       
       {/* PREGUNTAS (siempre visibles) */}
       <div className="preguntas-container mb-4 md:mb0 md:col-span-1 px-12 md:px-0 flex flex-col gap-5 md:gap-10 text-center">

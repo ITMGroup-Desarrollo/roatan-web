@@ -51,7 +51,7 @@ const PreguntasYRespuestas = ({ t }) => {
               alt="menos"
             />
             <p
-              className={`pregunta-texto pl-6 text-lg md:text-xl  ${
+              className={`pregunta-texto pl-6 text-lg md:text-xl justify-left ${
                 activa === id
                   ? "text-[var(--darkblue-color)]"
                   : "text-[var(--primary-color)]"

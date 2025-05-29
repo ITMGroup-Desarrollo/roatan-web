@@ -119,7 +119,7 @@ useEffect(() => {
           
         `}
       </style>
-      <div className=" swiper-pagination absolute lg:relative bottom-4 left-1/2 -translate-x-1/2 z-10 " />
+      <div className=" swiper-pagination  z-10 mb-4" />
     </div>
   );
 }

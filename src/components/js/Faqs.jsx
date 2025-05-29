@@ -1,9 +1,10 @@
 import { useState } from "react";
 import mas from "../../assets/img/iconos/home/mas.svg";
 import menos from "../../assets/img/iconos/home/menos.svg";
+import "aos/dist/aos.css";
 
 const PreguntasYRespuestas = ({ t }) => {
-  const [activa, setActiva] = useState(null);
+  const [activa, setActiva] = useState(1);
 
   const toggle = (id) => {
     setActiva(activa === id ? null : id);
@@ -28,7 +29,10 @@ const PreguntasYRespuestas = ({ t }) => {
   ];
 
   return (
-    <div className="preguntasyrespuestas-container w-screen absolute top-52 lg:top-80 xl:top-60 px-20 grid grid-cols-2">
+    <div className="preguntasyrespuestas-container w-screen absolute top-52 lg:top-80 xl:top-60 px-20 grid grid-cols-2"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      data-aos-easing="ease-in-out">
       <div className="preguntas-container col-span-1 flex flex-col gap-10 text-center">
         {faqs.map(({ id, pregunta }) => (
           <div
@@ -48,9 +52,13 @@ const PreguntasYRespuestas = ({ t }) => {
               src={menos.src}
               alt="menos"
             />
-            <p className={`pregunta-texto pl-6 text-lg md:text-xl  ${
-              activa === id ? "text-[var(--darkblue-color)]" : "text-[var(--primary-color)]"
-            }`}>
+            <p
+              className={`pregunta-texto pl-6 text-lg md:text-xl  ${
+                activa === id
+                  ? "text-[var(--darkblue-color)]"
+                  : "text-[var(--primary-color)]"
+              }`}
+            >
               {pregunta}
             </p>
           </div>

@@ -136,8 +136,8 @@
 }
 @media screen and (min-width: 1025px) {
   .logo-trip-container {
-    margin-top: 5rem !important;
-    margin-bottom: 1rem !important;
+    margin-top: 4rem !important;
+    margin-bottom: 2rem !important;
   }
 }
 .trip-container .swiper-button-prev.custom-nav {
@@ -157,6 +157,6 @@
   }
 
   .trip-container .swiper-slide-active .slide-content {
-    transform: scale(1.1) translateY(-6rem);
+    transform: scale(1.1) translateY(-4rem);
   }
 }

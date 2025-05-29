@@ -45,6 +45,10 @@ export const translations = {
       button: "Read more",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
+    homeFaqs: {
+      title: "FAQ's",
+      subtitle: "¿Necesitas ayuda?",
+    },
   },
   //endregion
 
@@ -93,6 +97,10 @@ export const translations = {
       subtitle: "lorem ipsum dolor sit amet",
       button: "Read more",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+    },
+    homeFaqs: {
+    title: "FAQ's",
+    subtitle: "need help?",
     },
   },
   //endregion

@@ -30,9 +30,7 @@ const PreguntasYRespuestas = ({ t }) => {
 
   return (
     <div className="preguntasyrespuestas-container w-screen absolute top-52 lg:top-80 xl:top-60 px-20 grid grid-cols-2"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-      data-aos-easing="ease-in-out">
+      >
       <div className="preguntas-container col-span-1 flex flex-col gap-10 text-center">
         {faqs.map(({ id, pregunta }) => (
           <div

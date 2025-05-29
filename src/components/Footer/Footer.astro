@@ -14,14 +14,16 @@ import { Image } from "astro:assets";
 ---
 
 <footer class="relative w-screen h-[35vh] md:h-full lg:h-full bg-[transparent] z-5">
-  <div class="relative bg-transparent h-full">
-    <video
-      src={footerVideo}
-      class="absolute w-full h-auto md:relative bottom-0 z-2"
-      autoplay
-      muted
-      loop
-      playsinline></video>
+  <video
+  id="footerVideo"
+  src={footerVideo}
+  class="absolute w-full h-auto md:relative bottom-0 z-2"
+  autoplay
+  muted
+  loop
+  playsinline
+></video>
+
     <div
       class="absolute z-10 bottom-2 lg:bottom-10 flex flex-col lg:grid lg:grid-cols-4 gap-3 w-screen items-end"
     >
@@ -162,3 +164,13 @@ import { Image } from "astro:assets";
     </div>
   </div>
 </footer>
+<script is:inline>
+  window.addEventListener("load", () => {
+    const video = document.getElementById("footerVideo");
+    if (video) {
+      video.play().catch(() => {
+        // Safari podría bloquearlo si no se cumple alguna condición
+      });
+    }
+  });
+</script>

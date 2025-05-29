@@ -9,26 +9,33 @@ import "../../assets/css/home.css";
 
 export default function SwiperClient() {
   useEffect(() => {
-    new Swiper(".swiper", {
-      modules: [Navigation, Pagination, Autoplay],
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-      delay: 3000, 
-      disableOnInteraction: false, 
+  const swiperInstance = new Swiper("#discover-swiper", {
+    modules: [Navigation, Pagination, Autoplay],
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    });
-  }, []);
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, 
+    },
+  });
+
+  swiperInstance.autoplay.stop();
+
+  setTimeout(() => {
+    swiperInstance.autoplay.start();
+  }, 1500);
+}, []);
 
   return (
-    <div className="swiper w-full h-full relative">
+    <div id="discover-swiper" className="swiper w-full h-full relative">
       <div className="swiper-wrapper h-full w-full">
         <div className="swiper-slide h-full w-full">
           <img

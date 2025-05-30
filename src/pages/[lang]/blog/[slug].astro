@@ -1,0 +1,51 @@
+---
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header/Header.astro";
+import Footer from "../../../components/Footer/Footer.astro";
+import Menu from "../../../components/Header/Menu.astro";
+import type { APIContext } from "astro";
+//@ts-ignore
+const { lang, slug } = Astro.params;
+
+const filePath = path.resolve(`./src/posts/${lang}/${slug}.md`);
+const fileContent = fs.readFileSync(filePath, "utf-8");
+
+const { data, content } = matter(fileContent);
+export async function getStaticPaths(): Promise<APIContext["params"][]> {
+  const fs = await import("fs");
+  const path = await import("path");
+
+  const langs = ["es", "en"];
+  const paths: APIContext["params"][] = [];
+
+  for (const lang of langs) {
+    const dir = path.resolve(`./src/posts/${lang}`);
+    const files = fs.readdirSync(dir);
+
+    for (const filename of files) {
+      const slug = filename.replace(".md", "");
+      
+      paths.push({
+        //@ts-ignore
+        params: { lang, slug },
+      });
+    }
+  }
+
+  return paths;
+}
+---
+
+<Layout lang={lang}>
+  <Menu lang={lang} />
+  <Header lang={lang} />
+  <article>
+    <h1>{data.title}</h1>
+    <p><em>{data.date}</em></p>
+    <div set:html={content} />
+  </article>
+  <Footer lang={lang} />
+</Layout>

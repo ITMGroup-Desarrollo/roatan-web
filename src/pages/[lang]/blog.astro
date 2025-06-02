@@ -45,7 +45,7 @@ export function getStaticPaths() {
         {
           posts.map((post, index) => (
             <li
-              class={`Blog-item  ${index === 0 ? "col-span-2" : ""} bg-white rounded-lg shadow-md`}
+              class={`Blog-item  ${index === 0 ? "md:col-span-2" : ""}  col-span-2 md:col-span-1 bg-white rounded-lg shadow-md`}
             >
               <a
                 href={`/${lang}/blog/${post.slug}`}

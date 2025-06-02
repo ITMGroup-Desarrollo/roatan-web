@@ -57,6 +57,12 @@ export const translations = {
         "Exercitation amet reprehenderit nulla duis nulla adipisicing occaecat pariatur nulla cupidatat cillum nostrud dolor aute.",
       respuesta3: "Proident labore nostrud mollit ipsum fugiat id amet do.",
     },
+    blog: {
+      title: "Blog",
+      subtitle: "Todos los artículos",
+      button: "Read more",
+      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+    },
   },
   //endregion
 
@@ -117,6 +123,12 @@ export const translations = {
       respuesta2:
         "Exercitation amet reprehenderit nulla duis nulla adipisicing occaecat pariatur nulla cupidatat cillum nostrud dolor aute.",
       respuesta3: "Proident labore nostrud mollit ipsum fugiat id amet do.",
+    },
+    blog: {
+      title: "Blog",
+      subtitle: "All Articles",
+      button: "Read more",
+      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
   },
   //endregion

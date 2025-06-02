@@ -6,9 +6,9 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Headers/Menu.astro";
-
+import { translations } from "../../locales.js";
 const lang = Astro.params.lang || "es";
-
+const t = translations[lang] ?? translations["es"];
 // Lee los archivos de posts
 const postsDir = path.resolve(`./src/posts/${lang}`);
 const files = fs.readdirSync(postsDir);
@@ -40,15 +40,22 @@ export function getStaticPaths() {
     class="Blog-container bg-[var(--redSocial-color)] w-screen flex flex-col items-center justify-center"
   >
     <div class="w-3/4">
-      <ul class="grid md:grid-cols-2">
+      <p class="text-4xl text-[var(--darkblue-color)]">{t.blog.subtitle}</p>
+      <ul class="grid grid-cols-1 md:grid-cols-2 ">
         {
           posts.map((post) => (
-            <li class="Blog-item mb-8 p-4 bg-white rounded-lg shadow-md">
-              <a href={`/${lang}/blog/${post.slug}`}>
-                <img src={post.image} alt={post.alt} />
-                <p>{post.title}</p>
-                <p>{post.excerpt}</p>
-                
+            <li class="Blog-item mb-8 first:col-span-2 bg-white rounded-lg shadow-md ">
+              <a
+                href={`/${lang}/blog/${post.slug}`}
+                class="flex flex-col first:flex-row  gap-4 h-full"
+              >
+                <div class="">
+                  <img src={post.image} alt={post.alt} class="w-full h-auto" />
+                </div>
+                <div class="">
+                  <p>{post.title}</p>
+                  <p>{post.excerpt}</p>
+                </div>
               </a>
             </li>
           ))

@@ -1,0 +1,27 @@
+---
+import { translations } from "../../locales.js";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+import { Image } from "astro:assets";
+import fondo from "../../assets/img/maquetado/blog/1.webp";
+---
+
+<header
+  id="headerBlog-container"
+  class="relative bg-image-header h-96 lg:w-screen lg:h-screen"
+>
+  <div class="absolute top-0 w-full h-full z-0">
+    <Image
+      src={fondo}
+      alt="Fondo del header del blog"
+      class="absolute z-0 w-full h-full object-cover"
+      loading="eager"
+      width={1920}
+      height={1080}
+    />
+    <div class="absolute w-full h-full bg-gradient-header z-1"></div>
+  </div>
+  <div class="absolute w-full h-full z-1 flex items-center justify-center">
+    <h1 class="text-white text-9xl font-bebas font-bold uppercase">Blog</h1>
+  </div>
+</header>

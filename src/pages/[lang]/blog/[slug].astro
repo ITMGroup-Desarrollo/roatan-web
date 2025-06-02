@@ -3,10 +3,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Layout from "../../../layouts/Layout.astro";
-import Header from "../../../components/Header/Header.astro";
+import Header from "../../../components/Headers/Header.astro";
 import Footer from "../../../components/Footer/Footer.astro";
-import Menu from "../../../components/Header/Menu.astro";
+import Menu from "../../../components/Headers/Menu.astro";
 import type { APIContext } from "astro";
+
 //@ts-ignore
 const { lang, slug } = Astro.params;
 
@@ -45,6 +46,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   <article>
     <h1>{data.title}</h1>
     <p><em>{data.date}</em></p>
+    <img src={data.image?.url} alt={data.image?.alt} />
     <div set:html={content} />
   </article>
   <Footer lang={lang} />

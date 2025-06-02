@@ -62,7 +62,11 @@ body{
 .bg-gradient-header-404{
     background: rgba(0, 0, 0, 0.3);
 }
-
+#headerBlog-container .bg-gradient-header{
+    background: var(--primary-color);
+    opacity: 0.8;
+    /* background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%); */
+}
 .title_container h1, h2{
   font-size: 4rem;
 }

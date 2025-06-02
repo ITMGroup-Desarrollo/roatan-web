@@ -3,9 +3,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header/Header.astro";
+import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
-import Menu from "../../components/Header/Menu.astro";
+import Menu from "../../components/Headers/Menu.astro";
+
 const lang = Astro.params.lang || "es";
 
 // Lee los archivos de posts
@@ -22,6 +23,8 @@ const posts = files.map((filename) => {
     title: data.title || filename.replace(".md", ""),
     slug: data.slug || filename.replace(".md", ""),
     excerpt: data.excerpt || "",
+    image: data.image?.url || "",
+    alt: data.image?.alt || "",
   };
 });
 export function getStaticPaths() {
@@ -30,19 +33,28 @@ export function getStaticPaths() {
 ---
 
 <Layout lang={lang}>
-<Menu lang={lang} />
-<Header lang={lang} />
-  
-  <h1>{lang === "es" ? "Blog" : "Blog"}</h1>
-  <ul>
-    {posts.map(post => (
-      <li>
-        <a href={`/${lang}/blog/${post.slug}`}>
-          <h2>{post.title}</h2>
-          <p>{post.excerpt}</p>
-        </a>
-      </li>
-    ))}
-  </ul>
+  <Menu lang={lang} />
+  <Header lang={lang} />
+
+  <div
+    class="Blog-container bg-[var(--redSocial-color)] w-screen flex flex-col items-center justify-center"
+  >
+    <div class="w-3/4">
+      <ul class="grid md:grid-cols-2">
+        {
+          posts.map((post) => (
+            <li class="Blog-item mb-8 p-4 bg-white rounded-lg shadow-md">
+              <a href={`/${lang}/blog/${post.slug}`}>
+                <img src={post.image} alt={post.alt} />
+                <p>{post.title}</p>
+                <p>{post.excerpt}</p>
+                
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
   <Footer lang={lang} />
 </Layout>

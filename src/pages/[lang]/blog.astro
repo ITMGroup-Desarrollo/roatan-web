@@ -41,18 +41,20 @@ export function getStaticPaths() {
   >
     <div class="w-3/4">
       <p class="text-4xl text-[var(--darkblue-color)]">{t.blog.subtitle}</p>
-      <ul class="grid grid-cols-1 md:grid-cols-2 ">
+      <ul class="grid grid-cols-1 md:grid-cols-2  gap-8 mb-8">
         {
-          posts.map((post) => (
-            <li class="Blog-item mb-8 first:col-span-2 bg-white rounded-lg shadow-md ">
+          posts.map((post, index) => (
+            <li
+              class={`Blog-item  ${index === 0 ? "col-span-2" : ""} bg-white rounded-lg shadow-md`}
+            >
               <a
                 href={`/${lang}/blog/${post.slug}`}
-                class="flex flex-col first:flex-row  gap-4 h-full"
+                class={`flex flex-col ${index === 0 ? "md:flex-row" : ""}  h-full`}
               >
-                <div class="">
+                <div class={`${index === 0 ? "basis-1/2" : ""}`}>
                   <img src={post.image} alt={post.alt} class="w-full h-auto" />
                 </div>
-                <div class="">
+                <div class={`${index === 0 ? "basis-1/2" : ""}`}>
                   <p>{post.title}</p>
                   <p>{post.excerpt}</p>
                 </div>

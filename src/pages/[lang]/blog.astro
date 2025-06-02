@@ -21,6 +21,7 @@ const posts = files.map((filename) => {
   return {
     ...data,
     title: data.title || filename.replace(".md", ""),
+    subtitle: data.subtitle || filename.replace(".md", ""),
     slug: data.slug || filename.replace(".md", ""),
     excerpt: data.excerpt || "",
     image: data.image?.url || "",
@@ -39,24 +40,25 @@ export function getStaticPaths() {
   <div
     class="Blog-container bg-[var(--redSocial-color)] w-screen flex flex-col items-center justify-center"
   >
-    <div class="w-3/4">
+    <div class="w-full p-8 md:w-3/4 md:-0">
       <p class="text-xl md:text-4xl text-[var(--darkblue-color)]">{t.blog.subtitle}</p>
       <ul class="grid grid-cols-1 md:grid-cols-2  gap-8 mb-8">
         {
           posts.map((post, index) => (
             <li
-              class={`Blog-item  ${index === 0 ? "md:col-span-2" : ""}  col-span-2 md:col-span-1 bg-white rounded-lg shadow-md`}
+              class={`Blog-item  ${index === 0 ? "md:col-span-2" : ""}  col-span-2 md:col-span-1 bg-white shadow-md`}
             >
               <a
                 href={`/${lang}/blog/${post.slug}`}
                 class={`flex flex-col ${index === 0 ? "md:flex-row" : ""}  h-full`}
               >
-                <div class={`${index === 0 ? "basis-1/2" : ""}`}>
-                  <img src={post.image} alt={post.alt} class="w-full h-auto" />
+                <div class={`${index === 0 ? "basis-1/2 pr-4" : ""}`}>
+                  <img src={post.image} alt={post.alt} class="w-full h-full object-cover" />
                 </div>
-                <div class={`${index === 0 ? "basis-1/2" : ""}`}>
-                  <p>{post.title}</p>
-                  <p>{post.excerpt}</p>
+                <div class={`${index === 0 ? "basis-1/2" : ""} p-8 flex flex-col gap-4`}>
+                  <p class="text-justify font-latoBold text-xl md:text-4xl uppercase">{post.title}</p>
+                  <p class="text-justify font-latoBold text-lg md:text-2xl uppercase">{post.subtitle}</p>
+                  <p class="text-justify" set:html={post.excerpt}/>
                 </div>
               </a>
             </li>

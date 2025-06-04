@@ -35,6 +35,7 @@ const posts = files.map((filename) => {
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
+
 ---
 
 <Layout lang={lang}>
@@ -44,11 +45,11 @@ export function getStaticPaths() {
   <div
     class="Blog-container bg-[var(--redSocial-color)] w-screen flex flex-col items-center justify-center"
   >
-    <div class="articles-container w-full p-8 md:w-4/5 md:-0 ">
+    <div class="articles-container w-full p-8 md:w-4/5 md:-0">
       <div class="flex md:flex-row flex-col md:justify-between mb-8">
-        <p class="text-xl md:text-4xl text-[var(--darkblue-color)] ">
-        {t.blog.subtitle}
-      </p>
+        <p class="text-xl md:text-4xl text-[var(--darkblue-color)]">
+          {t.blog.subtitle}
+        </p>
       </div>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {
@@ -77,18 +78,46 @@ export function getStaticPaths() {
                     {post.date}
                   </p>
                   <p class="text-justify pb-8" set:html={post.excerpt} />
-                  
                 </div>
               </a>
               <div class="share-container absolute bottom-4 right-5 z-20 flex flex-row-reverse">
-                   
-                    <img src="/img/iconos/share.svg" alt="share" class="w-6 " />
-                    <div class="share-items flex flex-row ">
-                      <a href={`https://api.whatsapp.com/send?text=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}><img src="/img/iconos/shareWP.svg" alt="WP icon" class="w-8 mr-4"></a>
-                      <a href={`https://twitter.com/intent/tweet?url=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}><img src="/img/iconos/shareX.svg" alt="X icon" class="w-8 mr-4"></a>
-                      <a href={`https://www.facebook.com/sharer/sharer.php?u=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}><img src="/img/iconos/shareFB.svg" alt="FB icon" class="w-8 mr-4"></a>
-                    </div>
-                  </div> 
+                <button onclick={`toggleShare('${post.slug}') `} class="h-[32px] ">
+                  <img src="/img/iconos/share.svg" alt="share" class="w-6 self-center" />
+                </button>
+
+                <div
+                  id={`share-items-${post.slug}`}
+                  class="share-items hidden flex-row "
+                >
+                  <a
+                    href={`https://api.whatsapp.com/send?text=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
+                  >
+                    <img
+                      src="/img/iconos/shareWP.svg"
+                      alt="WP icon"
+                      class="w-8 mr-4"
+                    />
+                  </a>
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
+                  >
+                    <img
+                      src="/img/iconos/shareX.svg"
+                      alt="X icon"
+                      class="w-8 mr-4"
+                    />
+                  </a>
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
+                  >
+                    <img
+                      src="/img/iconos/shareFB.svg"
+                      alt="FB icon"
+                      class="w-8 mr-4"
+                    />
+                  </a>
+                </div>
+              </div>
             </li>
           ))
         }
@@ -96,4 +125,20 @@ export function getStaticPaths() {
     </div>
   </div>
   <Footer lang={lang} />
+  <script is:inline>
+  function toggleShare(slug) {
+    const shareItems = document.getElementById(`share-items-${slug}`);
+    if (!shareItems) return;
+
+    if (shareItems.classList.contains("hidden")) {
+      shareItems.classList.remove("hidden");
+      shareItems.classList.add("flex");
+    } else {
+      shareItems.classList.remove("flex");
+      shareItems.classList.add("hidden");
+    }
+  }
+</script>
+
+
 </Layout>

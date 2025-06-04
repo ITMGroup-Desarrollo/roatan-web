@@ -60,11 +60,11 @@ export function getStaticPaths() {
                 href={`/${lang}/blog/${post.slug}`}
                 class={`flex flex-col ${index === 0 ? "md:flex-row " : ""}  h-full `}
               >
-                <div class={`${index === 0 ? "basis-1/2 pr-4 " : ""} `}>
+                <div class={`${index === 0 ? "basis-1/2 mdpr-4 " : ""} `}>
                   <img
                     src={post.image}
                     alt={post.alt}
-                    class={`w-full h-full object-cover ${index === 0 ? "rounded-s-xl " : "rounded-t-xl"} `}
+                    class={`w-full h-full object-cover rounded-t-xl ${index === 0 ? "md:rounded-t-none md:rounded-tl-xl md:rounded-bl-xl  " : ""} `}
                   />
                 </div>
                 <div

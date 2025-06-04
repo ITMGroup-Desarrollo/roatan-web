@@ -2,3 +2,26 @@
   color: #006ab7 ;
     opacity: 1;
 }
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.share-link {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.share-link.pop {
+  animation: pop 0.3s ease forwards;
+}

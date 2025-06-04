@@ -35,7 +35,6 @@ const posts = files.map((filename) => {
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
-
 ---
 
 <Layout lang={lang}>
@@ -81,8 +80,15 @@ export function getStaticPaths() {
                 </div>
               </a>
               <div class="share-container absolute bottom-4 right-5 z-20 flex flex-row-reverse">
-                <button onclick={`toggleShare('${post.slug}') `} class="h-[32px] ">
-                  <img src="/img/iconos/share.svg" alt="share" class="w-6 self-center" />
+                <button
+                  onclick={`toggleShare('${post.slug}') `}
+                  class="h-[32px] "
+                >
+                  <img
+                    src="/img/iconos/share.svg"
+                    alt="share"
+                    class="w-6 self-center"
+                  />
                 </button>
 
                 <div
@@ -91,6 +97,7 @@ export function getStaticPaths() {
                 >
                   <a
                     href={`https://api.whatsapp.com/send?text=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
+                    class="share-link"
                   >
                     <img
                       src="/img/iconos/shareWP.svg"
@@ -100,6 +107,7 @@ export function getStaticPaths() {
                   </a>
                   <a
                     href={`https://twitter.com/intent/tweet?url=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
+                    class="share-link"
                   >
                     <img
                       src="/img/iconos/shareX.svg"
@@ -109,6 +117,7 @@ export function getStaticPaths() {
                   </a>
                   <a
                     href={`https://www.facebook.com/sharer/sharer.php?u=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
+                    class="share-link"
                   >
                     <img
                       src="/img/iconos/shareFB.svg"
@@ -126,19 +135,32 @@ export function getStaticPaths() {
   </div>
   <Footer lang={lang} />
   <script is:inline>
-  function toggleShare(slug) {
-    const shareItems = document.getElementById(`share-items-${slug}`);
-    if (!shareItems) return;
+    function toggleShare(slug) {
+      const container = document.getElementById(`share-items-${slug}`);
+      if (!container) return;
 
-    if (shareItems.classList.contains("hidden")) {
-      shareItems.classList.remove("hidden");
-      shareItems.classList.add("flex");
-    } else {
-      shareItems.classList.remove("flex");
-      shareItems.classList.add("hidden");
+      if (container.classList.contains("hidden")) {
+        container.classList.remove("hidden");
+        container.classList.add("flex");
+
+        const links = container.querySelectorAll(".share-link");
+        links.forEach((link, i) => {
+          link.classList.remove("pop"); // Reset animation if toggled multiple times
+          link.style.animationDelay = `${i * 100}ms`;
+          void link.offsetWidth; // trigger reflow
+          link.classList.add("pop");
+        });
+      } else {
+        container.classList.remove("flex");
+        container.classList.add("hidden");
+
+        // Reset states (optional)
+        const links = container.querySelectorAll(".share-link");
+        links.forEach((link) => {
+          link.classList.remove("pop");
+          link.style.animationDelay = "";
+        });
+      }
     }
-  }
-</script>
-
-
+  </script>
 </Layout>

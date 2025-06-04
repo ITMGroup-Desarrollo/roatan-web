@@ -135,32 +135,34 @@ export function getStaticPaths() {
   </div>
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
   <script is:inline>
-    function toggleShare(slug) {
-      const container = document.getElementById(`share-items-${slug}`);
-      if (!container) return;
+  function toggleShare(slug) {
+    const container = document.getElementById(`share-items-${slug}`);
+    if (!container) return;
 
-      if (container.classList.contains("hidden")) {
-        container.classList.remove("hidden");
-        container.classList.add("flex");
+    const links = container.querySelectorAll(".share-link");
 
-        const links = container.querySelectorAll(".share-link");
-        links.forEach((link, i) => {
-          link.classList.remove("pop"); // Reset animation if toggled multiple times
-          link.style.animationDelay = `${i * 100}ms`;
-          void link.offsetWidth; // trigger reflow
-          link.classList.add("pop");
-        });
-      } else {
-        container.classList.remove("flex");
-        container.classList.add("hidden");
+    if (container.classList.contains("hidden")) {
+      container.classList.remove("hidden");
+      container.classList.add("flex");
 
-        // Reset states (optional)
-        const links = container.querySelectorAll(".share-link");
-        links.forEach((link) => {
-          link.classList.remove("pop");
-          link.style.animationDelay = "";
-        });
+      for (let i = links.length - 1, delay = 0; i >= 0; i--, delay++) {
+        const link = links[i];
+        link.classList.remove("pop");
+        link.style.animationDelay = `${delay * 100}ms`;
+        void link.offsetWidth;
+        link.classList.add("pop");
       }
+
+    } else {
+      container.classList.remove("flex");
+      container.classList.add("hidden");
+
+      links.forEach((link) => {
+        link.classList.remove("pop");
+        link.style.animationDelay = "";
+      });
     }
-  </script>
+  }
+</script>
+
 </Layout>

@@ -1,8 +1,8 @@
 ---
-title: "Título del post 4"
+title: "Lorem ipsun dolor"
 slug: "post-4"
 date: "2024-05-01"
-excerpt: "Este es un resumen del post 4 en ingles."
+excerpt: "Ullamco minim excepteur aute culpa ipsum adipisicing ex. Cupidatat incididunt eu laborum ut. Lorem excepteur enim <br><br> excepteur dolore eiusmod sint duis nostrud amet officia Lorem deserunt quis. Non reprehenderit ad nisi nisi ut adipisicing deserunt."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 image:

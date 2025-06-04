@@ -26,6 +26,7 @@ const posts = files.map((filename) => {
     subtitle: data.subtitle || filename.replace(".md", ""),
     date: data.date || filename.replace(".md", ""),
     slug: data.slug || filename.replace(".md", ""),
+    class: data.class || filename.replace(".md", ""),
     excerpt: data.excerpt || "",
     image: data.image?.url || "",
     alt: data.image?.alt || "",
@@ -48,45 +49,31 @@ export function getStaticPaths() {
         <p class="text-xl md:text-4xl text-[var(--darkblue-color)] ">
         {t.blog.subtitle}
       </p>
-      <div class="relative search_container max-w-fit md:mt-4">
-        <input
-          class="search_input font text-xs italic uppercase rounded-full border-2 border-[var(--primary-color)] w-auto py-1 px-2"
-          placeholder={t.blog.search_placeholder}
-        />
-        <Image
-          class="absolute right-4 top-1.5"
-          src="/img/iconos/lupa-azul.svg"
-          alt="lupa"
-          width="15"
-          height="15"
-          loading="eager"
-        />
-      </div>
       </div>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {
           posts.map((post, index) => (
             <li
-              class={`Blog-item  ${index === 0 ? "md:col-span-2" : ""}  col-span-2 md:col-span-1 bg-white shadow-md`}
+              class={`Blog-item  ${index === 0 ? "md:col-span-2 " : ""}  col-span-2 md:col-span-1 bg-white shadow-md rounded-xl `}
             >
               <a
                 href={`/${lang}/blog/${post.slug}`}
-                class={`flex flex-col ${index === 0 ? "md:flex-row" : ""}  h-full`}
+                class={`flex flex-col ${index === 0 ? "md:flex-row " : ""}  h-full `}
               >
-                <div class={`${index === 0 ? "basis-1/2 pr-4" : ""}`}>
+                <div class={`${index === 0 ? "basis-1/2 pr-4 " : ""} `}>
                   <img
                     src={post.image}
                     alt={post.alt}
-                    class="w-full h-full object-cover"
+                    class={`w-full h-full object-cover ${index === 0 ? "rounded-s-xl " : "rounded-t-xl"} `}
                   />
                 </div>
                 <div
-                  class={`${index === 0 ? "basis-1/2" : ""} p-8 flex flex-col gap-4`}
+                  class={`${index === 0 ? "basis-1/2" : ""} p-5 flex flex-col gap-4`}
                 >
-                  <p class="text-left font-latoBold text-xl md:text-4xl uppercase">
+                  <p class="text-left font-latoBold text-[var(--primary-color)] text-xl md:text-4xl uppercase">
                     {post.title}
                   </p>
-                  <p class="text-justify font-latoBold text-lg md:text-2xl uppercase">
+                  <p class="text-justify font-latoBold text-[var(--secondary-color)] text-lg md:text-2xl uppercase">
                     {post.date}
                   </p>
                   <p class="text-justify" set:html={post.excerpt} />

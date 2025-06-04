@@ -54,11 +54,11 @@ export function getStaticPaths() {
         {
           posts.map((post, index) => (
             <li
-              class={`Blog-item  ${index === 0 ? "md:col-span-2 " : ""}  col-span-2 md:col-span-1 bg-white shadow-md rounded-xl `}
+              class={`Blog-item relative ${index === 0 ? "md:col-span-2 " : ""}  col-span-2 md:col-span-1 bg-white shadow-md rounded-xl `}
             >
               <a
                 href={`/${lang}/blog/${post.slug}`}
-                class={`flex flex-col relative ${index === 0 ? "md:flex-row " : ""}  h-full `}
+                class={`flex flex-col z-10  ${index === 0 ? "md:flex-row " : ""}  h-full `}
               >
                 <div class={`${index === 0 ? "basis-1/2 md:pr-4 " : ""} `}>
                   <img
@@ -76,12 +76,19 @@ export function getStaticPaths() {
                   <p class="text-justify font-latoBold text-[var(--secondary-color)] text-lg md:text-2xl uppercase">
                     {post.date}
                   </p>
-                  <p class="text-justify pb-6" set:html={post.excerpt} />
-                  <div class="share-container absolute bottom-0 right-0 p-4">
-                    <img src="/img/iconos/share.svg" alt="share" class="w-6 " />
-                  </div>
+                  <p class="text-justify pb-8" set:html={post.excerpt} />
+                  
                 </div>
               </a>
+              <div class="share-container absolute bottom-4 right-5 z-20 flex flex-row-reverse">
+                   
+                    <img src="/img/iconos/share.svg" alt="share" class="w-6 " />
+                    <div class="share-items flex flex-row ">
+                      <a href={`https://api.whatsapp.com/send?text=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}><img src="/img/iconos/shareWP.svg" alt="WP icon" class="w-8 mr-4"></a>
+                      <a href={`https://twitter.com/intent/tweet?url=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}><img src="/img/iconos/shareX.svg" alt="X icon" class="w-8 mr-4"></a>
+                      <a href={`https://www.facebook.com/sharer/sharer.php?u=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}><img src="/img/iconos/shareFB.svg" alt="FB icon" class="w-8 mr-4"></a>
+                    </div>
+                  </div> 
             </li>
           ))
         }

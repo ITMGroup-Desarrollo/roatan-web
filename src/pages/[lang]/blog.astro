@@ -42,11 +42,11 @@ export function getStaticPaths() {
   <Header lang={lang} />
 
   <div
-    class="Blog-container bg-[var(--redSocial-color)] w-screen flex flex-col items-center justify-center"
+    class="Blog-container bg-white w-screen flex flex-col items-center justify-center"
   >
-    <div class="articles-container w-full p-8 md:w-4/5 md:-0">
+    <div class="articles-container w-full px-8 md:w-4/5 md:-0">
       <div class="flex md:flex-row flex-col md:justify-between mb-8">
-        <p class="text-xl md:text-4xl text-[var(--darkblue-color)]">
+        <p class="text-xl md:text-4xl text-[var(--darkblue-color)] mt-8">
           {t.blog.subtitle}
         </p>
       </div>
@@ -54,31 +54,31 @@ export function getStaticPaths() {
         {
           posts.map((post, index) => (
             <li
-              class={`Blog-item relative ${index === 0 ? "md:col-span-2 " : ""}  col-span-2 md:col-span-1 bg-white shadow-md rounded-xl `}
+              class={`Blog-item relative ${index === 0 ? "md:col-span-2 " : ""}  col-span-2 md:col-span-1 bg-[var(--redSocial-color)] shadow-md rounded-xl `}
             >
-              <a
-                href={`/${lang}/blog/${post.slug}`}
+              <div
+                
                 class={`flex flex-col z-10  ${index === 0 ? "md:flex-row " : ""}  h-full `}
               >
-                <div class={`${index === 0 ? "basis-1/2 md:pr-4 " : ""} `}>
+                <a href={`/${lang}/blog/${post.slug}`} class={`${index === 0 ? "basis-1/2 md:pr-4 " : ""} `}>
                   <img
                     src={post.image}
                     alt={post.alt}
                     class={`w-full h-full object-cover rounded-t-xl ${index === 0 ? "md:rounded-t-none md:rounded-tl-xl md:rounded-bl-xl  " : ""} `}
                   />
-                </div>
+                </a>
                 <div
-                  class={`${index === 0 ? "basis-1/2" : ""} p-5 flex flex-col gap-4`}
+                  class={`${index === 0 ? "basis-1/2" : ""} p-5 flex flex-col `}
                 >
-                  <p class="text-left font-latoBold text-[var(--primary-color)] text-xl md:text-4xl uppercase">
-                    {post.title}
-                  </p>
-                  <p class="text-justify font-latoBold text-[var(--secondary-color)] text-lg md:text-2xl uppercase">
+                  <p class="text-justify font-latoBold text-black text-base md:text-xl uppercase">
                     {post.date}
+                  </p>
+                  <p class="text-left font-latoBold text-[var(--primary-color)] text-xl md:text-4xl mb-4 uppercase">
+                    {post.title}
                   </p>
                   <p class="text-justify pb-8" set:html={post.excerpt} />
                 </div>
-              </a>
+              </div>
               <div class="share-container absolute bottom-4 right-5 z-20 flex flex-row-reverse">
                 <button
                   onclick={`toggleShare('${post.slug}') `}
@@ -133,7 +133,7 @@ export function getStaticPaths() {
       </ul>
     </div>
   </div>
-  <Footer lang={lang} />
+  <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
   <script is:inline>
     function toggleShare(slug) {
       const container = document.getElementById(`share-items-${slug}`);

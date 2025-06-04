@@ -49,5 +49,5 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
     <img src={data.image?.url} alt={data.image?.alt} />
     <div set:html={content} />
   </article>
-  <Footer lang={lang} />
+  <Footer lang={lang} videoFile="fondo-footer-blanco.mp4"//>
 </Layout>

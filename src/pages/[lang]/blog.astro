@@ -58,9 +58,9 @@ export function getStaticPaths() {
             >
               <a
                 href={`/${lang}/blog/${post.slug}`}
-                class={`flex flex-col ${index === 0 ? "md:flex-row " : ""}  h-full `}
+                class={`flex flex-col relative ${index === 0 ? "md:flex-row " : ""}  h-full `}
               >
-                <div class={`${index === 0 ? "basis-1/2 mdpr-4 " : ""} `}>
+                <div class={`${index === 0 ? "basis-1/2 md:pr-4 " : ""} `}>
                   <img
                     src={post.image}
                     alt={post.alt}
@@ -76,7 +76,10 @@ export function getStaticPaths() {
                   <p class="text-justify font-latoBold text-[var(--secondary-color)] text-lg md:text-2xl uppercase">
                     {post.date}
                   </p>
-                  <p class="text-justify" set:html={post.excerpt} />
+                  <p class="text-justify pb-6" set:html={post.excerpt} />
+                  <div class="share-container absolute bottom-0 right-0 p-4">
+                    <img src="/img/iconos/share.svg" alt="share" class="w-6 " />
+                  </div>
                 </div>
               </a>
             </li>

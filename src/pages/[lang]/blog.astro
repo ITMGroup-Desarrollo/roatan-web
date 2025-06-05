@@ -6,6 +6,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Headers/Menu.astro";
+import BlogSwiper from "../../components/js/BlogSwiper.jsx";
 import "../../assets/css/blog.css";
 import { Image } from "astro:assets";
 import { translations } from "../../locales.js";
@@ -50,119 +51,37 @@ export function getStaticPaths() {
           {t.blog.subtitle}
         </p>
       </div>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        {
-          posts.map((post, index) => (
-            <li
-              class={`Blog-item relative ${index === 0 ? "md:col-span-2 " : ""}  col-span-2 md:col-span-1 bg-[var(--redSocial-color)] shadow-md rounded-xl `}
-            >
-              <div
-                
-                class={`flex flex-col z-10  ${index === 0 ? "md:flex-row " : ""}  h-full `}
-              >
-                <a href={`/${lang}/blog/${post.slug}`} class={`${index === 0 ? "basis-1/2 md:pr-4 " : ""} `}>
-                  <img
-                    src={post.image}
-                    alt={post.alt}
-                    class={`w-full h-full object-cover rounded-t-xl ${index === 0 ? "md:rounded-t-none md:rounded-tl-xl md:rounded-bl-xl  " : ""} `}
-                  />
-                </a>
-                <div
-                  class={`${index === 0 ? "basis-1/2" : ""} p-5 flex flex-col `}
-                >
-                  <p class="text-justify font-latoBold text-[var(--darkblue-color)] text-base md:text-xl uppercase">
-                    {post.date}
-                  </p>
-                  <p class="text-left font-latoBold text-[var(--primary-color)] text-xl md:text-4xl mb-4 uppercase">
-                    {post.title}
-                  </p>
-                  <p class="text-justify pb-8" set:html={post.excerpt} />
-                </div>
-              </div>
-              <div class="share-container absolute bottom-4 right-5 z-20 flex flex-row-reverse">
-                <button
-                  onclick={`toggleShare('${post.slug}') `}
-                  class="h-[32px] "
-                >
-                  <img
-                    src="/img/iconos/share.svg"
-                    alt="share"
-                    class="w-6 self-center"
-                  />
-                </button>
-
-                <div
-                  id={`share-items-${post.slug}`}
-                  class="share-items hidden flex-row "
-                >
-                  <a
-                    href={`https://api.whatsapp.com/send?text=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
-                    class="share-link"
-                  >
-                    <img
-                      src="/img/iconos/shareWP.svg"
-                      alt="WP icon"
-                      class="w-8 mr-4"
-                    />
-                  </a>
-                  <a
-                    href={`https://twitter.com/intent/tweet?url=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
-                    class="share-link"
-                  >
-                    <img
-                      src="/img/iconos/shareX.svg"
-                      alt="X icon"
-                      class="w-8 mr-4"
-                    />
-                  </a>
-                  <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=https://roatan-web.netlify.app/${lang}/blog/${post.slug}`}
-                    class="share-link"
-                  >
-                    <img
-                      src="/img/iconos/shareFB.svg"
-                      alt="FB icon"
-                      class="w-8 mr-4"
-                    />
-                  </a>
-                </div>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
+      <BlogSwiper posts={posts} lang={lang} client:load />
     </div>
   </div>
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
   <script is:inline>
-  function toggleShare(slug) {
-    const container = document.getElementById(`share-items-${slug}`);
-    if (!container) return;
+    function toggleShare(slug) {
+      const container = document.getElementById(`share-items-${slug}`);
+      if (!container) return;
 
-    const links = container.querySelectorAll(".share-link");
+      const links = container.querySelectorAll(".share-link");
 
-    if (container.classList.contains("hidden")) {
-      container.classList.remove("hidden");
-      container.classList.add("flex");
+      if (container.classList.contains("hidden")) {
+        container.classList.remove("hidden");
+        container.classList.add("flex");
 
-      for (let i = links.length - 1, delay = 0; i >= 0; i--, delay++) {
-        const link = links[i];
-        link.classList.remove("pop");
-        link.style.animationDelay = `${delay * 100}ms`;
-        void link.offsetWidth;
-        link.classList.add("pop");
+        for (let i = links.length - 1, delay = 0; i >= 0; i--, delay++) {
+          const link = links[i];
+          link.classList.remove("pop");
+          link.style.animationDelay = `${delay * 100}ms`;
+          void link.offsetWidth;
+          link.classList.add("pop");
+        }
+      } else {
+        container.classList.remove("flex");
+        container.classList.add("hidden");
+
+        links.forEach((link) => {
+          link.classList.remove("pop");
+          link.style.animationDelay = "";
+        });
       }
-
-    } else {
-      container.classList.remove("flex");
-      container.classList.add("hidden");
-
-      links.forEach((link) => {
-        link.classList.remove("pop");
-        link.style.animationDelay = "";
-      });
     }
-  }
-</script>
-
+  </script>
 </Layout>

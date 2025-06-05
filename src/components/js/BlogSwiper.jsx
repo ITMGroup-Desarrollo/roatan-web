@@ -139,7 +139,7 @@ const BlogSwiper = ({ posts, lang }) => {
         {currentPage > 1 && (
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
-            className="px-3 py-1 rounded text-[var(--darkblue-color)] hover:underline hover:underline-offset-2"
+            className="px-3 py-1 text-2xl font-latoBold rounded text-[var(--primary-color)] hover:underline hover:underline-offset-2 hover:decoration-2"
           >
             &lt;
           </button>
@@ -150,10 +150,10 @@ const BlogSwiper = ({ posts, lang }) => {
           <button
             key={i}
             onClick={() => setCurrentPage(i + 1)}
-            className={`px-3 py-1 rounded hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 ${
+            className={`px-3 py-1 text-xl font-latoBold rounded hover:underline hover:underline-offset-2 hover:decoration-2 focus:underline focus:underline-offset-2 focus:decoration-2 ${
               currentPage === i + 1
-                ? " text-[var(--darkblue-color)] "
-                : " text-[var(--darkblue-color)] "
+                ? " text-[var(--primary-color)] "
+                : " text-[var(--primary-color)] "
             }`}
           >
             {i + 1}
@@ -164,7 +164,7 @@ const BlogSwiper = ({ posts, lang }) => {
         {currentPage < totalPages && (
           <button
             onClick={() => setCurrentPage(currentPage + 1)}
-            className="px-3 py-1 rounded text-[var(--darkblue-color)] hover:underline hover:underline-offset-2"
+            className="px-3 py-1 text-2xl font-latoBold rounded text-[var(--primary-color)] hover:underline hover:underline-offset-2 hover:decoration-2"
           >
             &gt;
           </button>

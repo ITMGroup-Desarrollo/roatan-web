@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import Layout from "../../../layouts/Layout.astro";
 import Footer from "../../../components/Footer/Footer.astro";
 import Menu from "../../../components/Headers/MenuBlog.astro";
+import "../../../assets/css/blog.css";
 import type { APIContext } from "astro";
 
 //@ts-ignore
@@ -12,8 +13,11 @@ const { lang, slug } = Astro.params;
 
 const filePath = path.resolve(`./src/posts/${lang}/${slug}.md`);
 const fileContent = fs.readFileSync(filePath, "utf-8");
-
 const { data, content } = matter(fileContent);
+
+// 👇 Esto debe ir AQUÍ
+const contentBlocks = content.split("<!--split-->");
+
 export async function getStaticPaths(): Promise<APIContext["params"][]> {
   const fs = await import("fs");
   const path = await import("path");
@@ -37,6 +41,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
 
   return paths;
 }
+
 ---
 
 <Layout lang={lang}>
@@ -44,10 +49,48 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   <article
     class="Article-container bg-white w-screen flex flex-col items-center justify-center"
   >
-    <div class=" w-full px-8 md:w-4/5 md:-0">
-      <h2 class="text text-[var(--primary-color)]">{data.title}</h2>
-      <img src={data.image?.url} alt={data.image?.alt} />
-      <div set:html={content} />
+    <div class="w-full px-8 md:w-3/4 md:-0">
+      <h2
+        class="text-4xl md:text-7xl text-center pt-8 text-[var(--primary-color)]"
+      >
+        {data.title}
+      </h2>
+      <div class="first-text-container text-justify pt-8">
+        <div set:html={contentBlocks[0]} />
+      </div>
+      <div class="gallery-container grid gap-4 pt-8">
+        {
+          data.gridgallery &&
+            Array.isArray(data.gridgallery) &&
+            data.gridgallery.map((img, index) => (
+              <div class="rounded-xl" style={`grid-area:image-${index + 1}`}>
+                <img
+                  class="rounded-xl object-cover object-center h-full"
+                  src={img.url}
+                  alt={img.alt ?? `Imagen${index + 1}`}
+                />
+              </div>
+            ))
+        }
+      </div>
+      <div class="second-text-container text-justify pt-8">
+        <div set:html={contentBlocks[1]} />
+      </div>
+      <div class="second-gallery-container flex flex-col gap-4 pt-8">
+        {
+          data.gallery &&
+            Array.isArray(data.gallery) &&
+            data.gallery.map((img, index) => (
+              <div class="rounded-xl" style={`grid-area:image-${index + 1}`}>
+                <img
+                  class="rounded-xl object-cover object-center w-full "
+                  src={img.url}
+                  alt={img.alt ?? `Imagen${index + 1}`}
+                />
+              </div>
+            ))
+        }
+      </div>
     </div>
   </article>
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />

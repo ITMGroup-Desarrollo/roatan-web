@@ -25,3 +25,11 @@
 .share-link.pop {
   animation: pop 0.3s ease forwards;
 }
+.gallery-container{
+  grid-template-areas:
+  "image-1 image-2"
+  "image-1 image-3";
+}
+.gallery-container .gallery-item {
+  grid-area: a;
+}

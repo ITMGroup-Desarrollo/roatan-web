@@ -1,0 +1,201 @@
+---
+import { translations } from "../../locales.js";
+import "../../assets/css/main.css";
+import "../../assets/css/menu.css";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+import { Image } from "astro:assets";
+import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
+const menuItems = Object.entries(t.menu).map(([key, label]) => ({
+  path: key,
+  label,
+}));
+---
+
+<div
+  id="menu_desktop"
+  class="w-screen hidden lg:flex lg:sticky flex-row-reverse top-0 justify-between p-6 bg-[var(--primary-color)] items-center z-30 transition-colors duration-300 ease-in-out"
+>
+  <Image
+    id="logo_menu"
+    class="absolute hidden lg:left-24 xl:left-48 lg:top-2 lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
+    src={roatanLogo}
+    alt="logo"
+    loading="eager"
+  />
+  <nav class="text-white flex items-center mx-6">
+    {
+      menuItems.map((item) => (
+        <a
+          class="menu_element uppercase font-bebas underline-grow text-2xl xl:text-4xl "
+          href={`/${lang}/${item.path}/`}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+    <div class="pb-1 relative search_container">
+      <input
+        class="search_input font text-xs italic uppercase mx-3 rounded-full border-2 border-white w-auto py-1 px-2"
+        placeholder="What to find?"
+      />
+      <Image
+        class="absolute right-6 top-1.5"
+        src="/img/iconos/lupa.svg"
+        alt="lupa"
+        width="15"
+        height="15"
+        loading="eager"
+      />
+    </div>
+    <div
+      class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1"
+    >
+      <a href="https://www.facebook.com/PortRoatan" target="_blank"
+        ><div class="icon-mask icon-mask-face"></div></a
+      >
+      <a href="https://www.instagram.com/portroatan" target="_blank"
+        ><div class="icon-mask icon-mask-ig"></div></a
+      >
+
+      <a
+        href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
+        target="_blank"><div class="icon-mask icon-mask-trip"></div></a
+      >
+    </div>
+    <a
+      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl ml-3"
+      href="/es/home">ES</a
+    >
+    <span class="text-2xl pb-2">|</span>
+    <a
+      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
+      href="/en/home">ENG</a
+    >
+  </nav>
+</div>
+<div id="burger_menu" class="relative flex flex-row-reverse w-screen lg:hidden z-40 mb-8">
+  <label class="burger z-40 top-9 right-5" for="burger">
+    <input type="checkbox" id="burger" />
+    <span class="burger-line bg-[var(--primary-color)]"></span>
+    <span class="burger-line bg-[var(--primary-color)]"></span>
+    <span class="burger-line bg-[var(--primary-color)]"></span>
+  </label>
+</div>
+<div
+  id="menu_movil"
+  class="absolute top-0 hidden lg:hidden justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
+>
+  <nav class="text-white flex flex-col items-center justify-center gap-5">
+    {
+      menuItems.map((item) => (
+        <a
+          class=" uppercase font-bebas text-4xl z-30"
+          href={`/${lang}/${item.path}/`}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+
+    <div>
+      <a
+        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl ml-3"
+        href="/es/home">ES</a
+      >
+      <span class="text-2xl pb-2">|</span>
+      <a
+        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
+        href="/en/home">ENG</a
+      >
+    </div>
+    <div
+      class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1"
+    >
+      <a href="https://www.facebook.com/PortRoatan" target="_blank"
+        ><div class="icon-mask icon-mask-face"></div></a
+      >
+      <a href="https://www.instagram.com/portroatan" target="_blank"
+        ><div class="icon-mask icon-mask-ig"></div></a
+      >
+      <a
+        href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
+        target="_blank"><div class="icon-mask icon-mask-trip"></div></a
+      >
+    </div>
+  </nav>
+</div>
+<script>
+  const burger = document.getElementById("burger");
+  const menuMovil = document.getElementById("menu_movil");
+  const burgerLines = document.querySelectorAll("#burger_menu .burger-line");
+
+  if (burger) {
+    burger.addEventListener("click", () => {
+      if (!menuMovil) return;
+
+      const isOpen = menuMovil.classList.contains("hidden");
+
+      if (isOpen) {
+        menuMovil.classList.remove("hidden");
+        menuMovil.classList.add("flex");
+        document.body.classList.add("overflow-hidden");
+
+        // Cambiar líneas a negro
+        burgerLines.forEach((line) => {
+          line.classList.remove("bg-white");
+          line.classList.add("bg-[var(--secondary-color)]");
+        });
+      } else {
+        menuMovil.classList.remove("flex");
+        menuMovil.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+
+        // Restaurar líneas a blanco
+        burgerLines.forEach((line) => {
+          line.classList.remove("bg-[var(--secondary-color)]");
+          line.classList.add("bg-[var(--primary-color)]");
+        });
+      }
+    });
+
+    // Cerrar menú y restaurar scroll y color de líneas al hacer clic en enlace
+    document.querySelectorAll("#menu_movil a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (menuMovil) {
+          menuMovil.classList.remove("flex");
+          menuMovil.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+
+          // Restaurar líneas a blanco
+          burgerLines.forEach((line) => {
+            line.classList.remove("bg-black");
+            line.classList.add("bg-white");
+          });
+        }
+
+        // Desactivar el checkbox visualmente
+        (burger as HTMLInputElement).checked = false;
+      });
+    });
+  }
+
+  // window.addEventListener('scroll', function () {
+  //   const menu = document.getElementById('menu_desktop');
+  //   const logo = document.getElementById('logo_menu');
+  //   if (!menu) return;
+  //   if (window.scrollY > 400) {
+  //     menu.classList.remove('bg-transparent');
+  //     menu.classList.add('bg-[var(--primary-color)]');
+  //     if (logo) {
+  //       logo.classList.remove('hidden');
+  //     }
+  //   } else {
+  //     menu.classList.remove('bg-[var(--primary-color)]');
+  //     menu.classList.add('bg-transparent');
+  //     if (logo) {
+  //       logo.classList.add('hidden');
+  //     }
+  //   }
+  // });
+</script>

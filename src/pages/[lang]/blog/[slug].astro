@@ -80,14 +80,14 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
       <div class="first-text-container text-justify pt-8">
         <div set:html={contentBlocks[0]} />
       </div>
-      <div class="gallery-container  grid gap-4 pt-8">
+      <div class="gallery-container  grid gap-[2vh] pt-8">
         {
           data.gridgallery &&
             Array.isArray(data.gridgallery) &&
             data.gridgallery.map((img, index) => (
               <div class="rounded-xl" style={`grid-area:image-${index + 1}`}>
                 <img
-                  class={`${index === 0 ? "max-h-[74vh]" : "max-h-[37vh]"}rounded-xl object-cover object-center h-full `}
+                  class={`${index === 0 ? "max-h-[76vh]" : "max-h-[37vh]"} rounded-xl object-cover object-center h-full `}
                   src={img.url}
                   alt={img.alt ?? `Imagen${index + 1}`}
                 />

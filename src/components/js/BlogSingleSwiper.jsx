@@ -1,10 +1,8 @@
-// src/components/BlogSingleSwiper.jsx
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Swiper from "swiper";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
 
 function Slide({ post, lang }) {
   return (
@@ -31,35 +29,33 @@ function Slide({ post, lang }) {
 }
 
 export default function BlogSingleSwiper({ recentPosts, lang }) {
-  const swiperRef = useRef(null);
-
   useEffect(() => {
-    if (swiperRef.current) {
-      new Swiper(swiperRef.current, {
-        modules: [Pagination, Autoplay],
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 16,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-      });
-    }
+    new Swiper("#blog-swiper", {
+      modules: [Pagination, Autoplay],
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      pagination: {
+        el: ".blog-swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
   }, []);
 
   return (
-    <div ref={swiperRef} className="swiper w-full pb-10 z-30 ">
-      <div className="swiper-wrapper">
-        {recentPosts.map((post) => (
-          <Slide key={post.slug} post={post} lang={lang} />
-        ))}
+    <div className="relative w-full pb-10 z-10">
+      <div id="blog-swiper" className="swiper">
+        <div className="swiper-wrapper">
+          {recentPosts.map((post) => (
+            <Slide key={post.slug} post={post} lang={lang} />
+          ))}
+        </div>
       </div>
-      <div className="swiper-pagination mt-4 text-center" />
+      <div className="swiper-pagination blog-swiper-pagination text-center z-30" />
     </div>
   );
 }

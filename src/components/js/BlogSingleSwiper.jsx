@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 
 function Slide({ post, lang }) {
   return (
-    <div className="swiper-slide">
+    <div className="swiper-slide ">
       <a
         href={`/${lang}/blog/${post.slug}`}
         className="bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden"
@@ -14,9 +14,9 @@ function Slide({ post, lang }) {
         <img
           src={post.image.url}
           alt={post.image.alt ?? post.title}
-          className="w-full object-cover"
+          className="w-full object-cover rounded-xl"
         />
-        <div className="p-4 flex flex-col justify-between flex-grow">
+        <div className="p-4 flex flex-col justify-between flex-grow rounded-b-xl">
           <h4 className="text-md font-bold mb-2">{post.title}</h4>
           <p className="text-sm text-gray-700 mb-4">{post.excerpt}</p>
           <span className="text-red-600 text-sm font-semibold mb-8">
@@ -47,15 +47,15 @@ export default function BlogSingleSwiper({ recentPosts, lang }) {
   }, []);
 
   return (
-    <div className="relative w-full pb-10 z-10">
+    <div className="relative w-full pb-12 px-2 z-10">
       <div id="blog-swiper" className="swiper">
-        <div className="swiper-wrapper">
+        <div className="swiper-wrapper mb-4">
           {recentPosts.map((post) => (
             <Slide key={post.slug} post={post} lang={lang} />
           ))}
         </div>
       </div>
-      <div className="swiper-pagination blog-swiper-pagination text-center z-30" />
+      <div className="swiper-pagination mt-4 blog-swiper-pagination text-center z-30" />
     </div>
   );
 }

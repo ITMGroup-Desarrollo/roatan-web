@@ -21,7 +21,7 @@ function Slide({ post, lang }) {
         <div className="p-4 flex flex-col justify-between flex-grow">
           <h4 className="text-md font-bold mb-2">{post.title}</h4>
           <p className="text-sm text-gray-700 mb-4">{post.excerpt}</p>
-          <span className="text-red-600 text-sm font-semibold">
+          <span className="text-red-600 text-sm font-semibold mb-8">
             {lang === "es" ? "Leer más" : "Read more"} &raquo;
           </span>
         </div>
@@ -53,7 +53,7 @@ export default function BlogSingleSwiper({ recentPosts, lang }) {
   }, []);
 
   return (
-    <div ref={swiperRef} className="swiper w-full pb-10 z-30">
+    <div ref={swiperRef} className="swiper w-full pb-10 z-30 ">
       <div className="swiper-wrapper">
         {recentPosts.map((post) => (
           <Slide key={post.slug} post={post} lang={lang} />

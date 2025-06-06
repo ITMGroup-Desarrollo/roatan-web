@@ -7,6 +7,7 @@ import Footer from "../../../components/Footer/Footer.astro";
 import Menu from "../../../components/Headers/MenuBlog.astro";
 import "../../../assets/css/blog.css";
 import type { APIContext } from "astro";
+import BlogSingleSwiper from "../../../components/js/BlogSingleSwiper.jsx";
 
 //@ts-ignore
 const { lang, slug } = Astro.params;
@@ -120,7 +121,12 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
       >
         {lang === "es" ? "PODRÍA INTERESARTE" : "YOU MAY ALSO LIKE"}
       </h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="md:hidden">
+        <BlogSingleSwiper client:load recentPosts={recentPosts} lang={lang} />
+      </div>
+
+      <!-- Versión escritorio (Grid) -->
+      <div class="hidden md:grid md:grid-cols-3 gap-6">
         {
           recentPosts.map((post) => (
             <a
@@ -147,4 +153,13 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   </article>
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
+  <style>
+    .swiper-pagination {
+      bottom: 0px !important;
+      position: absolute !important;
+      text-align: center;
+      width: 100%;
+      z-index: 10;
+    }
+  </style>
 </Layout>

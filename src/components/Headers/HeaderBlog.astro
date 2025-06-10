@@ -2,8 +2,9 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
+const headerTitle = Astro.props.headerTitle ?? "";
+const headerUrl = Astro.props.headerUrl ?? "";
 import { Image } from "astro:assets";
-import fondo from "../../assets/img/maquetado/blog/1.webp";
 ---
 
 <header
@@ -11,17 +12,15 @@ import fondo from "../../assets/img/maquetado/blog/1.webp";
   class="relative bg-image-header h-96 lg:w-screen lg:h-screen"
 >
   <div class="absolute top-0 w-full h-full z-0">
-    <Image
-      src={fondo}
+    <img
+      src={`/src//assets/img/maquetado/${headerUrl}`}
       alt="Fondo del header del blog"
       class="absolute z-0 w-full h-full object-cover"
       loading="eager"
-      width={1920}
-      height={1080}
     />
     <div class="absolute w-full h-full bg-gradient-header z-1"></div>
   </div>
   <div class="absolute w-full h-full z-1 flex items-center justify-center">
-    <h1 class="text-white text-6xl md:text-9xl font-bebas font-bold uppercase">Blog</h1>
+    <h1 class="text-white text-6xl md:text-9xl font-bebas font-bold uppercase">{headerTitle}</h1>
   </div>
 </header>

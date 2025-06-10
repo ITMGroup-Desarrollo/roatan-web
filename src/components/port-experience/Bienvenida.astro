@@ -13,7 +13,7 @@ import "../../assets/css/home.css";
 ---
 
 <div
-  class="welcome-container w-screen h-[16rem] md:h-[32rem] flex md:items-center justify-left md:justify-center pl-5 md:pl-auto relative overflow-hidden bg-white"
+  class="welcome-container w-screen h-[16rem] md:h-[32rem] flex  justify-center  relative overflow-hidden bg-white"
 >
   <WaveObserver client:visible />
   <div class="images-container absolute h-full w-screen flex flex-row">
@@ -24,17 +24,17 @@ import "../../assets/css/home.css";
       loading="eager"
     />
     <Image
-      class="ave absolute w-28 md:w-60 lg:w-64 h-auto right-0 bottom-5 z-0"
+      class="ave absolute w-24 md:w-60 lg:w-64 h-auto right-0 bottom-10 md:bottom-5 z-0"
       src={ave}
       alt="logo"
       loading="eager"
     />
   </div>
   <div
-    class="text-container w-2/3 mt-10 lg:w-2/3   flex flex-col"
+    class="text-container w-1/2 text-center mt-5 lg:w-2/3 md:pt-20  flex flex-col"
   >
     <p
-      class="text-2xl self-start md:self-center md:text-6xl font-bebas text-[var(--secondary-color)]"
+      class="text-2xl self-center md:text-6xl font-bebas text-[var(--secondary-color)]"
     >
       {t.port.title}
     </p>
@@ -43,13 +43,13 @@ import "../../assets/css/home.css";
     >
     </div>
     <p
-      class="text-[8px] text-justify md:text-center self-start md:self-center md:text-xl text-black md:w-2/3"
+      class="text-[8px] text-center self-start md:self-center md:text-xl text-black md:w-2/3"
     >
       {t.homeWelcome.text}
     </p>
   </div>
   <div
-    class="wave-container w-full h-[24%] bottom-5 right-0 bg-white absolute z-1 overflow-hidden"
+    class="wave-container w-full h-[24%] bottom-5 right-0 bg-transparent absolute z-1 overflow-hidden"
   >
     <Image
       class="wave absolute w-[100%] h-[100%] right-0 top-0 object-fill"

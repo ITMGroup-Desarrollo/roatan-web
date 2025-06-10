@@ -67,6 +67,10 @@ body{
     opacity: 0.8;
     /* background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%); */
 }
+#headerPort-container .bg-gradient-header{
+    background: var(--primary-color);
+    background: linear-gradient(0deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 70%);
+}
 .title_container h1, h2{
   font-size: 4rem;
 }

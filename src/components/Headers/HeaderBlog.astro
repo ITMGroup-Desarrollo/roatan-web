@@ -4,11 +4,12 @@ const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 const headerTitle = Astro.props.headerTitle ?? "";
 const headerUrl = Astro.props.headerUrl ?? "";
+const id = Astro.props.id ?? "";
 import { Image } from "astro:assets";
 ---
 
 <header
-  id="headerBlog-container"
+  id={id}
   class="relative bg-image-header h-96 lg:w-screen lg:h-screen"
 >
   <div class="absolute top-0 w-full h-full z-0">

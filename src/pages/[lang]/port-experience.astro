@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Headers/Menu.astro";
+import Bienvenida from "../../components/port-experience/Bienvenida.astro";
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
@@ -12,6 +13,6 @@ const lang = Astro.params.lang || "es";
 <Layout lang={lang}>  
   <Menu lang={lang} />
   <Header lang={lang} headerTitle="Port Experience" headerUrl="header-port.webp" id="headerPort-container"/>
-
+  <Bienvenida lang={lang} />
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4"/>
 </Layout>

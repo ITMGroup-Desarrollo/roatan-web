@@ -64,6 +64,13 @@ export const translations = {
       search_placeholder: "¿Buscando?",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
+    port: {
+      title: "Restaurante, Bares y Experiencias",
+      subtitle: "Todos los artículos",
+      button: "Read more",
+      search_placeholder: "¿Buscando?",
+      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+    },
   },
   //endregion
 
@@ -127,6 +134,13 @@ export const translations = {
     },
     blog: {
       title: "Blog",
+      subtitle: "All Articles",
+      button: "Read more",
+      search_placeholder: "Looking for?",
+      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+    },
+    port: {
+      title: "Rstaurant, Bars & Experiences",
       subtitle: "All Articles",
       button: "Read more",
       search_placeholder: "Looking for?",

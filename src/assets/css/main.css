@@ -77,8 +77,8 @@ body{
 #headerPort-container .bg-header{
   object-position: top;
 }
-#headerPort-container{
-  height: 100vh;
+#headerBlog-container .bg-header{
+  object-position: bottom;
 }
 .title_container h1, h2{
   font-size: 4rem;

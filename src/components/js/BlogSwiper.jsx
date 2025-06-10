@@ -80,6 +80,9 @@ const BlogSwiper = ({ posts, lang }) => {
                   className="text-justify pb-8"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 />
+                <a href={`/${lang}/blog/${post.slug}`}><span class="text-[var(--secondary-color)] text-sm font-semibold">
+                  {lang === "es" ? "Leer más" : "Read more"} &raquo;
+                </span></a>
               </div>
             </div>
             <div className="share-container absolute bottom-4 right-5 z-20 flex flex-row-reverse">

@@ -80,9 +80,12 @@ const BlogSwiper = ({ posts, lang }) => {
                   className="text-justify text-2xl pb-8"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 />
-                <a href={`/${lang}/blog/${post.slug}`}><span class="text-[var(--secondary-color)] text-xl font-semibold">
+                <a
+                  href={`/${lang}/blog/${post.slug}`}
+                  class="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
+                >
                   {lang === "es" ? "Leer más" : "Read more"} &raquo;
-                </span></a>
+                </a>
               </div>
             </div>
             <div className="share-container absolute bottom-4 right-5 z-20 flex flex-row-reverse">

@@ -32,7 +32,7 @@ const PreguntasYRespuestas = ({ t }) => {
     <div className="preguntasyrespuestas-container w-screen xl:w-3/4 md:absolute top-60 lg:top-80 xl:top-80 md:px-20 flex flex-col md:grid md:grid-cols-2">
       
       {/* PREGUNTAS (siempre visibles) */}
-      <div className="preguntas-container mb-4 md:mb0 md:col-span-1 px-8 md:px-0 flex flex-col gap-5 md:gap-10 text-center">
+      <div className="preguntas-container mb-4 md:mb0 md:col-span-1 px-5 md:px-0 flex flex-col gap-5 md:gap-10 text-center">
         {faqs.map(({ id, pregunta, respuesta }) => (
           <div key={id} className="flex flex-col gap-2">
             <div
@@ -47,12 +47,12 @@ const PreguntasYRespuestas = ({ t }) => {
                 alt="mas"
               />
               <img
-                className={`menos-icon w-8 md:w-10 ${activa === id ? "" : "hidden"}`}
+                className={`menos-icon md:ml-2 w-8 md:w-10 ${activa === id ? "" : "hidden"}`}
                 src={menos.src}
                 alt="menos"
               />
               <p
-                className={`pregunta-texto pl-6 text-xl md:text-xl text-left ${
+                className={`pregunta-texto pl-6 py-2 text-xl md:text-2xl text-left ${
                   activa === id
                     ? "text-[var(--darkblue-color)]"
                     : "text-[var(--primary-color)]"
@@ -85,7 +85,7 @@ const PreguntasYRespuestas = ({ t }) => {
               activa === id ? "" : "hidden"
             }`}
           >
-            <p className="respuesta-texto my-4 md:my-0 text-xl text-[var(--primary-color)] text-left">
+            <p className="respuesta-texto my-4 md:my-0 text-2xl text-[var(--primary-color)] text-left">
               {respuesta}
             </p>
           </div>

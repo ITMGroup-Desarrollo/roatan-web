@@ -70,13 +70,13 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   <article
     class="Article-container bg-white w-screen flex flex-col items-center justify-center"
   >
-    <div class="w-full px-8 md:w-3/4 md:-0">
+    <div class="w-full px-8 md:px-0 md:w-3/4 md:-0">
       <h2
-        class="text-4xl md:text-7xl text-center pt-8 text-[var(--primary-color)]"
+        class="text-5xl md:text-7xl text-center pt-8 text-[var(--primary-color)]"
       >
         {data.title}
       </h2>
-      <div class="first-text-container text-justify pt-8">
+      <div class="first-text-container text-justify text-2xl pt-8">
         <div set:html={contentBlocks[0]} />
       </div>
       <div class="gallery-container grid gap-[2vh] pt-8">
@@ -94,7 +94,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             ))
         }
       </div>
-      <div class="second-text-container text-justify pt-8">
+      <div class="second-text-container text-2xl text-justify pt-8">
         <div set:html={contentBlocks[1]} />
       </div>
       <div
@@ -115,9 +115,9 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
         }
       </div>
     </div>
-    <section class="w-full px-8 md:w-3/4 py-16">
+    <section class="w-full px-8 md:px-0 md:w-3/4 py-16">
       <h3
-        class="text-2xl md:text-3xl font-bold text-center text-[var(--primary-color)] mb-8"
+        class="text-5xl md:text-7xl font-bold text-center text-[var(--primary-color)] py-8 mb-8"
       >
         {lang === "es" ? "PODRÍA INTERESARTE" : "YOU MAY ALSO LIKE"}
       </h3>
@@ -139,9 +139,11 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
                 class="w-full object-cover"
               />
               <div class="p-4 flex flex-col justify-between flex-grow ">
-                <h4 class="text-md font-bold mb-2">{post.title}</h4>
-                <p class="text-sm text-gray-700 mb-4">{post.excerpt}</p>
-                <span class="text-[var(--secondary-color)] text-sm font-semibold">
+                <h4 class="text-4xl font-bold mb-2">{post.title}</h4>
+                <p class="text-2xl text-justify text-gray-700 mb-4" set:html={post.excerpt}></p>
+                <span
+                  class="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
+                >
                   {lang === "es" ? "Leer más" : "Read more"} &raquo;
                 </span>
               </div>

@@ -17,11 +17,16 @@ function Slide({ post, lang }) {
           className="w-full object-cover rounded-xl"
         />
         <div className="p-4 flex flex-col justify-between flex-grow rounded-b-xl">
-          <h4 className="text-md font-bold mb-2">{post.title}</h4>
-          <p className="text-sm text-gray-700 mb-4">{post.excerpt}</p>
-          <span className="text-red-600 text-sm font-semibold mb-8">
+          <h4 className="text-4xl font-bold mb-2">{post.title}</h4>
+          <p className="text-2xl text-justify text-gray-700 mb-4">
+            {post.excerpt}
+          </p>
+          <a
+            href={`/${lang}/blog/${post.slug}`}
+            class="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
+          >
             {lang === "es" ? "Leer más" : "Read more"} &raquo;
-          </span>
+          </a>
         </div>
       </a>
     </div>

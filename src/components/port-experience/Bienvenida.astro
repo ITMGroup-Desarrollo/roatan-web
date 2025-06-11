@@ -11,13 +11,13 @@ import WaveObserver from "../../components/js/WaveObserver.jsx";
 import "../../assets/css/home.css";
 ---
 
-<div
+<div id="portExperience"
   class="welcome-container w-screen h-auto md:h-[32rem] flex flex-col md:flex-row justify-center relative overflow-hidden bg-white z-0"
 >
   
   <div class="images-container absolute h-full w-screen flex flex-row">
     <Image
-      class="hidden md:block chica absolute w-32 md:w-60 lg:w-72 h-auto bottom-5 z-0"
+      class="hidden md:block chica absolute w-32 md:w-60 lg:w-72 h-auto bottom-5 md:bottom-7 z-0"
       src={chica}
       alt="logo"
       loading="eager"
@@ -30,10 +30,10 @@ import "../../assets/css/home.css";
     />
   </div>
   <div
-    class="text-container w-full px-5 md:px-0 mx-auto md:mx-0 text-center my-5 lg:w-2/3 md:pt-20  flex flex-col "
+    class="text-container w-full px-5 md:px-0 mx-auto md:mx-0 text-center mt-20 mb-5 md:mt-5 md:mb-0 lg:w-2/3 md:pt-5  flex flex-col "
   >
     <p
-      class="text-5xl md:text-7xl self-center  font-bebas text-[var(--secondary-color)]"
+      class="text-5xl md:text-7xl self-center lg:mt-10 font-bebas text-[var(--secondary-color)]"
     >
       {t.port.title}
     </p>
@@ -53,12 +53,6 @@ import "../../assets/css/home.css";
     <Image
       class="wave w-[100%] h-[100%] right-0 top-0 object-fill"
       src={olas}
-      alt="logo"
-      loading="eager"
-    />
-    <Image
-      class="md:hidden ave absolute w-20 right-0 bottom-30 z-1"
-      src={ave}
       alt="logo"
       loading="eager"
     />

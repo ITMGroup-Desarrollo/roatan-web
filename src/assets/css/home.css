@@ -16,6 +16,7 @@ body{
 .wave-cover.shrink {
   width: 0;
 }
+
 .wave-cover-port {
   position: absolute;
   width: 100%;
@@ -138,6 +139,19 @@ body{
   .swiper-button-next.custom-nav {
     display: none;
   }
+  #portExperience .wave-cover {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  height: 24%;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 2;
+  transition: width 1.5s ease-in-out;
+}
+#portExperience .wave-cover.shrink {
+  width: 0;
+}
 }
 @media screen and (min-width: 1025px) {
   .logo-trip-container {

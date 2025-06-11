@@ -70,17 +70,17 @@ const BlogSwiper = ({ posts, lang }) => {
                   index === 0 ? "basis-1/2" : ""
                 } p-5 flex flex-col`}
               >
-                <p className="text-justify font-latoBold text-[var(--darkblue-color)] text-base md:text-xl uppercase">
+                <p className="text-justify font-latoBold text-[var(--darkblue-color)] text-2xl mb-4  uppercase">
                   {post.date}
                 </p>
-                <p className="text-left font-latoBold text-[var(--primary-color)] text-xl md:text-4xl mb-4 uppercase">
+                <p className="text-left font-latoBold text-[var(--primary-color)] text-4xl md:text-7xl mb-4 uppercase">
                   {post.title}
                 </p>
                 <p
-                  className="text-justify pb-8"
+                  className="text-justify text-2xl pb-8"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 />
-                <a href={`/${lang}/blog/${post.slug}`}><span class="text-[var(--secondary-color)] text-sm font-semibold">
+                <a href={`/${lang}/blog/${post.slug}`}><span class="text-[var(--secondary-color)] text-xl font-semibold">
                   {lang === "es" ? "Leer más" : "Read more"} &raquo;
                 </span></a>
               </div>

@@ -12,15 +12,15 @@ import WaveObserverDiscover from "../../components/js/WaveObserverDiscover.jsx";
 <WaveObserverDiscover client:visible/>
   <div class="items-container w-full lg:w-1/2 md:h-full flex flex-col md:flex-row justify-center bg-white">
     <div
-      class="text-container flex flex-col mb-4 md:mb-auto h-full text-center justify-center "
+      class="text-container flex flex-col mb-4 md:mb-auto md:py-5 h-full text-center justify-center "
     >
-      <h2 class="text-3xl md:text-6xl font-bold text-[var(--primary-color)]">{t.homeTravel.title}</h2>
-      <p class="text-xl md:text-3xl text-[var(--primary-color)]">{t.homeTravel.subtitle}</p>
+      <h2 class="text-5xl md:text-7xl font-bold text-[var(--primary-color)]">{t.homeTravel.title}</h2>
+      <p class="text-2xl md:text-4xl text-[var(--primary-color)]">{t.homeTravel.subtitle}</p>
     </div>
     <div
       class="go-container flex items-center md:h-full justify-center ml-3  md:ml-6"
     >
-    <a href={`/${lang}/faqs/`} class="border-2 p-2 text-2xl rounded-lg text-[var(--primary-color)] border-[var(--primary-color)] hover:scale-110">Go!</a>
+    <a href={`/${lang}/faqs/`} class="border-2 p-2 text-2xl rounded-lg md:text-2xl text-[var(--primary-color)] border-[var(--primary-color)] hover:scale-110">Go!</a>
     </div>
   </div>
 </div>

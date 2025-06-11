@@ -42,7 +42,7 @@ const slidesData = [
 
 function Slide({ img, name, text }) {
   return (
-    <div className="swiper-slide h-full flex justify-center items-center  content-center">
+    <div className="swiper-slide md:mt-5 mb-16 h-full flex justify-center items-center  content-center">
       <div className="slide-content relative justify-self-center bg-white rounded-3xl p-6 shadow-lg text-center w-72 transition-transform duration-300">
         <img
           src={`/img/home/recursos/swiperTrip/${img}`}
@@ -56,7 +56,7 @@ function Slide({ img, name, text }) {
             className="w-32"
           />
         </div>
-        <p className="text-gray-600 text-sm mb-2">{text}</p>
+        <p className="text-gray-600 text-lg mb-2">{text}</p>
         <p className="font-semibold font-lindsey text-gray-800">{name}</p>
         <div className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white rotate-45" />
       </div>

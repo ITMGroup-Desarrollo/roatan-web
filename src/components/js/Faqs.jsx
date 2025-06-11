@@ -52,7 +52,7 @@ const PreguntasYRespuestas = ({ t }) => {
                 alt="menos"
               />
               <p
-                className={`pregunta-texto pl-6 text-base md:text-xl text-left ${
+                className={`pregunta-texto pl-6 text-xl md:text-xl text-left ${
                   activa === id
                     ? "text-[var(--darkblue-color)]"
                     : "text-[var(--primary-color)]"
@@ -68,7 +68,7 @@ const PreguntasYRespuestas = ({ t }) => {
                 activa === id ? "" : "hidden"
               }`}
             >
-              <p className="respuesta-texto text-base text-[var(--primary-color)] text-justify">
+              <p className="respuesta-texto text-xl text-[var(--primary-color)] text-justify">
                 {respuesta}
               </p>
             </div>

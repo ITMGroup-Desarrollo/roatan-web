@@ -4,18 +4,48 @@ import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Headers/Menu.astro";
 import Bienvenida from "../../components/port-experience/Bienvenida.astro";
+import { Image } from "astro:assets";
+import iconayb from "../../assets/img/iconos/port-experience/iconayb.svg";
+import flecha from "../../assets/img/iconos/port-experience/flecha-white.svg";
+import "../../assets/css/port-experience.css";
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
 const lang = Astro.params.lang || "es";
 ---
 
-<Layout lang={lang}>  
+<Layout id="portExperience" lang={lang} z-1>
   <Menu lang={lang} />
-  <Header lang={lang} headerTitle="Port Experience" headerUrl="header-port.webp" id="headerPort-container"/>
+  <Header
+    lang={lang}
+    headerTitle="Port Experience"
+    headerUrl="header-port.webp"
+    id="headerPort-container"
+  />
   <Bienvenida lang={lang} />
-  <div class="experience-container w-screen justify-center flex">
-    <div class=" rounded-t-full rounded-b-full h-[24rem] w-[18rem]"></div>
+  <div class="experience-container w-screen justify-center flex z-20">
+    <div
+      class="rounded-t-full rounded-b-full h-[24rem] w-[18rem] bg-[url('/img/port-experience/fruteria.webp')] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
+    >
+      <Image
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 z-20 transition-all duration-300"
+        src={iconayb}
+        alt="icono ayb"
+        loading="eager"
+      />
+
+      <div
+        class="text-container rounded-t-full rounded-b-full h-full w-full z-10 bg-gradient-item flex flex-col justify-center text-center translate-y-48 pt-56 md:group-hover:-translate-y-0 transition-all duration-300"
+      >
+        <p class="text-2xl text-white font-bold mb-4">Blue Parrot</p>
+        <Image
+          class="self-center mb-4 w-12"
+          src={flecha}
+          alt="icono flecha"
+          loading="eager"
+        />
+      </div>
+    </div>
   </div>
-  <Footer lang={lang} videoFile="fondo-footer-blanco.mp4"/>
+  <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
 </Layout>

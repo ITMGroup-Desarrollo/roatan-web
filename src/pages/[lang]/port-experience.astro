@@ -23,9 +23,10 @@ const lang = Astro.params.lang || "es";
     id="headerPort-container"
   />
   <Bienvenida lang={lang} />
-  <div class="experience-container bg-white md:w-4/5 md:mx-auto flex flex-col gap-12 md:gap-0 md:flex-row justify-around  z-20">
-    <div
-      class="rounded-t-full self-center  rounded-b-full h-[24rem] w-[18rem] bg-[url('/img/port-experience/fruteria.webp')] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
+  <div class="experience-container bg-white md:w-4/5 md:mx-auto flex flex-col gap-12 md:gap-0 md:grid md:grid-cols-3 z-20">
+    <div class="grid-col flex justify-center">
+      <div
+      class="rounded-t-full  self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-[url('/img/port-experience/fruteria.webp')] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
     >
       <Image
         class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 z-20 md:group-hover:-translate-y-16 transition-all duration-300"
@@ -46,8 +47,10 @@ const lang = Astro.params.lang || "es";
         />
       </div>
     </div>
-    <div
-      class="rounded-t-full self-center  rounded-b-full h-[24rem] w-[18rem] bg-[url('/img/port-experience/fruteria.webp')] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
+    </div>
+    <div class="grid-col flex justify-center">
+      <div
+      class="rounded-t-full  self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-[url('/img/port-experience/fruteria.webp')] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
     >
       <Image
         class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 z-20 md:group-hover:-translate-y-16 transition-all duration-300"
@@ -68,8 +71,10 @@ const lang = Astro.params.lang || "es";
         />
       </div>
     </div>
-    <div
-      class="rounded-t-full self-center  rounded-b-full h-[24rem] w-[18rem] bg-[url('/img/port-experience/fruteria.webp')] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
+    </div>
+    <div class="grid-col flex justify-center">
+      <div
+      class="rounded-t-full  self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-[url('/img/port-experience/fruteria.webp')] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
     >
       <Image
         class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 z-20 md:group-hover:-translate-y-16 transition-all duration-300"
@@ -90,6 +95,8 @@ const lang = Astro.params.lang || "es";
         />
       </div>
     </div>
+    </div>
+    
   </div>
   
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />

@@ -139,7 +139,7 @@ body{
   .swiper-button-next.custom-nav {
     display: none;
   }
-  #portExperience .wave-cover {
+  #port-experience-welcome .wave-cover {
   position: absolute;
   top: 85%;
   left: 0;
@@ -149,7 +149,7 @@ body{
   z-index: 2;
   transition: width 1.5s ease-in-out;
 }
-#portExperience .wave-cover.shrink {
+#port-experience-welcome .wave-cover.shrink {
   width: 0;
 }
 }

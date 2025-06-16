@@ -14,23 +14,16 @@ image:
 gridgallery:
   - url: "/img/port-experience/icekery/1.jpeg"
     alt: "imagen del post 1"
-    orientation: "horizontal"
+    size: "sm"
   - url: "/img/port-experience/icekery/2.jpeg"
     alt: "imagen del post 2"
-    orientation: "horizontal"
+    size: "md"
   - url: "/img/port-experience/icekery/5.jpeg"
     alt: "imagen del post 3"
-    orientation: "vertical"
+    size: "lg"
   - url: "/img/port-experience/icekery/4.jpeg"
     alt: "imagen del post 4"
-    orientation: "vertical"
-  - url: "/img/port-experience/icekery/3.jpeg"
-    alt: "imagen del post 5"
-    orientation: "horizontal"
-  - url: "/img/port-experience/icekery/4.jpeg"
-    alt: "imagen del post 4"
-    orientation: "horizontal"
-
+    size: "xl"
 
 gallery:
   - url: "/img/blogs/primer-blog/2.webp"

@@ -12,24 +12,20 @@ image:
   url: "/img/port-experience/icekery.jpeg"
   alt: "imagen del post 1"
 gridgallery:
-  - url: "/img/port-experience/icekery/1.jpeg"
-    alt: "imagen del post 1"
-    orientation: "horizontal"
-  - url: "/img/port-experience/icekery/2.jpeg"
-    alt: "imagen del post 2"
-    orientation: "horizontal"
   - url: "/img/port-experience/icekery/5.jpeg"
+    alt: "imagen del post 1"
+    size: "xl"
+  - url: "/img/port-experience/icekery/4.jpeg"
+    alt: "imagen del post 2"
+    size: "xl"
+  - url: "/img/port-experience/icekery/2.jpeg"
     alt: "imagen del post 3"
-    orientation: "vertical"
-  - url: "/img/port-experience/icekery/4.jpeg"
+    size: "lg"
+  - url: "/img/port-experience/icekery/1.jpeg"
     alt: "imagen del post 4"
-    orientation: "vertical"
-  - url: "/img/port-experience/icekery/3.jpeg"
-    alt: "imagen del post 5"
-    orientation: "horizontal"
-  - url: "/img/port-experience/icekery/4.jpeg"
-    alt: "imagen del post 4"
-    orientation: "horizontal"
+    size: "lg"
+
+
 
 
 gallery:

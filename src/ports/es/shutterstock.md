@@ -6,6 +6,8 @@ date: "2024-05-01"
 excerpt: "Ullamco minim excepteur aute culpa ipsum adipisicing ex. Cupidatat incididunt eu laborum ut. Lorem excepteur enim <br><br> excepteur dolore eiusmod sint duis nostrud amet officia Lorem deserunt quis. Non reprehenderit ad nisi nisi ut adipisicing deserunt."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
+icon: "/img/port-experience/icons/iconpool.svg"
+logo: "/img/port-experience/logos/shutterstock.png"
 image:
   url: "/img/port-experience/shutterstock.webp"
   alt: "imagen del post 1"

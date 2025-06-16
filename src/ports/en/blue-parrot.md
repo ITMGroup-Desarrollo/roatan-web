@@ -1,11 +1,13 @@
 ---
-title: "Blue <br class="hidden md:block">Parrot"
+title: 'Blue <br class="hidden md:block">Parrot'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "blue-parrot"
 date: "2024-05-01"
 excerpt: "Ullamco minim excepteur aute culpa ipsum adipisicing ex. Cupidatat incididunt eu laborum ut. Lorem excepteur enim <br><br> excepteur dolore eiusmod sint duis nostrud amet officia Lorem deserunt quis. Non reprehenderit ad nisi nisi ut adipisicing deserunt."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
+icon: "/img/port-experience/icons/iconayb.svg"
+logo: "/img/port-experience/logos/blue-parrot.png"
 image:
   url: "/img/port-experience/blue-parrot.webp"
   alt: "imagen del post 1"

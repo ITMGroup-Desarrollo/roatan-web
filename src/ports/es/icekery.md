@@ -12,18 +12,21 @@ image:
   url: "/img/port-experience/icekery.jpeg"
   alt: "imagen del post 1"
 gridgallery:
-  - url: "/img/port-experience/icekery/1.jpeg"
-    alt: "imagen del post 1"
-    size: "sm"
-  - url: "/img/port-experience/icekery/2.jpeg"
-    alt: "imagen del post 2"
-    size: "md"
   - url: "/img/port-experience/icekery/5.jpeg"
+    alt: "imagen del post 1"
+    size: "xl"
+  - url: "/img/port-experience/icekery/4.jpeg"
+    alt: "imagen del post 2"
+    size: "xl"
+  - url: "/img/port-experience/icekery/2.jpeg"
     alt: "imagen del post 3"
     size: "lg"
-  - url: "/img/port-experience/icekery/4.jpeg"
+  - url: "/img/port-experience/icekery/1.jpeg"
     alt: "imagen del post 4"
-    size: "xl"
+    size: "lg"
+
+
+
 
 gallery:
   - url: "/img/blogs/primer-blog/2.webp"

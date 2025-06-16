@@ -7,6 +7,7 @@ import Bienvenida from "../../components/port-experience/Bienvenida.astro";
 import { Image } from "astro:assets";
 import iconayb from "../../assets/img/iconos/port-experience/iconayb.svg";
 import flecha from "../../assets/img/iconos/port-experience/flecha-white.svg";
+import WaveObserver from "../../components/js/WaveObserver.jsx";
 import "../../assets/css/port-experience.css";
 
 const lang = Astro.params.lang || "es";
@@ -50,6 +51,7 @@ export function getStaticPaths() {
     id="headerPort-container"
   />
   <Bienvenida lang={lang} />
+  <WaveObserver client:visible />
   <div
     class="experience-container bg-white md:w-4/5 md:mx-auto flex flex-col gap-12 md:gap-0 md:grid md:grid-cols-3 z-20"
   >

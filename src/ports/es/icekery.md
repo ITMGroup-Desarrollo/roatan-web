@@ -1,15 +1,15 @@
 ---
-title: 'shutterstock'
+title: 'icekery'
 subtitle: "Non reprehenderit ad deserunt."
-slug: "shutterstock"
+slug: "icekery"
 date: "2024-05-01"
 excerpt: "Ullamco minim excepteur aute culpa ipsum adipisicing ex. Cupidatat incididunt eu laborum ut. Lorem excepteur enim <br><br> excepteur dolore eiusmod sint duis nostrud amet officia Lorem deserunt quis. Non reprehenderit ad nisi nisi ut adipisicing deserunt."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
-icon: "/img/port-experience/icons/iconpool.svg"
-logo: "/img/port-experience/logos/shutterstock.png"
+icon: "/img/port-experience/icons/iconayb.svg"
+logo: "/img/port-experience/logos/icekery.png"
 image:
-  url: "/img/port-experience/shutterstock.webp"
+  url: "/img/port-experience/icekery.jpeg"
   alt: "imagen del post 1"
 gridgallery:
   - url: "/img/blogs/primer-blog/1.webp"

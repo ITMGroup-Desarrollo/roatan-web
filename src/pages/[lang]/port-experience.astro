@@ -56,36 +56,46 @@ export function getStaticPaths() {
     class="experience-container bg-white md:w-4/5 md:mx-auto flex flex-col gap-12 md:gap-0 md:grid md:grid-cols-3 z-20"
   >
     {
-      posts.map((post) => (
-        <div class="port-experience-card grid-col md:mb-12 flex justify-center">
-          <div
-            class="rounded-t-full self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
-            style={`background-image: url('${post.image}')`}
-          >
-            <img
-              src={post.icon}
-              alt="icono ayb"
-              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 z-20 md:group-hover:-translate-y-16 transition-all duration-300"
-            />
+      posts.map((post, index) => {
+        const isLast = index === posts.length - 1;
+        const centerLastItem = posts.length % 3 === 1 && isLast;
 
-            <a
-              href={`/${lang}/port-experience/${post.slug}`}
-              class="text-container rounded-t-full rounded-b-full h-full w-full z-10 bg-gradient-item flex flex-col justify-center text-center md:translate-y-48 pt-56 md:group-hover:-translate-y-0 transition-all duration-300"
+        return (
+          <div
+            class={`port-experience-card grid-col md:mb-12 flex justify-center ${
+              centerLastItem ? "md:col-start-2" : ""
+            }`}
+            key={index}
+          >
+            <div
+              class="rounded-t-full self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
+              style={{ backgroundImage: `url('${post.image}')` }}
             >
-              <p
-                class="text-4xl text-white font-bold mb-4 capitalize"
-                set:html={post.title}
-              ></p>
-              <Image
-                class="self-center mb-4 w-12"
-                src={flecha}
-                alt="icono flecha"
-                loading="eager"
+              <img
+                src={post.icon}
+                alt="icono ayb"
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 z-20 md:group-hover:-translate-y-16 transition-all duration-300"
               />
-            </a>
+
+              <a
+                href={`/${lang}/port-experience/${post.slug}`}
+                class="text-container rounded-t-full rounded-b-full h-full w-full z-10 bg-gradient-item flex flex-col justify-center text-center md:translate-y-48 pt-56 md:group-hover:-translate-y-0 transition-all duration-300"
+              >
+                <p
+                  class="text-4xl text-white font-bold mb-4 capitalize"
+                  set:html={post.title}
+                />
+                <Image
+                  class="self-center mb-4 w-12"
+                  src={flecha}
+                  alt="icono flecha"
+                  loading="eager"
+                />
+              </a>
+            </div>
           </div>
-        </div>
-      ))
+        );
+      })
     }
   </div>
 

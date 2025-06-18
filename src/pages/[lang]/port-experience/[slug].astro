@@ -43,62 +43,58 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
 <Layout lang={lang}>
   <Menu lang={lang} />
 
-  <div class="w-screen py-8 justify-center flex">
-    <div class="w-4/5">
-      <div class="px-4">
-        <div class="flex flex-wrap gap-4 justify-center px-4">
-          {
-            data.gridgallery?.map((img, index) => {
-              let sizeClass = "";
-              let objectPositionClass = "";
+  <div class="w-screen py-8 flex justify-center">
+    <div class="w-4/5 px-4">
+      <div
+        class="
+          grid gap-4
+          grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))]
+          auto-rows-[180px]
+          md:grid-cols-12 md:auto-rows-[150px]
+          xl:auto-rows-[200px]
+        "
+      >
+        {
+          data.gridgallery?.map((img, index) => {
+            let sizeClass = "";
+            let objectPositionClass = "";
 
-              switch (img.size) {
-                case "sm":
-                  sizeClass = "w-[140px] h-[140px] sm:w-[180px] sm:h-[180px]";
-                  break;
-                case "md":
-                  sizeClass =
-                    "w-full h-[240px] md:w-[31.5%] md:h-[17rem] xl:h-[24rem]";
-                  break;
-                case "lg":
-                  sizeClass =
-                    "w-full h-[240px] md:w-[48%] md:h-[16rem] xl:h-[24rem]";
-                  objectPositionClass = "object-center";
-                  break;
-                case "xl":
-                  sizeClass =
-                    "w-full h-[360px] md:w-[48%] md:h-[32rem] xl:h-[48rem]";
-                  break;
-                default:
-                  sizeClass = "w-[220px] h-[180px]";
-              }
+            switch (img.size) {
+              case "sm":
+                sizeClass = "col-span-6 md:col-span-3 row-span-2";
+                break;
+              case "md":
+                sizeClass = "col-span-6 md:col-span-4 row-span-2";
+                break;
+              case "lg":
+                sizeClass = "col-span-6 row-span-2";
+                objectPositionClass = "object-center";
+                break;
+              case "xl":
+                sizeClass = "col-span-6 row-span-3 md:row-span-4";
+                break;
+              default:
+                sizeClass = "col-span-1 row-span-1";
+            }
 
-              return (
-                <div
-                  class={`overflow-hidden rounded-2xl flex-shrink-0 ${sizeClass}`}
-                >
-                  <img
-                    src={img.url}
-                    alt={img.alt ?? `Imagen ${index + 1}`}
-                    loading="lazy"
-                    class={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${objectPositionClass}`}
-                  />
-                </div>
-              );
-            })
-          }
-        </div>
+            return (
+              <div
+                class={`overflow-hidden rounded-2xl ${sizeClass}`}
+              >
+                <img
+                  src={img.url}
+                  alt={img.alt ?? `Imagen ${index + 1}`}
+                  loading="lazy"
+                  class={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${objectPositionClass}`}
+                />
+              </div>
+            );
+          })
+        }
       </div>
     </div>
   </div>
+
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
-  <style>
-    .swiper-pagination {
-      bottom: 0px !important;
-      position: absolute !important;
-      text-align: center;
-      width: 100%;
-      z-index: 10;
-    }
-  </style>
 </Layout>
+

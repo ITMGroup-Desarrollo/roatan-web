@@ -88,7 +88,7 @@ export const translations = {
       title: "Roatan is",
       subtitle:
         "Connection|Human|Transformation|Emotion|Impact|Storytelling|Energy|Inspiration|Sensation|Creativity|Immersion|Innovation|Engagement|Discovery|Life|Movement|Evolution|Everywhere|Everything",
-      button: "read more",
+      button: "Find more",
     },
     notFound: {
       notFound: "Ups! it looks like you're lost",
@@ -102,27 +102,27 @@ export const translations = {
     homeWelcome: {
       title: "WELCOME TO",
       subtitle: "PORT ROATAN",
-      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum. ",
+      text: "A love letter to the Caribbean and Honduras. Port Roatan is a one-of-a-kind cruise port that will get you in the mood as soon as you arrive. Inspired by the colorful surroundings, our guests will have the opportunity to experience a relaxing day in an immersive tropical setting with themed restaurants, bars, retail, and pools.",
     },
     homePort: {
       title: "Port Experience",
-      subtitle: "lorem ipsum dolor sit amet",
-      button: "Read more",
+      subtitle: "Let the Port Roatan feeling begin!",
+      button: "Find more",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeTravel: {
       title: "Travel to make",
-      subtitle: "memories all around the world",
+      subtitle: "Let’s create new memories together!",
     },
     homeDiscover: {
       title: "Discover Beyond the cruise",
-      subtitle: "lorem ipsum dolor sit amet",
-      button: "Read more",
+      subtitle: "New adventures ahead, are you ready?",
+      button: "LET’S GO!",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeFaqs: {
       title: "FAQ's",
-      subtitle: "need help?",
+      subtitle: "We’re here to answer!",
       pregunta1: "What can i find in Port Roatan?",
       pregunta2: "What activities can i do in Port Roatan?",
       pregunta3: "Can i visit Port Roatan without a cruise?",

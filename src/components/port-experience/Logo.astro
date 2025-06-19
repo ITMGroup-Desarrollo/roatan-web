@@ -1,0 +1,38 @@
+---
+
+const logo = Astro.props?.logo ?? "es";
+import { Image } from "astro:assets";
+import "aos/dist/aos.css";
+import olas from "../../assets/img/iconos/port-experience/ola.png";
+
+import "../../assets/css/home.css";
+---
+
+<div 
+  id="port-experience-welcome"
+  class="welcome-container w-screen h-auto md:h-[36rem] flex flex-col md:flex-row justify-center relative overflow-hidden bg-white z-0"
+>
+
+  <div
+    class="logo-container w-full px-5 md:px-0 mx-auto md:mx-0 content-center mt-20 mb-5 md:mt-5 md:mb-0 lg:w-2/3 md:pt-5  flex flex-col "
+  >
+   <img
+      class="h-[20rem] max-w-[24rem] object-scale-down self-center"
+      src={logo}
+      alt="logo"
+      loading="eager"
+    />
+  </div>
+  <div
+    class="wave-container w-full h-[24%] bottom-5 right-0 bg-transparent md:absolute z-1 overflow-hidden"
+  >
+    <Image
+      class="wave w-[100%] h-[100%] right-0 top-0 object-fill"
+      src={olas}
+      alt="logo"
+      loading="eager"
+    />
+    <div class="wave-cover"></div>
+  </div>
+  
+</div>

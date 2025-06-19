@@ -73,6 +73,9 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
               case "xl":
                 sizeClass = "col-span-6 row-span-3 md:row-span-4";
                 break;
+              case "long":
+                sizeClass = "col-span-6 row-span-2 md:col-span-9";
+                break;
               default:
                 sizeClass = "col-span-1 row-span-1";
             }

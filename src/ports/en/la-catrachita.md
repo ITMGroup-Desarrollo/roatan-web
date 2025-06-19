@@ -12,12 +12,19 @@ image:
   url: "/img/port-experience/catrachita.webp"
   alt: "imagen del post 1"
 gridgallery:
-  - url: "/img/blogs/primer-blog/1.webp"
+  - url: "/img/port-experience/catrachita/1.webp"
     alt: "imagen del post 1"
-  - url: "/img/blogs/primer-blog/3.webp"
+    size: "lg"
+  - url: "/img/port-experience/catrachita/4.webp"
+    alt: "imagen del post 4"
+    size: "xl"
+  - url: "/img/port-experience/catrachita/2.webp"
     alt: "imagen del post 2"
-  - url: "/img/blogs/primer-blog/4.webp"
+    size: "sm"
+  - url: "/img/port-experience/catrachita/3.webp"
     alt: "imagen del post 3"
+    size: "sm"
+
 gallery:
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 1"

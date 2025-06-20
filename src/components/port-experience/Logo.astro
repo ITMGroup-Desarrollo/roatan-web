@@ -1,6 +1,7 @@
 ---
 
 const logo = Astro.props?.logo ?? "es";
+const content = Astro.props?.content ?? "es";
 import { Image } from "astro:assets";
 import "aos/dist/aos.css";
 import olas from "../../assets/img/iconos/port-experience/ola.png";
@@ -14,15 +15,17 @@ import "../../assets/css/home.css";
 >
 
   <div
-    class="logo-container w-full px-5 md:px-0 mx-auto md:mx-0 content-center mb-5 md:mt-5 md:mb-0 lg:w-2/3 md:pt-5  flex flex-col "
+    class="logo-container w-full px-5 md:px-0 mx-auto md:mx-0 content-center mb-10 md:mb-0 lg:w-2/3   flex flex-col "
   >
    <img
-      class="h-[20rem] max-w-[18rem] md:h-[20rem] md:max-w-[24rem] object-scale-down self-center"
+      class="h-[12rem] max-w-[16rem] md:h-[14rem] md:max-w-[24rem] object-scale-down self-center mb-8 md:mb-4"
       src={logo}
       alt="logo"
       loading="eager"
     />
+    <div set:html={content} class="text-xl md:text-2xl text-justify md:text-center" />
   </div>
+  
   <div
     class="wave-container w-full h-[24%] bottom-5 right-0 bg-transparent md:absolute z-1 overflow-hidden"
   >

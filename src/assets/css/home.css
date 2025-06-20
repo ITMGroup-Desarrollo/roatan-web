@@ -151,9 +151,9 @@ body{
 }
   #port-experience-welcome-single .wave-cover {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 0;
-  height: 30%;
+  height: 25%;
   width: 100%;
   background-color: #ffffff;
   z-index: 2;

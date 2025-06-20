@@ -111,8 +111,8 @@ export const translations = {
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeTravel: {
-      title: "Travel to make",
-      subtitle: "Let’s create new memories together!",
+      title: "Let’s create",
+      subtitle: "New memories together!",
     },
     homeDiscover: {
       title: "Discover Beyond the cruise",

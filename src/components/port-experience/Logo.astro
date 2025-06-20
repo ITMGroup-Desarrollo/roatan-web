@@ -1,5 +1,4 @@
 ---
-
 const logo = Astro.props?.logo ?? "es";
 const content = Astro.props?.content ?? "es";
 import { Image } from "astro:assets";
@@ -9,25 +8,27 @@ import olas from "../../assets/img/iconos/port-experience/ola.png";
 import "../../assets/css/home.css";
 ---
 
-<div 
+<div
   id="port-experience-welcome-single"
-  class="welcome-container w-screen h-auto md:h-[36rem] flex flex-col md:flex-row justify-center relative overflow-hidden bg-white z-0"
+  class="welcome-container w-screen h-auto relative flex flex-col justify-center overflow-hidden bg-white z-0"
 >
-
   <div
-    class="logo-container w-full px-5 md:px-0 mx-auto md:mx-0 content-center mb-10 md:mb-0 lg:w-2/3   flex flex-col "
+    class="logo-container relative w-full px-5 md:px-0 mx-auto md:mx-0  mb-10 md:mb-10  flex flex-col"
   >
-   <img
+    <img
       class="h-[12rem] max-w-[16rem] md:h-[14rem] md:max-w-[24rem] object-scale-down self-center mb-8 md:mb-4"
       src={logo}
       alt="logo"
       loading="eager"
     />
-    <div set:html={content} class="text-xl md:text-2xl text-justify md:text-center" />
+    <div
+      set:html={content}
+      class="text-xl md:text-2xl text-justify md:text-center md:w-2/3 self-center"
+    />
   </div>
-  
+
   <div
-    class="wave-container relative w-full bottom-5 right-0 bg-transparent z-1 overflow-hidden"
+    class="wave-container relative md:h-[10rem] w-full bottom-5 right-0 bg-transparent z-1 overflow-hidden"
   >
     <Image
       class="wave w-[100%] h-[100%] right-0 top-0 object-fill"
@@ -37,5 +38,4 @@ import "../../assets/css/home.css";
     />
     <div class="wave-cover"></div>
   </div>
-  
 </div>

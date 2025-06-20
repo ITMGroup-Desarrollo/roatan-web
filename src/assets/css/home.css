@@ -11,7 +11,7 @@ body{
   width: 100%;
   background-color: #ffffff;
   z-index: 2;
-  transition: width 1.5s ease-in-out;
+  transition: width 1.2s ease-in-out;
 }
 .wave-cover.shrink {
   width: 0;
@@ -47,9 +47,11 @@ body{
 .cocktel-trip,
 .ave {
   opacity: 0;
-  transition: transform 1.5s ease-out, opacity 1s ease-out;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+  transition-delay: 0.6s;
   will-change: transform, opacity;
 }
+
 
 .chica,
 .chica-port, .platanito-trip {

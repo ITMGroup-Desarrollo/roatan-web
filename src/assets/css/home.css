@@ -150,10 +150,7 @@ body{
   transition: width 1.5s ease-in-out;
 }
   #port-experience-welcome-single .wave-cover {
-  position: absolute;
-  top: 80%;
   left: 0;
-  height: 25%;
   width: 100%;
   background-color: #ffffff;
   z-index: 2;

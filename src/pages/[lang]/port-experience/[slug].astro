@@ -7,7 +7,7 @@ import Footer from "../../../components/Footer/Footer.astro";
 import Logo from "../../../components/port-experience/Logo.astro";
 import Menu from "../../../components/Headers/MenuBlog.astro";
 import WaveObserver from "../../../components/js/WaveObserver.jsx";
-import "../../../assets/css/blog.css";
+import "../../../assets/css/port-experience.css";
 import type { APIContext } from "astro";
 
 //@ts-ignore
@@ -48,7 +48,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   <div class="w-screen py-8 flex flex-col bg-white justify-center">
     <Logo logo={data.logo} />
     <WaveObserver client:visible />
-    <div class="w-3/4 px-4 my-12 self-center mx-auto">
+    <div class="w-4/5 md:w-3/4 px-4 my-12 self-center md:mx-auto">
       <div
         class="
           grid gap-4

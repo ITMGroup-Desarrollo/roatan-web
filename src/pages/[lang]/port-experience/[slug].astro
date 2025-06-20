@@ -46,8 +46,9 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   <Menu lang={lang} />
 
   <div class="w-screen py-8 flex flex-col bg-white justify-center">
-    <Logo logo={data.logo} />
     <WaveObserver client:visible />
+    <Logo logo={data.logo} />
+    
     <div class="w-4/5 md:w-3/4 px-4 my-12 self-center md:mx-auto">
       <div
         class="

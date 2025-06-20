@@ -149,7 +149,20 @@ body{
   z-index: 2;
   transition: width 1.5s ease-in-out;
 }
+  #port-experience-welcome-single .wave-cover {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 2;
+  transition: width 1.5s ease-in-out;
+}
 #port-experience-welcome .wave-cover.shrink {
+  width: 0;
+}
+#port-experience-welcome-single .wave-cover.shrink {
   width: 0;
 }
 }

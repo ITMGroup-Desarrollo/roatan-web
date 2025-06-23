@@ -70,7 +70,7 @@ export function getStaticPaths() {
               class="rounded-t-full self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
               style={{ backgroundImage: `url('${post.image}')` }}
             >
-              <div class="absolute flex flex-col left-1/2 top-2/3 -translate-x-1/2 -translate-y-1/2 z-20 md:group-hover:-translate-y-36 transition-all duration-300">
+              <div class="absolute flex flex-col left-1/2 top-1/2 md:top-2/3 -translate-x-1/2 -translate-y-1/2 z-20 md:group-hover:-translate-y-36 transition-all duration-300">
                 <img
                 src={post.icon}
                 alt="icono ayb"
@@ -87,7 +87,7 @@ export function getStaticPaths() {
               >
                 
                 <Image
-                  class="self-center mb-4 w-12 pt-8"
+                  class="self-center mb-4 w-12 md:pt-8"
                   src={flecha}
                   alt="icono flecha"
                   loading="eager"

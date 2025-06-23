@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
-    "@astrojs/tailwind": "^6.0.0",
+    "@astrojs/tailwind": "^6.0.2",
     "aos": "^2.3.4",
-    "astro": "^5.8.1",
+    "astro": "^5.10.1",
     "gray-matter": "^4.0.3",
     "swiper": "^11.2.7",
     "tailwindcss": "^3.4.17"

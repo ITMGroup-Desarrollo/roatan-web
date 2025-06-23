@@ -10,9 +10,9 @@ export const translations = {
       contact: "Contacto",
     },
     header: {
-      title: "Roatan es",
+      title: "Roatán es",
       subtitle:
-        "Conexión|Humano|Transformación|Emoción|Impacto|Narrativa|Energía|Inspiración|Sensación|Creatividad|Inmersión|Innovación|Compromiso|Descubrimiento|Vida|Movimiento|Evolución|Todo",
+        "Caribe|Diversión|Energía|Emocionante|Impactante|Innovador|Conexión|Color|Paradisíaco|Espectacular|Vibrante|Genial",
       button: "leer más",
     },
     notFound: {
@@ -25,37 +25,37 @@ export const translations = {
       policy: "Política de privacidad",
     },
     homeWelcome: {
-      title: "WELCOME TO",
-      subtitle: "PORT ROATAN",
-      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+      title: "BIENVENIDO A",
+      subtitle: "PORT ROATÁN",
+      text: "Una carta de amor al Caribe y a Honduras. Port Roatán es un puerto de cruceros único que te hará entrar en ambiente desde el primer momento. Inspirado en los vibrantes paisajes del entorno, este destino ofrece a sus visitantes la oportunidad de disfrutar de un día relajante en un entorno tropical inmersivo, con restaurantes temáticos, bares, tiendas y piscinas que celebran el espíritu del paraíso caribeño.",
     },
     homePort: {
       title: "Port Experience",
-      subtitle: "lorem ipsum dolor sit amet",
+      subtitle: "¡Que empiece la diversión!",
       button: "Ver más",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeTravel: {
-      title: "Viajar para crear",
-      subtitle: "memorias alrededor del mundo",
+      title: "¡Hora de crear",
+      subtitle: "nuevos recuerdos juntos!",
     },
     homeDiscover: {
       title: "Discover Beyond the cruise",
-      subtitle: "lorem ipsum dolor sit amet",
-      button: "Ver más",
+      subtitle: "Las mejores aventuras están por venir... ¿Listo?",
+      button: "¡VAMOS!",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeFaqs: {
       title: "FAQ's",
-      subtitle: "¿Necesitas ayuda?",
-      pregunta1: "¿Qué puedo encontrar en Port Roatan?",
-      pregunta2: "¿Hay actividades dentro de Port Roatan?",
-      pregunta3: "¿Puedo visitar Port Roatan aunque no viaje en crucero?",
+      subtitle: "¡Estamos listos para ayudarte!",
+      pregunta1: "¿Qué puedo encontrar en Port Roatán?",
+      pregunta2: "¿Hay actividades dentro de Port Roatán?",
+      pregunta3: "¿Puedo visitar Port Roatán, aunque no venga en crucero?",
       respuesta1:
-        "Adipisicing irure ut ullamco et labore ipsum ut nostrud duis tempor minim dolore eiusmod nostrud.",
+        "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatán te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
       respuesta2:
-        "Exercitation amet reprehenderit nulla duis nulla adipisicing occaecat pariatur nulla cupidatat cillum nostrud dolor aute.",
-      respuesta3: "Proident labore nostrud mollit ipsum fugiat id amet do.",
+        " ¡Claro que sí! Piscinas refrescantes, zonas lounge, hamacas y hasta un spa relajante (con costo adicional).",
+      respuesta3: " ¡Gracias por tu interés! Al momento, el acceso a Port Roatán es exclusivo para cruceristas.",
     },
     blog: {
       title: "Blog",
@@ -65,11 +65,11 @@ export const translations = {
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     port: {
-      title: "Restaurante, Bares y Experiencias",
+      title: "Restaurantes, bares y experiencias",
       subtitle: "Todos los artículos",
       button: "Read more",
       search_placeholder: "¿Buscando?",
-      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+      text: "Port Roatán es un puerto de cruceros diseñado para brindarte lo mejor del Caribe desde el primer momento. Inspirado en la vibrante esencia de Honduras, aquí encontrarás todo lo necesario para disfrutar al máximo tu visita. Restaurantes y bares temáticos con sabores locales y drinks refrescantes (sí, también los clásicos), piscinas, zonas para relajarte y photo spots ideales para tus fotos. Estamos seguros de que Port Roatán te enamorará y siempre querrás regresar. ",
     },
   },
   //endregion
@@ -87,16 +87,16 @@ export const translations = {
     header: {
       title: "Roatan is",
       subtitle:
-        "Connection|Human|Transformation|Emotion|Impact|Storytelling|Energy|Inspiration|Sensation|Creativity|Immersion|Innovation|Engagement|Discovery|Life|Movement|Evolution|Everywhere|Everything",
+        "Fun|Caribbean|Good vibes|Energy|Emotion|Evolution|Impact|Innovation|Connection|Colorful|Vibrant|Stunning|Paradise|Everything",
       button: "Find more",
     },
     notFound: {
-      notFound: "Ups! it looks like you're lost",
+      notFound: "Oops! Nothing to see here!",
       back: "Back to home",
     },
     footer: {
-      textboxPlaceholder: "Join our newsletter!",
-      textboxButton: "subscribe",
+      textboxPlaceholder: "Join the newsletter!",
+      textboxButton: "Sign in",
       policy: "Privacy Policy",
     },
     homeWelcome: {
@@ -124,13 +124,13 @@ export const translations = {
       title: "FAQ's",
       subtitle: "We’re here to answer!",
       pregunta1: "What can i find in Port Roatan?",
-      pregunta2: "What activities can i do in Port Roatan?",
+      pregunta2: "Are there activities inside Port Roatan?",
       pregunta3: "Can i visit Port Roatan without a cruise?",
       respuesta1:
-        "Adipisicing irure ut ullamco et labore ipsum ut nostrud duis tempor minim dolore eiusmod nostrud.",
+        "A cruise port you'll be dreaming of! Inspired by its Caribbean location, Port Roatan is a cruise port that offers various activities for cruise guests to enjoy. From themed restaurants, to an exclusive retail area, we want to make the best out of your Port Roatan stop.",
       respuesta2:
-        "Exercitation amet reprehenderit nulla duis nulla adipisicing occaecat pariatur nulla cupidatat cillum nostrud dolor aute.",
-      respuesta3: "Proident labore nostrud mollit ipsum fugiat id amet do.",
+        "Yes! Refreshing pools, lounge areas, hammocks, and a relaxing spa (at extra cost).",
+      respuesta3: "Thank you for your interest! Port Roatan is exclusive to cruise ship guests.",
     },
     blog: {
       title: "Blog",
@@ -140,11 +140,11 @@ export const translations = {
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     port: {
-      title: "Restaurant, Bars & Experiences",
+      title: "Restaurants, bars, and experiences",
       subtitle: "All Articles",
       button: "Read more",
       search_placeholder: "Looking for?",
-      text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
+      text: "Port Roatan is a cruise port designed to give guests the ultimate Caribbean experiences upon arrival. Inspired by its vibrant location in Honduras, you’ll find plenty of accomodations designed to make the best out of your stop. Themed restaurants and bars with local dishes and refreshing drinks (of course, the classics too), pools, lounge areas and photo spots, we’re sure Port Roatan will make you fall in love.",
     },
   },
   //endregion

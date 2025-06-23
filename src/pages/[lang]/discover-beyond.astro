@@ -3,8 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Headers/Menu.astro";
-import { Image } from "astro:assets";
-import flecha from "../../assets/img/iconos/port-experience/flecha-white.svg";
 import "../../assets/css/port-experience.css";
 
 const lang = Astro.params.lang || "es";
@@ -33,6 +31,8 @@ const posts = files.map((filename) => {
     icon: data.icon || "",
     image: data.image?.url || "",
     alt: data.image?.alt || "",
+    fondo: data.fondo?.url || "",
+    altfondo: data.fondo?.alt || "",
   };
 });
 export function getStaticPaths() {
@@ -51,21 +51,37 @@ export function getStaticPaths() {
   />
   <div id="tours-container" class="tours-container bg-white">
     {
-      posts.map((post, index) => {
-        const isLast = index === posts.length - 1;
-        const centerLastItem = posts.length % 3 === 1 && isLast;
-
+      posts.map((post) => {
         return (
           <div
-            class="relative principalview h-[24rem] md:h-screen"
+            class="relative principalview h-[24rem] md:h-screen w-screen "
             style={{
-              backgroundImage: `url('${post.image}')`,
+              backgroundImage: `url('${post.fondo}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div class="absolute inset-0 bg-white opacity-80" />
+            <div class="absolute inset-0 bg-white/80 flex">
+              <div class="bg-transparent w-[60%] justify-center flex items-center">
+                <div class="principal-items-container w-full md:pl-10 flex flex-col h-[90%] justify-center gap-4">
+                  <div class="text-container flex flex-col gap-2">
+                    <h1 class="text-4xl md:text-6xl font-bebasBold text-[var(--secondary-color)]" set:html={post.title}></h1>
+                    <div class="h-1 w-20 bg-[var(--secondary-color)]"></div>
+                    <p class="text-2xl text-[var(--darkblue-color)]">{post.excerpt}</p>
+                  </div>
+                  <div class="icons-container"></div>
+                  <button class="text-left text-2xl w-fit uppercase text-white bg-[var(--secondary-color)] py-2 px-4 rounded">see more</button>
+                </div>
+              </div>
+              <div class="bg-transparent w-[40%]">
+                <img
+                  src={post.image}
+                  alt={post.alt}
+                  class="object-contain w-auto h-[90%]"
+                />
+              </div>
+            </div>
           </div>
         );
       })

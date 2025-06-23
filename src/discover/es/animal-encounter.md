@@ -1,14 +1,17 @@
 ---
-title: 'Blue <br class="hidden md:block">Parrot'
+title: 'Animal Encounter <br class="hidden md:block">& Beachside Adventure'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "animal-encounter"
 date: "2024-05-01"
-excerpt: "Ullamco minim excepteur aute culpa ipsum adipisicing ex. Cupidatat incididunt eu laborum ut. Lorem excepteur enim <br><br> excepteur dolore eiusmod sint duis nostrud amet officia Lorem deserunt quis. Non reprehenderit ad nisi nisi ut adipisicing deserunt."
+excerpt: "Enjoy a beautiful day on the beach at Brady's Key, with soft white sand, shaded by palm trees or an umbrella, and crystal-clear waters. Paddle, swim, or simply unwind in the sun."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
-image:
+fondo:
   url: "/img/discover-beyond/animal/fondo.webp"
   alt: "fondo"
+image:
+  url: "/img/discover-beyond/animal/intro.png"
+  alt: "intro"
 gridgallery:
   - url: "/img/port-experience/blue-parrot/1.webp"
     alt: "imagen del post 1"
@@ -19,23 +22,6 @@ gridgallery:
   - url: "/img/port-experience/blue-parrot/3.webp"
     alt: "imagen del post 3"
     size: "md"
-  - url: "/img/port-experience/blue-parrot/4.webp"
-    alt: "imagen del post 4"
-    size: "md"
-  - url: "/img/port-experience/blue-parrot/5.webp"
-    alt: "imagen del post 4"
-    size: "md"
-  - url: "/img/port-experience/blue-parrot/6.webp"
-    alt: "imagen del post 4"
-    size: "lg"
-  - url: "/img/port-experience/blue-parrot/7.webp"
-    alt: "imagen del post 4"
-    size: "lg"
-gallery:
-  - url: "/img/blogs/primer-blog/2.webp"
-    alt: "imagen del post 1"
-  - url: "/img/blogs/primer-blog/2.webp"
-    alt: "imagen del post 2"
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 

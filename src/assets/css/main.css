@@ -77,6 +77,16 @@ body{
 #headerPort-container .bg-header{
   object-position: top;
 }
+#headerDiscover-container .bg-gradient-header{
+    background: var(--primary-color);
+    background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
+}
+#headerDiscover-container{
+  height: 100vh;
+}
+#headerDiscover-container .bg-header{
+  object-position: bottom;
+}
 #headerBlog-container .bg-header{
   object-position: bottom;
 }
@@ -113,6 +123,9 @@ video::-webkit-media-controls {
 }
 @media screen and (max-width: 768px) {
   #headerPort-container{
+  height: 24rem;
+}
+  #headerDiscover-container{
   height: 24rem;
 }
 }

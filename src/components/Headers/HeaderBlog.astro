@@ -3,15 +3,13 @@ import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 const headerTitle = Astro.props.headerTitle ?? "";
+const headerSubtitle = Astro.props.headerSubtitle ?? "";
 const headerUrl = Astro.props.headerUrl ?? "";
 const id = Astro.props.id ?? "";
 import { Image } from "astro:assets";
 ---
 
-<header
-  id={id}
-  class="relative bg-image-header h-96 lg:w-screen "
->
+<header id={id} class="relative bg-image-header h-96 lg:w-screen">
   <div class="absolute top-0 w-full h-full z-0">
     <img
       src={`/img/maquetado/${headerUrl}`}
@@ -22,6 +20,9 @@ import { Image } from "astro:assets";
     <div class="absolute w-full h-full bg-gradient-header z-1"></div>
   </div>
   <div class="absolute w-full h-full z-1 flex items-center justify-center">
-    <h1 class="text-white text-5xl md:text-8xl font-bebas font-bold uppercase">{headerTitle}</h1>
+    <h1 class="text-white text-center">
+      <p class="text-5xl md:text-8xl font-bebas font-bold uppercase">{headerTitle}</p>
+      <p class="text-3xl md:text-3xl">{headerSubtitle}</p>
+    </h1>
   </div>
 </header>

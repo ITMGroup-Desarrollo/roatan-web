@@ -71,6 +71,10 @@ export const translations = {
       search_placeholder: "¿Buscando?",
       text: "Port Roatán es un puerto de cruceros diseñado para brindarte lo mejor del Caribe desde el primer momento. Inspirado en la vibrante esencia de Honduras, aquí encontrarás todo lo necesario para disfrutar al máximo tu visita. Restaurantes y bares temáticos con sabores locales y drinks refrescantes (sí, también los clásicos), piscinas, zonas para relajarte y photo spots ideales para tus fotos. Estamos seguros de que Port Roatán te enamorará y siempre querrás regresar. ",
     },
+    discover: {
+      title: "Discover",
+      subtitle: "Beyond the cruise",
+    }
   },
   //endregion
 
@@ -146,6 +150,10 @@ export const translations = {
       search_placeholder: "Looking for?",
       text: "Port Roatan is a cruise port designed to give guests the ultimate Caribbean experiences upon arrival. Inspired by its vibrant location in Honduras, you’ll find plenty of accomodations designed to make the best out of your stop. Themed restaurants and bars with local dishes and refreshing drinks (of course, the classics too), pools, lounge areas and photo spots, we’re sure Port Roatan will make you fall in love.",
     },
+    discover: {
+      title: "Discover",
+      subtitle: "Beyond the cruise",
+    }
   },
   //endregion
 };

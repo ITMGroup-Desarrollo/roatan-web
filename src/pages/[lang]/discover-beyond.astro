@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Headers/HeaderBlog.astro";
+import Footer from "../../components/Footer/Footer.astro";
+import Menu from "../../components/Headers/Menu.astro";
+import { Image } from "astro:assets";
+import flecha from "../../assets/img/iconos/port-experience/flecha-white.svg";
+import "../../assets/css/port-experience.css";
+
+const lang = Astro.params.lang || "es";
+
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { translations } from "../../locales.js";
+const t = translations[lang] ?? translations["es"];
+const postsDir = path.resolve(`./src/discover/${lang}`);
+const files = fs.readdirSync(postsDir);
+
+const posts = files.map((filename) => {
+  const filePath = path.join(postsDir, filename);
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const { data } = matter(fileContent);
+
+  return {
+    ...data,
+    title: data.title || filename.replace(".md", ""),
+    subtitle: data.subtitle || filename.replace(".md", ""),
+    date: data.date || filename.replace(".md", ""),
+    slug: data.slug || filename.replace(".md", ""),
+    class: data.class || filename.replace(".md", ""),
+    excerpt: data.excerpt || "",
+    icon: data.icon || "",
+    image: data.image?.url || "",
+    alt: data.image?.alt || "",
+  };
+});
+export function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+---
+
+<Layout id="portExperience" lang={lang}>
+  <Menu lang={lang} />
+  <Header
+    lang={lang}
+    headerTitle={t.discover.title}
+    headerSubtitle={t.discover.subtitle}
+    headerUrl="header-discover.webp"
+    id="headerDiscover-container"
+  />
+  <div id="tours-container" class="tours-container bg-white">
+    {
+      posts.map((post, index) => {
+        const isLast = index === posts.length - 1;
+        const centerLastItem = posts.length % 3 === 1 && isLast;
+
+        return (
+          <div
+            class="relative principalview h-[24rem] md:h-screen"
+            style={{
+              backgroundImage: `url('${post.image}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <div class="absolute inset-0 bg-white opacity-80" />
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
+</Layout>

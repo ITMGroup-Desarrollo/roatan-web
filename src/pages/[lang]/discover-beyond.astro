@@ -97,7 +97,7 @@ export function getStaticPaths() {
                   data-slug={post.slug}
                   data-open-text={t.discover.buttonopen}
                   data-close-text={t.discover.buttonclose}
-                  class="toggleButton text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase text-white bg-[var(--secondary-color)] py-2 px-4 xl:py-4 xl:px-8 rounded"
+                  class={`toggleButton text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  py-2 px-4 xl:py-4 xl:px-8 rounded`}
                   onclick="toggleSecondView(event)"
                 >
                   {t.discover.buttonopen}
@@ -114,9 +114,16 @@ export function getStaticPaths() {
             </div>
           </div>
           <div
-            class="secondview hidden relative h-0 opacity-0 overflow-hidden transition-all duration-700 ease-in-out w-screen"
+            class="secondview hidden relative justify-items-center h-0 opacity-0 overflow-hidden transition-all duration-700 ease-in-out  w-screen "
             data-slug={post.slug}
-          ></div>
+          >
+            <div class="grid grid-cols-2 grid-rows-2 h-[80%] w-[90%] gap-8 mt-8">
+              <div class="bg-red-500"></div>
+              <div class="bg-orange-500"></div>
+              <div class="bg-blue-500"></div>
+              <div class="bg-green-500"></div>
+            </div>
+          </div>
 
 
         );
@@ -141,13 +148,13 @@ export function getStaticPaths() {
         view.classList.remove("hidden");
         // Animar apertura
         requestAnimationFrame(() => {
-          view.classList.add("h-[100vh]", "opacity-100");
+          view.classList.add("h-[24rem]", "md:h-[130vh]", "xl:h-[110vh]", "opacity-100");
           view.classList.remove("h-0", "opacity-0");
         });
         button.textContent = closeText;
       } else {
         // Animar cierre
-        view.classList.remove("h-[100vh]", "opacity-100");
+        view.classList.remove("h-[24rem]", "md:h-[130vh]", "xl:h-[110vh]", "opacity-100");
         view.classList.add("h-0", "opacity-0");
 
         // Esperar a que termine la transición antes de ocultar

@@ -78,7 +78,7 @@ export function getStaticPaths() {
                       post.icons &&
                       Array.isArray(post.icons) &&
                       post.icons.map((icon, index) => (
-                        <div class="items-start flex w-[80%]">
+                        <div class="items-start flex ">
                           <div class="flex flex-col w-[65%] xl:w-[50%] items-center gap-2" >
                           <img
                             class="w-16 xl:w-24 h-16 xl:h-24 object-contain"
@@ -94,12 +94,14 @@ export function getStaticPaths() {
                     }
                   </div>
                   <button
-                    id="toggleButton"
-                    class="text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase text-white bg-[var(--secondary-color)] py-2 px-4 xl:py-4 xl:px-8 rounded"
-                    onclick="toggleSecondView()"
-                  >
-                    {t.discover.buttonopen}
-                  </button>
+                  data-slug={post.slug}
+                  data-open-text={t.discover.buttonopen}
+                  data-close-text={t.discover.buttonclose}
+                  class="toggleButton text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase text-white bg-[var(--secondary-color)] py-2 px-4 xl:py-4 xl:px-8 rounded"
+                  onclick="toggleSecondView(event)"
+                >
+                  {t.discover.buttonopen}
+                </button>
                 </div>
               </div>
               <div class={`${post.direction === "left" ? "order-2" : "order-1"} bg-transparent w-[40%]`}>
@@ -111,31 +113,37 @@ export function getStaticPaths() {
               </div>
             </div>
           </div>
-          <div class="secondview hidden relative h-[24rem] md:h-screen w-screen "></div>
+          <div class={`secondview hidden relative h-[24rem] md:h-screen w-screen `} data-slug={post.slug}></div>
+
         );
       })
     }
   </div>
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
-  <script type="module" is:inline>
-  let isOpen = false;
+  <script is:inline>
+  function toggleSecondView(event) {
+    const button = event.currentTarget;
+    const slug = button.getAttribute("data-slug");
+    const openText = button.getAttribute("data-open-text");
+    const closeText = button.getAttribute("data-close-text");
+    const view = document.querySelector(`.secondview[data-slug="${slug}"]`);
 
-  function toggleSecondView() {
-    const view = document.querySelector(".secondview");
-    const button = document.getElementById("toggleButton");
+    if (!view) return;
 
-    isOpen = !isOpen;
+    const isHidden = view.classList.contains("hidden");
 
-    if (isOpen) {
+    if (isHidden) {
       view.classList.remove("hidden");
       view.classList.add("flex");
-      button.textContent = `${t.discover.buttonclose}`;
+      button.textContent = closeText;
     } else {
       view.classList.remove("flex");
       view.classList.add("hidden");
-      button.textContent = `${t.discover.buttonopen}`;
+      button.textContent = openText;
     }
   }
 </script>
+
+
 </Layout>

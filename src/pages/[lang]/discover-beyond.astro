@@ -31,8 +31,10 @@ const posts = files.map((filename) => {
     icon: data.icon || "",
     image: data.image?.url || "",
     alt: data.image?.alt || "",
+    direction: data.direction || "",
     fondo: data.fondo?.url || "",
     altfondo: data.fondo?.alt || "",
+    icons: data.icons || []
   };
 });
 export function getStaticPaths() {
@@ -54,7 +56,7 @@ export function getStaticPaths() {
       posts.map((post) => {
         return (
           <div
-            class="relative principalview h-[24rem] md:h-screen w-screen "
+            class="relative principalview h-[24rem] md:h-[130vh] xl:h-[110vh] w-screen "
             style={{
               backgroundImage: `url('${post.fondo}')`,
               backgroundSize: "cover",
@@ -63,18 +65,44 @@ export function getStaticPaths() {
             }}
           >
             <div class="absolute inset-0 bg-white/80 flex">
-              <div class="bg-transparent w-[60%] justify-center flex items-center">
-                <div class="principal-items-container w-full md:pl-10 flex flex-col h-[90%] justify-center gap-4">
+            
+              <div class={`${post.direction === "left" ? "order-1" : "order-2"} bg-transparent w-[60%] justify-center flex items-center`}>
+                <div class="principal-items-container w-full md:pl-10 flex flex-col h-[90%] justify-center gap-4 xl:gap-16">
                   <div class="text-container flex flex-col gap-2">
-                    <h1 class="text-4xl md:text-6xl font-bebasBold text-[var(--secondary-color)]" set:html={post.title}></h1>
-                    <div class="h-1 w-20 bg-[var(--secondary-color)]"></div>
+                    <h1 class={` ${post.direction === "left" ? "text-[var(--secondary-color)]" : "text-[var(--primary-color)]"} text-4xl md:text-6xl xl:text-8xl font-bebasBold`} set:html={post.title}></h1>
+                    <div class={` ${post.direction === "left" ? "bg-[var(--secondary-color)]" : "bg-[var(--primary-color)]"} h-1 w-20`}></div>
                     <p class="text-2xl text-[var(--darkblue-color)]">{post.excerpt}</p>
                   </div>
-                  <div class="icons-container"></div>
-                  <button class="text-left text-2xl w-fit uppercase text-white bg-[var(--secondary-color)] py-2 px-4 rounded">see more</button>
+                  <div class="icons-container my-4 grid gap-4 md:grid-cols-3">
+                    {
+                      post.icons &&
+                      Array.isArray(post.icons) &&
+                      post.icons.map((icon, index) => (
+                        <div class="items-start flex w-[80%]">
+                          <div class="flex flex-col w-[65%] xl:w-[50%] items-center gap-2" >
+                          <img
+                            class="w-16 xl:w-24 h-16 xl:h-24 object-contain"
+                            src={icon.url}
+                            alt={icon.alt ?? `Icon ${index + 1}`}
+                          />
+                          <span class="text-base md:text-lg text-center  text-[var(--darkblue-color)]">
+                            {icon.name}
+                          </span>
+                        </div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                  <button
+                    id="toggleButton"
+                    class="text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase text-white bg-[var(--secondary-color)] py-2 px-4 xl:py-4 xl:px-8 rounded"
+                    onclick="toggleSecondView()"
+                  >
+                    {t.discover.buttonopen}
+                  </button>
                 </div>
               </div>
-              <div class="bg-transparent w-[40%]">
+              <div class={`${post.direction === "left" ? "order-2" : "order-1"} bg-transparent w-[40%]`}>
                 <img
                   src={post.image}
                   alt={post.alt}
@@ -83,10 +111,31 @@ export function getStaticPaths() {
               </div>
             </div>
           </div>
+          <div class="secondview hidden relative h-[24rem] md:h-screen w-screen "></div>
         );
       })
     }
   </div>
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
+  <script type="module" is:inline>
+  let isOpen = false;
+
+  function toggleSecondView() {
+    const view = document.querySelector(".secondview");
+    const button = document.getElementById("toggleButton");
+
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      view.classList.remove("hidden");
+      view.classList.add("flex");
+      button.textContent = `${t.discover.buttonclose}`;
+    } else {
+      view.classList.remove("flex");
+      view.classList.add("hidden");
+      button.textContent = `${t.discover.buttonopen}`;
+    }
+  }
+</script>
 </Layout>

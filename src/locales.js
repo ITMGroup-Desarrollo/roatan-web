@@ -74,6 +74,8 @@ export const translations = {
     discover: {
       title: "Discover",
       subtitle: "Beyond the cruise",
+      buttonopen: "Ver más",
+      buttonclose: "Ver menos",
     }
   },
   //endregion
@@ -153,6 +155,8 @@ export const translations = {
     discover: {
       title: "Discover",
       subtitle: "Beyond the cruise",
+      buttonopen: "See more",
+      buttonclose: "See less",
     }
   },
   //endregion

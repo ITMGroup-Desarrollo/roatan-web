@@ -113,7 +113,11 @@ export function getStaticPaths() {
               </div>
             </div>
           </div>
-          <div class={`secondview hidden relative h-[24rem] md:h-screen w-screen `} data-slug={post.slug}></div>
+          <div
+            class="secondview hidden relative h-0 opacity-0 overflow-hidden transition-all duration-700 ease-in-out w-screen"
+            data-slug={post.slug}
+          ></div>
+
 
         );
       })
@@ -122,28 +126,39 @@ export function getStaticPaths() {
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
   <script is:inline>
-  function toggleSecondView(event) {
-    const button = event.currentTarget;
-    const slug = button.getAttribute("data-slug");
-    const openText = button.getAttribute("data-open-text");
-    const closeText = button.getAttribute("data-close-text");
-    const view = document.querySelector(`.secondview[data-slug="${slug}"]`);
+    function toggleSecondView(event) {
+      const button = event.currentTarget;
+      const slug = button.getAttribute("data-slug");
+      const openText = button.getAttribute("data-open-text");
+      const closeText = button.getAttribute("data-close-text");
+      const view = document.querySelector(`.secondview[data-slug="${slug}"]`);
 
-    if (!view) return;
+      if (!view) return;
 
-    const isHidden = view.classList.contains("hidden");
+      const isHidden = view.classList.contains("hidden");
 
-    if (isHidden) {
-      view.classList.remove("hidden");
-      view.classList.add("flex");
-      button.textContent = closeText;
-    } else {
-      view.classList.remove("flex");
-      view.classList.add("hidden");
-      button.textContent = openText;
+      if (isHidden) {
+        view.classList.remove("hidden");
+        // Animar apertura
+        requestAnimationFrame(() => {
+          view.classList.add("h-[100vh]", "opacity-100");
+          view.classList.remove("h-0", "opacity-0");
+        });
+        button.textContent = closeText;
+      } else {
+        // Animar cierre
+        view.classList.remove("h-[100vh]", "opacity-100");
+        view.classList.add("h-0", "opacity-0");
+
+        // Esperar a que termine la transición antes de ocultar
+        setTimeout(() => {
+          view.classList.add("hidden");
+        }, 700); // Debe coincidir con duration-700
+        button.textContent = openText;
+      }
     }
-  }
-</script>
+  </script>
+
 
 
 </Layout>

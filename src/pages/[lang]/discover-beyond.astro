@@ -133,7 +133,7 @@ export function getStaticPaths() {
                   <div class="w-[80%] min-h-[20rem] h-full rounded-3xl overflow-hidden flex">
                     <SwiperClient
                       slug={`${post.slug}-1`}
-                      client:visible={true}
+                      client:only
                     />
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export function getStaticPaths() {
                   <div class="w-[80%] h-full rounded-3xl overflow-hidden flex ">
                     <SwiperClient
                       slug={`${post.slug}-2`}
-                      client:visible={true}
+                      client:only
                     />
                   </div>
                 </div>

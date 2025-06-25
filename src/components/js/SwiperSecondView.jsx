@@ -15,41 +15,57 @@ export default function SwiperClient({ slug }) {
 
     let swiperInstance = null;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !swiperInstance) {
-            swiperInstance = new Swiper(`#${swiperId}`, {
-              modules: [Navigation, Pagination, Autoplay],
-              loop: true,
-              navigation: {
-                nextEl: `#${swiperId} .swiper-button-next`,
-                prevEl: `#${swiperId} .swiper-button-prev`,
-              },
-              pagination: {
-                el: `#${swiperId} .swiper-pagination`,
-                clickable: true,
-              },
-              autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              },
-            });
+    const initSwiper = () => {
+      if (!el || swiperInstance) return;
 
-            swiperInstance.autoplay.stop();
-            setTimeout(() => {
-              swiperInstance.autoplay.start();
-            }, 1500);
+      const tryInit = () => {
+        if (el.offsetHeight > 0 && el.offsetWidth > 0) {
+          swiperInstance = new Swiper(`#${swiperId}`, {
+            modules: [Navigation, Pagination, Autoplay],
+            loop: true,
+            navigation: {
+              nextEl: `#${swiperId} .swiper-button-next`,
+              prevEl: `#${swiperId} .swiper-button-prev`,
+            },
+            pagination: {
+              el: `#${swiperId} .swiper-pagination`,
+              clickable: true,
+            },
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            },
+          });
 
-            observer.disconnect(); // Ya no necesitamos observar
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+          swiperInstance.autoplay.stop();
+          setTimeout(() => {
+            swiperInstance.autoplay.start();
+          }, 1500);
+        } else {
+          // Vuelve a intentar después de un breve tiempo
+          setTimeout(tryInit, 100);
+        }
+      };
 
-    observer.observe(el);
+      tryInit();
+    };
+
+    // Detectar cambios de visibilidad con MutationObserver
+    const parent = el.closest(".secondview");
+
+    const observer = new MutationObserver(() => {
+      if (parent && !parent.classList.contains("invisible")) {
+        initSwiper();
+      }
+    });
+
+    if (parent) {
+      observer.observe(parent, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
 
     return () => {
       observer.disconnect();

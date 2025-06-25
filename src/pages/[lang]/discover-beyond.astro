@@ -14,6 +14,7 @@ import { translations } from "../../locales.js";
 const t = translations[lang] ?? translations["es"];
 const postsDir = path.resolve(`./src/discover/${lang}`);
 const files = fs.readdirSync(postsDir);
+import SwiperClient from "../../components/js/SwiperSecondView";
 
 const posts = files.map((filename) => {
   const filePath = path.join(postsDir, filename);
@@ -34,7 +35,7 @@ const posts = files.map((filename) => {
     direction: data.direction || "",
     fondo: data.fondo?.url || "",
     altfondo: data.fondo?.alt || "",
-    icons: data.icons || []
+    icons: data.icons || [],
   };
 });
 export function getStaticPaths() {
@@ -55,77 +56,99 @@ export function getStaticPaths() {
     {
       posts.map((post) => {
         return (
-          <div
-            class="relative principalview h-[24rem] md:h-[130vh] xl:h-[110vh] w-screen "
-            style={{
-              backgroundImage: `url('${post.fondo}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <div class="absolute inset-0 bg-white/80 flex justify-center">
-            
-              <div class={`${post.direction === "left" ? "order-1" : "order-2"} bg-transparent w-[55%] justify-center flex items-center`}>
-                <div class="principal-items-container w-full md:pl-10 flex flex-col h-[90%] justify-center gap-4 xl:gap-16">
-                  <div class="text-container flex flex-col gap-2">
-                    <h1 class={` ${post.direction === "left" ? "text-[var(--secondary-color)]" : "text-[var(--primary-color)]"} text-4xl md:text-6xl xl:text-8xl font-bebasBold`} set:html={post.title}></h1>
-                    <div class={` ${post.direction === "left" ? "bg-[var(--secondary-color)]" : "bg-[var(--primary-color)]"} h-1 w-20`}></div>
-                    <p class="text-2xl text-[var(--darkblue-color)]">{post.excerpt}</p>
-                  </div>
-                  <div class="icons-container my-4 grid gap-4 md:grid-cols-3">
-                    {
-                      post.icons &&
-                      Array.isArray(post.icons) &&
-                      post.icons.map((icon, index) => (
-                        <div class="items-start flex ">
-                          <div class="flex flex-col w-[65%] xl:w-[50%] items-center gap-2" >
-                          <img
-                            class="w-16 xl:w-24 h-16 xl:h-24 object-contain"
-                            src={icon.url}
-                            alt={icon.alt ?? `Icon ${index + 1}`}
-                          />
-                          <span class="text-base md:text-lg text-center  text-[var(--darkblue-color)]">
-                            {icon.name}
-                          </span>
-                        </div>
-                        </div>
-                      ))
-                    }
-                  </div>
-                  <button
-                  data-slug={post.slug}
-                  data-open-text={t.discover.buttonopen}
-                  data-close-text={t.discover.buttonclose}
-                  class={`toggleButton text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  py-2 px-4 xl:py-4 xl:px-8 rounded`}
-                  onclick="toggleSecondView(event)"
+          <div>
+            <div
+              class="relative principalview h-[24rem] md:h-[130vh] xl:h-[110vh] w-screen "
+              style={{
+                backgroundImage: `url('${post.fondo}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div class="absolute inset-0 bg-white/80 flex justify-center">
+                <div
+                  class={`${post.direction === "left" ? "order-1" : "order-2"} bg-transparent w-[55%] justify-center flex items-center`}
                 >
-                  {t.discover.buttonopen}
-                </button>
+                  <div class="principal-items-container w-full md:pl-10 flex flex-col h-[90%] justify-center gap-4 xl:gap-16">
+                    <div class="text-container flex flex-col gap-2">
+                      <h1
+                        class={` ${post.direction === "left" ? "text-[var(--secondary-color)]" : "text-[var(--primary-color)]"} text-4xl md:text-6xl xl:text-8xl font-bebasBold`}
+                        set:html={post.title}
+                      />
+                      <div
+                        class={` ${post.direction === "left" ? "bg-[var(--secondary-color)]" : "bg-[var(--primary-color)]"} h-1 w-20`}
+                      />
+                      <p class="text-2xl text-[var(--darkblue-color)]">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                    <div class="icons-container my-4 grid gap-4 md:grid-cols-3">
+                      {post.icons &&
+                        Array.isArray(post.icons) &&
+                        post.icons.map((icon, index) => (
+                          <div class="items-start flex ">
+                            <div class="flex flex-col w-[65%] xl:w-[50%] items-center gap-2">
+                              <img
+                                class="w-16 xl:w-24 h-16 xl:h-24 object-contain"
+                                src={icon.url}
+                                alt={icon.alt ?? `Icon ${index + 1}`}
+                              />
+                              <span class="text-base md:text-lg text-center  text-[var(--darkblue-color)]">
+                                {icon.name}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                    <button
+                      data-slug={post.slug}
+                      data-open-text={t.discover.buttonopen}
+                      data-close-text={t.discover.buttonclose}
+                      class={`toggleButton text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  py-2 px-4 xl:py-4 xl:px-8 rounded`}
+                      onclick="toggleSecondView(event)"
+                    >
+                      {t.discover.buttonopen}
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class={`${post.direction === "left" ? "order-2" : "order-1"} bg-transparent w-[35%]`}
+                >
+                  <img
+                    src={post.image}
+                    alt={post.alt}
+                    class={`object-contain w-auto h-[90%] ${post.direction === "fill-primary-color" ? "fill-secondary-color" : "order-1"}`}
+                  />
                 </div>
               </div>
-              <div class={`${post.direction === "left" ? "order-2" : "order-1"} bg-transparent w-[35%]`}>
-                <img
-                  src={post.image}
-                  alt={post.alt}
-                  class="object-contain w-auto h-[90%]"
-                />
+            </div>
+            <div
+              class="secondview invisible pointer-events-none relative justify-items-center opacity-0 max-h-0 overflow-hidden transition-all duration-700 ease-in-out w-screen"
+              data-slug={post.slug}
+            >
+              <div class="grid grid-cols-2 grid-rows-2 h-[80%] w-[90%] gap-8 mt-8">
+                <div class="bg-red-500" />
+                <div class=" justify-items-center">
+                  <div class="w-[80%] min-h-[20rem] h-full rounded-3xl overflow-hidden flex">
+                    <SwiperClient
+                      slug={`${post.slug}-1`}
+                      client:visible={true}
+                    />
+                  </div>
+                </div>
+                <div class=" justify-items-center">
+                  <div class="w-[80%] h-full rounded-3xl overflow-hidden flex ">
+                    <SwiperClient
+                      slug={`${post.slug}-2`}
+                      client:visible={true}
+                    />
+                  </div>
+                </div>
+                <div class="bg-green-500" />
               </div>
             </div>
           </div>
-          <div
-            class="secondview hidden relative justify-items-center h-0 opacity-0 overflow-hidden transition-all duration-700 ease-in-out  w-screen "
-            data-slug={post.slug}
-          >
-            <div class="grid grid-cols-2 grid-rows-2 h-[80%] w-[90%] gap-8 mt-8">
-              <div class="bg-red-500"></div>
-              <div class="bg-orange-500"></div>
-              <div class="bg-blue-500"></div>
-              <div class="bg-green-500"></div>
-            </div>
-          </div>
-
-
         );
       })
     }
@@ -133,39 +156,67 @@ export function getStaticPaths() {
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
   <script is:inline>
-    function toggleSecondView(event) {
-      const button = event.currentTarget;
-      const slug = button.getAttribute("data-slug");
-      const openText = button.getAttribute("data-open-text");
-      const closeText = button.getAttribute("data-close-text");
-      const view = document.querySelector(`.secondview[data-slug="${slug}"]`);
+  function toggleSecondView(event) {
+    const button = event.currentTarget;
+    const slug = button.getAttribute("data-slug");
+    const openText = button.getAttribute("data-open-text");
+    const closeText = button.getAttribute("data-close-text");
 
-      if (!view) return;
+    const card = button.closest(".principalview");
+    const view = card?.nextElementSibling;
 
-      const isHidden = view.classList.contains("hidden");
+    if (!view) return;
 
-      if (isHidden) {
-        view.classList.remove("hidden");
-        // Animar apertura
-        requestAnimationFrame(() => {
-          view.classList.add("h-[24rem]", "md:h-[130vh]", "xl:h-[110vh]", "opacity-100");
-          view.classList.remove("h-0", "opacity-0");
-        });
-        button.textContent = closeText;
-      } else {
-        // Animar cierre
-        view.classList.remove("h-[24rem]", "md:h-[130vh]", "xl:h-[110vh]", "opacity-100");
-        view.classList.add("h-0", "opacity-0");
+    const isHidden = view.classList.contains("invisible");
 
-        // Esperar a que termine la transición antes de ocultar
+    // Cerrar otros abiertos
+    document.querySelectorAll(".secondview").forEach((el) => {
+      if (el !== view && !el.classList.contains("invisible")) {
+        el.classList.remove("opacity-100");
+        el.classList.add("opacity-0");
+
         setTimeout(() => {
-          view.classList.add("hidden");
-        }, 700); // Debe coincidir con duration-700
-        button.textContent = openText;
+          el.classList.remove("max-h-[130vh]", "pointer-events-auto");
+          el.classList.add("max-h-0", "invisible", "pointer-events-none");
+        }, 500);
+
+        // ✅ Buscar el botón correcto de ese bloque
+        const parentCard = el.previousElementSibling;
+        const otherBtn = parentCard?.querySelector(`button[data-slug="${el.dataset.slug}"]`);
+        if (otherBtn) otherBtn.textContent = otherBtn.getAttribute("data-open-text");
       }
+    });
+
+    if (isHidden) {
+      view.classList.remove("invisible", "pointer-events-none");
+      view.classList.add("opacity-0", "pointer-events-auto");
+
+      requestAnimationFrame(() => {
+        view.classList.remove("max-h-0");
+        view.classList.add("max-h-[130vh]");
+
+        requestAnimationFrame(() => {
+          view.classList.add("opacity-100");
+        });
+      });
+
+      setTimeout(() => {
+        view.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 200);
+
+      button.textContent = closeText;
+    } else {
+      view.classList.remove("opacity-100");
+      view.classList.add("opacity-0");
+
+      setTimeout(() => {
+        view.classList.remove("max-h-[130vh]", "pointer-events-auto");
+        view.classList.add("max-h-0", "invisible", "pointer-events-none");
+      }, 500);
+
+      button.textContent = openText;
     }
-  </script>
-
-
+  }
+</script>
 
 </Layout>

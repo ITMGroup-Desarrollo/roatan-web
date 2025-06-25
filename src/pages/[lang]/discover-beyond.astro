@@ -16,6 +16,7 @@ const postsDir = path.resolve(`./src/discover/${lang}`);
 const files = fs.readdirSync(postsDir);
 import SwiperClient from "../../components/js/SwiperSecondView";
 import clientOnly from "@astrojs/react";
+// @ts-ignore
 const SwiperClientOnly = clientOnly(SwiperClient);
 
 const posts = files.map((filename) => {
@@ -38,6 +39,7 @@ const posts = files.map((filename) => {
     fondo: data.fondo?.url || "",
     altfondo: data.fondo?.alt || "",
     icons: data.icons || [],
+    requirements: data.requirements || [],
   };
 });
 export function getStaticPaths() {
@@ -130,21 +132,49 @@ export function getStaticPaths() {
               data-slug={post.slug}
             >
               <div class="grid grid-cols-2 grid-rows-2 h-[80%] w-[90%] gap-8 mt-8">
-                <div class="bg-red-500" />
+                <div class="flex flex-col justify-center">
+                  <div class="flex justify-center">
+                    <p class="w-[80%] text-3xl md:text-5xl xl:text-7xl text-[var(--secondary-color)] font-alverata font-bold ">
+                      What to bring?
+                    </p>
+                  </div>
+                  <div class="flex justify-center">
+                    <ol class="list-disc pt-6 text-[var(--darkblue-color)] w-[80%] pl-6 space-y-4 md:columns-1 md:[column-count:2] max-h-[20rem] overflow-y-auto">
+                      {post.requirements.map((item) => (
+                        <li class="break-inside-avoid">{item.name}</li>
+                      ))}
+                    </ol>
+                  </div>
+                  <div class=" flex justify-center">
+                    <div class="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                      <div class="flex p-4 col-span-1 bg-green-200 items-center">
+                        <img
+                          src="/img/iconos/discover-beyond/capacity.svg"
+                          alt="Capacity Icon"
+                          class={`w-12 xl:w-24`}
+                        />
+                        <div class="h-full mx-4 w-[3px] bg-[var(--secondary-color)]" />
+                        <div class=""></div>
+                      </div>
+                      <div class="flex p-4 col-span-1 bg-blue-200 items-center">
+                        <img
+                          src="/img/iconos/discover-beyond/clock.svg"
+                          alt="Capacity Icon"
+                          class={`w-10 xl:w-20`}
+                        />
+                        <div class="h-full mx-4 w-[3px] bg-[var(--secondary-color)]" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class=" justify-items-center">
                   <div class="w-[80%] min-h-[20rem] h-full rounded-3xl overflow-hidden flex">
-                    <SwiperClient
-                      slug={`${post.slug}-1`}
-                      client:only
-                    />
+                    <SwiperClient slug={`${post.slug}-1`} client:only />
                   </div>
                 </div>
                 <div class=" justify-items-center">
                   <div class="w-[80%] h-full rounded-3xl overflow-hidden flex ">
-                    <SwiperClient
-                      slug={`${post.slug}-2`}
-                      client:only
-                    />
+                    <SwiperClient slug={`${post.slug}-2`} client:only />
                   </div>
                 </div>
                 <div class="bg-green-500" />
@@ -158,67 +188,69 @@ export function getStaticPaths() {
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
   <script is:inline>
-  function toggleSecondView(event) {
-    const button = event.currentTarget;
-    const slug = button.getAttribute("data-slug");
-    const openText = button.getAttribute("data-open-text");
-    const closeText = button.getAttribute("data-close-text");
+    function toggleSecondView(event) {
+      const button = event.currentTarget;
+      const slug = button.getAttribute("data-slug");
+      const openText = button.getAttribute("data-open-text");
+      const closeText = button.getAttribute("data-close-text");
 
-    const card = button.closest(".principalview");
-    const view = card?.nextElementSibling;
+      const card = button.closest(".principalview");
+      const view = card?.nextElementSibling;
 
-    if (!view) return;
+      if (!view) return;
 
-    const isHidden = view.classList.contains("invisible");
+      const isHidden = view.classList.contains("invisible");
 
-    // Cerrar otros abiertos
-    document.querySelectorAll(".secondview").forEach((el) => {
-      if (el !== view && !el.classList.contains("invisible")) {
-        el.classList.remove("opacity-100");
-        el.classList.add("opacity-0");
+      // Cerrar otros abiertos
+      document.querySelectorAll(".secondview").forEach((el) => {
+        if (el !== view && !el.classList.contains("invisible")) {
+          el.classList.remove("opacity-100");
+          el.classList.add("opacity-0");
 
-        setTimeout(() => {
-          el.classList.remove("max-h-[130vh]", "pointer-events-auto");
-          el.classList.add("max-h-0", "invisible", "pointer-events-none");
-        }, 500);
+          setTimeout(() => {
+            el.classList.remove("max-h-[130vh]", "pointer-events-auto");
+            el.classList.add("max-h-0", "invisible", "pointer-events-none");
+          }, 500);
 
-        // ✅ Buscar el botón correcto de ese bloque
-        const parentCard = el.previousElementSibling;
-        const otherBtn = parentCard?.querySelector(`button[data-slug="${el.dataset.slug}"]`);
-        if (otherBtn) otherBtn.textContent = otherBtn.getAttribute("data-open-text");
-      }
-    });
-
-    if (isHidden) {
-      view.classList.remove("invisible", "pointer-events-none");
-      view.classList.add("opacity-0", "pointer-events-auto");
-
-      requestAnimationFrame(() => {
-        view.classList.remove("max-h-0");
-        view.classList.add("max-h-[130vh]");
-
-        requestAnimationFrame(() => {
-          view.classList.add("opacity-100");
-        });
+          // ✅ Buscar el botón correcto de ese bloque
+          const parentCard = el.previousElementSibling;
+          const otherBtn = parentCard?.querySelector(
+            `button[data-slug="${el.dataset.slug}"]`
+          );
+          if (otherBtn)
+            otherBtn.textContent = otherBtn.getAttribute("data-open-text");
+        }
       });
 
-      setTimeout(() => {
-        view.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 200);
+      if (isHidden) {
+        view.classList.remove("invisible", "pointer-events-none");
+        view.classList.add("opacity-0", "pointer-events-auto");
 
-      button.textContent = closeText;
-    } else {
-      view.classList.remove("opacity-100");
-      view.classList.add("opacity-0");
+        requestAnimationFrame(() => {
+          view.classList.remove("max-h-0");
+          view.classList.add("max-h-[130vh]");
 
-      setTimeout(() => {
-        view.classList.remove("max-h-[130vh]", "pointer-events-auto");
-        view.classList.add("max-h-0", "invisible", "pointer-events-none");
-      }, 500);
+          requestAnimationFrame(() => {
+            view.classList.add("opacity-100");
+          });
+        });
 
-      button.textContent = openText;
+        setTimeout(() => {
+          view.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 200);
+
+        button.textContent = closeText;
+      } else {
+        view.classList.remove("opacity-100");
+        view.classList.add("opacity-0");
+
+        setTimeout(() => {
+          view.classList.remove("max-h-[130vh]", "pointer-events-auto");
+          view.classList.add("max-h-0", "invisible", "pointer-events-none");
+        }, 500);
+
+        button.textContent = openText;
+      }
     }
-  }
-</script>
-
+  </script>
 </Layout>

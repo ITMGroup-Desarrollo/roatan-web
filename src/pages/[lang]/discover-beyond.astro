@@ -68,7 +68,7 @@ export function getStaticPaths() {
         return (
           <div class="single-post-container">
             <div
-              class="relative principalview h-[24rem] md:h-[130vh] xl:h-[110vh] w-screen "
+              class="relative principalview h-[82rem] -mb-6 md:mb-0 md:h-[130vh] xl:h-[110vh] w-screen "
               style={{
                 backgroundImage: `url('${post.fondo}')`,
                 backgroundSize: "cover",
@@ -76,28 +76,37 @@ export function getStaticPaths() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div class="absolute inset-0 bg-white/80 flex justify-center">
+              <div class="absolute inset-0 bg-white/80 flex flex-col md:flex-row justify-center items-center">
                 <div
-                  class={`${post.direction === "left" ? "order-1" : "order-2"} bg-transparent w-[55%] justify-center flex items-center`}
+                  class={`${post.direction === "left" ? "md:order-1" : "md:order-2"} bg-transparent px-10 md:px-0 md:w-[55%] justify-center flex items-center`}
                 >
                   <div class="principal-items-container w-full md:pl-10 flex flex-col h-[90%] justify-center gap-4 xl:gap-16">
                     <div class="text-container flex flex-col gap-2">
                       <h1
-                        class={` ${post.direction === "left" ? "text-[var(--secondary-color)]" : "text-[var(--primary-color)]"} text-4xl md:text-6xl xl:text-8xl font-bebasBold`}
+                        class={` ${post.direction === "left" ? "text-[var(--secondary-color)]" : "text-[var(--primary-color)]"} text-5xl md:text-6xl xl:text-8xl font-bebasBold`}
                         set:html={post.title}
                       />
                       <div
                         class={` ${post.direction === "left" ? "bg-[var(--secondary-color)]" : "bg-[var(--primary-color)]"} h-1 w-20`}
                       />
-                      <p class="text-2xl text-[var(--darkblue-color)]">
+                      <p class="text-2xl text-[var(--darkblue-color)] text-justify md:text-left">
                         {post.excerpt}
                       </p>
                     </div>
-                    <div class="icons-container my-4 grid gap-4 md:grid-cols-3">
+                    <div
+                      class={`block md:hidden ${post.direction === "left" ? "md:order-2" : "md:order-1"} bg-transparent w-[100%]`}
+                    >
+                      <img
+                        src={post.image}
+                        alt={post.alt}
+                        class={`object-contain w-auto h-[90%] ${post.direction === "fill-primary-color" ? "fill-secondary-color" : "md:order-1"}`}
+                      />
+                    </div>
+                    <div class="icons-container my-4 grid gap-4 grid-cols-2 md:grid-cols-3">
                       {post.icons &&
                         Array.isArray(post.icons) &&
                         post.icons.map((icon, index) => (
-                          <div class="items-start flex ">
+                          <div class="justify-center md:justify-start md:items-start flex ">
                             <div class="flex flex-col w-[65%] xl:w-[50%] items-center gap-2">
                               <img
                                 class="w-16 xl:w-24 h-16 xl:h-24 object-contain"
@@ -115,7 +124,7 @@ export function getStaticPaths() {
                       data-slug={post.slug}
                       data-open-text={t.discover.buttonopen}
                       data-close-text={t.discover.buttonclose}
-                      class={`toggleButton font-bebas text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden`}
+                      class={`toggleButton self-center md:self-start font-bebas text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  pt-5 pb-12 md:py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden items-center`}
                       onclick="toggleSecondView(event)"
                     >
                       {t.discover.buttonopen}
@@ -123,24 +132,24 @@ export function getStaticPaths() {
                   </div>
                 </div>
                 <div
-                  class={`${post.direction === "left" ? "order-2" : "order-1"} bg-transparent w-[35%]`}
+                  class={`hidden md:block ${post.direction === "left" ? "md:order-2" : "md:order-1"} bg-transparent w-[35%]`}
                 >
                   <img
                     src={post.image}
                     alt={post.alt}
-                    class={`object-contain w-auto h-[90%] ${post.direction === "fill-primary-color" ? "fill-secondary-color" : "order-1"}`}
+                    class={`object-contain w-auto h-[90%] ${post.direction === "fill-primary-color" ? "fill-secondary-color" : "md:order-1"}`}
                   />
                 </div>
               </div>
             </div>
             <div
-              class="secondview invisible pointer-events-none relative justify-items-center opacity-0 max-h-0 overflow-hidden transition-all duration-700 ease-in-out w-screen"
+              class="secondview -mb-6 md:mb-0  invisible h-[96rem] pointer-events-none relative justify-items-center opacity-0 max-h-0 overflow-hidden transition-all duration-700 ease-in-out w-screen"
               data-slug={post.slug}
             >
-              <div class="grid grid-cols-2 grid-rows-2 h-[80%] w-[90%] gap-8 mt-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 h-full md:h-[80%] w-[90%] gap-8 mt-8">
                 <div class="flex flex-col justify-center">
                   <div class="flex justify-center">
-                    <p class="w-[80%] text-3xl md:text-5xl xl:text-7xl text-[var(--secondary-color)] font-alverata font-bold ">
+                    <p class="w-[80%] pt-6 md:pt-0 text-center md:text-start text-3xl md:text-5xl xl:text-7xl text-[var(--secondary-color)] font-alverata font-bold ">
                       What to bring?
                     </p>
                   </div>
@@ -184,22 +193,24 @@ export function getStaticPaths() {
                     </div>
                   </div>
                 </div>
-                <div class=" justify-items-center">
-                  <div class="w-[80%] min-h-[20rem] h-full rounded-3xl overflow-hidden flex">
+                <div class="justify-items-center h-fit md:h-auto">
+                  <div class="w-[80%] h-[16rem] md:min-h-[20rem] md:h-full rounded-3xl overflow-hidden flex">
                     <SwiperClient slug={`${post.slug}-1`} client:only />
                   </div>
 
                   <WaveObserver client:load />
                 </div>
-                <div class=" justify-items-center">
-                  <div class="w-[80%] h-full rounded-3xl overflow-hidden flex ">
+                <div class="hidden md:block justify-items-center">
+                  <div class="w-[80%] h-[16rem] md:min-h-[20rem] md:h-full rounded-3xl overflow-hidden flex">
                     <SwiperClient slug={`${post.slug}-2`} client:only />
                   </div>
+
+                  <WaveObserver client:load />
                 </div>
-                <div class="flex relative justify-center items-end">
-                  <div class="wave-container mt-8 absolute top-0 md:h-[6rem] w-full -mr-[10%]  right-0 bg-transparent z-1">
+                <div class="flex relative justify-center w-screen md:w-auto justify-self-center items-center md:items-end pb-10 md:pb-0">
+                  <div class="wave-container  md:mt-8 absolute -top-20 md:top-0 md:h-[6rem] w-full md:-mr-[10%] right-0 bg-transparent z-1">
                     <Image
-                      class="wave w-[100%] h-[100%] right-0 top-0 object-fill"
+                      class="wave self-center w-[100%] h-[100%] right-0 top-0 object-fill"
                       src={olas}
                       alt="logo"
                       loading="eager"
@@ -208,10 +219,10 @@ export function getStaticPaths() {
                   </div>
                   <div class="note-container w-[80%]">
                     <>
-                      <p class="text-3xl md:text-5xl xl:text-7xl text-[var(--secondary-color)] font-alverata font-bold ">
+                      <p class="text-3xl mb-4 md:text-5xl xl:text-7xl text-center md:text-start text-[var(--secondary-color)] font-alverata font-bold ">
                         {t.discover.Note}:
                       </p>
-                      <p>{post.note}</p>
+                      <p class="text-justify md:text-left">{post.note}</p>
                     </>
                   </div>
                 </div>
@@ -219,7 +230,7 @@ export function getStaticPaths() {
               <div class="w-full flex justify-center my-8">
                 <button
                   data-slug={post.slug}
-                  class={`toggleButton font-bebas bg-[var(--secondary-color)] text-white  border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)] text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase   py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden`}
+                  class={`toggleButton md:my-8 font-bebas bg-[var(--secondary-color)] text-white  border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)] text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase   py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden`}
                   onclick="toggleSecondView(event)"
                 >
                   {t.discover.secondbutton}

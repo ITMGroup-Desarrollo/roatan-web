@@ -78,6 +78,8 @@ export const translations = {
       buttonclose: "Ver menos",
       Capacity: "Capacidad",
       Duration: "Duración",
+      Note: "Toma en cuenta",
+      secondbutton: "Volver",
     }
   },
   //endregion
@@ -161,6 +163,8 @@ export const translations = {
       buttonclose: "See less",
       Capacity: "Capacity",
       Duration: "Duration",
+      Note: "Please note",
+      secondbutton: "Go back",
     }
   },
   //endregion

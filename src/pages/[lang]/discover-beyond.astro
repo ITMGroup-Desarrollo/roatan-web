@@ -43,6 +43,7 @@ const posts = files.map((filename) => {
     altfondo: data.fondo?.alt || "",
     capacity: data.capacity || "",
     duration: data.duration || "",
+    note: data.note || "",
     icons: data.icons || [],
     requirements: data.requirements || [],
   };
@@ -65,7 +66,7 @@ export function getStaticPaths() {
     {
       posts.map((post) => {
         return (
-          <div>
+          <div class="single-post-container">
             <div
               class="relative principalview h-[24rem] md:h-[130vh] xl:h-[110vh] w-screen "
               style={{
@@ -187,7 +188,7 @@ export function getStaticPaths() {
                   <div class="w-[80%] min-h-[20rem] h-full rounded-3xl overflow-hidden flex">
                     <SwiperClient slug={`${post.slug}-1`} client:only />
                   </div>
-                  
+
                   <WaveObserver client:load />
                 </div>
                 <div class=" justify-items-center">
@@ -195,8 +196,8 @@ export function getStaticPaths() {
                     <SwiperClient slug={`${post.slug}-2`} client:only />
                   </div>
                 </div>
-                <div class="flex relative flex-col justify-center items-center">
-                  <div class="wave-container  mt-8 absolute md:h-[6rem] w-full -mr-[10%]  right-0 bg-transparent z-1">
+                <div class="flex relative justify-center items-end">
+                  <div class="wave-container mt-8 absolute top-0 md:h-[6rem] w-full -mr-[10%]  right-0 bg-transparent z-1">
                     <Image
                       class="wave w-[100%] h-[100%] right-0 top-0 object-fill"
                       src={olas}
@@ -205,22 +206,26 @@ export function getStaticPaths() {
                     />
                     <div class="wave-cover" />
                   </div>
-                  <div class="note-container"><p></p><p></p></div>
+                  <div class="note-container w-[80%]">
+                    <>
+                      <p class="text-3xl md:text-5xl xl:text-7xl text-[var(--secondary-color)] font-alverata font-bold ">
+                        {t.discover.Note}:
+                      </p>
+                      <p>{post.note}</p>
+                    </>
+                  </div>
                 </div>
               </div>
               <div class="w-full flex justify-center my-8">
                 <button
                   data-slug={post.slug}
-                  data-open-text={t.discover.buttonopen}
-                  data-close-text={t.discover.buttonclose}
-                  class={`toggleButton text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden`}
+                  class={`toggleButton bg-[var(--secondary-color)] text-white  border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)] text-left text-2xl xl:text-4xl xl:mx-3 w-fit uppercase   py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden`}
                   onclick="toggleSecondView(event)"
                 >
-                  {t.discover.buttonopen}
+                  {t.discover.secondbutton}
                 </button>
               </div>
             </div>
-            
           </div>
         );
       })
@@ -235,25 +240,30 @@ export function getStaticPaths() {
       const openText = button.getAttribute("data-open-text");
       const closeText = button.getAttribute("data-close-text");
 
-      const card = button.closest(".principalview");
-      const view = card?.nextElementSibling;
+      // Buscar el bloque del post
+      const postBlock =
+        button.closest(".principalview")?.parentNode ||
+        button.closest(".secondview")?.parentNode;
 
+      if (!postBlock) return;
+
+      // Buscar la .secondview dentro de ese bloque
+      const view = postBlock.querySelector(`.secondview[data-slug="${slug}"]`);
       if (!view) return;
 
       const isHidden = view.classList.contains("invisible");
 
-      // Cerrar otros abiertos
+      // Cerrar otras abiertas
       document.querySelectorAll(".secondview").forEach((el) => {
         if (el !== view && !el.classList.contains("invisible")) {
           el.classList.remove("opacity-100");
           el.classList.add("opacity-0");
 
           setTimeout(() => {
-            el.classList.remove("max-h-[130vh]", "pointer-events-auto");
+            el.classList.remove("max-h-[150vh]", "pointer-events-auto");
             el.classList.add("max-h-0", "invisible", "pointer-events-none");
           }, 500);
 
-          // ✅ Buscar el botón correcto de ese bloque
           const parentCard = el.previousElementSibling;
           const otherBtn = parentCard?.querySelector(
             `button[data-slug="${el.dataset.slug}"]`
@@ -280,7 +290,10 @@ export function getStaticPaths() {
           view.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 200);
 
-        button.textContent = closeText;
+        // Solo cambia el texto del botón principal
+        if (button.closest(".principalview")) {
+          button.textContent = closeText;
+        }
       } else {
         view.classList.remove("opacity-100");
         view.classList.add("opacity-0");
@@ -288,9 +301,25 @@ export function getStaticPaths() {
         setTimeout(() => {
           view.classList.remove("max-h-[150vh]", "pointer-events-auto");
           view.classList.add("max-h-0", "invisible", "pointer-events-none");
+
+          // 👇 Hacer scroll inverso a la vista principal
+          const principalView = postBlock.querySelector(".principalview");
+          if (principalView) {
+            principalView.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
         }, 500);
 
-        button.textContent = openText;
+        // Cambiar texto del botón principal
+        const parentCard = view.previousElementSibling;
+        const mainBtn = parentCard?.querySelector(
+          `button[data-slug="${slug}"]`
+        );
+        if (mainBtn) {
+          mainBtn.textContent = mainBtn.getAttribute("data-open-text");
+        }
       }
     }
   </script>

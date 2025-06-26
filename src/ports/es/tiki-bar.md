@@ -1,5 +1,5 @@
 ---
-title: 'tiki <br class="hidden md:block">bar'
+title: 'TIKI TIKI <br class="hidden md:block">Pool bar'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "tiki-bar"
 date: "2024-05-01"

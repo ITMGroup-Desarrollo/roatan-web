@@ -208,7 +208,7 @@ export function getStaticPaths() {
                   <WaveObserver client:load />
                 </div>
                 <div class="flex relative justify-center w-screen md:w-auto justify-self-center items-center md:items-end pb-10 md:pb-0">
-                  <div class="wave-container  md:mt-8 absolute  md:h-[6rem] w-full md:-mr-[10%] right-0 bg-transparent z-1">
+                  <div class="wave-container  md:mt-8 absolute -top-10 md:top-0 md:h-[6rem] w-full md:-mr-[10%] right-0 bg-transparent z-1">
                     <Image
                       class="wave self-center w-[100%] h-[100%] right-0 top-0 object-fill"
                       src={olas}
@@ -219,7 +219,7 @@ export function getStaticPaths() {
                   </div>
                   <div class="note-container w-[80%]">
                     <>
-                      <p class="text-3xl mb-4 md:text-5xl xl:text-7xl text-center md:text-start text-[var(--secondary-color)] font-alverata font-bold ">
+                      <p class="text-3xl mt-12 md:mt-0 mb-4 md:text-5xl xl:text-7xl text-center md:text-start text-[var(--secondary-color)] font-alverata font-bold ">
                         {t.discover.Note}:
                       </p>
                       <p class="text-justify md:text-left">{post.note}</p>

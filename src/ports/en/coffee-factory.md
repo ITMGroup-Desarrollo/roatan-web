@@ -3,7 +3,7 @@ title: 'Coffee <br class="hidden md:block">Factory'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "coffee-factory"
 date: "2024-05-01"
-excerpt: "Ullamco minim excepteur aute culpa ipsum adipisicing ex. Cupidatat incididunt eu laborum ut. Lorem excepteur enim <br><br> excepteur dolore eiusmod sint duis nostrud amet officia Lorem deserunt quis. Non reprehenderit ad nisi nisi ut adipisicing deserunt."
+excerpt: "The best way to fuel up is with a delicious cafecito! Hot or cold, you choose! Enjoy it for the day or have it before you go, we promise you'll come back for more."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconcoffee.png"
@@ -38,4 +38,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.
+The best way to fuel up is with a delicious cafecito! Hot or cold, you choose! Enjoy it for the day or have it before you go, we promise you'll come back for more. 

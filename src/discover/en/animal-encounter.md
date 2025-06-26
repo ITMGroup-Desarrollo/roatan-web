@@ -29,6 +29,16 @@ icons:
   - url: "/img/iconos/discover-beyond/secondary/club.svg"
     alt: "icon"
     name: "Beach club"
+requirements:
+  - name: "Swimwear and towel"
+  - name: "Comfortable clothing and shoes"
+  - name: "Camera or cellphone"
+  - name: "Hat and sunglasses"
+  - name: "Eco-friendly insect repellent"
+  - name: "Biodegradable sunblock"
+  - name: "Cash"
+capacity: "200 Pax"
+duration: "3 Hrs"
 firstgallery:
   - url: "/img/port-experience/blue-parrot/1.webp"
     alt: "imagen del post 1"

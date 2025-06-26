@@ -37,6 +37,8 @@ requirements:
   - name: "Eco-friendly insect repellent"
   - name: "Biodegradable sunblock"
   - name: "Cash"
+capacity: "200 Pax"
+duration: "3 Hrs"
 firstgallery:
   - url: "/img/port-experience/blue-parrot/1.webp"
     alt: "imagen del post 1"

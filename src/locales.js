@@ -76,6 +76,8 @@ export const translations = {
       subtitle: "Beyond the cruise",
       buttonopen: "Ver más",
       buttonclose: "Ver menos",
+      Capacity: "Capacidad",
+      Duration: "Duración",
     }
   },
   //endregion
@@ -157,6 +159,8 @@ export const translations = {
       subtitle: "Beyond the cruise",
       buttonopen: "See more",
       buttonclose: "See less",
+      Capacity: "Capacity",
+      Duration: "Duration",
     }
   },
   //endregion

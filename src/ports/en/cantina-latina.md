@@ -3,7 +3,7 @@ title: 'Cantina <br class="hidden md:block">Latina'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "cantina-latina"
 date: "2024-05-01"
-excerpt: "Ullamco minim excepteur aute culpa ipsum adipisicing ex. Cupidatat incididunt eu laborum ut. Lorem excepteur enim <br><br> excepteur dolore eiusmod sint duis nostrud amet officia Lorem deserunt quis. Non reprehenderit ad nisi nisi ut adipisicing deserunt."
+excerpt: "The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink in hand."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"
@@ -41,4 +41,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.
+The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink in hand.

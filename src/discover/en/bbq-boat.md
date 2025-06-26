@@ -1,34 +1,28 @@
 ---
-title: 'Animal Encounter <br class="hidden md:block">& Beachside Adventure'
+title: 'Bbq donut boat <br class="hidden md:block">Adventure'
 subtitle: "Non reprehenderit ad deserunt."
-slug: "animal-encounter"
+slug: "bbq-boat"
 direction: "right"
 date: "2024-05-01"
-excerpt: "Enjoy a beautiful day on the beach at Brady's Key, with soft white sand, shaded by palm trees or an umbrella, and crystal-clear waters. Paddle, swim, or simply unwind in the sun."
+excerpt: "Experience the perfect combination of relaxation and culinary delights with our BBQ Donut Boat tour. Sail through the serene and beautiful waters of Roatan Bay while grilling your own BBQ onboard and enyjoying the stunning Caribbean views"
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 fondo:
-  url: "/img/discover-beyond/animal/fondo.webp"
+  url: "/img/discover-beyond/bbq/fondo.webp"
   alt: "fondo"
 image:
-  url: "/img/discover-beyond/animal/intro.png"
+  url: "/img/discover-beyond/bbq/intro.png"
   alt: "intro"
 icons:
   - url: "/img/iconos/discover-beyond/primary/guide.svg"
     alt: "icon"
     name: "Certified bilingual tour guide"
-  - url: "/img/iconos/discover-beyond/primary/bus.svg"
+  - url: "/img/iconos/discover-beyond/primary/food.svg"
     alt: "icon"
-    name: "Roundtrip transportation"
-  - url: "/img/iconos/discover-beyond/primary/monkey.svg"
+    name: "Grilled menu"
+  - url: "/img/iconos/discover-beyond/primary/softdrink.svg"
     alt: "icon"
-    name: "Animal interaction"
-  - url: "/img/iconos/discover-beyond/primary/boat.svg"
-    alt: "icon"
-    name: "Transfer by boat"
-  - url: "/img/iconos/discover-beyond/primary/club.svg"
-    alt: "icon"
-    name: "Beach club"
+    name: "Soft drink"
 requirements:
   - name: "Swimwear and towel"
   - name: "Comfortable clothing and shoes"

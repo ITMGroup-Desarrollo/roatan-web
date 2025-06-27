@@ -93,12 +93,12 @@ export function getStaticPaths() {
                       </p>
                     </div>
                     <div
-                      class={`block md:hidden ${post.direction === "left" ? "md:order-2" : "md:order-1"} bg-transparent w-[100%]`}
+                      class={`block md:hidden ${post.direction === "left" ? "md:order-2" : "md:order-1"} bg-transparent w-full`}
                     >
                       <img
                         src={post.image}
                         alt={post.alt}
-                        class={`object-contain w-auto h-[90%] ${post.direction === "fill-primary-color" ? "fill-secondary-color" : "md:order-1"}`}
+                        class={`object-contain w-auto h-full ${post.direction === "fill-primary-color" ? "fill-secondary-color" : "md:order-1"}`}
                       />
                     </div>
                     <div class="icons-container my-4 grid gap-4 grid-cols-2 md:grid-cols-3">

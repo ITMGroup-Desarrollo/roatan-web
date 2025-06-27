@@ -143,9 +143,9 @@ body{
   }
   #port-experience-welcome .wave-cover {
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 0;
-  height: 20%;
+  height: 15%;
   width: 100%;
   background-color: #ffffff;
   z-index: 2;

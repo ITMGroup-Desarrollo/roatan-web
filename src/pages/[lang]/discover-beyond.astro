@@ -62,13 +62,13 @@ export function getStaticPaths() {
     headerUrl="header-discover.webp"
     id="headerDiscover-container"
   />
-  <div id="tours-container" class="tours-container bg-white">
+  <div id="tours-container" class="tours-containe bg-white max-w-full overflow-hidden">
     {
       posts.map((post) => {
         return (
           <div class="single-post-container">
             <div
-              class="relative principalview h-[82rem] -mb-6 md:mb-0 md:h-[130vh] xl:h-[110vh] w-screen "
+              class="relative principalview h-[1400px] -mb-6 md:mb-0 md:h-[130vh] xl:h-[110vh] w-screen "
               style={{
                 backgroundImage: `url('${post.fondo}')`,
                 backgroundSize: "cover",

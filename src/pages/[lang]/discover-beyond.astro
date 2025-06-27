@@ -123,7 +123,7 @@ export function getStaticPaths() {
                       data-slug={post.slug}
                       data-open-text={t.discover.buttonopen}
                       data-close-text={t.discover.buttonclose}
-                      class={`toggleButton self-center md:self-start font-bebas text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  pt-5 pb-5 md:py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden items-center`}
+                      class={`toggleButton self-center md:self-start font-bebas text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  pt-5 pb-4 md:py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden items-center`}
                       onclick="toggleSecondView(event)"
                     >
                       {t.discover.buttonopen}

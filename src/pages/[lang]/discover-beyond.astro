@@ -96,7 +96,7 @@ export function getStaticPaths() {
                       {post.excerpt}
                     </p>
                   </div>
-                  <div
+                  {/* <div
                     class={`block md:hidden ${post.direction === "left" ? "md:order-2" : "md:order-1"} bg-transparent w-full`}
                   >
                     <img
@@ -104,7 +104,7 @@ export function getStaticPaths() {
                       alt={post.alt}
                       class={`object-contain w-auto h-full ${post.direction === "fill-primary-color" ? "fill-secondary-color" : "md:order-1"}`}
                     />
-                  </div>
+                  </div> */}
                   <div class="icons-container my-4 grid gap-4 grid-cols-2 md:grid-cols-3">
                     {post.icons &&
                       Array.isArray(post.icons) &&

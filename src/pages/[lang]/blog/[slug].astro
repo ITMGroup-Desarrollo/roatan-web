@@ -141,7 +141,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             {recentPosts.map((post) => (
               <a
                 href={`/${lang}/blog/${post.slug}`}
-                class={`${recentPosts.length === 1 ? "max-w-[60%]" : "w-auto"} bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden`}
+                class={`${recentPosts.length === 1 ? "md:max-w-[40vw]" : "md:w-auto"} bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden`}
               >
                 <img
                   src={post.image.url}

@@ -86,7 +86,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             data.gridgallery.map((img, index) => (
               <div class="rounded-xl" style={`grid-area:image-${index + 1}`}>
                 <img
-                  class={`${index === 0 ? "max-h-[76vh]" : "max-h-[37vh]"} rounded-xl object-cover object-center h-full `}
+                  class={`${index === 0 ? "md:max-h-[37vh]" : "md:max-h-[18vh]"} rounded-xl object-cover object-center h-full `}
                   src={img.url}
                   alt={img.alt ?? `Imagen${index + 1}`}
                 />

@@ -86,7 +86,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             data.gridgallery.map((img, index) => (
               <div class="rounded-xl" style={`grid-area:image-${index + 1}`}>
                 <img
-                  class={`${index === 0 ? "max-h-[38vh] md:max-h-[76vh]" : "max-h-[18vh] md:max-h-[37vh]"} rounded-xl object-cover object-center h-full `}
+                  class={`${index === 0 ? "h-[27vh] md:h-[76vh]" : "h-[12.5vh] md:h-[37vh]"} w-full rounded-xl object-fit object-center h-full `}
                   src={img.url}
                   alt={img.alt ?? `Imagen${index + 1}`}
                 />
@@ -98,7 +98,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
         <div set:html={contentBlocks[1]} />
       </div>
       <div
-        class="second-gallery-container flex flex-col md:flex-row gap-4 pt-8"
+        class="second-gallery-container flex flex-col  gap-4 pt-8"
       >
         {
           data.gallery &&
@@ -106,7 +106,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             data.gallery.map((img, index) => (
               <div class="rounded-xl">
                 <img
-                  class={`max-h-[75vh] rounded-xl object-cover object-center w-full `}
+                  class={`h-[25vh] md:h-[75vh] w-full rounded-xl object-cover object-center `}
                   src={img.url}
                   alt={img.alt ?? `Imagen${index + 1}`}
                 />
@@ -141,7 +141,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             {recentPosts.map((post) => (
               <a
                 href={`/${lang}/blog/${post.slug}`}
-                class={`${recentPosts.length === 1 ? "md:max-w-[40vw]" : "md:w-auto"} bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden`}
+                class={`${recentPosts.length === 1 ? "md:w-[40vw]" : "md:w-auto"} bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden`}
               >
                 <img
                   src={post.image.url}

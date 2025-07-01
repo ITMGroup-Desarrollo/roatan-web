@@ -73,7 +73,7 @@ const BlogSwiper = ({ posts, lang }) => {
                 <p className="text-justify font-latoBold text-[var(--darkblue-color)] text-2xl mb-4  uppercase">
                   {post.date}
                 </p>
-                <p className="text-left font-latoBold text-[var(--primary-color)] text-4xl md:text-7xl mb-4 uppercase">
+                <p className="text-left font-latoBold text-[var(--primary-color)] text-4xl md:text-5xl mb-4 uppercase">
                   {post.title}
                 </p>
                 <p

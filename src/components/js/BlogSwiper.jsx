@@ -73,9 +73,10 @@ const BlogSwiper = ({ posts, lang }) => {
                 <p className="text-justify font-latoBold text-[var(--darkblue-color)] text-2xl mb-4  uppercase">
                   {post.date}
                 </p>
-                <p className="text-left font-latoBold text-[var(--primary-color)] text-4xl md:text-5xl mb-4 uppercase">
-                  {post.title}
-                </p>
+                <p
+                  className="text-left font-latoBold text-[var(--primary-color)] text-4xl md:text-5xl mb-4 uppercase"
+                  dangerouslySetInnerHTML={{ __html: post.title }}
+                ></p>
                 <p
                   className="text-justify text-2xl pb-8"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}

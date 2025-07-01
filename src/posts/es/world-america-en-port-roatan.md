@@ -7,7 +7,7 @@ excerpt: "Como líderes en el desarrollo de puertos de cruceros, estamos listos 
 description: "Esta es la primera publicación del blog roatan"
 author: "Alicia Alejandra Cruz Guzmán"
 image:
-  url: "/img/blogs/world-america/1.jpg"
+  url: "/img/blogs/world-america/inicio.webp"
   alt: "imagen del post 1"
 gridgallery:
   - url: "/img/blogs/world-america/1.jpg"
@@ -17,7 +17,7 @@ gridgallery:
   - url: "/img/blogs/world-america/3.jpg"
     alt: "imagen del post 3"
 gallery:
-  - url: "/img/blogs/world-america/1.webp"
+  - url: "/img/blogs/world-america/1.jpg"
     alt: "imagen del post 1"
   - url: "/img/blogs/world-america/2.jpg"
     alt: "imagen del post 2"

@@ -7,10 +7,10 @@ excerpt: "As a leader in cruise port development, we are always thrilled to welc
 description: "Esta es la primera publicación de port roatan"
 author: "Alicia Alejandra Cruz Guzmán"
 image:
-  url: "/img/blogs/world-america/1.webp"
+  url: "/img/blogs/world-america/1.jpg"
   alt: "imagen del post 1"
 gridgallery:
-  - url: "/img/blogs/world-america/1.webp"
+  - url: "/img/blogs/world-america/1.jpg"
     alt: "imagen del post 1"
   - url: "/img/blogs/world-america/2.jpg"
     alt: "imagen del post 2"

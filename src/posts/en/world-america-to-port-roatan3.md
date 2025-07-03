@@ -14,7 +14,7 @@ gridgallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/world-america/2.webp"
     alt: "imagen del post 2"
-  - url: "/img/blogs/world-america/3.jpg"
+  - url: "/img/blogs/world-america/3.webp"
     alt: "imagen del post 3"
 gallery:
   - url: "/img/blogs/world-america/4.webp"

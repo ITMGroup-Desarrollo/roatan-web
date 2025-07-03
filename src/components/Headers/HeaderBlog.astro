@@ -5,8 +5,7 @@ const t = translations[lang] ?? translations["es"];
 const headerTitle = Astro.props.headerTitle ?? "";
 const headerSubtitle = Astro.props.headerSubtitle ?? "";
 const headerUrl = Astro.props.headerUrl ?? "";
-const id = Astro.props.id ?? "";
-import { Image } from "astro:assets";
+const id = Astro.props.id ?? "";  
 ---
 
 <header id={id} class="relative bg-image-header h-96 lg:w-screen">

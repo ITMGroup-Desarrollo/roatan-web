@@ -35,19 +35,24 @@ capacity: "200 Pax"
 duration: "3 Hrs"
 note: "This tour is recommended for all family members, but minors should be always accompanied by their parent. Alcohol will not be served to people under 18 years old. Take into consideration that there is a certain amount of walking in this excursion."
 firstgallery:
-  - url: "/img/port-experience/blue-parrot/1.webp"
+  - url: "/img/discover-beyond/bbq/1.webp"
     alt: "imagen del post 1"
-  - url: "/img/port-experience/blue-parrot/2.webp"
+  - url: "/img/discover-beyond/bbq/2.webp"
     alt: "imagen del post 2"
-  - url: "/img/port-experience/blue-parrot/3.webp"
-    alt: "imagen del post 3"
 secondgallery:
-  - url: "/img/port-experience/blue-parrot/1.webp"
-    alt: "imagen del post 1"
-  - url: "/img/port-experience/blue-parrot/2.webp"
-    alt: "imagen del post 2"
-  - url: "/img/port-experience/blue-parrot/3.webp"
+  - url: "/img/discover-beyond/bbq/3.webp"
     alt: "imagen del post 3"
+  - url: "/img/discover-beyond/bbq/4.webp"
+    alt: "imagen del post 4"
+combinedgallery:
+  - url: "/img/discover-beyond/bbq/1.webp"
+    alt: "imagen del post 1"
+  - url: "/img/discover-beyond/bbq/2.webp"
+    alt: "imagen del post 2"
+  - url: "/img/discover-beyond/bbq/3.webp"
+    alt: "imagen del post 3"
+  - url: "/img/discover-beyond/bbq/4.webp"
+    alt: "imagen del post 4"
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 

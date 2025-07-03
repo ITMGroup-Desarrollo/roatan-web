@@ -5,8 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../assets/css/home.css";
-
-export default function SwiperClient({ slug }) {
+export default function SwiperClient({ slug, images = [] }) {
   const swiperId = `discover-swiper-${slug}`;
 
   useEffect(() => {
@@ -43,7 +42,6 @@ export default function SwiperClient({ slug }) {
             swiperInstance.autoplay.start();
           }, 1500);
         } else {
-          // Vuelve a intentar después de un breve tiempo
           setTimeout(tryInit, 100);
         }
       };
@@ -51,9 +49,7 @@ export default function SwiperClient({ slug }) {
       tryInit();
     };
 
-    // Detectar cambios de visibilidad con MutationObserver
     const parent = el.closest(".secondview");
-
     const observer = new MutationObserver(() => {
       if (parent && !parent.classList.contains("invisible")) {
         initSwiper();
@@ -78,27 +74,41 @@ export default function SwiperClient({ slug }) {
   return (
     <div id={swiperId} className="swiper w-full h-full relative">
       <div className="swiper-wrapper h-full w-full">
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/roatan.webp"
-            alt="swiperfoto1"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/shutter.webp"
-            alt="swiperfoto2"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/tikibar.webp"
-            alt="swiperfoto3"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        {images.length > 0 ? (
+          images.map((img, idx) => (
+            <div key={idx} className="swiper-slide h-full w-full">
+              <img
+                src={img.url}
+                alt={img.alt || `slide-${idx + 1}`}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ))
+        ) : (
+          <>
+            <div className="swiper-slide h-full w-full">
+              <img
+                src="/img/home/recursos/roatan.webp"
+                alt="swiperfoto1"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="swiper-slide h-full w-full">
+              <img
+                src="/img/home/recursos/shutter.webp"
+                alt="swiperfoto2"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="swiper-slide h-full w-full">
+              <img
+                src="/img/home/recursos/tikibar.webp"
+                alt="swiperfoto3"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </>
+        )}
       </div>
       <div className="swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10" />
     </div>

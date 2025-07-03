@@ -3,7 +3,7 @@ title: 'taco <br class="hidden md:block">lover'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "taco-lover"
 date: "2024-05-01"
-excerpt: "Un pedacito de México en Port Roatán. ¿Tacos deliciosos con una cerveza? ¡Es la combinación perfecta! También podrás encontrar opciones vegetarianas."
+excerpt: 'Un pedacito de México en Port Roatán. ¿Tacos deliciosos con una cerveza? ¡Es la combinación perfecta! También podrás encontrar&nbspopciones&nbspvegetarianas.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"
@@ -32,4 +32,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Un pedacito de México en Port Roatán. ¿Tacos deliciosos con una cerveza? ¡Es la combinación perfecta! También podrás encontrar opciones vegetarianas.
+Un pedacito de México en Port Roatán. ¿Tacos deliciosos con una cerveza? ¡Es la combinación perfecta! También podrás encontrar&nbspopciones&nbspvegetarianas.

@@ -3,7 +3,7 @@ title: 'La Fruteria'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "la-fruteria"
 date: "2024-05-01"
-excerpt: "Bebidas divertidas y frescas, ¡estamos dentro! Un coco o una piña loca mientras visitas Port Roatán es una parada OBLIGADA."
+excerpt: 'Bebidas divertidas y frescas, ¡estamos dentro! Un coco o una piña loca mientras visitas Port Roatán es una&nbspparada&nbspOBLIGADA.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"
@@ -32,4 +32,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Bebidas divertidas y frescas, ¡estamos dentro! Un coco o una piña loca mientras visitas Port Roatán es una parada OBLIGADA.
+Bebidas divertidas y frescas, ¡estamos dentro! Un coco o una piña loca mientras visitas Port Roatán es una&nbspparada&nbspOBLIGADA.

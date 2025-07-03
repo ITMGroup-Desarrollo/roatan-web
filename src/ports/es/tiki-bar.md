@@ -1,9 +1,9 @@
 ---
-title: 'TIKI TIKI <br class="hidden md:block">Pool bar'
+title: 'TIKI&nbspTIKI <br class="hidden md:block">Pool&nbspbar'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "tiki-bar"
 date: "2024-05-01"
-excerpt: "¿En mood de pool bar? ¡Nos vemos en el Tiki Tiki! Una piña colada o una margarita junto a la piscina siempre será el mejor plan."
+excerpt: '¿En mood de pool bar? ¡Nos vemos en el Tiki Tiki! Una piña colada o una margarita junto a la piscina siempre será el mejor plan.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/icondrink.png"
@@ -32,4 +32,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¿En mood de pool bar? ¡Nos vemos en el Tiki Tiki! Una piña colada o una margarita junto a la piscina siempre será el mejor plan.
+¿En mood de pool bar? ¡Nos vemos en el Tiki Tiki! Una piña colada o una margarita junto a la piscina siempre será el&nbspmejor&nbspplan.

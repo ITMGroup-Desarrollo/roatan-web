@@ -3,7 +3,7 @@ title: 'Boat <br class="hidden md:block">Bar'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "boat-bar"
 date: "2024-05-01"
-excerpt: "Drinks, food, and a good mood! The Boat Bar is a must if you are looking to freshen up and relax."
+excerpt: 'Drinks, food, and a good mood! The Boat Bar is a must if you are looking to freshen up&nbs&nbspand&nbs&nbsprelax.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/icondrink.png"
@@ -39,4 +39,4 @@ tags: ["astro", "bloguear", "aprender en público"]
 ---
 
 
-Drinks, food, and a good mood! The Boat Bar is a must if you are looking to freshen up and relax.
+Drinks, food, and a good mood! The Boat Bar is a must if you are looking to freshen up&nbspand&nbsprelax.

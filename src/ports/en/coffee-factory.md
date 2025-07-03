@@ -3,7 +3,7 @@ title: 'Coffee <br class="hidden md:block">Factory'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "coffee-factory"
 date: "2024-05-01"
-excerpt: "The best way to fuel up is with a delicious cafecito! Hot or cold, you choose! Enjoy it for the day or have it before you go, we promise you'll come back for more."
+excerpt: 'The best way to fuel up is with a delicious cafecito! Hot or cold, you choose! Enjoy it for the day or have it before you go, we promise you'll come back&nbspfor&nbspmore.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconcoffee.png"
@@ -38,4 +38,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-The best way to fuel up is with a delicious cafecito! Hot or cold, you choose! Enjoy it for the day or have it before you go, we promise you'll come back for more. 
+The best way to fuel up is with a delicious cafecito! Hot or cold, you choose! Enjoy it for the day or have it before you go, we promise you'll come back&nbspfor&nbspmore. 

@@ -3,7 +3,7 @@ title: 'La Fruteria'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "la-fruteria"
 date: "2024-05-01"
-excerpt: "Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is a MUST."
+excerpt: 'Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is&nbspa&nbspMUST.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"
@@ -32,4 +32,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is a MUST.  
+Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is&nbspa&nbspMUST.  

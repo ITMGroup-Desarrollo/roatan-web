@@ -4,7 +4,7 @@ subtitle: "Non reprehenderit ad deserunt."
 slug: "animal-encounter"
 direction: "right"
 date: "2024-05-01"
-excerpt: "Experience the perfect combination of relaxation and culinary delights with our BBQ Donut Boat tour. Sail through the serene and beautiful waters of Roatan Bay while grilling your own BBQ onboard and enyjoying the stunning Caribbean views"
+excerpt: "Experience the perfect combination of relaxation and culinary delights with our BBQ Donut Boat tour. Sail through the serene and beautiful waters of Roatan Bay while grilling your own BBQ onboard and enjoying the stunning Caribbean views."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 fondo:

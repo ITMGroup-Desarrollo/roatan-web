@@ -3,7 +3,7 @@ title: 'Cantina <br class="hidden md:block">Latina'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "cantina-latina"
 date: "2024-05-01"
-excerpt: "The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink in hand."
+excerpt: 'The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink&nbs&nbspin&nbs&nbsphand.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"
@@ -41,4 +41,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink in hand.
+The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink&nbspin&nbsphand.

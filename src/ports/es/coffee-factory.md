@@ -3,7 +3,7 @@ title: 'Coffee <br class="hidden md:block">Factory'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "coffee-factory"
 date: "2024-05-01"
-excerpt: "¡La mejor manera de llenarte de energía es con un delicioso cafecito! Caliente o frío, ¡tú eliges! Disfrútalo durante el día o antes de irte. Te prometemos que volverás por más."
+excerpt: '¡La mejor manera de llenarte de energía es con un delicioso cafecito! Caliente o frío, ¡tú eliges! Disfrútalo durante el día o antes de irte. Te prometemos que volverás&nbsppor&nbspmás.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconcoffee.png"
@@ -38,4 +38,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡La mejor manera de llenarte de energía es con un delicioso cafecito! Caliente o frío, ¡tú eliges! Disfrútalo durante el día o antes de irte. Te prometemos que volverás por más.
+¡La mejor manera de llenarte de energía es con un delicioso cafecito! Caliente o frío, ¡tú eliges! Disfrútalo durante el día o antes de irte. Te prometemos que volverás&nbsppor&nbspmás.

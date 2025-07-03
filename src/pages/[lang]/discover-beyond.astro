@@ -153,16 +153,18 @@ export function getStaticPaths() {
               data-slug={post.slug}
             >
               <div class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2 h-full md:h-[80%] w-full md:w-[90%] gap-8 mt-8">
-                <div class="flex flex-col justify-center">
+                <div class="flex flex-col justify-center mt-8">
                   <div class="flex justify-center">
                     <p class="w-[80%] pt-6 md:pt-0 text-center md:text-start text-3xl md:text-5xl xl:text-7xl text-[var(--secondary-color)] font-alverata font-bold ">
-                      What to bring?
+                      {t.discover.requirements}
                     </p>
                   </div>
                   <div class="flex justify-center items-start">
-                    <ol class="list-disc pt-6 text-[var(--darkblue-color)] w-[80%] pl-6 space-y-4 md:columns-1 md:[column-count:2] max-h-[20rem] overflow-y-auto">
+                    <ol class="pt-6 text-[var(--darkblue-color)] w-[80%] pl-6 space-y-4 md:columns-1 md:[column-count:2] max-h-[20rem] overflow-y-auto list-none">
                       {post.requirements.map((item) => (
-                        <li class="break-inside-avoid w-[90%]">{item.name}</li>
+                        <li class="break-inside-avoid w-[80%] relative pl-4 before:content-['•'] before:absolute before:left-0 before:top-0">
+                          {item.name}
+                        </li>
                       ))}
                     </ol>
                   </div>
@@ -214,8 +216,6 @@ export function getStaticPaths() {
                       client:only
                     />
                   </div>
-
-                  
                 </div>
                 <div class="hidden md:flex justify-center">
                   <div class="w-[80%] h-[16rem] md:min-h-[20rem] md:h-full rounded-3xl overflow-hidden flex">
@@ -225,8 +225,6 @@ export function getStaticPaths() {
                       client:only
                     />
                   </div>
-
-                 
                 </div>
                 <div class="flex relative justify-center w-screen md:w-auto justify-self-center items-center md:items-end pb-10 md:pb-0">
                   <div class="wave-container  md:mt-8 absolute -top-2 md:top-0 md:h-[6rem] w-full md:-mr-[10%] right-0 bg-transparent z-1">
@@ -239,7 +237,8 @@ export function getStaticPaths() {
                     <div class="wave-cover" />
                   </div>
                   <div class="note-container w-[80%]">
-                    <><WaveObserver client:load />
+                    <>
+                      <WaveObserver client:load />
                       <p class="text-3xl mt-20 md:mt-0 mb-4 md:text-5xl xl:text-7xl text-center md:text-start text-[var(--secondary-color)] font-alverata font-bold ">
                         {t.discover.Note}:
                       </p>

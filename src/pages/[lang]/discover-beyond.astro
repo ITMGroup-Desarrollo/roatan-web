@@ -156,10 +156,10 @@ export function getStaticPaths() {
                       What to bring?
                     </p>
                   </div>
-                  <div class="flex justify-center">
+                  <div class="flex justify-center items-start">
                     <ol class="list-disc pt-6 text-[var(--darkblue-color)] w-[80%] pl-6 space-y-4 md:columns-1 md:[column-count:2] max-h-[20rem] overflow-y-auto">
                       {post.requirements.map((item) => (
-                        <li class="break-inside-avoid">{item.name}</li>
+                        <li class="break-inside-avoid w-[90%]">{item.name}</li>
                       ))}
                     </ol>
                   </div>

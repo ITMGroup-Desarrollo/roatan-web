@@ -3,7 +3,6 @@ title: 'La Catrachita'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "la-catrachita"
 date: "2024-05-01"
-excerpt: 'From ceviche to burgers, you'll love La Catrachita! Don't worry about drinking, there are plenty of options to choose from. Cold beers, margaritas, and more, time to get in&nbspthe&nbspmood!'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"

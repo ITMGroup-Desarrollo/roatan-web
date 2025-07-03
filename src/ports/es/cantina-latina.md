@@ -3,7 +3,6 @@ title: 'Cantina <br class="hidden md:block">Latina'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "cantina-latina"
 date: "2024-05-01"
-excerpt: ' ¡El mejor lugar para disfrutar los sabores del Caribe! Colorido, lleno de sabor y, por supuesto, ¡delicioso! Acompaña tus platillos con una una bebida deliciosa&nbspen&nbspmano.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"

@@ -3,7 +3,6 @@ title: 'Monkey <br class="hidden md:block">Bar'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "monkey-bar"
 date: "2024-05-01"
-excerpt: 'Nachos, seafood, drinks, Monkey Bar has it all! Ask for your favorite drink, celebrate,&nbspand&nbspcheers!'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/icondrink.png"

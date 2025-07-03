@@ -3,7 +3,6 @@ title: 'taco <br class="hidden md:block">lover'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "taco-lover"
 date: "2024-05-01"
-excerpt: 'A piece of Mexico in Port Roatan. Delicious tacos with a beer? It’s a match!  You’ll find veggie&nbspoptions&nbsptoo!'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"

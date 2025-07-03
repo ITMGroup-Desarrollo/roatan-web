@@ -3,7 +3,6 @@ title: 'Blue <br class="hidden md:block">Parrot'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "blue-parrot"
 date: "2024-05-01"
-excerpt: 'Top spot for seafood lovers! Delicious, fresh, and unique, Blue Parrot's menu is an experience you must enjoy&nbspupon&nbsparrival!'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconayb.svg"

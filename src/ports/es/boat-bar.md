@@ -3,7 +3,6 @@ title: 'Boat <br class="hidden md:block">Bar'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "boat-bar"
 date: "2024-05-01"
-excerpt: '¡Bebidas, comida y buena vibra! El Boat Bar es una parada obligada si quieres refrescarte&nbspy&nbsprelajarte.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/icondrink.png"

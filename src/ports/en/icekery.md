@@ -3,7 +3,6 @@ title: 'icekery<br>&nbsp;'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "icekery"
 date: "2024-05-01"
-excerpt: 'An ice cream a day, gives you a smile for the day! Forget the heat and have an artisanal ice cream with your&nbspfavorite&nbsptoppings.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconice.png"

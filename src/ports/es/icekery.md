@@ -3,7 +3,6 @@ title: 'icekery<br>&nbsp;'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "icekery"
 date: "2024-05-01"
-excerpt: '¡Un helado al día te saca una sonrisa! Olvídate del calor y disfruta un helado artesanal con tus&nbsptoppings&nbspfavoritos.'
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
 icon: "/img/port-experience/icons/iconice.png"

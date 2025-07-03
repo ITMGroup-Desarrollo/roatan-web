@@ -92,7 +92,7 @@ export const translations = {
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
       blog: "Blog",
-      faqs: "FAQ's",
+      "faqs": "FAQ's",
       contact: "Contact",
     },
     header: {

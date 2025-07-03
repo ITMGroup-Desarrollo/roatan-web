@@ -71,6 +71,10 @@ body{
     background: var(--primary-color);
     background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
 }
+#headerFaqs-container .bg-gradient-header{
+    background: var(--primary-color);
+    background: linear-gradient(0deg, var(--primary-color) 0%, rgba(255, 255, 255, 0) 0%);
+}
 #headerPort-container{
   height: 100vh;
 }
@@ -101,6 +105,7 @@ body{
     position: relative;
   }
 } */
+
 @media screen and (min-width: 1025px) {
   .title_container h1, h2{
     font-size: 6rem;
@@ -125,7 +130,18 @@ video::-webkit-media-controls {
   #headerPort-container{
   height: 24rem;
 }
+  #headerFaqs-container{
+  height: 24rem;
+  display: flex !important;
+}
   #headerDiscover-container{
   height: 24rem;
 }
+}
+@media screen and (min-width: 769px) {
+
+  #headerFaqs-container{
+  display: none !important;
+}
+
 }

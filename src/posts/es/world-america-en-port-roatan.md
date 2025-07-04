@@ -19,10 +19,6 @@ gridgallery:
 gallery:
   - url: "/img/blogs/world-america/4.webp"
     alt: "imagen del post 1"
-  - url: "/img/blogs/world-america/5.webp"
-    alt: "imagen del post 2"
-  - url: "/img/blogs/world-america/6.webp"
-    alt: "imagen del post 3"
 tags: ["roatan", "port roatan", "world america", "blog", "primer blog", "honduras"]
 ---
 Como lideres en el desarrollo de puertos de cruceros, estamos listos para recibir a nuevos amigos y compartir experiencias inolvidables. Estamos encantados de anunciar que <b>Costa Maya y Port Roatan serán parte del viaje inaugural de MSC World America por el Caribe Occidental este 21 y 22 de abril</b>.

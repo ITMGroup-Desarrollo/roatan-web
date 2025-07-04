@@ -19,10 +19,6 @@ gridgallery:
 gallery:
   - url: "/img/blogs/world-america/4.webp"
     alt: "imagen del post 1"
-  - url: "/img/blogs/world-america/5.webp"
-    alt: "imagen del post 2"
-  - url: "/img/blogs/world-america/6.webp"
-    alt: "imagen del post 3"
 tags: ["roatan", "port roatan", "world america", "blog", "first blog", "honduras"]
 ---
 

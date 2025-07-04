@@ -2,6 +2,7 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
+const full = false;
 import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
 ---
 
@@ -26,9 +27,9 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
       </p>
       <span class="hidden md:block w-[2px] h-[20rem] xl:h-[20rem] bg-[var(--primary-color)]"
       ></span>
-      <PreguntasYRespuestas client:only="react" t={t} />
+      <PreguntasYRespuestas client:only="react" t={t} full={full}/>
       <a
-        href={`/${lang}/port-experience/`}
+        href={`/${lang}/faqs/`}
         class="text-[var(--primary-color)] border-2 border-[var(--primary-color)] self-center py-2 px-6 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
         >{t.homePort.button}</a
       >

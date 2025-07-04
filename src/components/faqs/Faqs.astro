@@ -2,33 +2,25 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
-import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
+import PreguntasYRespuestas from "../../components/js/Faqslanding.jsx";
 ---
 
-<div class="faqs h-[48rem] md:h-auto relative bg-[var(--redSocial-color)]">
+<div class="faqs h-auto relative bg-[var(--redSocial-color)] overflow-hidden">
   <div
-    class="faqs-container  md:mt-0 top-0 lg:-top-0 xl:top-0 w-screen h-auto md:h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
+    class="faqs-container w-screen h-auto flex flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
   >
-    <div class="title-container justify-center items-center flex flex-col z-15">
+    <div class="title-container justify-center items-center flex flex-col z-15 pt-8">
       <h2
         class="title hidden md:block text-5xl md:text-8xl font-bebas text-[var(--primary-color)]"
       >
         {t.homeFaqs.title}
       </h2>
       <p
-        class="subtitle text-3xl md:text-4xl font-bebas uppercase text-[var(--secondary-color)] mb-4 md:mb-12"
+        class="subtitle text-4xl md:text-4xl font-bebas uppercase text-[var(--secondary-color)] mb-6 md:mb-12"
       >
         {t.homeFaqs.subtitle}
       </p>
-      <span
-        class="hidden md:block w-[2px] h-[20rem] xl:h-[20rem] bg-[var(--primary-color)]"
-      ></span>
-      <PreguntasYRespuestas client:only="react" t={t} />
-      <a
-        href={`/${lang}/port-experience/`}
-        class="text-[var(--primary-color)] border-2 border-[var(--primary-color)] self-center py-2 px-6 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
-        >{t.homePort.button}</a
-      >
+      <PreguntasYRespuestas client:only="react" t={t} full="true/" />
     </div>
   </div>
 </div>

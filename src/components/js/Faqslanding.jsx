@@ -61,11 +61,11 @@ const PreguntasYRespuestas = ({ t, full }) => {
   }
 
   return (
-    <div className="preguntasyrespuestas-container w-screen xl:w-3/4 md:absolute top-60 lg:top-80 xl:top-80 md:px-20 flex flex-col md:grid md:grid-cols-2">
+    <div className="preguntasyrespuestas-container w-screen md:px-[20%] flex flex-col">
       {/* PREGUNTAS (siempre visibles) */}
       <div className="preguntas-container mb-4 md:mb0 md:col-span-1 px-5 md:px-0 flex flex-col gap-5 md:gap-10 text-center">
         {faqs.map(({ id, pregunta, respuesta }) => (
-          <div key={id} className="flex flex-col gap-2">
+          <div key={id} className="flex flex-col gap-4">
             <div
               onClick={() => toggle(id)}
               className={`pregunta flex flex-row rounded-full md:mr-8 items-center justify-left cursor-pointer transition-all duration-300 ease-in-out ${
@@ -99,7 +99,7 @@ const PreguntasYRespuestas = ({ t, full }) => {
 
             {/* RESPUESTA SOLO EN MOBILE */}
             <div
-              className={`respuesta md:hidden bg-white flex px-4 py-2 rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${
+              className={`respuesta bg-white flex px-4 py-2 rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${
                 activa === id ? "" : "hidden"
               }`}
             >
@@ -111,21 +111,6 @@ const PreguntasYRespuestas = ({ t, full }) => {
         ))}
       </div>
 
-      {/* RESPUESTAS SOLO EN DESKTOP */}
-      <div className="respuestas-container  hidden md:flex md:col-span-1 flex-col md:gap-10 text-center mb-8 md:mb-0">
-        {faqs.map(({ id, respuesta }) => (
-          <div
-            key={id}
-            className={`respuesta bg-white flex md:ml-6 px-4 flex-row rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${
-              activa === id ? "" : "hidden"
-            }`}
-          >
-            <p className="respuesta-texto my-4 md:my-0 text-2xl text-[var(--primary-color)] text-left">
-              {respuesta}
-            </p>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

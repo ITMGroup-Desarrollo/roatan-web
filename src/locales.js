@@ -51,11 +51,17 @@ export const translations = {
       pregunta1: "¿Qué puedo encontrar en Port Roatán?",
       pregunta2: "¿Hay actividades dentro de Port Roatán?",
       pregunta3: "¿Puedo visitar Port Roatán, aunque no venga en crucero?",
+      pregunta4: "Are pools and lounge areas free?",
+      pregunta5: "Any suggestions on what to bring upon arrival?",
+      pregunta6: "I would love to explore Roatan. Are there any tours available?",
       respuesta1:
         "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatán te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
       respuesta2:
         " ¡Claro que sí! Piscinas refrescantes, zonas lounge, hamacas y hasta un spa relajante (con costo adicional).",
       respuesta3: " ¡Gracias por tu interés! Al momento, el acceso a Port Roatán es exclusivo para cruceristas.",
+      respuesta4: "Yes, they are! There is no reservation needed for you to enjoy them. Please note, these areas are first come, first serve.",
+      respuesta5: "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, and hat. We recommend bringing cash for your activities and souvenirs.",
+      respuesta6: "Roatan is a stunning destination. We recommend visiting",
     },
     blog: {
       title: "Blog",
@@ -137,11 +143,17 @@ export const translations = {
       pregunta1: "What can i find in Port Roatan?",
       pregunta2: "Are there activities inside Port Roatan?",
       pregunta3: "Can i visit Port Roatan without a cruise?",
+      pregunta4: "Are pools and lounge areas free?",
+      pregunta5: "Any suggestions on what to bring upon arrival?",
+      pregunta6: "I would love to explore Roatan. Are there any tours available?",
       respuesta1:
         "A cruise port you'll be dreaming of! Inspired by its Caribbean location, Port Roatan is a cruise port that offers various activities for cruise guests to enjoy. From themed restaurants, to an exclusive retail area, we want to make the best out of your Port Roatan stop.",
       respuesta2:
         "Yes! Refreshing pools, lounge areas, hammocks, and a relaxing spa (at extra cost).",
       respuesta3: "Thank you for your interest! Port Roatan is exclusive to cruise ship guests.",
+      respuesta4: "Yes, they are! There is no reservation needed for you to enjoy them. Please note, these areas are first come, first serve.",
+      respuesta5: "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, and hat. We recommend bringing cash for your activities and souvenirs.",
+      respuesta6: "Roatan is a stunning destination. We recommend visiting",
     },
     blog: {
       title: "Blog",

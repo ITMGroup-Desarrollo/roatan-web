@@ -73,7 +73,7 @@ body{
 }
 #headerFaqs-container .bg-gradient-header{
     background: var(--primary-color);
-    background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
+    background: linear-gradient(0deg, var(--primary-color) 0%, rgba(255, 255, 255, 0) 0%);
 }
 #headerPort-container{
   height: 100vh;

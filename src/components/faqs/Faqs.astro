@@ -7,15 +7,11 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
 
 <div class="faqs h-[48rem] md:h-auto relative bg-[var(--redSocial-color)]">
   <div
-    class="space-container w-screen md:h-[20rem] bg-[var(--redSocial-color)]"
-  >
-  </div>
-  <div
-    class="faqs-container md:absolute md:mt-0 top-0 lg:-top-0 xl:top-0 w-screen h-auto md:h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
+    class="faqs-container  md:mt-0 top-0 lg:-top-0 xl:top-0 w-screen h-auto md:h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center overflow-y-hidden overflow-x-hidden bg-[transparent] z-10"
   >
     <div class="title-container justify-center items-center flex flex-col z-15">
       <h2
-        class="title text-5xl md:text-8xl font-bebas text-[var(--primary-color)]"
+        class="title hidden md:block text-5xl md:text-8xl font-bebas text-[var(--primary-color)]"
       >
         {t.homeFaqs.title}
       </h2>
@@ -24,7 +20,8 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
       >
         {t.homeFaqs.subtitle}
       </p>
-      <span class="hidden md:block w-[2px] h-[20rem] xl:h-[20rem] bg-[var(--primary-color)]"
+      <span
+        class="hidden md:block w-[2px] h-[20rem] xl:h-[20rem] bg-[var(--primary-color)]"
       ></span>
       <PreguntasYRespuestas client:only="react" t={t} />
       <a
@@ -42,17 +39,16 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
 
     respuestas.forEach((respuesta) => {
       if (respuesta.id === idRespuesta) {
-        
         const isHidden = respuesta.classList.contains("hidden");
-        respuestas.forEach(r => r.classList.add("hidden")); // Oculta todas las respuestas
-        preguntas.forEach(p => {
+        respuestas.forEach((r) => r.classList.add("hidden")); // Oculta todas las respuestas
+        preguntas.forEach((p) => {
           p.querySelector(".mas-icon")?.classList.remove("hidden");
           p.querySelector(".menos-icon")?.classList.add("hidden");
         });
 
         if (isHidden) {
           respuesta.classList.remove("hidden");
-          
+
           const preguntaId = "pregunta" + idRespuesta.replace("respuesta", "");
           const pregunta = document.getElementById(preguntaId);
           if (pregunta) {
@@ -61,13 +57,15 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
           }
         }
       } else {
-        respuesta.classList.add("hidden"); 
+        respuesta.classList.add("hidden");
       }
     });
   }
 
   // Oculta todas las respuestas al inicio
   window.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".respuesta").forEach(r => r.classList.add("hidden"));
+    document
+      .querySelectorAll(".respuesta")
+      .forEach((r) => r.classList.add("hidden"));
   });
 </script>

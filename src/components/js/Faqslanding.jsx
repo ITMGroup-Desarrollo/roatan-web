@@ -61,7 +61,7 @@ const PreguntasYRespuestas = ({ t, full }) => {
   }
 
   return (
-    <div className="preguntasyrespuestas-container w-full md:px-5 flex flex-col">
+    <div className="preguntasyrespuestas-container w-full md:w-[80%] flex flex-col">
       {/* PREGUNTAS (siempre visibles) */}
       <div className="preguntas-container w-full mb-4 md:mb0 md:col-span-1 px-5  flex flex-col gap-5 md:gap-10 text-center">
         {faqs.map(({ id, pregunta, respuesta }) => (

@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
-import Menu from "../../components/Headers/MenuBlog.astro";
+import Menu from "../../components/Headers/Menu.astro";
 import Faqss from "../../components/faqs/Faqs.astro";
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
@@ -14,7 +14,7 @@ const lang = Astro.params.lang || "es";
   <Menu lang={lang} />
   <Header
     lang={lang}
-    headerTitle=""
+    headerTitle="Faq's"
     headerUrl="header-faqs.webp"
     id="headerFaqs-container"
   />

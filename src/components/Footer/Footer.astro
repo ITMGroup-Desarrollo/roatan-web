@@ -18,7 +18,7 @@ import { Image } from "astro:assets";
   <video
   id="footerVideo"
   src={videoSrc}
-  class="absolute w-full h-[36vh] md:h-full lg:h-full md:relative bottom-0 z-2"
+  class="absolute w-full h-auto md:h-full lg:h-full md:relative bottom-0 z-2"
   autoplay
   muted
   loop
@@ -28,7 +28,7 @@ import { Image } from "astro:assets";
 
 
     <div
-      class="absolute z-10 bottom-2 lg:bottom-10 flex flex-col lg:grid lg:grid-cols-4 gap-3 w-screen items-end"
+      class="absolute z-10 bottom-0 lg:bottom-10 flex flex-col lg:grid lg:grid-cols-4 gap-3 w-screen items-end"
     >
       <div class="lg:col-span-1 lg:flex lg:justify-center">
         <nav

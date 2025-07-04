@@ -61,14 +61,14 @@ const PreguntasYRespuestas = ({ t, full }) => {
   }
 
   return (
-    <div className="preguntasyrespuestas-container w-screen md:px-[20%] flex flex-col">
+    <div className="preguntasyrespuestas-container w-full md:px-5 flex flex-col">
       {/* PREGUNTAS (siempre visibles) */}
-      <div className="preguntas-container mb-4 md:mb0 md:col-span-1 px-5 md:px-0 flex flex-col gap-5 md:gap-10 text-center">
+      <div className="preguntas-container w-full mb-4 md:mb0 md:col-span-1 px-5  flex flex-col gap-5 md:gap-10 text-center">
         {faqs.map(({ id, pregunta, respuesta }) => (
           <div key={id} className="flex flex-col gap-4">
             <div
               onClick={() => toggle(id)}
-              className={`pregunta flex flex-row rounded-full md:mr-8 items-center justify-left cursor-pointer transition-all duration-300 ease-in-out ${
+              className={`pregunta flex flex-row w-full rounded-full md:mr-8 items-center justify-left cursor-pointer transition-all duration-300 ease-in-out ${
                 activa === id ? "bg-[var(--secondary-color)]" : "bg-transparent"
               }`}
             >
@@ -99,7 +99,7 @@ const PreguntasYRespuestas = ({ t, full }) => {
 
             {/* RESPUESTA SOLO EN MOBILE */}
             <div
-              className={`respuesta bg-white flex px-4 py-2 rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${
+              className={`respuesta bg-white w-full flex px-4 py-2 rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${
                 activa === id ? "" : "hidden"
               }`}
             >

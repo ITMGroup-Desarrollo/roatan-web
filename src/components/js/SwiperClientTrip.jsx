@@ -25,6 +25,24 @@ const slidesData = [
     text: 'This is a very "disneyfied" port where you have all the tourist shops and restaurants...',
     name: "BrandonK850",
     url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r996189449-Port_Of_Roatan-Roatan_Bay_Islands.html",
+  },
+  {
+    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e4/2d/default-avatar-2020-48.jpg?w=100&h=100&s=1",
+    text: "The Port of Roatan was a great port to get off the boat and hang out...",
+    name: "Susan I",
+    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r1015268803-Port_Of_Roatan-Roatan_Bay_Islands.html",
+  },
+  {
+    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/05/3a/00/privatemf.jpg?w=100&h=100&s=1",
+    text: "This was a beautiful port and had a lot of great shopping, local culture and recreation...",
+    name: "privatemf",
+    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r953307467-Port_Of_Roatan-Roatan_Bay_Islands.html",
+  },
+  {
+    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/52/63/ec/caption.jpg?w=100&h=100&s=1",
+    text: 'This is a very "disneyfied" port where you have all the tourist shops and restaurants...',
+    name: "BrandonK850",
+    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r996189449-Port_Of_Roatan-Roatan_Bay_Islands.html",
   }
 ];
 
@@ -74,7 +92,7 @@ export default function SwiperClient() {
           centeredSlides: true,
         },
         1025: {
-          slidesPerView: 1,
+          slidesPerView: 3,
           centeredSlides: true,
         },
       },

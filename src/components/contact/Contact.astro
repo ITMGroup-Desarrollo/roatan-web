@@ -1,0 +1,59 @@
+---
+
+---
+<section class=" py-12 relative bg-transparent">
+  <form class="max-w-4xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4">
+    <input
+      type="text"
+      name="nombre"
+      placeholder="NOMBRE"
+      required
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color italic focus:outline-none"
+    />
+
+    <input
+      type="email"
+      name="correo"
+      placeholder="CORREO"
+      required
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color italic focus:outline-none"
+    />
+
+    <select
+      name="naviera"
+      required
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color italic focus:outline-none"
+    >
+      <option value="" disabled selected hidden>NAVIERA</option>
+      <option value="msc">MSC</option>
+      <option value="royal">Royal Caribbean</option>
+      <option value="carnival">Carnival</option>
+    </select>
+
+    <input
+      type="date"
+      name="fecha"
+      placeholder="FECHA DE RESERVACIÓN"
+      required
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color italic text-primary-color focus:outline-none"
+    />
+
+    <textarea
+      name="mensaje"
+      rows="4"
+      placeholder="MENSAJE"
+      required
+      class="md:col-span-2 border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color italic focus:outline-none"
+    ></textarea>
+
+    <div class="md:col-span-2 flex justify-center mt-4">
+      <button
+        type="submit"
+        class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors"
+      >
+        ENVIAR
+      </button>
+    </div>
+  </form>
+
+</section>

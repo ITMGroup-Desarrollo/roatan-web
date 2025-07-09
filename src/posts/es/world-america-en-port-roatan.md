@@ -1,5 +1,5 @@
 ---
-title: 'MSC World America en Port&nbspRoatán'
+title: 'MSC World America en Port&nbsp;Roatán'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "world-america-en-port-roatan"
 date: "2024-05-01"

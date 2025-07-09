@@ -35,4 +35,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡Un helado al día te saca una sonrisa! Olvídate del calor y disfruta un helado artesanal con tus&nbsptoppings&nbspfavoritos.
+¡Un helado al día te saca una sonrisa! Olvídate del calor y disfruta un helado artesanal con tus&nbsp;toppings&nbsp;favoritos.

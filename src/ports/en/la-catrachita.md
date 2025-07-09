@@ -32,4 +32,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-From ceviche to burgers, you'll love La Catrachita! Don't worry about drinking, there are plenty of options to choose from. Cold beers, margaritas, and more, time to get in&nbspthe&nbspmood!
+From ceviche to burgers, you'll love La Catrachita! Don't worry about drinking, there are plenty of options to choose from. Cold beers, margaritas, and more, time to get in&nbsp;the&nbsp;mood!

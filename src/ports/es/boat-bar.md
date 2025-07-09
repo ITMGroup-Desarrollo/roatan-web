@@ -37,4 +37,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡Bebidas, comida y buena vibra! El Boat Bar es una parada obligada si quieres refrescarte&nbspy&nbsprelajarte.
+¡Bebidas, comida y buena vibra! El Boat Bar es una parada obligada si quieres refrescarte&nbsp;y&nbsp;relajarte.

@@ -31,4 +31,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Un pedacito de México en Port Roatán. ¿Tacos deliciosos con una cerveza? ¡Es la combinación perfecta! También podrás encontrar&nbspopciones&nbspvegetarianas.
+Un pedacito de México en Port Roatán. ¿Tacos deliciosos con una cerveza? ¡Es la combinación perfecta! También podrás encontrar&nbsp;opciones&nbsp;vegetarianas.

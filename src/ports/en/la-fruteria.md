@@ -31,4 +31,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is&nbspa&nbspMUST.  
+Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is&nbsp;a&nbsp;MUST.  

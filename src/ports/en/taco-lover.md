@@ -30,4 +30,4 @@ gallery:
     alt: "imagen del post 2"
 tags: ["astro", "bloguear", "aprender en público"]
 ---
-A piece of Mexico in Port Roatan. Delicious tacos with a beer? It’s a match!  You’ll find veggie&nbspoptions&nbsptoo!
+A piece of Mexico in Port Roatan. Delicious tacos with a beer? It’s a match!  You’ll find veggie&nbsp;options&nbsp;too!

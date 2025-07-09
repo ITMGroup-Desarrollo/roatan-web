@@ -41,4 +41,4 @@ tags: ["astro", "bloguear", "aprender en público"]
 ---
 
 
-Top spot for seafood lovers! Delicious, fresh, and unique, Blue Parrot's menu is an experience you must enjoy&nbspupon&nbsparrival!  
+Top spot for seafood lovers! Delicious, fresh, and unique, Blue Parrot's menu is an experience you must enjoy&nbsp;upon&nbsp;arrival!  

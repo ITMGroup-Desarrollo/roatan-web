@@ -37,4 +37,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡La mejor manera de llenarte de energía es con un delicioso cafecito! Caliente o frío, ¡tú eliges! Disfrútalo durante el día o antes de irte. Te prometemos que volverás&nbsppor&nbspmás.
+¡La mejor manera de llenarte de energía es con un delicioso cafecito! Caliente o frío, ¡tú eliges! Disfrútalo durante el día o antes de irte. Te prometemos que volverás&nbsp;por&nbsp;más.

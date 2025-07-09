@@ -43,4 +43,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡Nachos, mariscos, drinks… Monkey Bar lo tiene todo! Pide tu favorito, celebra&nbspy&nbsp¡salud! 
+¡Nachos, mariscos, drinks… Monkey Bar lo tiene todo! Pide tu favorito, celebra&nbsp;y&nbsp;¡salud! 

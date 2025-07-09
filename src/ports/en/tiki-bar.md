@@ -1,5 +1,5 @@
 ---
-title: 'TIKI&nbspTIKI <br class="hidden md:block">Pool&nbspbar'
+title: 'TIKI&nbsp;TIKI <br class="hidden md:block">Pool&nbsp;bar'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "tiki-bar"
 date: "2024-05-01"
@@ -30,4 +30,4 @@ gallery:
     alt: "imagen del post 2"
 tags: ["astro", "bloguear", "aprender en público"]
 ---
-Looking for a pool bar? We'll see you at Tiki Tiki! A piña colada or a margarita by the pool will always be the best plan&nbspfor&nbspyou! 
+Looking for a pool bar? We'll see you at Tiki Tiki! A piña colada or a margarita by the pool will always be the best plan&nbsp;for&nbsp;you! 

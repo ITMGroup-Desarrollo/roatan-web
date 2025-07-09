@@ -1,5 +1,5 @@
 ---
-title: 'MSC World America at Port&nbspRoatán'
+title: 'MSC World America at Port&nbsp;Roatán'
 subtitle: "world-america-to-port-roatan"
 slug: "world-america-to-port-roatan"
 date: "2024-05-01"

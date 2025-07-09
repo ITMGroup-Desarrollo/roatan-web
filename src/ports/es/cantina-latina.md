@@ -40,4 +40,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡El mejor lugar para disfrutar los sabores del Caribe! Colorido, lleno de sabor y, por supuesto, ¡delicioso! Acompaña tus platillos con una una bebida deliciosa&nbspen&nbspmano.
+¡El mejor lugar para disfrutar los sabores del Caribe! Colorido, lleno de sabor y, por supuesto, ¡delicioso! Acompaña tus platillos con una una bebida deliciosa&nbsp;en&nbsp;mano.

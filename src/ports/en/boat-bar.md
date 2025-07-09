@@ -38,4 +38,4 @@ tags: ["astro", "bloguear", "aprender en público"]
 ---
 
 
-Drinks, food, and a good mood! The Boat Bar is a must if you are looking to freshen up&nbspand&nbsprelax.
+Drinks, food, and a good mood! The Boat Bar is a must if you are looking to freshen up&nbsp;and&nbsp;relax.

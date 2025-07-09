@@ -35,4 +35,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-An ice cream a day, gives you a smile for the day! Forget the heat and have an artisanal ice cream with your&nbspfavorite&nbsptoppings.
+An ice cream a day, gives you a smile for the day! Forget the heat and have an artisanal ice cream with your&nbsp;favorite&nbsp;toppings.

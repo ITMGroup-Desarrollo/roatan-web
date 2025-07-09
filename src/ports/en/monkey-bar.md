@@ -43,4 +43,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Nachos, seafood, drinks, Monkey Bar has it all! Ask for your favorite drink, celebrate,&nbspand&nbspcheers!
+Nachos, seafood, drinks, Monkey Bar has it all! Ask for your favorite drink, celebrate,&nbsp;and&nbsp;cheers!

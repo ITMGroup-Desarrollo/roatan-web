@@ -31,4 +31,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡Desde ceviche hasta hamburguesas, te encantará La Catrachita! Y no te preocupes por las bebidas, hay muchas opciones para elegir. Cervezas bien frías, margaritas y más… ¡es hora de entrar&nbspen&nbspambiente!
+¡Desde ceviche hasta hamburguesas, te encantará La Catrachita! Y no te preocupes por las bebidas, hay muchas opciones para elegir. Cervezas bien frías, margaritas y más… ¡es hora de entrar&nbsp;en&nbsp;ambiente!

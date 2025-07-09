@@ -40,4 +40,4 @@ gallery:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink&nbspin&nbsphand.
+The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink&nbsp;in&nbsp;hand.

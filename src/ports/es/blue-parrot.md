@@ -41,4 +41,4 @@ tags: ["astro", "bloguear", "aprender en público"]
 ---
 
 
-¡El lugar ideal para los amantes del marisco! Delicioso, fresco y único, el menú de Blue Parrot es una experiencia que tienes que vivir&nbspapenas&nbspllegues.
+¡El lugar ideal para los amantes del marisco! Delicioso, fresco y único, el menú de Blue Parrot es una experiencia que tienes que vivir&nbsp;apenas&nbsp;llegues.

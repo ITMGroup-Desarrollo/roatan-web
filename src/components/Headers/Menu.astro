@@ -5,11 +5,40 @@ import "../../assets/css/menu.css";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 import { Image } from "astro:assets";
+import SearchContent from '../js/SearchContent.jsx';
 import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
 const menuItems = Object.entries(t.menu).map(([key, label]) => ({
   path: key,
   label,
 }));
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import "../../assets/css/main.css";
+import "../../assets/css/menu.css";
+
+
+function loadMarkdownFromDir(dirPath) {
+  if (!fs.existsSync(dirPath)) return [];
+  return fs.readdirSync(dirPath).map((filename) => {
+    const filePath = path.join(dirPath, filename);
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { data } = matter(fileContent);
+    return {
+      ...data,
+      title: data.title || filename.replace(".md", ""),
+      slug: data.slug || filename.replace(".md", ""),
+      tags: data.tags || [],
+      category: dirPath.includes("posts") ? "blog" : dirPath.includes("ports") ? "port-experience" : "discover-beyond",
+    };
+  });
+}
+
+const baseDir = path.resolve(`./src`);
+const content = [
+  ...loadMarkdownFromDir(`${baseDir}/posts/${lang}`),
+  ...loadMarkdownFromDir(`${baseDir}/ports/${lang}`),
+];
 ---
 
 <div
@@ -32,7 +61,7 @@ id="logo_menu"
         </a>
       ))
     }
-    <div class="pb-1 relative search_container">
+    <!-- <div class="pb-1 relative search_container">
       <input
         class="search_input font text-xs italic uppercase mx-3 rounded-full border-2 border-white w-auto py-1 px-2"
         placeholder="What to find?"
@@ -45,7 +74,8 @@ id="logo_menu"
         height="15"
         loading="eager"
       />
-    </div>
+    </div> -->
+    <SearchContent lang={lang} content={content} client:load />
     <div class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1">
       <a href="https://www.facebook.com/PortRoatan" target="_blank"
         ><div class="icon-mask icon-mask-face"></div></a

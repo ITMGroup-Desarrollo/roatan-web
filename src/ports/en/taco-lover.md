@@ -28,6 +28,6 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 A piece of Mexico in Port Roatan. Delicious tacos with a beer? It’s a match!  You’ll find veggie&nbsp;options&nbsp;too!

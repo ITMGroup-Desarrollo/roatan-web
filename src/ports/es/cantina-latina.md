@@ -37,7 +37,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 ¡El mejor lugar para disfrutar los sabores del Caribe! Colorido, lleno de sabor y, por supuesto, ¡delicioso! Acompaña tus platillos con una una bebida deliciosa&nbsp;en&nbsp;mano.

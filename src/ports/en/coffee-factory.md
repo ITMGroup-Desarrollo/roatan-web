@@ -34,7 +34,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 The best way to fuel up is with a delicious cafecito! Hot or cold, you choose! Enjoy it for the day or have it before you go, we promise you'll come back&nbsp;for&nbsp;more. 

@@ -28,7 +28,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 ¿En mood de pool bar? ¡Nos vemos en el Tiki Tiki! Una piña colada o una margarita junto a la piscina siempre será el&nbsp;mejor&nbsp;plan.

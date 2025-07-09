@@ -54,7 +54,7 @@ secondgallery:
     alt: "imagen del post 2"
   - url: "/img/port-experience/blue-parrot/3.webp"
     alt: "imagen del post 3"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 

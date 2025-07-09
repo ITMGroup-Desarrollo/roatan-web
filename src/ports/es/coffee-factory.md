@@ -34,7 +34,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 ¡La mejor manera de llenarte de energía es con un delicioso cafecito! Caliente o frío, ¡tú eliges! Disfrútalo durante el día o antes de irte. Te prometemos que volverás&nbsp;por&nbsp;más.

@@ -28,6 +28,6 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 Looking for a pool bar? We'll see you at Tiki Tiki! A piña colada or a margarita by the pool will always be the best plan&nbsp;for&nbsp;you! 

@@ -53,7 +53,7 @@ combinedgallery:
     alt: "imagen del post 3"
   - url: "/img/discover-beyond/bbq/4.webp"
     alt: "imagen del post 4"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 

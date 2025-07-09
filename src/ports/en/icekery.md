@@ -32,7 +32,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 An ice cream a day, gives you a smile for the day! Forget the heat and have an artisanal ice cream with your&nbsp;favorite&nbsp;toppings.

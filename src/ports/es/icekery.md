@@ -32,7 +32,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astro", "comer", "aprender en público"]
 ---
 
 ¡Un helado al día te saca una sonrisa! Olvídate del calor y disfruta un helado artesanal con tus&nbsp;toppings&nbsp;favoritos.

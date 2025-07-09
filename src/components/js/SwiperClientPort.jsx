@@ -21,42 +21,36 @@ export default function SwiperClient() {
         clickable: true,
       },
       autoplay: {
-      delay: 3000, 
-      disableOnInteraction: false,
-    },
+        delay: 3000,
+        disableOnInteraction: false,
+      },
     });
   }, []);
+
+  const images = [
+    "/img/home/recursos/roatan.webp",
+    "/img/home/recursos/shutter.webp",
+    "/img/home/recursos/tikibar.webp",
+  ];
 
   return (
     <div className="swiper w-full h-full relative">
       <div className="swiper-wrapper h-full w-full">
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/roatan.webp"
-            alt="swiperfoto1"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/shutter.webp"
-            alt="swiperfoto2"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/tikibar.webp"
-            alt="swiperfoto3"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        {images.map((src, index) => (
+          <div key={index} className="swiper-slide h-full w-full">
+            <img
+              src={src}
+              alt={`swiperfoto${index + 1}`}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        ))}
       </div>
+
       {/* <div className="hidden md:block swiper-button-prev custom-nav"></div>
       <div className="hidden md:block swiper-button-next custom-nav"></div> */}
 
-      {/* Pagination bullets */}
-      <div className=" swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10" />
+      <div className="swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10" />
     </div>
   );
 }

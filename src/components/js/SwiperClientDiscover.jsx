@@ -9,61 +9,57 @@ import "../../assets/css/home.css";
 
 export default function SwiperClient() {
   useEffect(() => {
-  const swiperInstance = new Swiper("#discover-swiper", {
-    modules: [Navigation, Pagination, Autoplay],
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true, 
-    },
-  });
+    const swiperInstance = new Swiper("#discover-swiper", {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
 
-  swiperInstance.autoplay.stop();
+    swiperInstance.autoplay.stop();
+    setTimeout(() => {
+      swiperInstance.autoplay.start();
+    }, 1500);
+  }, []);
 
-  setTimeout(() => {
-    swiperInstance.autoplay.start();
-  }, 1500);
-}, []);
+  const images = [
+    "/img/discover-beyond/bbq/1.webp",
+    "/img/discover-beyond/bbq/2.webp",
+    "/img/discover-beyond/bbq/3.webp",
+    "/img/discover-beyond/bbq/4.webp",
+  ];
 
   return (
     <div id="discover-swiper" className="swiper w-full h-full relative">
       <div className="swiper-wrapper h-full w-full">
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/roatan.webp"
-            alt="swiperfoto1"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/shutter.webp"
-            alt="swiperfoto2"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="swiper-slide h-full w-full">
-          <img
-            src="/img/home/recursos/tikibar.webp"
-            alt="swiperfoto3"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        {images.map((src, i) => (
+          <div key={i} className="swiper-slide h-full w-full">
+            <img
+              src={src}
+              alt={`swiperfoto${i + 1}`}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        ))}
       </div>
+
+      {/* Navigation (uncomment if needed) */}
       {/* <div className="hidden md:block swiper-button-prev custom-nav"></div>
       <div className="hidden md:block swiper-button-next custom-nav"></div> */}
 
       {/* Pagination bullets */}
-      <div className=" swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10" />
+      <div className="swiper-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10" />
     </div>
   );
 }

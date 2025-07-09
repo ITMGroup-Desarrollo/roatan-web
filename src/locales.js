@@ -87,6 +87,14 @@ export const translations = {
       Duration: "Duración",
       Note: "Toma en cuenta",
       secondbutton: "Volver",
+    },
+    contact: {
+      name: "Nombre completo",
+      email: "correo",
+      ship: "naviera",
+      date: "fecha de reservación",
+      message: "MENSAJE",
+      send: "enviar",
     }
   },
   //endregion
@@ -179,6 +187,14 @@ export const translations = {
       Duration: "Duration",
       Note: "Please note",
       secondbutton: "Go back",
+    },
+    contact: {
+      name: "full name",
+      email: "email",
+      ship: "Cruise",
+      date: "Reservation date",
+      message: "MESSAGE",
+      send: "send",
     }
   },
   //endregion

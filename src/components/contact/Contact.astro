@@ -1,30 +1,32 @@
 ---
-
+import { translations } from "../../locales.js";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
 ---
 <section class="bg-white py-12 relative bg-transparent">
   <form class="max-w-4xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4">
     <input
       type="text"
       name="nombre"
-      placeholder="NOMBRE"
+      placeholder={t.contact.name}
       required
-      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
     />
 
     <input
       type="email"
       name="correo"
-      placeholder="CORREO"
+      placeholder={t.contact.email}
       required
-      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
     />
 
     <select
       name="naviera"
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color  focus:outline-none"
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color  focus:outline-none focus:invalid:border-red-500 invalid:border-red-500"
     >
-      <option value="" disabled selected hidden>NAVIERA</option>
+      <option value="" disabled selected hidden>{t.contact.ship}</option>
       <option value="msc">MSC</option>
       <option value="royal">Royal Caribbean</option>
       <option value="carnival">Carnival Cruise Lines</option>
@@ -35,7 +37,7 @@
     <input
       type="date"
       name="fecha"
-      placeholder="FECHA DE RESERVACIÓN"
+      placeholder={t.contact.date}
       required
       class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  text-primary-color focus:outline-none"
     />
@@ -43,7 +45,7 @@
     <textarea
       name="mensaje"
       rows="4"
-      placeholder="MENSAJE"
+      placeholder={t.contact.message}
       required
       class="md:col-span-2 border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
     ></textarea>
@@ -51,9 +53,9 @@
     <div class="md:col-span-2 flex justify-center mt-4">
       <button
         type="submit"
-        class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors"
+        class="bg-primary-color uppercase text-white border-2 border-primary-color px-8 py-3 rounded-md hover:bg-white hover:text-primary-color hover:border-primary-color transition-colors"
       >
-        ENVIAR
+        {t.contact.send}
       </button>
     </div>
   </form>

@@ -29,7 +29,7 @@ function loadMarkdownFromDir(dirPath) {
       title: data.title || filename.replace(".md", ""),
       slug: data.slug || filename.replace(".md", ""),
       tags: data.tags || [],
-      category: dirPath.includes("posts") ? "posts" : dirPath.includes("ports") ? "ports" : "discover",
+      category: dirPath.includes("posts") ? "blog" : dirPath.includes("ports") ? "port-experience" : "discover-beyond",
     };
   });
 }

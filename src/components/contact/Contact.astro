@@ -1,30 +1,34 @@
 ---
+// src/pages/contact.astro
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
+const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
 ---
+
 <section class="bg-white py-12 relative bg-transparent">
-  <form class="max-w-4xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4">
+  <form
+    id="contact-form"
+    class="max-w-4xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4"
+  >
     <input
       type="text"
       name="nombre"
       placeholder={t.contact.name}
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
     />
-
     <input
       type="email"
       name="correo"
       placeholder={t.contact.email}
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
     />
-
     <select
       name="naviera"
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color  focus:outline-none"
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color focus:outline-none"
     >
       <option value="" disabled selected hidden>{t.contact.ship}</option>
       <option value="msc">MSC</option>
@@ -33,31 +37,62 @@ const t = translations[lang] ?? translations["es"];
       <option value="norwegian">Norwegian</option>
       <option value="virgin-voyages">Virgin Voyages</option>
     </select>
-
     <input
       type="date"
       name="fecha"
-      placeholder={t.contact.date}
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  text-primary-color focus:outline-none"
+      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color focus:outline-none"
     />
-
     <textarea
       name="mensaje"
       rows="4"
       placeholder={t.contact.message}
       required
-      class="md:col-span-2 border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color  focus:outline-none"
+      class="md:col-span-2 border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
     ></textarea>
 
+    <!-- CAPTCHA -->
+    <div class="md:col-span-2 flex justify-center mt-4">
+      <div class="g-recaptcha" data-sitekey={siteKey}></div>
+    </div>
+<div id="form-message" class="md:col-span-2"></div>
     <div class="md:col-span-2 flex justify-center mt-4">
       <button
         type="submit"
-        class="bg-primary-color uppercase text-white border-2 border-primary-color px-8 py-3 rounded-md hover:bg-white hover:text-primary-color hover:border-primary-color transition-colors"
+        class="bg-primary-color uppercase text-white border-2 border-primary-color px-8 py-3 rounded-md hover:bg-white hover:text-primary-color transition-colors"
       >
         {t.contact.send}
       </button>
+      
     </div>
+    
   </form>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script is:inline>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
 
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          body: formData,
+        });
+
+        const result = await response.json();
+
+        const messageBox = document.getElementById("form-message");
+        messageBox.textContent = result.message;
+        messageBox.className = result.success
+          ? "md:col-span-2 text-green-600 mt-4 text-center"
+          : "md:col-span-2 text-red-600 mt-4 text-center";
+
+        if (result.success) {
+          form.reset();
+          grecaptcha.reset(); // opcional: resetea el captcha
+        }
+      });
+  </script>
 </section>

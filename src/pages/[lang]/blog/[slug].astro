@@ -39,7 +39,7 @@ const recentPosts = allPosts
 
 
 const contentBlocks = content.split("<!--split-->");
-export const prerender = true;
+// export const prerender = true;
 export async function getStaticPaths(): Promise<APIContext["params"][]> {
   const fs = await import("fs");
   const path = await import("path");

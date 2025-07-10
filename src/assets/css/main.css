@@ -64,8 +64,8 @@ body{
 }
 #headerBlog-container .bg-gradient-header{
     background: var(--primary-color);
-    opacity: 0.8;
-    /* background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%); */
+    /* opacity: 0.8; */
+    background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
 }
 #headerPort-container .bg-gradient-header{
     background: var(--primary-color);
@@ -73,7 +73,11 @@ body{
 }
 #headerFaqs-container .bg-gradient-header{
     background: var(--primary-color);
-    background: linear-gradient(0deg, var(--primary-color) 0%, rgba(255, 255, 255, 0) 0%);
+    background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
+}
+#headerContact-container .bg-gradient-header{
+    background: var(--primary-color);
+    background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
 }
 #headerPort-container{
   height: 100vh;

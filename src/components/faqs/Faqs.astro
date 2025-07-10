@@ -2,6 +2,7 @@
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
+const full = true;
 import PreguntasYRespuestas from "../../components/js/Faqslanding.jsx";
 ---
 
@@ -24,6 +25,7 @@ import PreguntasYRespuestas from "../../components/js/Faqslanding.jsx";
         {t.homeFaqs.subtitle}
       </p>
     </div>
+    <PreguntasYRespuestas client:only="react" t={t} full={full}/>
   </div>
 </div>
 <script>

@@ -89,6 +89,7 @@ export const translations = {
       secondbutton: "Volver",
     },
     contact: {
+      title: "Contacto",
       name: "Nombre completo",
       email: "correo",
       ship: "naviera",
@@ -189,6 +190,7 @@ export const translations = {
       secondbutton: "Go back",
     },
     contact: {
+      title: "Contact",
       name: "full name",
       email: "email",
       ship: "Cruise",

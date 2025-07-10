@@ -28,9 +28,13 @@ export default function SwiperClient() {
   }, []);
 
   const images = [
-    "/img/home/recursos/roatan.webp",
-    "/img/home/recursos/shutter.webp",
-    "/img/home/recursos/tikibar.webp",
+    "/img/home/swiperPort/1.webp",
+    "/img/home/swiperPort/2.webp",
+    "/img/home/swiperPort/4.webp",
+    "/img/home/swiperPort/5.webp",
+    "/img/home/swiperPort/6.webp",
+    "/img/home/swiperPort/8.webp",
+    "/img/home/swiperPort/9.webp",
   ];
 
   return (

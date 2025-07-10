@@ -34,10 +34,17 @@ export default function SwiperClient() {
   }, []);
 
   const images = [
-    "/img/discover-beyond/bbq/1.webp",
-    "/img/discover-beyond/bbq/2.webp",
+    "/img/home/swiperDiscover/1.webp",
+    "/img/home/swiperDiscover/2.webp",
+    "/img/home/swiperDiscover/3.webp",
+    "/img/home/swiperDiscover/4.webp",
+    "/img/home/swiperDiscover/5.webp",
+    "/img/home/swiperDiscover/6.webp",
+    "/img/home/swiperDiscover/7.webp",
+    "/img/home/swiperDiscover/8.webp",
+    "/img/home/swiperDiscover/9.webp",
+    "/img/home/swiperDiscover/10.webp",
     "/img/discover-beyond/bbq/3.webp",
-    "/img/discover-beyond/bbq/4.webp",
   ];
 
   return (

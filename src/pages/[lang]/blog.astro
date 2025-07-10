@@ -13,7 +13,7 @@ const lang = Astro.params.lang || "es";
 const t = translations[lang] ?? translations["es"];
 const postsDir = path.resolve(`./src/posts/${lang}`);
 const files = fs.readdirSync(postsDir);
-
+export const prerender = true;
 const posts = files.map((filename) => {
   const filePath = path.join(postsDir, filename);
   const fileContent = fs.readFileSync(filePath, "utf-8");

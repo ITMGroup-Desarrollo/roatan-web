@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 import flecha from "../../assets/img/iconos/port-experience/flecha-white.svg";
 import WaveObserver from "../../components/js/WaveObserver.jsx";
 import "../../assets/css/port-experience.css";
-
+export const prerender = true;
 const lang = Astro.params.lang || "es";
 
 import fs from "fs";

@@ -9,6 +9,7 @@ import Travel from "../../components/Home/Travel.astro";
 import Discover from "../../components/Home/Discover.astro";
 import Trip from "../../components/Home/Trip.astro";
 import Faqs from "../../components/Home/Faqs.astro";
+export const prerender = true;
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }

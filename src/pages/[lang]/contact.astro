@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Headers/Menu.astro";
 import Contacto from "../../components/contact/Contact.astro"
 import { translations } from "../../locales.js";
+export const prerender = true;
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }

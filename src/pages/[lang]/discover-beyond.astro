@@ -21,7 +21,7 @@ import "aos/dist/aos.css";
 import olas from "../../assets/img/iconos/port-experience/ola.png";
 // @ts-ignore
 const SwiperClientOnly = clientOnly(SwiperClient);
-// export const prerender = true;
+export const prerender = true;
 const posts = files.map((filename) => {
   const filePath = path.join(postsDir, filename);
   const fileContent = fs.readFileSync(filePath, "utf-8");

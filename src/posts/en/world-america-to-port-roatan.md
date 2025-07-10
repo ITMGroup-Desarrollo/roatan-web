@@ -22,10 +22,10 @@ gallery:
 tags: ["roatan", "port roatan", "world america", "blog", "first blog", "honduras"]
 ---
 
-As a leader in cruise port development, we are always thrilled to welcome new friends and share unforgettable experiences. <b>We are thrilled to announce that Costa Maya and Port Roatan will be part of the MSC World America's inaugural Western Caribbean journey on April 21st and 22nd.</b>
+As a leader in cruise port development, we are always excited to welcome new friends and create unforgettable moments. <b>We’re proud to share that Port Roatan will be part of MSC World America’s inaugural Western Caribbean journey on April 22nd.</b>
 <br><br>
-MSC World America is set to redefine the cruising experience for the modern traveler. <b>This World Class ship by MSC Cruises spans 22 decks and is more than 154 feet in width</b>, making it home to the <b>largest MSC Yacht Club in the Caribbean</b>.
+MSC World America is set to redefine the cruising experience for the modern traveler. <b>This world-class ship by MSC Cruises spans 22 decks and over 154 feet in width</b>, housing the <b>largest MSC Yacht Club in the Caribbean</b>.
 <!--split-->
-Both Costa Maya and Port Roatan are ready to offer incredible activities and unique experiences for cruise guests of all ages. Imagine a relaxing day by the pools, discovering immersive experiences inspired by the local culture, eating and drinking at themed restaurants, shopping for souvenirs, and catching exciting entertainment, are you ready? 'Cause we can't wait to create lasting memories with you during your visit.
+Port Roatan is ready to deliver unforgettable moments—from relaxing by the sea and exploring local culture to dining in themed restaurants, shopping for souvenirs, and enjoying live entertainment. Are you ready? Because we can't wait to welcome you and create lasting memories together.
 <br><br>
-Stay tuned for updates, photos, and more exciting news about this exciting anticipated arrival!
+Stay tuned for updates, photos, and more exciting news about this anticipated arrival!

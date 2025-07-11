@@ -47,7 +47,7 @@ export default function SwiperClient() {
     "/img/home/swiperDiscover/8.webp",
     "/img/home/swiperDiscover/9.webp",
     "/img/home/swiperDiscover/10.webp",
-    "/img/discover-beyond/bbq/3.webp",
+    "/img/home/swiperDiscover/11.webp",
   ];
 
   return (

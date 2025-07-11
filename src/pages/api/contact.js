@@ -37,14 +37,12 @@ export async function POST({ request }) {
     );
   }
 
-  // ✅ Obtener los datos del formulario
   const nombre = form.get("nombre")?.toString() || "";
   const correo = form.get("correo")?.toString() || "";
   const naviera = form.get("naviera")?.toString() || "";
   const fecha = form.get("fecha")?.toString() || "";
   const mensaje = form.get("mensaje")?.toString() || "";
 
-  // ✅ Configurar nodemailer
   const transporter = nodemailer.createTransport({
     host: import.meta.env.MAIL_HOST,
     port: Number(import.meta.env.MAIL_PORT),

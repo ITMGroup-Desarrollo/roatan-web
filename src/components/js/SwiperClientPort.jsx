@@ -19,6 +19,8 @@ export default function SwiperClient() {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 2,
       },
       autoplay: {
         delay: 3000,

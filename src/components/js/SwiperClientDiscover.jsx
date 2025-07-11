@@ -33,28 +33,20 @@ export default function SwiperClient() {
     }, 1500);
   }, []);
 
-  // const images = [
-  //   "/img/home/swiperDiscover/1.webp",
-  //   "/img/home/swiperDiscover/2.webp",
-  //   "/img/home/swiperDiscover/3.webp",
-  //   "/img/home/swiperDiscover/4.webp",
-  //   "/img/home/swiperDiscover/5.webp",
-  //   "/img/home/swiperDiscover/6.webp",
-  //   "/img/home/swiperDiscover/7.webp",
-  //   "/img/home/swiperDiscover/8.webp",
-  //   "/img/home/swiperDiscover/9.webp",
-  //   "/img/home/swiperDiscover/10.webp",
-  //   "/img/discover-beyond/bbq/3.webp",
-  // ];
   const images = [
-    "/img/home/swiperPort/1.webp",
-    "/img/home/swiperPort/2.webp",
-    "/img/home/swiperPort/4.webp",
-    "/img/home/swiperPort/5.webp",
-    "/img/home/swiperPort/6.webp",
-    "/img/home/swiperPort/8.webp",
-    "/img/home/swiperPort/9.webp",
+    "/img/home/swiperDiscover/1.webp",
+    "/img/home/swiperDiscover/2.webp",
+    "/img/home/swiperDiscover/3.webp",
+    "/img/home/swiperDiscover/4.webp",
+    "/img/home/swiperDiscover/5.webp",
+    "/img/home/swiperDiscover/6.webp",
+    "/img/home/swiperDiscover/7.webp",
+    "/img/home/swiperDiscover/8.webp",
+    "/img/home/swiperDiscover/9.webp",
+    "/img/home/swiperDiscover/10.webp",
+    "/img/discover-beyond/bbq/3.webp",
   ];
+
   return (
     <div id="discover-swiper" className="swiper w-full h-full relative">
       <div className="swiper-wrapper h-full w-full">

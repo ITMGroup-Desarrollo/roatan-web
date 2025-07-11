@@ -61,12 +61,23 @@ export async function POST({ request }) {
       // to: "info@porttainobay.com",
       subject: `Nuevo contacto de ${nombre}`,
       html: `
-        <h3>Nuevo mensaje de contacto</h3>
-        <p><strong>Nombre:</strong> ${nombre}</p>
-        <p><strong>Correo:</strong> ${correo}</p>
-        <p><strong>Naviera:</strong> ${naviera}</p>
-        <p><strong>Fecha:</strong> ${fecha}</p>
-        <p><strong>Mensaje:</strong><br>${mensaje}</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
+          <h2 style="color: #003366; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+            Nuevo mensaje desde el formulario de contacto
+          </h2>
+          <p style="margin: 10px 0;"><strong>Origen:</strong>Port Roatán</p>
+          <p style="margin: 10px 0;"><strong>Nombre:</strong> ${nombre}</p>
+          <p style="margin: 10px 0;"><strong>Correo electrónico:</strong> <a href="mailto:${correo}" style="color: #0066cc;">${correo}</a></p>
+          <p style="margin: 10px 0;"><strong>Naviera:</strong> ${naviera}</p>
+          <p style="margin: 10px 0;"><strong>Fecha de llegada:</strong> ${fecha}</p>
+          <p style="margin: 20px 0;"><strong>Mensaje:</strong></p>
+          <div style="background-color: #fff; padding: 15px; border: 1px solid #ccc; border-radius: 4px;">
+            ${mensaje.replace(/\n/g, "<br>")}
+          </div>
+          <p style="margin-top: 30px; font-size: 12px; color: #999;">
+            Este mensaje fue enviado automáticamente desde el sitio web. No respondas directamente a este correo.
+          </p>
+        </div>
       `,
     });
 

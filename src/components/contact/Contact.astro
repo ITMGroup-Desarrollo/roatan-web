@@ -55,7 +55,7 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
     <div class="md:col-span-2 flex justify-center mt-4">
       <div class="g-recaptcha" data-sitekey={siteKey}></div>
     </div>
-<div id="form-message" class="md:col-span-2"></div>
+    <div id="form-message" class="md:col-span-2"></div>
     <div class="md:col-span-2 flex justify-center mt-4">
       <button
         type="submit"
@@ -63,36 +63,71 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
       >
         {t.contact.send}
       </button>
-      
     </div>
-    
   </form>
+  <!-- Popup de agradecimiento -->
+  <div
+    id="thank-you-popup"
+    class="popup hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+  >
+    <div
+      class="bg-white rounded-lg overflow-hidden text-center max-w-md w-full"
+    >
+      <!-- Parte superior con color y la imagen -->
+      <div class="bg-secondary-color p-6">
+        <img
+          src="/src/assets/img/logo/thanks.png"
+          alt="Success Icon"
+          class="mx-auto w-28 h-28"
+        />
+      </div>
+      <!-- Contenido del mensaje -->
+      <div class="bg-[#F2F2F2] p-6">
+        <h2 class="text-4xl font-bold text-primary-color mb-2">THANK YOU!</h2>
+        <p class="text-primary-color mb-4">We have received your message</p>
+        <button
+          id="popup-back-btn"
+          class="bg-primary-color text-white px-6 py-2 border-2 border-primary-color rounded hover:bg-white hover:text-primary-color hover:border-primary-color hover: transition"
+        >
+          BACK!
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script is:inline>
-    document
-      .getElementById("contact-form")
-      .addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
+<script is:inline>
+  document.getElementById("contact-form")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
 
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          body: formData,
-        });
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: formData,
+    });
 
-        const result = await response.json();
+    const result = await response.json();
 
-        const messageBox = document.getElementById("form-message");
-        messageBox.textContent = result.message;
-        messageBox.className = result.success
-          ? "md:col-span-2 text-green-600 mt-4 text-center"
-          : "md:col-span-2 text-red-600 mt-4 text-center";
+    const messageBox = document.getElementById("form-message");
+    messageBox.textContent = result.message;
+    messageBox.className = result.success
+      ? "md:col-span-2 text-green-600 mt-4 text-center"
+      : "md:col-span-2 text-red-600 mt-4 text-center";
 
-        if (result.success) {
-          form.reset();
-          grecaptcha.reset(); // opcional: resetea el captcha
-        }
-      });
-  </script>
+    if (result.success) {
+      form.reset();
+      grecaptcha.reset();
+      document.getElementById("thank-you-popup")?.classList.remove("hidden");
+    }
+  });
+
+  // Botón BACK: cierra popup y redirige a home
+  document.getElementById("popup-back-btn")?.addEventListener("click", () => {
+    document.getElementById("thank-you-popup")?.classList.add("hidden");
+    window.location.href = "/";
+  });
+</script>
+
+
 </section>

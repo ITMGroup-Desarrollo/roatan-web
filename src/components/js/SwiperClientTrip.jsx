@@ -9,40 +9,40 @@ import "../../assets/css/home.css";
 
 const slidesData = [
   {
-    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e4/2d/default-avatar-2020-48.jpg?w=100&h=100&s=1",
+    img: "/img/home/tripadvisor/TA_1.jpg",
     text: "The Port of Roatan was a great port to get off the boat and hang out...",
     name: "Susan I",
     url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r1015268803-Port_Of_Roatan-Roatan_Bay_Islands.html",
   },
   {
-    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/05/3a/00/privatemf.jpg?w=100&h=100&s=1",
+    img: "/img/home/tripadvisor/TA_2.jpg",
     text: "This was a beautiful port and had a lot of great shopping, local culture and recreation...",
     name: "privatemf",
     url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r953307467-Port_Of_Roatan-Roatan_Bay_Islands.html",
   },
   {
-    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/52/63/ec/caption.jpg?w=100&h=100&s=1",
-    text: 'This is a very "disneyfied" port where you have all the tourist shops and restaurants...',
-    name: "BrandonK850",
-    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r996189449-Port_Of_Roatan-Roatan_Bay_Islands.html",
+    img: "/img/home/tripadvisor/TA_3.jpg",
+    text: 'Great!!! Variety of shops, tours available, bars, restaurants. Dufry store...',
+    name: "SharyZepeda",
+    url: "https://www.tripadvisor.es/ShowUserReviews-g303872-d10214401-r751097221-Town_Center_At_Port_of_Roatan-Coxen_Hole_Roatan_Bay_Islands.html",
   },
   {
-    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e4/2d/default-avatar-2020-48.jpg?w=100&h=100&s=1",
-    text: "The Port of Roatan was a great port to get off the boat and hang out...",
-    name: "Susan I",
-    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r1015268803-Port_Of_Roatan-Roatan_Bay_Islands.html",
+    img: "/img/home/tripadvisor/TA_4.jpg",
+    text: "From the moment I stepped off the cruise, I felt the vibrant energy...",
+    name: "APTraveler",
+    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r1017355437-Port_Of_Roatan-Roatan_Bay_Islands.html?m=19905",
   },
   {
-    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/05/3a/00/privatemf.jpg?w=100&h=100&s=1",
-    text: "This was a beautiful port and had a lot of great shopping, local culture and recreation...",
-    name: "privatemf",
-    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r953307467-Port_Of_Roatan-Roatan_Bay_Islands.html",
+    img: "/img/home/tripadvisor/TA_5.jpg",
+    text: "First time into this port. spent some free time here after returning from excursion...",
+    name: "448jw",
+    url: "https://www.tripadvisor.es/ShowUserReviews-g303872-d10214401-r877728146-Town_Center_At_Port_of_Roatan-Coxen_Hole_Roatan_Bay_Islands.html",
   },
   {
-    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/52/63/ec/caption.jpg?w=100&h=100&s=1",
-    text: 'This is a very "disneyfied" port where you have all the tourist shops and restaurants...',
-    name: "BrandonK850",
-    url: "https://www.tripadvisor.com.mx/ShowUserReviews-g292019-d25290415-r996189449-Port_Of_Roatan-Roatan_Bay_Islands.html",
+    img: "/img/home/tripadvisor/TA_6.jpg",
+    text: 'We visited this port in March 2020 and loved it. Some tourist shops...',
+    name: "patriciabrown2017",
+    url: "https://www.tripadvisor.es/ShowUserReviews-g303872-d10214401-r752027509-Town_Center_At_Port_of_Roatan-Coxen_Hole_Roatan_Bay_Islands.html",
   }
 ];
 

@@ -51,17 +51,17 @@ export const translations = {
       pregunta1: "¿Qué puedo encontrar en Port Roatan?",
       pregunta2: "¿Hay actividades dentro de Port Roatan?",
       pregunta3: "¿Puedo visitar Port Roatan, aunque no venga en crucero?",
-      pregunta4: "Are pools and lounge areas free?",
-      pregunta5: "Any suggestions on what to bring upon arrival?",
-      pregunta6: "I would love to explore Roatan. Are there any tours available?",
+      pregunta4: "¿Las piscinas y zonas lounge son gratis?",
+      pregunta5: "¿Qué me recomiendan llevar al llegar?",
+      pregunta6: "¿Quisiera explorar Roatán, ¿hay tours disponibles?",
       respuesta1:
         "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatan te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
       respuesta2:
         " ¡Claro que sí! Piscinas refrescantes, zonas lounge, hamacas y hasta un spa relajante (con costo adicional).",
       respuesta3: " ¡Gracias por tu interés! Al momento, el acceso a Port Roatan es exclusivo para cruceristas.",
-      respuesta4: "Yes, they are! There is no reservation needed for you to enjoy them. Please note, these areas are first come, first serve.",
-      respuesta5: "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, and hat. We recommend bringing cash for your activities and souvenirs.",
-      respuesta6: "Roatan is a stunning destination. We recommend visiting",
+      respuesta4: "¡Sí! Solo ten en cuenta que no hay reservaciones, así que puedes elegir tu lugar favorito al llegar.",
+      respuesta5: "¡Un outfit fresco y cómodo (playero), bloqueador solar, lentes de sol y sombrero! También te sugerimos llevar efectivo para tus actividades y souvenirs.",
+      respuesta6: "Roatán es un destino espectacular. Te recomendamos explorar el puerto y visitar los Last-minute booths al llegar.",
     },
     blog: {
       title: "Blog",

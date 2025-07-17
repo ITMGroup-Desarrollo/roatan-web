@@ -26,8 +26,8 @@ export const translations = {
     },
     homeWelcome: {
       title: "BIENVENIDO A",
-      subtitle: "PORT ROATÁN",
-      text: "Una carta de amor al Caribe y a Honduras. Port Roatán es un puerto de cruceros único que te hará entrar en ambiente desde el primer momento. Inspirado en los vibrantes paisajes del entorno, este destino ofrece a sus visitantes la oportunidad de disfrutar de un día relajante en un entorno tropical inmersivo, con restaurantes temáticos, bares, tiendas y piscinas que celebran el espíritu del paraíso caribeño.",
+      subtitle: "PORT ROATAN",
+      text: "Una carta de amor al Caribe y a Honduras. Port Roatan es un puerto de cruceros único que te hará entrar en ambiente desde el primer momento. Inspirado en los vibrantes paisajes del entorno, este destino ofrece a sus visitantes la oportunidad de disfrutar de un día relajante en un entorno tropical inmersivo, con restaurantes temáticos, bares, tiendas y piscinas que celebran el espíritu del paraíso caribeño.",
     },
     homePort: {
       title: "Port Experience",
@@ -48,17 +48,17 @@ export const translations = {
     homeFaqs: {
       title: "FAQ's",
       subtitle: "¡Estamos listos para ayudarte!",
-      pregunta1: "¿Qué puedo encontrar en Port Roatán?",
-      pregunta2: "¿Hay actividades dentro de Port Roatán?",
-      pregunta3: "¿Puedo visitar Port Roatán, aunque no venga en crucero?",
+      pregunta1: "¿Qué puedo encontrar en Port Roatan?",
+      pregunta2: "¿Hay actividades dentro de Port Roatan?",
+      pregunta3: "¿Puedo visitar Port Roatan, aunque no venga en crucero?",
       pregunta4: "Are pools and lounge areas free?",
       pregunta5: "Any suggestions on what to bring upon arrival?",
       pregunta6: "I would love to explore Roatan. Are there any tours available?",
       respuesta1:
-        "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatán te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
+        "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatan te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
       respuesta2:
         " ¡Claro que sí! Piscinas refrescantes, zonas lounge, hamacas y hasta un spa relajante (con costo adicional).",
-      respuesta3: " ¡Gracias por tu interés! Al momento, el acceso a Port Roatán es exclusivo para cruceristas.",
+      respuesta3: " ¡Gracias por tu interés! Al momento, el acceso a Port Roatan es exclusivo para cruceristas.",
       respuesta4: "Yes, they are! There is no reservation needed for you to enjoy them. Please note, these areas are first come, first serve.",
       respuesta5: "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, and hat. We recommend bringing cash for your activities and souvenirs.",
       respuesta6: "Roatan is a stunning destination. We recommend visiting",
@@ -75,7 +75,7 @@ export const translations = {
       subtitle: "Todos los artículos",
       button: "Read more",
       search_placeholder: "¿Buscando?",
-      text: "Port Roatán es un puerto de cruceros diseñado para brindarte lo mejor del Caribe desde el primer momento. Inspirado en la vibrante esencia de Honduras, aquí encontrarás todo lo necesario para disfrutar al máximo tu visita. Restaurantes y bares temáticos con sabores locales y drinks refrescantes (sí, también los clásicos), piscinas, zonas para relajarte y photo spots ideales para tus fotos. Estamos seguros de que Port Roatán te enamorará y siempre querrás regresar. ",
+      text: "Port Roatan es un puerto de cruceros diseñado para brindarte lo mejor del Caribe desde el primer momento. Inspirado en la vibrante esencia de Honduras, aquí encontrarás todo lo necesario para disfrutar al máximo tu visita. Restaurantes y bares temáticos con sabores locales y drinks refrescantes (sí, también los clásicos), piscinas, zonas para relajarte y photo spots ideales para tus fotos. Estamos seguros de que Port Roatan te enamorará y siempre querrás regresar. ",
     },
     discover: {
       title: "Discover",

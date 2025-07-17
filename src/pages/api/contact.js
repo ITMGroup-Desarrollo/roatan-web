@@ -63,7 +63,7 @@ export async function POST({ request }) {
           <h2 style="color: #003366; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
             Nuevo mensaje desde el formulario de contacto
           </h2>
-          <p style="margin: 10px 0;"><strong>Origen:</strong>Port Roatán</p>
+          <p style="margin: 10px 0;"><strong>Origen:</strong>Port Roatan</p>
           <p style="margin: 10px 0;"><strong>Nombre:</strong> ${nombre}</p>
           <p style="margin: 10px 0;"><strong>Correo electrónico:</strong> <a href="mailto:${correo}" style="color: #0066cc;">${correo}</a></p>
           <p style="margin: 10px 0;"><strong>Naviera:</strong> ${naviera}</p>

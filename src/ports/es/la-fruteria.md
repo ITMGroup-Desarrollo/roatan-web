@@ -31,4 +31,4 @@ gallery:
 tags: ["astro", "comer", "aprender en público"]
 ---
 
-Bebidas divertidas y frescas, ¡estamos dentro! Un coco o una piña loca mientras visitas Port Roatán es una&nbsp;parada&nbsp;OBLIGADA.
+Bebidas divertidas y frescas, ¡estamos dentro! Un coco o una piña loca mientras visitas Port Roatan es una&nbsp;parada&nbsp;OBLIGADA.

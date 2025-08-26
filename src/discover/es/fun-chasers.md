@@ -2,7 +2,7 @@
 title: 'Fun Chasers: Mangrove <br class="hidden md:block">& Snorkel Adventure with Lunch '
 subtitle: "Non reprehenderit ad deserunt."
 slug: "fun-chasers"
-direction: "left"
+direction: "right"
 date: "2024-05-01"
 excerpt: 'Libera a tu explorador interior en un viaje inolvidable que combina la emoción del descubrimiento submarino con la serenidad de un pintoresco paseo en barco. Deslízate entre impresionantes formaciones de manglares, sumérgete en aguas cristalinas con una increíble vida marina y disfruta la belleza del mar Caribe en un restaurante flotante único en el corazón de la barrera de arrecifes. Relájate con todas las comodidades, deliciosa comida y un ambiente tropical.'
 description: "snorkel"
@@ -14,28 +14,28 @@ image:
   url: "/img/discover-beyond/fun-chasers/intro.webp"
   alt: "intro"
 icons:
-  - url: "/img/iconos/discover-beyond/secondary/guide.svg"
+  - url: "/img/iconos/discover-beyond/primary/guide.svg"
     alt: "icon"
     name: "Guía bilingüe certificado"
-  - url: "/img/iconos/discover-beyond/secondary/bus.svg"
+  - url: "/img/iconos/discover-beyond/primary/bus.svg"
     alt: "icon"
     name: "Transportación de ida y vuelta"
-  - url: "/img/iconos/discover-beyond/secondary/boat.svg"
+  - url: "/img/iconos/discover-beyond/primary/boat.svg"
     alt: "icon"
     name: "Excursión en barco por los manglares"
-  - url: "/img/iconos/discover-beyond/secondary/-.svg"
+  - url: "/img/iconos/discover-beyond/primary/-.svg"
     alt: "icon"
     name: "Snorkel con todo el equipo de seguridad necesario"
-  - url: "/img/iconos/discover-beyond/secondary/food.svg"
+  - url: "/img/iconos/discover-beyond/primary/food.svg"
     alt: "icon"
     name: "Palitos de pescado con guarniciones o hamburguesa con papas fritas"
-  - url: "/img/iconos/discover-beyond/secondary/softdrink.svg"
+  - url: "/img/iconos/discover-beyond/primary/softdrink.svg"
     alt: "icon"
     name: "2 bebidas no alcohólicas"
-  - url: "/img/iconos/discover-beyond/secondary/-.svg"
+  - url: "/img/iconos/discover-beyond/primary/-.svg"
     alt: "icon"
     name: "Tiempo de playa en el restaurante flotante Fun Chasers"
-  - url: "/img/iconos/discover-beyond/secondary/club.svg"
+  - url: "/img/iconos/discover-beyond/primary/club.svg"
     alt: "icon"
     name: "Sillas lounge y zonas de sombra"
 requirements:
@@ -153,6 +153,6 @@ combinedgallery:
     alt: "imagen del post 25"
 tags: ["astro", "comer", "aprender en público"]
 ---
-
+-
 
 Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.

@@ -6,7 +6,7 @@ direction: "right"
 date: "2024-05-01"
 excerpt: "Vive una experiencia perfecta de relajación y delicias culinarias con nuestra BBQ Donut Adventure. Navega por las serenas y hermosas aguas de la bahía de Roatán mientras preparas tu propio BBQ a bordo y disfrutas de las impresionantes vistas del Caribe."
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
-author: "Alumno de Astro"
+author: ""
 fondo:
   url: "/img/discover-beyond/bbq/fondo.webp"
   alt: "fondo"

@@ -22,7 +22,7 @@ icons:
     name: "Equipo de snorkel"
   - url: "/img/iconos/discover-beyond/primary/guide.svg"
     alt: "icon"
-    name: "Capitán, guía turístico y tripulación"
+    name: "Capitán, guía y tripulación"
   - url: "/img/iconos/discover-beyond/primary/softdrink.svg"
     alt: "icon"
     name: "Barra libre a bordo"

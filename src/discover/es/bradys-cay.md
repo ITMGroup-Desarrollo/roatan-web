@@ -16,7 +16,7 @@ image:
 icons:
   - url: "/img/iconos/discover-beyond/secondary/bus.svg"
     alt: "icon"
-    name: "Transporte de ida y vuelta desde el puerto de cruceros hasta el embarque"
+    name: "Transporte de ida y vuelta"
   - url: "/img/iconos/discover-beyond/secondary/boat.svg"
     alt: "icon"
     name: "Traslado en barco a Brady's Cay"
@@ -25,7 +25,7 @@ icons:
     name: "Bebida de bienvenida en Brady's Cay"
   - url: "/img/iconos/discover-beyond/secondary/club.svg"
     alt: "icon"
-    name: "Todos los servicios e instalaciones del club de playa"
+    name: "Servicios e instalaciones del club de playa"
 requirements:
   - name: "Bañador y toalla"
   - name: "Ropa cómoda para actividades al aire libre"

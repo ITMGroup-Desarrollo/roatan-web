@@ -33,7 +33,13 @@ requirements:
   - name: "Cash"
 capacity: "200 Pax"
 duration: "3 Hrs"
-note: "This tour is recommended for all family members, but minors should be always accompanied by their parent. Alcohol will not be served to people under 18 years old. Take into consideration that there is a certain amount of walking in this excursion."
+note: "Requirements and restrictions: Minimal age to participate is 6 years old
+and maximum is 80 years old. Blind guests and hard of hearing/hearing impaired
+guests must be accompanied by an assistant, friend, or family member. Maximum
+weight is 120 kilos or 260 pounds. This tour is appropriate for guests who can walk
+approximately 100 yards with walker and / or cane; nevertheless, guests with folding
+manual or folding lightweight wheelchair, scooter / electric wheelchair are not eligible
+to participate in the excursion."
 firstgallery:
   - url: "/img/discover-beyond/bbq/1.webp"
     alt: "imagen del post 1"

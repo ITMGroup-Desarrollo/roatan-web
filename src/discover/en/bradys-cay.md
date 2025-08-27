@@ -1,0 +1,95 @@
+---
+title: 'Beach Day <br class="hidden md:block">at Brady’s Cay'
+subtitle: "Non reprehenderit ad deserunt."
+slug: "bradys-cay"
+direction: "left"
+date: "2024-05-01"
+excerpt: "Brady’s Cay is the perfect getaway for a day full of fun and sun. Spend your day
+unwinding on a beautiful stretch of white sand, shaded by swaying palm trees or a
+comfy umbrella, with a refreshing drink in hand. Located on the eastern side of the
+island, Brady’s Cay offers everything you need for the perfect beach day, including
+beachside amenities, crystal-clear waters, and laid-back vibes. Dive into the sea for a
+swim, paddle along the coast in a kayak, or simply bask in the Caribbean sunshine"
+description: "Tour Beach Day at Brady’s Cay"
+author: ""
+fondo:
+  url: "/img/discover-beyond/bradys-cay/fondo.webp"
+  alt: "fondo"
+image:
+  url: "/img/discover-beyond/bradys-cay/intro.webp"
+  alt: "intro"
+icons:
+  - url: "/img/iconos/discover-beyond/secondary/bus.svg"
+    alt: "icon"
+    name: "Round trip transportation"
+  - url: "/img/iconos/discover-beyond/secondary/boat.svg"
+    alt: "icon"
+    name: "Transfer by boat to Brady's Cay"
+  - url: "/img/iconos/discover-beyond/secondary/softdrink.svg"
+    alt: "icon"
+    name: "Welcome drink at Brady's Cay"
+  - url: "/img/iconos/discover-beyond/secondary/club.svg"
+    alt: "icon"
+    name: "Beach club services and amenities"
+requirements:
+  - name: "Swimming suit and towel"
+  - name: "Comfortable clothing for outdoor activities"
+  - name: "Camera or cellphone"
+  - name: "Hat and sunglasses"
+  - name: "Eco friendly insect repellent"
+  - name: "Biodegradable sun block"
+  - name: "Extra spending money"
+capacity: "100 Pax"
+duration: "4.5 Hrs"
+note: "Requirements and restrictions: Guests who are hard of hearing / hearing
+impaired or blind, are kindly requested to be accompanied by an assistant, friend, or
+family member to ensure their comfort and safety. Participants must be between 3 and
+70 years old. For safety reasons, this activity is not suitable for guests with recent
+surgeries, or expectant mothers. This excursion includes walking on uneven surfaces,
+so participants should be able to walk independently without assistance. Unfortunately,
+this excursion is not suitable for guests who rely on mobility aids such as walkers,
+canes, wheelchairs, or scooters."
+firstgallery:
+  - url: "/img/discover-beyond/bradys-cay/1.webp"
+    alt: "imagen del post 1"
+  - url: "/img/discover-beyond/bradys-cay/2.webp"
+    alt: "imagen del post 2"
+  - url: "/img/discover-beyond/bradys-cay/3.webp"
+    alt: "imagen del post 3"
+  - url: "/img/discover-beyond/bradys-cay/4.webp"
+    alt: "imagen del post 4"
+secondgallery:
+  - url: "/img/discover-beyond/bradys-cay/5.webp"
+    alt: "imagen del post 5"
+  - url: "/img/discover-beyond/bradys-cay/6.webp"
+    alt: "imagen del post 6"
+  - url: "/img/discover-beyond/bradys-cay/8.webp"
+    alt: "imagen del post 8"
+  - url: "/img/discover-beyond/bradys-cay/9.webp"
+    alt: "imagen del post 9"
+  - url: "/img/discover-beyond/bradys-cay/10.webp"
+    alt: "imagen del post 10"
+combinedgallery:
+  - url: "/img/discover-beyond/bradys-cay/1.webp"
+    alt: "imagen del post 1"
+  - url: "/img/discover-beyond/bradys-cay/2.webp"
+    alt: "imagen del post 2"
+  - url: "/img/discover-beyond/bradys-cay/3.webp"
+    alt: "imagen del post 3"
+  - url: "/img/discover-beyond/bradys-cay/4.webp"
+    alt: "imagen del post 4"
+  - url: "/img/discover-beyond/bradys-cay/5.webp"
+    alt: "imagen del post 5"
+  - url: "/img/discover-beyond/bradys-cay/6.webp"
+    alt: "imagen del post 6"
+  - url: "/img/discover-beyond/bradys-cay/8.webp"
+    alt: "imagen del post 8"
+  - url: "/img/discover-beyond/bradys-cay/9.webp"
+    alt: "imagen del post 9"
+  - url: "/img/discover-beyond/bradys-cay/10.webp"
+    alt: "imagen del post 10"
+tags: ["astro", "comer", "aprender en público"]
+---
+
+
+Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.

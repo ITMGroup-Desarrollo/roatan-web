@@ -4,7 +4,12 @@ subtitle: "Non reprehenderit ad deserunt."
 slug: "fun-chasers"
 direction: "right"
 date: "2024-05-01"
-excerpt: 'Libera a tu explorador interior en un viaje inolvidable que combina la emoción del descubrimiento submarino con la serenidad de un pintoresco paseo en barco. Deslízate entre impresionantes formaciones de manglares, sumérgete en aguas cristalinas con una increíble vida marina y disfruta la belleza del mar Caribe en un restaurante flotante único en el corazón de la barrera de arrecifes. Relájate con todas las comodidades, deliciosa comida y un ambiente tropical.'
+excerpt: 'Unleash your inner explorer on an unforgettable journey that blends the thrill of
+underwater discovery with the serenity of a scenic boat ride. Glide past breathtaking
+mangrove formations, dive into crystal-clear waters with incredible marine life, and
+soak in the beauty of the Caribbean Sea at a unique floating restaurant, set right in the
+heart of a reef barrier. Indulge in pure relaxation with all the amenities, delicious
+cuisine, and a laid-back tropical vibe.'
 description: "snorkel"
 author: ""
 fondo:
@@ -16,39 +21,48 @@ image:
 icons:
   - url: "/img/iconos/discover-beyond/primary/guide.svg"
     alt: "icon"
-    name: "Guía bilingüe certificado"
+    name: "Certified bilingual tour guide"
   - url: "/img/iconos/discover-beyond/primary/bus.svg"
     alt: "icon"
-    name: "Transportación de ida y vuelta"
+    name: "Round trip transportation"
   - url: "/img/iconos/discover-beyond/primary/boat.svg"
     alt: "icon"
-    name: "Excursión en barco por los manglares"
+    name: "Boat tour through mangroves"
   - url: "/img/iconos/discover-beyond/primary/-.svg"
     alt: "icon"
-    name: "Snorkel con el equipo de seguridad"
+    name: "Snorkel safety equipment"
   - url: "/img/iconos/discover-beyond/primary/food.svg"
     alt: "icon"
-    name: "Fish sticks o hamburguesa con papas"
+    name: "Fish sticks or cheeseburger with fries"
   - url: "/img/iconos/discover-beyond/primary/softdrink.svg"
     alt: "icon"
-    name: "Dos bebidas no alcohólicas"
+    name: "Two nonalcoholic drinks"
   - url: "/img/iconos/discover-beyond/primary/-.svg"
     alt: "icon"
-    name: "Tiempo de playa en el restaurante flotante Fun Chasers"
+    name: "Beach time at Fun Chasers Floating restaurant"
   - url: "/img/iconos/discover-beyond/primary/club.svg"
     alt: "icon"
-    name: "Sillas lounge y zonas de sombra"
+    name: "Lounge chairs and shaded areas"
 requirements:
-  - name: "Bañador y toalla"
-  - name: "Ropa cómoda para actividades al aire libre"
-  - name: "Cámara o teléfono móvil"
-  - name: "Sombrero y gafas de sol"
-  - name: "Repelente de insectos ecológico"
-  - name: "Protector solar biodegradable"
-  - name: "Dinero en efectivo"
+  - name: "Swimming suit and towel"
+  - name: "Comfortable clothing for outdoor activities"
+  - name: "Camera or cellphone"
+  - name: "Hat and sunglasses"
+  - name: "Eco friendly insect repellent"
+  - name: "Biodegradable sun block"
+  - name: "Extra spending money"
 capacity: "80 Pax"
 duration: "4.5 Hrs"
-note: "Requisitos y restricciones: Las personas con discapacidad auditiva deben ir acompañadas de un asistente, amigo o familiar. Por razones de seguridad, no pueden participar en esta excursión los huéspedes con lesiones de cuello o espalda, cirugías recientes o pacientes con asma, diabetes, esquizofrenia, pánico, epilepsia, ceguera, embarazo u otras afecciones cardíacas o respiratorias. El límite de peso es de 120 kilos o 264 libras. La edad mínima para participar es de 8 años y la máxima de 65. Esta excursión es apropiada para huéspedes que puedan caminar sin dificultades. Los visitantes con andador, bastón, silla de ruedas plegable manual o plegable ligera, scooter / silla de ruedas eléctrica no son elegibles para participar en la excursión."
+note: "Requirements and restrictions: The use of lifejacket is mandatory during
+navigation and snorkel portion.
+Guests who are hard of hearing or hearing impaired are kindly asked to be accompanied by an assistant, friend, or family
+member for their comfort and safety. Participants must be between 08 and 65 years
+old, and the maximum weight for this activity is 120 kilos (260 pounds). For safety
+reasons, this activity is not suitable for guests with heart or respiratory conditions,
+blood pressure issues, epilepsy, asthma, diabetes, back or neck problems,
+schizophrenia, panic disorders, blindness, recent surgeries, or expectant mothers. The
+excursion involves walking on uneven surfaces and requires physical activity, so participants must be able to walk independently. Unfortunately, it is not suitable for
+those who rely on mobility aids such as walkers, canes, wheelchairs, or scooters."
 firstgallery:
   - url: "/img/discover-beyond/fun-chasers/1.webp"
     alt: "imagen del post 1"

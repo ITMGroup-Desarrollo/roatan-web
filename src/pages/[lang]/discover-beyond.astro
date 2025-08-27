@@ -74,7 +74,7 @@ export function getStaticPaths() {
         return (
           <div class="single-post-container">
             <div
-              class="relative principalview flex flex-col md:flex-row py-20 h-auto md:mb-0  w-screen "
+              class="relative principalview flex flex-col md:flex-row py-20 justify-center h-auto md:mb-0  w-screen "
               style={{
                 backgroundImage: `url('${post.fondo}')`,
                 backgroundSize: "cover",
@@ -86,7 +86,7 @@ export function getStaticPaths() {
               <div
                 class={`${post.direction === "left" ? "md:order-1" : "md:order-2"} relative bg-transparent px-10 md:px-0 md:w-[55%] justify-center flex items-center`}
               >
-                <div class="principal-items-container w-full md:pl-10 flex flex-col  justify-center gap-4 xl:gap-16">
+                <div class={`principal-items-container w-full ${post.direction === "left" ? "md:pr-10" : "md:pl-10"}  flex flex-col  justify-center gap-4 xl:gap-16`}>
                   <div class="text-container flex flex-col gap-2">
                     <h1
                       class={` ${post.direction === "left" ? "text-[var(--secondary-color)]" : "text-[var(--primary-color)]"} text-5xl md:text-6xl xl:text-7xl font-bebasBold`}
@@ -108,7 +108,7 @@ export function getStaticPaths() {
                       class={`object-contain w-auto md:h-[90%] ${post.direction === "left" ? "fill-primary-color" : "fill-secondary-color"} md:order-1`}
                     />
                   </div>
-                  <div class="icons-container my-4 grid gap-4 grid-cols-2 md:grid-cols-3">
+                  <div class={`icons-container my-4 grid gap-4 grid-cols-2 ${post.direction === "left" ? "md:grid-cols-3" : "md:grid-cols-4"} `}>
                     {post.icons &&
                       Array.isArray(post.icons) &&
                       post.icons.map((icon, index) => (
@@ -227,7 +227,7 @@ export function getStaticPaths() {
                   </div>
                 </div>
                 <div class="flex relative justify-center w-screen md:w-auto justify-self-center items-center md:items-end md:justify-end pb-10 md:pb-0">
-                  <div class="wave-container  md:mt-8 absolute -top-2 md:top-0 md:h-[6rem] w-full md:-mr-[10%] right-0 bg-transparent z-1">
+                  <div class="wave-container  absolute -top-2 md:top-0 md:h-[6rem] w-full md:-mr-[10%] right-0 bg-transparent z-1">
                     <Image
                       class="wave self-center w-[100%] h-[100%] right-0 top-0 object-fill"
                       src={olas}

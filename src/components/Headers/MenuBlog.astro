@@ -5,7 +5,7 @@ import "../../assets/css/menu.css";
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 import { Image } from "astro:assets";
-import SearchContent from '../js/SearchContent.jsx';
+import SearchContent from "../js/SearchContent.jsx";
 import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
 const menuItems = Object.entries(t.menu).map(([key, label]) => ({
   path: key,
@@ -16,7 +16,6 @@ import path from "path";
 import matter from "gray-matter";
 import "../../assets/css/main.css";
 import "../../assets/css/menu.css";
-
 
 function loadMarkdownFromDir(dirPath) {
   if (!fs.existsSync(dirPath)) return [];
@@ -29,7 +28,11 @@ function loadMarkdownFromDir(dirPath) {
       title: data.title || filename.replace(".md", ""),
       slug: data.slug || filename.replace(".md", ""),
       tags: data.tags || [],
-      category: dirPath.includes("posts") ? "blog" : dirPath.includes("ports") ? "port-experience" : "discover-beyond",
+      category: dirPath.includes("posts")
+        ? "blog"
+        : dirPath.includes("ports")
+          ? "port-experience"
+          : "discover-beyond",
     };
   });
 }
@@ -40,6 +43,9 @@ const content = [
   ...loadMarkdownFromDir(`${baseDir}/ports/${lang}`),
   ...loadMarkdownFromDir(`${baseDir}/discover/${lang}`),
 ];
+const currentPath = Astro.url.pathname;
+const pathEs = currentPath.replace(/^\/(en|es)/, "/es");
+const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
 ---
 
 <div
@@ -105,7 +111,10 @@ const content = [
     >
   </nav>
 </div>
-<div id="burger_menu" class="relative h-0 flex flex-row-reverse w-screen lg:hidden z-40 ">
+<div
+  id="burger_menu"
+  class="relative h-0 flex flex-row-reverse w-screen lg:hidden z-40"
+>
   <label class="burger z-40 top-9 right-5" for="burger">
     <input type="checkbox" id="burger" />
     <span class="burger-line bg-white"></span>
@@ -132,12 +141,12 @@ const content = [
     <div>
       <a
         class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl ml-3"
-        href="/es/home">ES</a
+        href={pathEs}>ES</a
       >
       <span class="text-2xl pb-2">|</span>
       <a
         class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
-        href="/en/home">EN</a
+        href={pathEn}>EN</a
       >
     </div>
     <div

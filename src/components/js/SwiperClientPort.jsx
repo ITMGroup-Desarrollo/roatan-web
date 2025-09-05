@@ -32,11 +32,21 @@ export default function SwiperClient() {
   const images = [
     "/img/home/swiperPort/1.webp",
     "/img/home/swiperPort/2.webp",
+    "/img/home/swiperPort/3.webp",
     "/img/home/swiperPort/4.webp",
     "/img/home/swiperPort/5.webp",
     "/img/home/swiperPort/6.webp",
+    "/img/home/swiperPort/7.webp",
     "/img/home/swiperPort/8.webp",
     "/img/home/swiperPort/9.webp",
+    "/img/home/swiperPort/10.webp",
+    "/img/home/swiperPort/11.webp",
+    "/img/home/swiperPort/12.webp",
+    "/img/home/swiperPort/13.webp",
+    "/img/home/swiperPort/14.webp",
+    "/img/home/swiperPort/15.webp",
+    "/img/home/swiperPort/16.webp",
+    "/img/home/swiperPort/17.webp",
   ];
 
   return (

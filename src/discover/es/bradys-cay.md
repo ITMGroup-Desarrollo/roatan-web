@@ -11,7 +11,7 @@ fondo:
   url: "/img/discover-beyond/bradys-cay/fondo.webp"
   alt: "fondo"
 image:
-  url: "/img/discover-beyond/bradys-cay/intro.webp"
+  url: "/img/discover-beyond/bradys-cay/intro.png"
   alt: "intro"
 icons:
   - url: "/img/iconos/discover-beyond/secondary/bus.svg"

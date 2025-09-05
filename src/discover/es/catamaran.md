@@ -11,7 +11,7 @@ fondo:
   url: "/img/discover-beyond/catamaran/fondo.webp"
   alt: "fondo"
 image:
-  url: "/img/discover-beyond/catamaran/intro.webp"
+  url: "/img/discover-beyond/catamaran/intro.png"
   alt: "intro"
 icons:
   - url: "/img/iconos/discover-beyond/primary/boat.svg"
@@ -45,6 +45,8 @@ firstgallery:
     alt: "imagen del post 1"
   - url: "/img/discover-beyond/catamaran/2.webp"
     alt: "imagen del post 2"
+  - url: "/img/discover-beyond/catamaran/3.webp"
+    alt: "imagen del post 3"
 secondgallery:
   - url: "/img/discover-beyond/catamaran/4.webp"
     alt: "imagen del post 4"

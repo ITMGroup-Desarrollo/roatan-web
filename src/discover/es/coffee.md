@@ -11,7 +11,7 @@ fondo:
   url: "/img/discover-beyond/coffee/fondo.webp"
   alt: "fondo"
 image:
-  url: "/img/discover-beyond/coffee/intro.webp"
+  url: "/img/discover-beyond/coffee/intro.png"
   alt: "intro"
 icons:
   - url: "/img/iconos/discover-beyond/secondary/guide.svg"

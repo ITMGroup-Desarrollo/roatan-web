@@ -16,7 +16,7 @@ fondo:
   url: "/img/discover-beyond/fun-chasers/fondo.webp"
   alt: "fondo"
 image:
-  url: "/img/discover-beyond/fun-chasers/intro.webp"
+  url: "/img/discover-beyond/fun-chasers/intro.png"
   alt: "intro"
 icons:
   - url: "/img/iconos/discover-beyond/primary/guide.svg"

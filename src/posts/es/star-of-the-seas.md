@@ -3,7 +3,7 @@ title: 'Star of the seas en Port&nbsp;Roatan'
 subtitle: "Star of the seas en port roatan"
 slug: "star-of-the-seas"
 date: "2024-09-04"
-excerpt: "Port Roatan dio la bienvenida con orgullo al Star of the Seas de Royal Caribbean en su histórica <b>primera escala (Maiden Call)..."
+excerpt: "Port Roatan dio la bienvenida con orgullo al Star of the Seas de Royal Caribbean en su histórica primera escala (Maiden Call)..."
 description: "Esta es la primera publicación de port roatan"
 author: "Alicia Alejandra Cruz Guzmán"
 image:

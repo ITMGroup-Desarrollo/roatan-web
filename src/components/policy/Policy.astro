@@ -1,0 +1,109 @@
+---
+import { translations } from "../../locales.js";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+---
+
+<div class="policy h-auto relative bg-[var(--redSocial-color)] w-screen">
+  <div
+    class="faqs-container pt-10 px-10 md:px-20 w-full text-center h-auto flex gap-5 md:gap-2 flex-col items-center justify-start bg-[transparent]"
+  >
+    <h2
+      class="title mt-16 md:my-10 md:block text-5xl md:text-8xl font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.policy.title}
+    </h2>
+    <div class="text-lg md:text-2xl text-justify font-lato text-black">
+      <p>{t.policy.parrafo1}</p><br />
+      <p>{t.policy.parrafo2}</p><br />
+      <p>{t.policy.parrafo3}</p><br />
+      <p>{t.policy.parrafo4}</p><br />
+      <p>{t.policy.parrafo5}</p><br />
+    </div>
+    <h2
+      class=" md:my-10 md:block text-4xl md:text-6xl font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.policy.datossubtitulo}
+    </h2>
+    <div class="text-lg md:text-2xl text-justify font-lato text-black">
+      <p>{t.policy.datos1}</p><br />
+    </div>
+    <h2
+      class=" md:my-10 md:block text-4xl md:text-6xl font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.policy.empresasubtitulo}
+    </h2>
+    <div class="text-lg md:text-2xl text-justify font-lato text-black">
+      <p>{t.policy.empresa1}</p><br />
+      <p class="md:pl-10">{t.policy.empresa2}</p><br />
+      <p class="md:pl-10">{t.policy.empresa3}</p><br />
+    </div>
+    <h2
+      class=" md:my-10 md:block text-4xl md:text-6xl font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.policy.obtencionsubtitulo}
+    </h2>
+    <div class="text-lg md:text-2xl text-justify font-lato text-black">
+      <p>{t.policy.obtencion1}</p><br />
+      <ul class="list-disc list-outside space-y-2 pl-5 md:pl-10">
+        <li>{t.policy.obtencionlista1}</li>
+        <li>{t.policy.obtencionlista2}</li>
+        <li>{t.policy.obtencionlista3}</li>
+        <li>{t.policy.obtencionlista4}</li>
+        <li>{t.policy.obtencionlista5}</li>
+      </ul><br>
+      <p>{t.policy.obtencion2}</p><br />
+      <p>{t.policy.obtencion3}</p><br />
+    </div>
+    <h2
+      class=" md:my-10 md:block text-4xl md:text-6xl font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.policy.usosubtitulo}
+    </h2>
+    <div class="text-lg md:text-2xl text-justify font-lato text-black">
+      <p>{t.policy.uso1}</p><br />
+      <p class="md:pl-10">{t.policy.uso2}</p><br />
+      <p class="md:pl-10">{t.policy.uso3}</p><br />
+      <ul class="list-disc list-outside space-y-2 pl-10 md:pl-20">
+        <li>{t.policy.usolista1}</li>
+        <li>{t.policy.usolista2}</li>
+        <li>{t.policy.usolista3}</li>
+        <li>{t.policy.usolista4}</li>
+        <li>{t.policy.usolista5}</li>
+        <li>{t.policy.usolista6}</li>
+        <li>{t.policy.usolista7}</li>
+      </ul><br>
+      <p class="md:pl-10">{t.policy.uso4}</p><br />
+      <p class="md:pl-10">{t.policy.uso5}</p><br />
+      <p class="md:pl-10">{t.policy.uso6}</p><br />
+    </div>
+    <h2
+      class=" md:my-10 md:block text-4xl md:text-6xl font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.policy.transparenciasubtitulo}
+    </h2>
+    <div class="text-lg md:text-2xl text-justify font-lato text-black">
+      <p>{t.policy.transparencia1}</p><br />
+      <ul class=" list-outside space-y-2 pl-5 md:pl-10">
+        <li>{t.policy.transparencialista1}</li>
+        <li>{t.policy.transparencialista2}</li>
+        <li>{t.policy.transparencialista3}</li>
+      </ul><br>
+      <p>{t.policy.transparencia2}</p><br />
+      <p>{t.policy.transparencia3}</p><br />
+    </div>
+    <h2
+      class=" md:my-10 md:block text-4xl md:text-6xl font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.policy.modificacionessubtitulo}
+    </h2>
+    <div class="text-lg md:text-2xl text-justify font-lato text-black">
+      <p>{t.policy.modificaciones1}</p><br />
+    </div>
+  </div>
+</div>
+<style>
+  body {
+    background-color: var(--redSocial-color);
+  }
+</style>

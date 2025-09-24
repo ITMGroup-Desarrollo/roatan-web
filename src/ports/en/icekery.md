@@ -1,5 +1,5 @@
 ---
-title: 'icekery<br>&nbsp;'
+title: 'Icekery<br>&nbsp;'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "icekery"
 date: "2024-05-01"

@@ -1,5 +1,5 @@
 ---
-title: 'taco <br class="hidden md:block">lover'
+title: 'Taco <br class="hidden md:block">lover'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "taco-lover"
 date: "2024-05-01"

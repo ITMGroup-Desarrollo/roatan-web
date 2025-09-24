@@ -50,6 +50,10 @@ guests who can walk independently without assistance. While guests using a walke
 cane are welcome to participate, those using a manual or lightweight folding
 wheelchair, scooter, or electric wheelchair will not be eligible to join."
 firstgallery:
+  - url: "/img/discover-beyond/ocean-harvest/1.webp"
+    alt: "imagen del post 1"
+  - url: "/img/discover-beyond/ocean-harvest/2.webp"
+    alt: "imagen del post 2"
   - url: "/img/discover-beyond/ocean-harvest/3.webp"
     alt: "imagen del post 3"
   - url: "/img/discover-beyond/ocean-harvest/5.webp"
@@ -81,7 +85,17 @@ secondgallery:
     alt: "imagen del post 17"
   - url: "/img/discover-beyond/ocean-harvest/18.webp"
     alt: "imagen del post 18"
+  - url: "/img/discover-beyond/ocean-harvest/19.webp"
+    alt: "imagen del post 19"
+  - url: "/img/discover-beyond/ocean-harvest/20.webp"
+    alt: "imagen del post 20"
+  - url: "/img/discover-beyond/ocean-harvest/21.webp"
+    alt: "imagen del post 21"
 combinedgallery:
+  - url: "/img/discover-beyond/ocean-harvest/1.webp"
+    alt: "imagen del post 1"
+  - url: "/img/discover-beyond/ocean-harvest/2.webp"
+    alt: "imagen del post 2"
   - url: "/img/discover-beyond/ocean-harvest/3.webp"
     alt: "imagen del post 3"
   - url: "/img/discover-beyond/ocean-harvest/5.webp"
@@ -112,6 +126,12 @@ combinedgallery:
     alt: "imagen del post 17"
   - url: "/img/discover-beyond/ocean-harvest/18.webp"
     alt: "imagen del post 18"
+  - url: "/img/discover-beyond/ocean-harvest/19.webp"
+    alt: "imagen del post 19"
+  - url: "/img/discover-beyond/ocean-harvest/20.webp"
+    alt: "imagen del post 20"
+  - url: "/img/discover-beyond/ocean-harvest/21.webp"
+    alt: "imagen del post 21"
 tags: ["astro", "comer", "aprender en público"]
 ---
 -

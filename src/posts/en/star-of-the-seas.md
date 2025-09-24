@@ -1,5 +1,5 @@
 ---
-title: 'Star of the seas at Port&nbsp;Roatan'
+title: 'Star of the Seas at Port&nbsp;Roatan'
 subtitle: "Star of the seas at port roatan"
 slug: "star-of-the-seas"
 date: "2024-09-04"

@@ -95,7 +95,7 @@ export function getStaticPaths() {
                     <div
                       class={` ${post.direction === "left" ? "bg-[var(--secondary-color)]" : "bg-[var(--primary-color)]"} h-1 w-20`}
                     />
-                    <p class="text-xl xl:text-2xl text-[var(--darkblue-color)] text-justify md:text-left" set:html={post.excerpt}>
+                    <p class="text-xl md:text-lg xl:text-2xl text-[var(--darkblue-color)] text-justify md:text-justify" set:html={post.excerpt}>
                       
                     </p>
                   </div>
@@ -115,7 +115,7 @@ export function getStaticPaths() {
                         <div class="justify-center md:justify-start md:items-start flex ">
                           <div class="flex flex-col w-[65%] xl:w-[50%] items-center gap-2">
                             <img
-                              class="w-16 xl:w-[5.5rem] h-16 xl:h-w-[5.5rem] object-contain"
+                              class="w-16 md:w-[3rem] xl:w-[5.5rem] h-16 md:h-[3rem] xl:h-[5.5rem] object-contain"
                               src={icon.url}
                               alt={icon.alt ?? `Icon ${index + 1}`}
                             />
@@ -138,7 +138,7 @@ export function getStaticPaths() {
                 </div>
               </div>
               <div
-                class={` ${post.direction === "left" ? "md:order-2" : "md:order-1"} h-fit hidden md:block bg-transparent w-[35%] z-20`}
+                class={` ${post.direction === "left" ? "md:order-2" : "md:order-1"} h-fit hidden md:block bg-transparent w-[30%] xl:w-[35%] z-20`}
               >
                 <img
                   src={post.image}

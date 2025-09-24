@@ -1,5 +1,5 @@
 ---
-title: 'La Fruteria'
+title: 'La Frutería'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "la-fruteria"
 date: "2024-05-01"

@@ -48,7 +48,13 @@ body{
     width: 100%;
   }
 }
-
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 .bg-gradient-header{
     background: var(--primary-color);
     background: linear-gradient(90deg, var(--primary-color) 15%, rgba(255, 255, 255, 0) 60%);

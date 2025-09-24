@@ -39,11 +39,23 @@ firstgallery:
     alt: "imagen del post 1"
   - url: "/img/discover-beyond/bbq/2.webp"
     alt: "imagen del post 2"
-secondgallery:
   - url: "/img/discover-beyond/bbq/3.webp"
     alt: "imagen del post 3"
   - url: "/img/discover-beyond/bbq/4.webp"
     alt: "imagen del post 4"
+  - url: "/img/discover-beyond/bbq/5.webp"
+    alt: "imagen del post 5"
+secondgallery:
+  - url: "/img/discover-beyond/bbq/6.webp"
+    alt: "imagen del post 6"
+  - url: "/img/discover-beyond/bbq/7.webp"
+    alt: "imagen del post 7"
+  - url: "/img/discover-beyond/bbq/8.webp"
+    alt: "imagen del post 8"
+  - url: "/img/discover-beyond/bbq/9.webp"
+    alt: "imagen del post 9"
+  - url: "/img/discover-beyond/bbq/10.webp"
+    alt: "imagen del post 10"
 combinedgallery:
   - url: "/img/discover-beyond/bbq/1.webp"
     alt: "imagen del post 1"
@@ -53,6 +65,18 @@ combinedgallery:
     alt: "imagen del post 3"
   - url: "/img/discover-beyond/bbq/4.webp"
     alt: "imagen del post 4"
+  - url: "/img/discover-beyond/bbq/5.webp"
+    alt: "imagen del post 5"
+  - url: "/img/discover-beyond/bbq/6.webp"
+    alt: "imagen del post 6"
+  - url: "/img/discover-beyond/bbq/7.webp"
+    alt: "imagen del post 7"
+  - url: "/img/discover-beyond/bbq/8.webp"
+    alt: "imagen del post 8"
+  - url: "/img/discover-beyond/bbq/9.webp"
+    alt: "imagen del post 9"
+  - url: "/img/discover-beyond/bbq/10.webp"
+    alt: "imagen del post 10"
 tags: ["astro", "comer", "aprender en público"]
 ---
 

@@ -51,6 +51,7 @@ export default function SwiperClient() {
     "/img/home/swiperDiscover/12.webp",
     "/img/home/swiperDiscover/13.webp",
     "/img/home/swiperDiscover/14.webp",
+    "/img/home/swiperDiscover/15.webp",
   ];
 
   return (

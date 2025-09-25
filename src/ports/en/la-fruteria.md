@@ -28,7 +28,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "comer", "aprender en público"]
+tags: ["restaurants", "bars", "food", "cuisine", "menu", "foodie", "fruits", "fresh fruits", "fruit drinks", "cold coconut", "coco", "pineapple", "piña colada"]
 ---
 
 Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is&nbsp;a&nbsp;MUST.  

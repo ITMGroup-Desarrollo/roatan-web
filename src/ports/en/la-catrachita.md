@@ -29,7 +29,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "comer", "aprender en público"]
+tags: ["restaurants", "bars", "food", "cuisine", "menu", "foodie", "honduran food", "honduran", "honduran Cuisine", "local food"]
 ---
 
 From ceviche to burgers, you'll love La Catrachita! Don't worry about drinking, there are plenty of options to choose from. Cold beers, margaritas, and more, time to get in&nbsp;the&nbsp;mood!

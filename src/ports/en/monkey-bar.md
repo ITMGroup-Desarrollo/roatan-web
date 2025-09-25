@@ -40,7 +40,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "comer", "aprender en público"]
+tags: ["restaurants", "bars", "food", "cuisine", "menu", "foodie", "monkey", "drinks", "beer"]
 ---
 
 Nachos, seafood, drinks, Monkey Bar has it all! Ask for your favorite drink, celebrate,&nbsp;and&nbsp;cheers!

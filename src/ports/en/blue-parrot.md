@@ -37,7 +37,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["astro", "comer", "aprender en público"]
+tags: ["Restaurants", "bars", "food", "cuisine", "menu", "foodie"]
 ---
 
 

@@ -50,11 +50,11 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
 
 <div
   id="menu_desktop"
-  class="w-screen hidden lg:flex lg:sticky flex-row-reverse top-0 justify-between p-6 bg-[var(--primary-color)] items-center z-30 transition-colors duration-300 ease-in-out"
+  class="w-screen hidden lg:flex lg:sticky flex-row-reverse top-0 justify-between px-6 py-3 bg-[var(--primary-color)] items-center z-30 transition-colors duration-300 ease-in-out"
 >
   <Image
     id="logo_menu"
-    class="absolute hidden lg:left-24 xl:left-48 lg:top-2 lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
+    class="absolute hidden lg:left-24 xl:left-48  lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
     src={roatanLogo}
     alt="logo"
     loading="eager"
@@ -70,23 +70,9 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
         </a>
       ))
     }
-    <!-- <div class="pb-1 relative search_container">
-      <input
-        class="search_input font text-xs italic uppercase mx-3 rounded-full border-2 border-white w-auto py-1 px-2"
-        placeholder="What to find?"
-      />
-      <Image
-        class="absolute right-6 top-1.5"
-        src="/img/iconos/lupa.svg"
-        alt="lupa"
-        width="15"
-        height="15"
-        loading="eager"
-      />
-    </div> -->
     <SearchContent lang={lang} content={content} client:load />
     <div
-      class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1"
+      class="flex flex-row items-center social_media_container gap-2 xl:gap-4  pt-1"
     >
       <a href="https://www.facebook.com/PortRoatan" target="_blank"
         ><div class="icon-mask icon-mask-face"></div></a

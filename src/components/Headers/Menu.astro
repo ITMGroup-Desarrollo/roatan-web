@@ -6,7 +6,7 @@ const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
 import { Image } from "astro:assets";
 import SearchContent from "../js/SearchContent.jsx";
-import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
+import roatanLogo from "../../assets/img/logo/Roatan-LogoSimple.png";
 const menuItems = Object.entries(t.menu).map(([key, label]) => ({
   path: key,
   label,
@@ -49,43 +49,29 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
 
 <div
   id="menu_desktop"
-  class="w-screen lg:-mt-24 hidden lg:flex lg:sticky flex-row-reverse top-0 justify-between p-6 bg-transparent items-center z-30 transition-colors duration-300 ease-in-out"
+  class="w-screen relative lg:-mt-24 hidden lg:flex lg:sticky flex-row-reverse top-0 justify-between px-6 py-3 bg-transparent items-center z-30 transition-colors duration-300 ease-in-out"
 >
   <Image
     id="logo_menu"
-    class="absolute hidden lg:left-24 xl:left-48 lg:top-2 lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
+    class="absolute hidden lg:left-24 xl:left-48  lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
     src={roatanLogo}
     alt="logo"
     loading="eager"
   />
-  <nav class="text-white flex items-center mx-6">
+  <nav class="text-white flex items-center gap-3 mx-6">
     {
       menuItems.map((item) => (
         <a
-          class="menu_element uppercase font-bebas underline-grow text-2xl xl:text-4xl "
+          class="menu_element uppercase  font-bebas underline-grow text-2xl xl:text-4xl "
           href={`/${lang}/${item.path}/`}
         >
           {item.label}
         </a>
       ))
     }
-    <!-- <div class="pb-1 relative search_container">
-      <input
-        class="search_input font text-xs italic uppercase mx-3 rounded-full border-2 border-white w-auto py-1 px-2"
-        placeholder="What to find?"
-      />
-      <Image
-        class="absolute right-6 top-1.5"
-        src="/img/iconos/lupa.svg"
-        alt="lupa"
-        width="15"
-        height="15"
-        loading="eager"
-      />
-    </div> -->
     <SearchContent lang={lang} content={content} client:load />
     <div
-      class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1"
+      class="flex flex-row items-center social_media_container gap-2 xl:gap-4  pt-1"
     >
       <a href="https://www.facebook.com/PortRoatan" target="_blank"
         ><div class="icon-mask icon-mask-face"></div></a
@@ -100,12 +86,12 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
       >
     </div>
     <a
-      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl ml-3"
+      class="uppercase hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
       href={pathEs}>ES</a
     >
     <span class="text-2xl pb-2">|</span>
     <a
-      class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
+      class="uppercase hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
       href={pathEn}>EN</a
     >
   </nav>

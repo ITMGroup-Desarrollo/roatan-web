@@ -8,19 +8,16 @@ import olas from "../../assets/img/iconos/home/olas-white.png";
 import "../../assets/css/home.css";
 import chica from "../../assets/img/iconos/home/chica.png";
 import SwiperClient from "../../components/js/SwiperClientPort";
-
-
 ---
 
 <div
   class="port-container items-center w-screen h-auto md:h-[34rem] flex flex-col md:flex-row lg:items-start justify-center relative overflow-hidden bg-[var(--secondary-color)]"
 >
-
   <div
     class="text-container w-full md:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
   >
     <h2
-      class="capitalize text-5xl md:text-7xl flex flex-col  font-alverata  text-white"
+      class="capitalize text-5xl md:text-7xl flex flex-col font-alverata text-white"
     >
       {t.homePort.title}
     </h2>
@@ -30,10 +27,10 @@ import SwiperClient from "../../components/js/SwiperClientPort";
     </p>
     <a
       href={`/${lang}/port-experience/`}
-      class="text-[var(--darkblue-color)] md:text-2xl border-2 border-[var(--darkblue-color)] self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
+      class="text-[var(--darkblue-color)] font-bold md:text-2xl border-2 border-[var(--darkblue-color)] self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
       >{t.homePort.button}</a
     >
-    
+
     <div class="w-full h-16 lg:h-24 relative">
       <Image
         class="w-[100%] h-[100%] object-fill"
@@ -42,20 +39,17 @@ import SwiperClient from "../../components/js/SwiperClientPort";
         loading="eager"
       />
       <Image
-      class="block md:hidden chica-port absolute w-20 md:w-60 lg:w-80 h-auto -bottom-5 z-50"
-      src={chica}
-      alt="logo"
-      loading="eager"
-    />
-      <div class="wave-cover-port ">
-        
-      </div>
+        class="block md:hidden chica-port absolute w-20 md:w-60 lg:w-80 h-auto -bottom-5 z-50"
+        src={chica}
+        alt="logo"
+        loading="eager"
+      />
+      <div class="wave-cover-port"></div>
     </div>
-    
   </div>
-  <div class="swiper-container w-full h-full md:w-1/2 text-center flex flex-col">
+  <div
+    class="swiper-container w-full h-full md:w-1/2 text-center flex flex-col"
+  >
     <SwiperClient client:only="react" />
   </div>
-  
 </div>
-

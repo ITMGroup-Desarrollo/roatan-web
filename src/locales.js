@@ -40,7 +40,7 @@ export const translations = {
       subtitle: "nuevos recuerdos juntos!",
     },
     homeDiscover: {
-      title: "Discover Beyond the cruise",
+      title: "Discover Beyond the&nbsp;cruise",
       subtitle: "Las mejores aventuras están por venir... ¿Listo?",
       button: "¡VAMOS!",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
@@ -58,10 +58,14 @@ export const translations = {
         "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatan te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
       respuesta2:
         " ¡Claro que sí! Piscinas refrescantes, zonas lounge, tiendas, hamacas y hasta un spa relajante (con costo adicional).",
-      respuesta3: " ¡Gracias por tu interés! Al momento, el acceso a Port Roatan es exclusivo para cruceristas.",
-      respuesta4: "¡Sí! Solo ten en cuenta que no hay reservaciones, así que puedes elegir tu lugar favorito al llegar.",
-      respuesta5: "¡Un outfit fresco y cómodo (playero), bloqueador solar, lentes de sol y sombrero! También te sugerimos llevar efectivo para tus actividades y souvenirs.",
-      respuesta6: "Roatán es un destino espectacular. Te recomendamos explorar el puerto y visitar los Last-minute booths al llegar.",
+      respuesta3:
+        " ¡Gracias por tu interés! Al momento, el acceso a Port Roatan es exclusivo para cruceristas.",
+      respuesta4:
+        "¡Sí! Solo ten en cuenta que no hay reservaciones, así que puedes elegir tu lugar favorito al llegar.",
+      respuesta5:
+        "¡Un outfit fresco y cómodo (playero), bloqueador solar, lentes de sol y sombrero! También te sugerimos llevar efectivo para tus actividades y souvenirs.",
+      respuesta6:
+        "Roatán es un destino espectacular. Te recomendamos explorar el puerto y visitar los Last-minute booths al llegar.",
     },
     blog: {
       title: "Blog",
@@ -99,50 +103,77 @@ export const translations = {
     },
     policy: {
       title: "POLÍTICA DE PRIVACIDAD",
-      parrafo1: "En cumplimiento de lo establecido en el Decreto Legislativo No. 170 – 2006 (la “Ley”) y demás normativas legales aplicables, PORT ROATAN (la “EMPRESA” o el “Responsable”), con domicilio para efectos de este aviso en BARRIO WILLIE WARREN, COXEN HOLE, ROATÁN, ISLAS DE LA BAHÍA, HONDURAS, pone a su disposición el presente aviso de privacidad.",
-      parrafo2: "Por medio del presente, la EMPRESA busca garantizar de forma permanente que el tratamiento de sus datos personales (en adelante, los “Datos Personales”) sea legítimo, controlado e informado, con el objetivo de asegurar su privacidad y su derecho a la autodeterminación informativa.",
-      parrafo3: "Este Aviso de Privacidad explica las políticas y prácticas aplicables dentro de la EMPRESA en relación con el tratamiento que se realiza de sus Datos Personales (entendiéndose por tratamiento la obtención, uso, divulgación y almacenamiento de dicha información), así como las medidas que la EMPRESA toma para protegerlos. Le pedimos que lea cuidadosamente este Aviso de Privacidad. Al conocerlo, usted manifiesta estar enterado y de acuerdo con los términos y el alcance del tratamiento de sus Datos Personales. Usted consiente expresamente el tratamiento de sus Datos Personales al proporcionarlos a la EMPRESA por cualquier medio. Si no está de acuerdo con la política contenida en este aviso, le solicitamos no proporcionar información a la EMPRESA ni a sus representantes.",
-      parrafo4: "Cualquier información que usted proporcione en las áreas públicas del Sitio Web será considerada información pública y no se considerará como Datos Personales proporcionados a la EMPRESA. En estos casos, la EMPRESA no tendrá control ni será responsable por las acciones de otros usuarios del Sitio Web o de clientes respecto a cualquier información que publiquen en dichas áreas.",
-      parrafo5: "La transferencia de datos personales a terceros sólo se realizará con su consentimiento o cuando este no sea requerido de acuerdo con la Ley Aplicable. Este Aviso de Privacidad está dirigido a los clientes de la EMPRESA que visitan este sitio web.",
+      parrafo1:
+        "En cumplimiento de lo establecido en el Decreto Legislativo No. 170 – 2006 (la “Ley”) y demás normativas legales aplicables, PORT ROATAN (la “EMPRESA” o el “Responsable”), con domicilio para efectos de este aviso en BARRIO WILLIE WARREN, COXEN HOLE, ROATÁN, ISLAS DE LA BAHÍA, HONDURAS, pone a su disposición el presente aviso de privacidad.",
+      parrafo2:
+        "Por medio del presente, la EMPRESA busca garantizar de forma permanente que el tratamiento de sus datos personales (en adelante, los “Datos Personales”) sea legítimo, controlado e informado, con el objetivo de asegurar su privacidad y su derecho a la autodeterminación informativa.",
+      parrafo3:
+        "Este Aviso de Privacidad explica las políticas y prácticas aplicables dentro de la EMPRESA en relación con el tratamiento que se realiza de sus Datos Personales (entendiéndose por tratamiento la obtención, uso, divulgación y almacenamiento de dicha información), así como las medidas que la EMPRESA toma para protegerlos. Le pedimos que lea cuidadosamente este Aviso de Privacidad. Al conocerlo, usted manifiesta estar enterado y de acuerdo con los términos y el alcance del tratamiento de sus Datos Personales. Usted consiente expresamente el tratamiento de sus Datos Personales al proporcionarlos a la EMPRESA por cualquier medio. Si no está de acuerdo con la política contenida en este aviso, le solicitamos no proporcionar información a la EMPRESA ni a sus representantes.",
+      parrafo4:
+        "Cualquier información que usted proporcione en las áreas públicas del Sitio Web será considerada información pública y no se considerará como Datos Personales proporcionados a la EMPRESA. En estos casos, la EMPRESA no tendrá control ni será responsable por las acciones de otros usuarios del Sitio Web o de clientes respecto a cualquier información que publiquen en dichas áreas.",
+      parrafo5:
+        "La transferencia de datos personales a terceros sólo se realizará con su consentimiento o cuando este no sea requerido de acuerdo con la Ley Aplicable. Este Aviso de Privacidad está dirigido a los clientes de la EMPRESA que visitan este sitio web.",
       datossubtitulo: "DATOS PERSONALES",
-      datos1: "Se entiende por datos personales cualquier información relativa a una persona física o jurídica identificada o identificable.",
+      datos1:
+        "Se entiende por datos personales cualquier información relativa a una persona física o jurídica identificada o identificable.",
       empresasubtitulo: "DATOS PERSONALES QUE RECABA LA EMPRESA",
-      empresa1: "Para los fines establecidos en este Aviso de Privacidad, la EMPRESA podrá obtener los siguientes Datos Personales:",
-      empresa2: "A. Datos de identificación: Información que permite distinguir a una persona de otras. Esto incluye nombre, título, firma autógrafa, firma electrónica, copia del documento de identidad.",
-      empresa3: "B. Datos de contacto: Información que nos permite mantener comunicación con usted. Esto incluye dirección, domicilio fiscal, dirección para entregas, correo electrónico, teléfono fijo o móvil.",
-      obtencionsubtitulo:"OBTENCIÓN DE DATOS PERSONALES",
-      obtencion1:"La EMPRESA puede obtener sus datos personales de las siguientes maneras:",
-      obtencionlista1:"Cuando se registra para acceder y utilizar el Sitio Web.",
-      obtencionlista2:"Cuando se suscribe al Sitio Web para recibir información o promociones.",
-      obtencionlista3:"Cuando adquiere productos o servicios a través del Sitio Web o en las tiendas de la EMPRESA.",
-      obtencionlista4:"Cuando contacta a la EMPRESA a través del sitio web, en alguna de sus sucursales, o mediante el Centro de Atención al Cliente, correo electrónico: portofroatan.com, sin importar el motivo de la comunicación.",
-      obtencionlista5:"Cuando participa en una promoción o encuesta.",
-      obtencion2:"La EMPRESA también puede obtener cierta información de forma automática cuando usted visita el Sitio Web. Esta información puede incluir la dirección IP asociada a su dispositivo, el sistema operativo que utiliza, la página web desde la que fue redirigido, su actividad dentro del Sitio Web, la fecha y hora de su visita y sus compras. Esta información puede obtenerse mediante el uso de “Cookies” y “Web Beacons”.",
-      obtencion3:"Asimismo, la EMPRESA puede obtener información indirectamente cuando es proporcionada por terceros contratados para apoyar en procesos específicos como corrección de registros, prevención de fraude y ofertas especiales o personalizadas.",
-      usosubtitulo:"USO DE LOS DATOS PERSONALES",
-      uso1:"El tratamiento de sus Datos Personales tendrá los siguientes fines:",
-      uso2:"A. Cuando interactúe en redes sociales de terceros (por ejemplo, mediante funciones como “Me gusta”), con fines publicitarios y de vinculación desde dichas redes. Puede consultar las políticas de privacidad de cada red social para conocer cómo funcionan estas funciones, qué datos se obtienen y cómo deshabilitarlas.",
-      uso3:"B. Con su consentimiento (cuando sea necesario), trataremos sus Datos Personales para:",
-      usolista1:"Analizar sus preferencias y hábitos.",
-      usolista2:"Anticipar sus necesidades con base en el análisis de su perfil.",
-      usolista3:"Mejorar y personalizar su experiencia en nuestros sitios web y aplicaciones.",
-      usolista4:"Asegurar que el contenido esté optimizado para usted y su dispositivo.",
-      usolista5:"Ofrecer publicidad y contenido acorde a sus intereses.",
-      usolista6:"Permitirle participar en funciones interactivas.",
-      usolista7:"Por ejemplo, recordaremos su nombre de usuario/correo electrónico para facilitar su acceso o recuperar elementos agregados al carrito de compras. Usted podrá oponerse o retirar su consentimiento en cualquier momento.",
-      uso4:"C. Gestión de su cuenta (registro en línea), incluyendo facturación, devoluciones, historial de transacciones, programas de lealtad o recompensas, y aclaraciones.",
-      uso5:"D. Comunicarnos con usted por temas relacionados a sus compras, incluyendo entrega de pedidos, retiro de productos o asuntos de seguridad.",
-      uso6:"E. Fines de mercadeo. Podemos enviarle boletines, encuestas, cupones, promociones, ofertas personalizadas y recomendaciones de productos (“Información Promocional”). El envío de dicha información no es esencial para nuestra relación con usted. Si no desea recibirla, puede comunicarse con nosotros en cualquier momento para rechazarla. Esto no afectará su derecho a recibir los productos o servicios solicitados.",
-      transparenciasubtitulo:"TRANSPARENCIA DE DATOS PERSONALES",
-      transparencia1:"La EMPRESA no venderá, arrendará ni alquilará sus Datos Personales; sin embargo, podrá compartirlos con terceros en los siguientes casos:",
-      transparencialista1:"a) Proveedores de servicios: La EMPRESA podrá compartir sus datos con empresas que le prestan servicios conforme a los contratos correspondientes.",
-      transparencialista2:"b) Terceros con base en obligaciones legales: La EMPRESA podrá compartir datos cuando exista un fundamento legal.",
-      transparencialista3:"c) Autoridades: La EMPRESA podrá compartir sus datos conforme a los requerimientos legales o en cumplimiento de la Ley No. 170–2006, Ley de Transparencia y Acceso a la Información Pública. Cualquier tercero que reciba sus Datos Personales estará obligado por los términos de este aviso.",
-      transparencia2:"Estos terceros podrían encontrarse fuera de la República de Honduras, lo que implicaría una transferencia internacional de sus Datos Personales.",
-      transparencia3:"Si usted no está de acuerdo con dichas transferencias, le solicitamos no navegar ni utilizar nuestro sitio web.",
-      modificacionessubtitulo:"MODIFICACIONES AL AVISO",
-      modificaciones1:"En caso de que se realicen cambios en el tratamiento de sus Datos Personales, el contenido de este aviso será actualizado. La EMPRESA se reserva el derecho de modificarlo en cualquier momento, por lo que le recomendamos consultarlo de forma periódica para estar al tanto de los cambios.",
-    }
+      empresa1:
+        "Para los fines establecidos en este Aviso de Privacidad, la EMPRESA podrá obtener los siguientes Datos Personales:",
+      empresa2:
+        "A. Datos de identificación: Información que permite distinguir a una persona de otras. Esto incluye nombre, título, firma autógrafa, firma electrónica, copia del documento de identidad.",
+      empresa3:
+        "B. Datos de contacto: Información que nos permite mantener comunicación con usted. Esto incluye dirección, domicilio fiscal, dirección para entregas, correo electrónico, teléfono fijo o móvil.",
+      obtencionsubtitulo: "OBTENCIÓN DE DATOS PERSONALES",
+      obtencion1:
+        "La EMPRESA puede obtener sus datos personales de las siguientes maneras:",
+      obtencionlista1:
+        "Cuando se registra para acceder y utilizar el Sitio Web.",
+      obtencionlista2:
+        "Cuando se suscribe al Sitio Web para recibir información o promociones.",
+      obtencionlista3:
+        "Cuando adquiere productos o servicios a través del Sitio Web o en las tiendas de la EMPRESA.",
+      obtencionlista4:
+        "Cuando contacta a la EMPRESA a través del sitio web, en alguna de sus sucursales, o mediante el Centro de Atención al Cliente, correo electrónico: portofroatan.com, sin importar el motivo de la comunicación.",
+      obtencionlista5: "Cuando participa en una promoción o encuesta.",
+      obtencion2:
+        "La EMPRESA también puede obtener cierta información de forma automática cuando usted visita el Sitio Web. Esta información puede incluir la dirección IP asociada a su dispositivo, el sistema operativo que utiliza, la página web desde la que fue redirigido, su actividad dentro del Sitio Web, la fecha y hora de su visita y sus compras. Esta información puede obtenerse mediante el uso de “Cookies” y “Web Beacons”.",
+      obtencion3:
+        "Asimismo, la EMPRESA puede obtener información indirectamente cuando es proporcionada por terceros contratados para apoyar en procesos específicos como corrección de registros, prevención de fraude y ofertas especiales o personalizadas.",
+      usosubtitulo: "USO DE LOS DATOS PERSONALES",
+      uso1: "El tratamiento de sus Datos Personales tendrá los siguientes fines:",
+      uso2: "A. Cuando interactúe en redes sociales de terceros (por ejemplo, mediante funciones como “Me gusta”), con fines publicitarios y de vinculación desde dichas redes. Puede consultar las políticas de privacidad de cada red social para conocer cómo funcionan estas funciones, qué datos se obtienen y cómo deshabilitarlas.",
+      uso3: "B. Con su consentimiento (cuando sea necesario), trataremos sus Datos Personales para:",
+      usolista1: "Analizar sus preferencias y hábitos.",
+      usolista2:
+        "Anticipar sus necesidades con base en el análisis de su perfil.",
+      usolista3:
+        "Mejorar y personalizar su experiencia en nuestros sitios web y aplicaciones.",
+      usolista4:
+        "Asegurar que el contenido esté optimizado para usted y su dispositivo.",
+      usolista5: "Ofrecer publicidad y contenido acorde a sus intereses.",
+      usolista6: "Permitirle participar en funciones interactivas.",
+      usolista7:
+        "Por ejemplo, recordaremos su nombre de usuario/correo electrónico para facilitar su acceso o recuperar elementos agregados al carrito de compras. Usted podrá oponerse o retirar su consentimiento en cualquier momento.",
+      uso4: "C. Gestión de su cuenta (registro en línea), incluyendo facturación, devoluciones, historial de transacciones, programas de lealtad o recompensas, y aclaraciones.",
+      uso5: "D. Comunicarnos con usted por temas relacionados a sus compras, incluyendo entrega de pedidos, retiro de productos o asuntos de seguridad.",
+      uso6: "E. Fines de mercadeo. Podemos enviarle boletines, encuestas, cupones, promociones, ofertas personalizadas y recomendaciones de productos (“Información Promocional”). El envío de dicha información no es esencial para nuestra relación con usted. Si no desea recibirla, puede comunicarse con nosotros en cualquier momento para rechazarla. Esto no afectará su derecho a recibir los productos o servicios solicitados.",
+      transparenciasubtitulo: "TRANSPARENCIA DE DATOS PERSONALES",
+      transparencia1:
+        "La EMPRESA no venderá, arrendará ni alquilará sus Datos Personales; sin embargo, podrá compartirlos con terceros en los siguientes casos:",
+      transparencialista1:
+        "a) Proveedores de servicios: La EMPRESA podrá compartir sus datos con empresas que le prestan servicios conforme a los contratos correspondientes.",
+      transparencialista2:
+        "b) Terceros con base en obligaciones legales: La EMPRESA podrá compartir datos cuando exista un fundamento legal.",
+      transparencialista3:
+        "c) Autoridades: La EMPRESA podrá compartir sus datos conforme a los requerimientos legales o en cumplimiento de la Ley No. 170–2006, Ley de Transparencia y Acceso a la Información Pública. Cualquier tercero que reciba sus Datos Personales estará obligado por los términos de este aviso.",
+      transparencia2:
+        "Estos terceros podrían encontrarse fuera de la República de Honduras, lo que implicaría una transferencia internacional de sus Datos Personales.",
+      transparencia3:
+        "Si usted no está de acuerdo con dichas transferencias, le solicitamos no navegar ni utilizar nuestro sitio web.",
+      modificacionessubtitulo: "MODIFICACIONES AL AVISO",
+      modificaciones1:
+        "En caso de que se realicen cambios en el tratamiento de sus Datos Personales, el contenido de este aviso será actualizado. La EMPRESA se reserva el derecho de modificarlo en cualquier momento, por lo que le recomendamos consultarlo de forma periódica para estar al tanto de los cambios.",
+    },
   },
   //endregion
 
@@ -153,7 +184,7 @@ export const translations = {
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
       blog: "Blog",
-      "faqs": "FAQ's",
+      faqs: "FAQ's",
       contact: "Contact",
     },
     header: {
@@ -178,16 +209,16 @@ export const translations = {
     },
     homePort: {
       title: "Port Experience",
-      subtitle: "Let the Port Roatan feeling begin!",
+      subtitle: "Have a taste of Roatan here!",
       button: "Find more",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeTravel: {
       title: "Let’s create",
-      subtitle: "New memories together!",
+      subtitle: "new memories together!",
     },
     homeDiscover: {
-      title: "Discover Beyond the cruise",
+      title: "Discover Beyond the&nbsp;cruise",
       subtitle: "New adventures ahead, are you ready?",
       button: "LET’S GO!",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
@@ -200,14 +231,18 @@ export const translations = {
       pregunta3: "Can I visit Port Roatan without a cruise?",
       pregunta4: "Are pools and lounge areas free?",
       pregunta5: "Any suggestions on what to bring upon arrival?",
-      pregunta6: "I would love to explore Roatan. Are there any tours available?",
+      pregunta6:
+        "I would love to explore Roatan. Are there any tours available?",
       respuesta1:
         "A cruise port you'll be dreaming of! Inspired by its Caribbean location, Port Roatan is a cruise port that offers various activities for cruise guests to enjoy. From themed restaurants, to an exclusive retail area, we want to make the best out of your Port Roatan stop.",
       respuesta2:
         "Yes! Refreshing pools, lounge areas, shopping, hammocks, and a relaxing spa (at extra cost).",
-      respuesta3: "Thank you for your interest! Port Roatan is exclusive to cruise ship guests.",
-      respuesta4: "Yes, they are! There is no reservation needed for you to enjoy them. Please note, these areas are first come, first serve.",
-      respuesta5: "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, and hat. We recommend bringing cash for your activities and souvenirs.",
+      respuesta3:
+        "Thank you for your interest! Port Roatan is exclusive to cruise ship guests.",
+      respuesta4:
+        "Yes, they are! There is no reservation needed for you to enjoy them. Please note, these areas are first come, first serve.",
+      respuesta5:
+        "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, and hat. We recommend bringing cash for your activities and souvenirs.",
       respuesta6: "Roatan is a stunning destination. We recommend visiting",
     },
     blog: {
@@ -246,50 +281,76 @@ export const translations = {
     },
     policy: {
       title: "PRIVACY POLICY",
-      parrafo1: 'In compliance with the provisions of Decreto Legislativo No. 170 – 2006 (the “Law”) and other applicable legal regulations, PORT ROATAN (the “Company”) or (the “Responsible”), residing for the purposes of this notice at BARRIO WILLIE WARREN, COXEN HOLE, ROATÁN, ISLAS DE LA BAHÍA, HONDURAS, makes this privacy notice available to you. By virtue of this notice, the Company will permanently seek to ensure that the processing of your personal data (hereinafter the "Personal Data") is legitimate, controlled, and informed, with the purpose of guaranteeing the privacy of your Personal Data and your right to informational self-determination.',
-      parrafo2: "This Privacy Notice explains the privacy policies and practices that apply in the COMPANY in relation to the processing that we do with your Personal Data (with the understanding that processing is the obtaining, use, disclosure and storage of said data) and the measures that the COMPANY takes to protect your Personal Data.",
-      parrafo3: "Please read this Privacy Notice carefully; by knowing it you are aware of it and agree with the terms and scope of the processing of your Personal Data. You expressly consent to the processing of your Personal Data when you provide information to the COMPANY through any means. If you do not agree with the privacy policy contained in this notice, do not provide any information to the COMPANY or its representatives.",
-      parrafo4: "Any sending of information that you make to any of the public areas of the Website will be public data and will not be considered as Personal Data provided to the COMPANY. In these cases, the COMPANY will not have control and will not be responsible for the actions of other users of the Website or of clients with respect to any information that they put in public areas.",
-      parrafo5: "The transfer of personal data to third parties is made only if you have consented to it or when your consent is not required in terms of Applicable Law. This Privacy Notice is aimed at the COMPANY’S clients, who visit this website.",
+      parrafo1:
+        'In compliance with the provisions of Decreto Legislativo No. 170 – 2006 (the “Law”) and other applicable legal regulations, PORT ROATAN (the “Company”) or (the “Responsible”), residing for the purposes of this notice at BARRIO WILLIE WARREN, COXEN HOLE, ROATÁN, ISLAS DE LA BAHÍA, HONDURAS, makes this privacy notice available to you. By virtue of this notice, the Company will permanently seek to ensure that the processing of your personal data (hereinafter the "Personal Data") is legitimate, controlled, and informed, with the purpose of guaranteeing the privacy of your Personal Data and your right to informational self-determination.',
+      parrafo2:
+        "This Privacy Notice explains the privacy policies and practices that apply in the COMPANY in relation to the processing that we do with your Personal Data (with the understanding that processing is the obtaining, use, disclosure and storage of said data) and the measures that the COMPANY takes to protect your Personal Data.",
+      parrafo3:
+        "Please read this Privacy Notice carefully; by knowing it you are aware of it and agree with the terms and scope of the processing of your Personal Data. You expressly consent to the processing of your Personal Data when you provide information to the COMPANY through any means. If you do not agree with the privacy policy contained in this notice, do not provide any information to the COMPANY or its representatives.",
+      parrafo4:
+        "Any sending of information that you make to any of the public areas of the Website will be public data and will not be considered as Personal Data provided to the COMPANY. In these cases, the COMPANY will not have control and will not be responsible for the actions of other users of the Website or of clients with respect to any information that they put in public areas.",
+      parrafo5:
+        "The transfer of personal data to third parties is made only if you have consented to it or when your consent is not required in terms of Applicable Law. This Privacy Notice is aimed at the COMPANY’S clients, who visit this website.",
       datossubtitulo: "PERSONAL DATA",
-      datos1: "Personal data is considered as any information concerning an identified or identifiable natural or legal person.",
+      datos1:
+        "Personal data is considered as any information concerning an identified or identifiable natural or legal person.",
       empresasubtitulo: "PERSONAL DATA OBTAINED BY THE COMPANY",
-      empresa1: "For the purposes established in this Privacy Notice, the COMPANY may obtain the personal data referred to below:",
-      empresa2: "A. Identification data: information that makes it possible to differentiate a person from other individuals. These data include name, title, autograph signature, electronic signature, copy of the document that proves your identity.",
-      empresa3: "B. Contact information: information that allows us to keep in touch with you. These data include your address, tax address, address for the purposes of making deliveries, email, home phone or other contact phone.",
-      obtencionsubtitulo:"PERSONAL DATA OBTAINMENT",
-      obtencion1:"The COMPANY can obtain your data in the following way:",
-      obtencionlista1:"When you register to access and use the Website",
-      obtencionlista2:"When you register on the Website to receive information and promotions",
-      obtencionlista3:"When you purchase products or services through the Website or in the stores of the COMPANY.",
-      obtencionlista4:"When you contact the COMPANY, through the Website, one of the COMPANY branches, or through the Customer Service Center Email: portofroatan.com. Regardless of the reason of the communication.",
-      obtencionlista5:"When you participate in a promotion or survey.",
-      obtencion2:'The COMPANY may automatically obtain certain information when you visit the Website. This information includes the IP address associated with your computer equipment and the operating system you use, the web page from which you were linked to our website, your activity within the Website, the date and time you visited our Online Store and your purchases. This information can be obtained through the use of "Cookies" and "Web Beacons".',
-      obtencion3:"The COMPANY may also obtain information from you indirectly when it is provided to us by third parties with whom we have contracted to support us in specific processes. These processes include correcting records, fraud prevention services, and offering special offers or products.",
-      usosubtitulo:"USE OF PERSONAL DATA",
-      uso1:"The purpose of the processing of your Personal Data is the following:",
-      uso2:'A. When you interact on third party social networks, (i.e., using functions such as "Like"), to serve you advertisements and to direct us to you on social networks. You can obtain more information about how these functions work, the profile data that we obtain from you, and learn how to exclude these functions, by accessing the privacy policies of the main social networks.',
-      uso3:"B. With your consent (when necessary), we will process your Personal Data to:",
-      usolista1:"Analyze your preferences and habits.",
-      usolista2:"Anticipate your needs based on the analysis of your profile.",
-      usolista3:"Improve and personalize your experience on our websites and apps.",
-      usolista4:"Ensure that the content of our websites and apps is optimized for you and your computing devices.",
-      usolista5:"Facilitate to you advertising and content oriented towards your tastes and/or needs.",
-      usolista6:"Allow you to participate in interactive functions, if you wish.",
-      usolista7:"For example, we will remember your username/email or username so that you can quickly access the next time you want to visit our Website or when you want to easily retrieve items previously added to your shopping cart. The use of Personal Data is voluntary, which implies that you can object to the processing of your Personal Data (or withdraw your consent) for this purpose.",
-      uso4:"C. Manage your account (online registration). This purpose includes processing your Personal Data for billing purposes; process product returns; keep a history of your transactions; manage loyalty, discount and rewards programs; carry out clarifications and investigations.",
-      uso5:"D. Communicate with you for different reasons related to your purchase including aspects related to the delivery of your order, notify you of the withdrawal of products or security aspects.",
-      uso6:'E. For Marketing Purposes. We may send you publications, surveys, or promotional information of various kinds such as coupons, offers (including personalized offers), and product recommendations (the "Promotional Information"). Please consider that sending you Promotional Information is not an activity that the COMPANY considers essential to maintain its relationship with you. If you prefer not to receive Promotional Information from the COMPANY, we ask you to let us know. You can contact us at any time to refuse the reception of Promotional Information. The fact that you decide not to receive Promotional Information will not affect the possibility of receiving from the COMPANY the services or items that you request from us.',
-      transparenciasubtitulo:"TRANSFER OF PERSONAL DATA",
-      transparencia1:"The COMPANY shall not sell, lease, or rent your Personal Data; however, it could share or transfer them to or with the following third parties:",
-      transparencialista1:"a) Service Providers. The COMPANY can send your Personal Data to companies that provide some sort of service to the COMPANY. These services are provided for the COMPANY under the terms and conditions contained in the corresponding services agreement.",
-      transparencialista2:"b) Third parties that use Personal Data based on legal motifs. The COMPANY can share Personal Data based on legal motifs.",
-      transparencialista3:"c) Authorities. The COMPANY may share your Personal Data in compliance with the applicable legal requirements and/or in compliance with the instructions given by Law No. 170-2006 “Ley de Transparencia y Acceso a la Informacion Publica”. In any event, any and every third party which may be a party on the transfer of the mentioned Personal data shall be deemed to acknowledge the content of the present notice and to be obliged under its terms and conditions.",
-      transparencia2:"Whilst these companies or service providers may be located outside the Republic of Honduras, these transfers may imply an international transfer of Personal Data.",
-      transparencia3:"If you do not agree with these transfers, we kindly request to avoid navigating and using our website.",
-      modificacionessubtitulo:"AMENDMENTS OR MODIFICATIONS",
-      modificaciones1:"In the event of any modification on the process of your Personal data, the content of these notices will be updated accordingly. The COMPANY has the right to make all changes or amendments at any time; therefore, we strongly request that you re-visit this notice frequently to be aware of any changes or updates.",
-    }
+      empresa1:
+        "For the purposes established in this Privacy Notice, the COMPANY may obtain the personal data referred to below:",
+      empresa2:
+        "A. Identification data: information that makes it possible to differentiate a person from other individuals. These data include name, title, autograph signature, electronic signature, copy of the document that proves your identity.",
+      empresa3:
+        "B. Contact information: information that allows us to keep in touch with you. These data include your address, tax address, address for the purposes of making deliveries, email, home phone or other contact phone.",
+      obtencionsubtitulo: "PERSONAL DATA OBTAINMENT",
+      obtencion1: "The COMPANY can obtain your data in the following way:",
+      obtencionlista1: "When you register to access and use the Website",
+      obtencionlista2:
+        "When you register on the Website to receive information and promotions",
+      obtencionlista3:
+        "When you purchase products or services through the Website or in the stores of the COMPANY.",
+      obtencionlista4:
+        "When you contact the COMPANY, through the Website, one of the COMPANY branches, or through the Customer Service Center Email: portofroatan.com. Regardless of the reason of the communication.",
+      obtencionlista5: "When you participate in a promotion or survey.",
+      obtencion2:
+        'The COMPANY may automatically obtain certain information when you visit the Website. This information includes the IP address associated with your computer equipment and the operating system you use, the web page from which you were linked to our website, your activity within the Website, the date and time you visited our Online Store and your purchases. This information can be obtained through the use of "Cookies" and "Web Beacons".',
+      obtencion3:
+        "The COMPANY may also obtain information from you indirectly when it is provided to us by third parties with whom we have contracted to support us in specific processes. These processes include correcting records, fraud prevention services, and offering special offers or products.",
+      usosubtitulo: "USE OF PERSONAL DATA",
+      uso1: "The purpose of the processing of your Personal Data is the following:",
+      uso2: 'A. When you interact on third party social networks, (i.e., using functions such as "Like"), to serve you advertisements and to direct us to you on social networks. You can obtain more information about how these functions work, the profile data that we obtain from you, and learn how to exclude these functions, by accessing the privacy policies of the main social networks.',
+      uso3: "B. With your consent (when necessary), we will process your Personal Data to:",
+      usolista1: "Analyze your preferences and habits.",
+      usolista2: "Anticipate your needs based on the analysis of your profile.",
+      usolista3:
+        "Improve and personalize your experience on our websites and apps.",
+      usolista4:
+        "Ensure that the content of our websites and apps is optimized for you and your computing devices.",
+      usolista5:
+        "Facilitate to you advertising and content oriented towards your tastes and/or needs.",
+      usolista6:
+        "Allow you to participate in interactive functions, if you wish.",
+      usolista7:
+        "For example, we will remember your username/email or username so that you can quickly access the next time you want to visit our Website or when you want to easily retrieve items previously added to your shopping cart. The use of Personal Data is voluntary, which implies that you can object to the processing of your Personal Data (or withdraw your consent) for this purpose.",
+      uso4: "C. Manage your account (online registration). This purpose includes processing your Personal Data for billing purposes; process product returns; keep a history of your transactions; manage loyalty, discount and rewards programs; carry out clarifications and investigations.",
+      uso5: "D. Communicate with you for different reasons related to your purchase including aspects related to the delivery of your order, notify you of the withdrawal of products or security aspects.",
+      uso6: 'E. For Marketing Purposes. We may send you publications, surveys, or promotional information of various kinds such as coupons, offers (including personalized offers), and product recommendations (the "Promotional Information"). Please consider that sending you Promotional Information is not an activity that the COMPANY considers essential to maintain its relationship with you. If you prefer not to receive Promotional Information from the COMPANY, we ask you to let us know. You can contact us at any time to refuse the reception of Promotional Information. The fact that you decide not to receive Promotional Information will not affect the possibility of receiving from the COMPANY the services or items that you request from us.',
+      transparenciasubtitulo: "TRANSFER OF PERSONAL DATA",
+      transparencia1:
+        "The COMPANY shall not sell, lease, or rent your Personal Data; however, it could share or transfer them to or with the following third parties:",
+      transparencialista1:
+        "a) Service Providers. The COMPANY can send your Personal Data to companies that provide some sort of service to the COMPANY. These services are provided for the COMPANY under the terms and conditions contained in the corresponding services agreement.",
+      transparencialista2:
+        "b) Third parties that use Personal Data based on legal motifs. The COMPANY can share Personal Data based on legal motifs.",
+      transparencialista3:
+        "c) Authorities. The COMPANY may share your Personal Data in compliance with the applicable legal requirements and/or in compliance with the instructions given by Law No. 170-2006 “Ley de Transparencia y Acceso a la Informacion Publica”. In any event, any and every third party which may be a party on the transfer of the mentioned Personal data shall be deemed to acknowledge the content of the present notice and to be obliged under its terms and conditions.",
+      transparencia2:
+        "Whilst these companies or service providers may be located outside the Republic of Honduras, these transfers may imply an international transfer of Personal Data.",
+      transparencia3:
+        "If you do not agree with these transfers, we kindly request to avoid navigating and using our website.",
+      modificacionessubtitulo: "AMENDMENTS OR MODIFICATIONS",
+      modificaciones1:
+        "In the event of any modification on the process of your Personal data, the content of these notices will be updated accordingly. The COMPANY has the right to make all changes or amendments at any time; therefore, we strongly request that you re-visit this notice frequently to be aware of any changes or updates.",
+    },
   },
   //endregion
 };

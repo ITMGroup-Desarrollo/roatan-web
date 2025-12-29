@@ -21,18 +21,22 @@ import SwiperClient from "../../components/js/SwiperClientDiscover";
   <div
     class="text-container w-full md:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
   >
-    <h2
-      class="capitalize text-5xl md:text-7xl flex flex-col  mx-auto max-w-[90%] font-alverata  text-white"
+    <!-- <h2
+      class="capitalize text-5xl md:text-7xl flex flex-col mx-auto max-w-[90%] font-alverata text-white"
     >
       {t.homeDiscover.title}
-    </h2>
+    </h2> -->
+    <h2
+      class="capitalize text-5xl md:text-7xl flex flex-col mx-auto max-w-[90%] font-alverata text-white"
+      set:html={t.homeDiscover.title}
+    />
     <div class="w-16 self-center border-b-2 border-white"></div>
     <p class="text-2xl text-white">
       {t.homeDiscover.subtitle}
     </p>
     <a
       href={`/${lang}/discover-beyond/`}
-      class="text-white md:text-2xl border-2 border-white self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
+      class="text-white font-bold md:text-2xl border-2 border-white self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
       >{t.homeDiscover.button}</a
     >
     <div class="w-full h-16 lg:h-24 relative">

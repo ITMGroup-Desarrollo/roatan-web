@@ -86,7 +86,9 @@ export function getStaticPaths() {
               <div
                 class={`${post.direction === "left" ? "md:order-1" : "md:order-2"} relative h-fit self-center bg-transparent px-10 md:px-0 md:w-[55%] justify-center flex items-center`}
               >
-                <div class={`principal-items-container  w-full ${post.direction === "left" ? "md:pr-10" : "md:pl-10"}  flex flex-col  justify-center gap-4 xl:gap-16`}>
+                <div
+                  class={`principal-items-container  w-full ${post.direction === "left" ? "md:pr-10" : "md:pl-10"}  flex flex-col  justify-center gap-4 xl:gap-16`}
+                >
                   <div class="text-container flex flex-col gap-2">
                     <h1
                       class={` ${post.direction === "left" ? "text-[var(--secondary-color)]" : "text-[var(--primary-color)]"} text-5xl md:text-6xl xl:text-7xl font-bebasBold`}
@@ -95,9 +97,10 @@ export function getStaticPaths() {
                     <div
                       class={` ${post.direction === "left" ? "bg-[var(--secondary-color)]" : "bg-[var(--primary-color)]"} h-1 w-20`}
                     />
-                    <p class="text-xl md:text-lg xl:text-2xl text-[var(--darkblue-color)] text-justify md:text-justify" set:html={post.excerpt}>
-                      
-                    </p>
+                    <p
+                      class="text-xl md:text-lg xl:text-2xl text-[var(--darkblue-color)] text-justify md:text-justify"
+                      set:html={post.excerpt}
+                    />
                   </div>
                   <div
                     class={`flex md:hidden ${post.direction === "left" ? "md:order-2" : "md:order-1"} bg-transparent w-full`}
@@ -108,7 +111,9 @@ export function getStaticPaths() {
                       class={`object-contain w-auto md:h-[90%] ${post.direction === "left" ? "fill-primary-color" : "fill-secondary-color"} md:order-1`}
                     />
                   </div>
-                  <div class={`icons-container my-4 grid gap-4 grid-cols-2 ${post.direction === "left" ? "md:grid-cols-3" : "md:grid-cols-4"} `}>
+                  <div
+                    class={`icons-container my-4 grid gap-4 grid-cols-2 ${post.direction === "left" ? "md:grid-cols-3" : "md:grid-cols-4"} `}
+                  >
                     {post.icons &&
                       Array.isArray(post.icons) &&
                       post.icons.map((icon, index) => (
@@ -130,7 +135,7 @@ export function getStaticPaths() {
                     data-slug={post.slug}
                     data-open-text={t.discover.buttonopen}
                     data-close-text={t.discover.buttonclose}
-                    class={`toggleButton self-center md:self-start font-bebas text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  pt-5 pb-4 md:py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden items-center`}
+                    class={`toggleButton font-bold self-center md:self-start font-bebas text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase ${post.direction === "left" ? "text-white bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)]" : "text-[var(--darkblue-color)] bg-transparent border-2 border-[var(--darkblue-color)] hover:bg-white"}  pt-5 pb-4 md:py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden items-center`}
                     onclick="toggleSecondView(event)"
                   >
                     {t.discover.buttonopen}
@@ -242,7 +247,10 @@ export function getStaticPaths() {
                       <p class="text-3xl mt-20 md:mt-0 mb-4 md:text-4xl xl:text-6xl text-center md:text-start text-[var(--secondary-color)] font-alverata font-bold ">
                         {t.discover.Note}:
                       </p>
-                      <p class="text-justify md:text-left md:text-xs xl:text-base" set:html={post.note}></p>
+                      <p
+                        class="text-justify md:text-left md:text-xs xl:text-base"
+                        set:html={post.note}
+                      />
                     </>
                   </div>
                 </div>
@@ -250,7 +258,7 @@ export function getStaticPaths() {
               <div class="w-full flex justify-center my-8">
                 <button
                   data-slug={post.slug}
-                  class={`toggleButton md:my-8 font-bebas bg-[var(--secondary-color)] text-white  border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)] text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase   py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden`}
+                  class={`toggleButton font-bold md:my-8 font-bebas bg-[var(--secondary-color)] text-white  border-2 border-[var(--secondary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)] text-left text-3xl xl:text-4xl xl:mx-3 w-fit uppercase   py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden`}
                   onclick="toggleSecondView(event)"
                 >
                   {t.discover.secondbutton}

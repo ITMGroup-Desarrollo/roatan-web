@@ -25,12 +25,13 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
       >
         {t.homeFaqs.subtitle}
       </p>
-      <span class="hidden md:block w-[2px] h-[20rem] xl:h-[20rem] bg-[var(--primary-color)]"
+      <span
+        class="hidden md:block w-[2px] h-[20rem] xl:h-[20rem] bg-[var(--primary-color)]"
       ></span>
-      <PreguntasYRespuestas client:only="react" t={t} full={full}/>
+      <PreguntasYRespuestas client:only="react" t={t} full={full} />
       <a
         href={`/${lang}/faqs/`}
-        class="text-[var(--primary-color)] border-2 border-[var(--primary-color)] self-center py-2 px-6 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
+        class="text-[var(--primary-color)] font-bold border-2 border-[var(--primary-color)] self-center py-2 px-6 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white"
         >{t.homePort.button}</a
       >
     </div>
@@ -43,17 +44,16 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
 
     respuestas.forEach((respuesta) => {
       if (respuesta.id === idRespuesta) {
-        
         const isHidden = respuesta.classList.contains("hidden");
-        respuestas.forEach(r => r.classList.add("hidden")); // Oculta todas las respuestas
-        preguntas.forEach(p => {
+        respuestas.forEach((r) => r.classList.add("hidden")); // Oculta todas las respuestas
+        preguntas.forEach((p) => {
           p.querySelector(".mas-icon")?.classList.remove("hidden");
           p.querySelector(".menos-icon")?.classList.add("hidden");
         });
 
         if (isHidden) {
           respuesta.classList.remove("hidden");
-          
+
           const preguntaId = "pregunta" + idRespuesta.replace("respuesta", "");
           const pregunta = document.getElementById(preguntaId);
           if (pregunta) {
@@ -62,13 +62,15 @@ import PreguntasYRespuestas from "../../components/js/Faqs.jsx";
           }
         }
       } else {
-        respuesta.classList.add("hidden"); 
+        respuesta.classList.add("hidden");
       }
     });
   }
 
   // Oculta todas las respuestas al inicio
   window.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".respuesta").forEach(r => r.classList.add("hidden"));
+    document
+      .querySelectorAll(".respuesta")
+      .forEach((r) => r.classList.add("hidden"));
   });
 </script>

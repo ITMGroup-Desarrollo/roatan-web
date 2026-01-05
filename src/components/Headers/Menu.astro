@@ -109,13 +109,25 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
 </div>
 <div
   id="menu_movil"
-  class="absolute top-0 hidden lg:hidden justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
+  class="absolute top-0 hidden lg:hidden text-center justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
 >
   <nav class="text-white flex flex-col items-center justify-center gap-5">
+    <a
+      id="logo_menu"
+      class="w-28 h-auto"
+      href={lang === "es" ? "/es/home" : "/en/home"}
+    >
+      <Image
+        class="w-full h-auto"
+        src={roatanLogo}
+        alt="logo"
+        loading="eager"
+      />
+    </a>
     {
       menuItems.map((item) => (
         <a
-          class=" uppercase font-bebas text-4xl z-30"
+          class=" uppercase text-center font-bebas text-4xl z-30"
           href={`/${lang}/${item.path}/`}
         >
           {item.label}

@@ -11,7 +11,7 @@ fondo:
   url: "/img/discover-beyond/ocean-harvest/fondo.webp"
   alt: "fondo"
 image:
-  url: "/img/discover-beyond/ocean-harvest/intro.webp"
+  url: "/img/discover-beyond/ocean-harvest/intro.png"
   alt: "intro"
 icons:
   - url: "/img/iconos/discover-beyond/secondary/guide.svg"

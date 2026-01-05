@@ -2,15 +2,13 @@ export const translations = {
   //region Español
   es: {
     menu: {
-      home: "Inicio",
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
-      blog: "Blog",
-      faqs: "FAQ's",
+      blog: "Recent News",
       contact: "Contacto",
     },
     header: {
-      title: "Roatán es",
+      title: "Port Roatan es",
       subtitle:
         "Caribe|Diversión|Energía|Emocionante|Impactante|Innovador|Conexión|Color|Paradisíaco|Espectacular|Vibrante|Genial",
       button: "leer más",
@@ -68,7 +66,7 @@ export const translations = {
         "Roatán es un destino espectacular. Te recomendamos explorar el puerto y visitar los Last-minute booths al llegar.",
     },
     blog: {
-      title: "Blog",
+      title: "Port Roatan News",
       subtitle: "Todos los artículos",
       button: "Read more",
       search_placeholder: "¿Buscando?",
@@ -93,13 +91,16 @@ export const translations = {
       secondbutton: "Volver",
     },
     contact: {
-      title: "Contacto",
-      name: "Nombre completo",
-      email: "correo",
-      ship: "naviera",
-      date: "fecha de reservación",
-      message: "MENSAJE",
-      send: "enviar",
+      title: "Contactanos",
+      name: "Nombre",
+      lastName: "Apellido",
+      email: "Correo",
+      phone: "Telefono",
+      ship: "Naviera",
+      country: "País",
+      date: "Fecha de salida",
+      message: "Mensaje",
+      send: "Enviar",
     },
     policy: {
       title: "POLÍTICA DE PRIVACIDAD",
@@ -180,15 +181,13 @@ export const translations = {
   //region Inglés
   en: {
     menu: {
-      home: "Home",
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
-      blog: "Blog",
-      faqs: "FAQ's",
+      blog: "Recent News",
       contact: "Contact",
     },
     header: {
-      title: "Roatan is",
+      title: "Port Roatan is",
       subtitle:
         "Fun|Caribbean|Good vibes|Energy|Emotion|Evolution|Impact|Innovation|Connection|Colorful|Vibrant|Stunning|Paradise|Everything",
       button: "Find more",
@@ -246,14 +245,14 @@ export const translations = {
       respuesta6: "Roatan is a stunning destination. We recommend visiting",
     },
     blog: {
-      title: "Blog",
+      title: "Port Roatan News",
       subtitle: "All Articles",
       button: "Read more",
       search_placeholder: "Looking for?",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     port: {
-      title: "Restaurants, bars, and experiences",
+      title: "Restaurants, bars and experiences",
       subtitle: "All Articles",
       button: "Read more",
       search_placeholder: "Looking for?",
@@ -271,13 +270,16 @@ export const translations = {
       secondbutton: "Go back",
     },
     contact: {
-      title: "Contact",
-      name: "full name",
-      email: "email",
+      title: "Contact Us",
+      name: "Name",
+      lastName: "Last name",
+      email: "Email",
+      phone: "Phone",
       ship: "Cruise",
-      date: "Reservation date",
-      message: "MESSAGE",
-      send: "send",
+      date: "Sail date",
+      country: "Country",
+      message: "Message",
+      send: "Send",
     },
     policy: {
       title: "PRIVACY POLICY",

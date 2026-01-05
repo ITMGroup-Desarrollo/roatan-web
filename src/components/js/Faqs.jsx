@@ -56,7 +56,6 @@ const PreguntasYRespuestas = ({ t, full }) => {
         pregunta: t.homeFaqs.pregunta3,
         respuesta: t.homeFaqs.respuesta3,
       },
-      
     ];
   }
 
@@ -73,14 +72,14 @@ const PreguntasYRespuestas = ({ t, full }) => {
               }`}
             >
               <img
-                className={`mas-icon w-8 md:w-10 ${
+                className={`mas-icon w-8 md:w-12 ${
                   activa === id ? "hidden" : ""
                 }`}
                 src={mas.src}
                 alt="mas"
               />
               <img
-                className={`menos-icon md:ml-2 w-8 md:w-10 ${
+                className={`menos-icon w-8 md:w-12 ${
                   activa === id ? "" : "hidden"
                 }`}
                 src={menos.src}

@@ -51,18 +51,18 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
   id="menu_desktop"
   class="w-screen relative lg:-mt-24 hidden lg:flex lg:sticky flex-row-reverse top-0 justify-between px-6 py-3 bg-transparent items-center z-30 transition-colors duration-300 ease-in-out"
 >
-  <Image
+  <a
     id="logo_menu"
-    class="absolute hidden lg:left-24 xl:left-48  lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
-    src={roatanLogo}
-    alt="logo"
-    loading="eager"
-  />
-  <nav class="text-white flex items-center gap-3 mx-6">
+    class="absolute lg:left-24 xl:left-36 lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
+    href={lang === "es" ? "/es/home" : "/en/home"}
+  >
+    <Image class="w-full h-auto" src={roatanLogo} alt="logo" loading="eager" />
+  </a>
+  <nav class="text-white flex items-center">
     {
       menuItems.map((item) => (
         <a
-          class="menu_element uppercase  font-bebas underline-grow text-2xl xl:text-4xl "
+          class="menu_element mx-3 font-bebas underline-grow text-lg xl:text-2xl "
           href={`/${lang}/${item.path}/`}
         >
           {item.label}
@@ -71,7 +71,7 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
     }
     <SearchContent lang={lang} content={content} client:load />
     <div
-      class="flex flex-row items-center social_media_container gap-2 xl:gap-4  pt-1"
+      class="flex flex-row items-center social_media_container gap-2 xl:gap-4 pt-1"
     >
       <a href="https://www.facebook.com/PortRoatan" target="_blank"
         ><div class="icon-mask icon-mask-face"></div></a
@@ -86,12 +86,12 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
       >
     </div>
     <a
-      class="uppercase hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
+      class="uppercase mx-4 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl"
       href={pathEs}>ES</a
     >
     <span class="text-2xl pb-2">|</span>
     <a
-      class="uppercase hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
+      class="uppercase mx-4 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl"
       href={pathEn}>EN</a
     >
   </nav>
@@ -125,12 +125,12 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
 
     <div>
       <a
-        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl ml-3"
+        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl ml-3"
         href={pathEs}>ES</a
       >
       <span class="text-2xl pb-2">|</span>
       <a
-        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-2xl xl:text-4xl"
+        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl"
         href={pathEn}>EN</a
       >
     </div>
@@ -212,15 +212,15 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
     if (window.scrollY > 400) {
       menu.classList.remove("bg-transparent");
       menu.classList.add("bg-[var(--primary-color)]");
-      if (logo) {
-        logo.classList.remove("hidden");
-      }
+      // if (logo) {
+      //   logo.classList.remove("hidden");
+      // }
     } else {
       menu.classList.remove("bg-[var(--primary-color)]");
       menu.classList.add("bg-transparent");
-      if (logo) {
-        logo.classList.add("hidden");
-      }
+      // if (logo) {
+      //   logo.classList.add("hidden");
+      // }
     }
   });
 </script>

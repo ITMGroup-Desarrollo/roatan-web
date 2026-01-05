@@ -6,7 +6,7 @@ const t = translations[lang] ?? translations["es"];
 const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
 ---
 
-<section class="bg-white py-12 relative bg-transparent">
+<section class="bg-[var(--redSocial-color)] py-12 mt-12 relative">
   <form
     id="contact-form"
     class="max-w-4xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4"
@@ -16,19 +16,40 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
       name="nombre"
       placeholder={t.contact.name}
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
+    />
+    <input
+      type="text"
+      name="apellido"
+      placeholder={t.contact.lastName}
+      required
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
     />
     <input
       type="email"
       name="correo"
       placeholder={t.contact.email}
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
+    />
+    <input
+      type="tel"
+      name="telefono"
+      placeholder={t.contact.phone}
+      required
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
+    />
+    <input
+      type="text"
+      name="country"
+      placeholder={t.contact.country}
+      required
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full placeholder-primary-color focus:outline-none"
     />
     <select
       name="naviera"
       required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color focus:outline-none"
+      class="border-2 border-primary-color rounded-md px-4 py-3 w-full text-primary-color focus:outline-none"
     >
       <option value="" disabled selected hidden>{t.contact.ship}</option>
       <option value="msc">MSC</option>
@@ -37,12 +58,17 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
       <option value="norwegian">Norwegian</option>
       <option value="virgin-voyages">Virgin Voyages</option>
     </select>
-    <input
-      type="date"
-      name="fecha"
-      required
-      class="border-2 uppercase border-primary-color rounded-md px-4 py-3 w-full text-primary-color focus:outline-none"
-    />
+    <!-- <div>
+      <label class="text-sm text-primary-color mb-1 block"
+        >{t.contact.date}</label
+      >
+      <input
+        type="date"
+        name="fecha"
+        required
+        class="border-2 border-primary-color rounded-md px-4 py-3 w-full text-primary-color focus:outline-none"
+      />
+    </div> -->
     <textarea
       name="mensaje"
       rows="4"
@@ -59,7 +85,7 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
     <div class="md:col-span-2 flex justify-center mt-4">
       <button
         type="submit"
-        class="bg-primary-color font-bold uppercase text-white border-2 border-primary-color px-8 py-3 rounded-md hover:bg-white hover:text-primary-color transition-colors"
+        class="bg-primary-color font-bold text-white border-2 border-primary-color px-8 py-3 rounded-md hover:bg-white hover:text-primary-color transition-colors"
       >
         {t.contact.send}
       </button>

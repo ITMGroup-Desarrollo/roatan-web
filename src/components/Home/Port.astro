@@ -11,13 +11,13 @@ import SwiperClient from "../../components/js/SwiperClientPort";
 ---
 
 <div
-  class="port-container items-center w-screen h-[700px] md:h-[34rem] flex flex-col md:flex-row lg:items-start justify-center relative overflow-hidden bg-[var(--secondary-color)]"
+  class="port-container items-center w-screen h-auto md:h-[34rem] flex flex-col md:flex-row lg:items-start justify-center relative overflow-hidden bg-[var(--secondary-color)]"
 >
   <div
     class="text-container w-full md:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
   >
     <h2
-      class="capitalize text-5xl md:text-7xl flex flex-col font-alverata text-white"
+      class="capitalize text-4xl md:text-7xl flex flex-col font-alverata text-white"
     >
       {t.homePort.title}
     </h2>
@@ -48,7 +48,7 @@ import SwiperClient from "../../components/js/SwiperClientPort";
     </div>
   </div>
   <div
-    class="swiper-container w-full h-full md:w-1/2 text-center flex flex-col"
+    class="swiper-container w-full h-[350px] md:w-1/2 text-center flex flex-col"
   >
     <SwiperClient client:only="react" />
   </div>

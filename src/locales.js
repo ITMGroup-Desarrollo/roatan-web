@@ -29,7 +29,8 @@ export const translations = {
     },
     homePort: {
       title: "Port Experience",
-      subtitle: "¡Que empiece la diversión!",
+      subtitle:
+        "¡Prepárate para tu llegada a Port Roatan! Piscinas, restaurantes temáticos, bares, entretenimiento y mucha diversión te están esperando.",
       button: "Ver más",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
@@ -39,7 +40,8 @@ export const translations = {
     },
     homeDiscover: {
       title: "Discover Beyond the&nbsp;cruise",
-      subtitle: "Las mejores aventuras están por venir... ¿Listo?",
+      subtitle:
+        "Disfruta de Roatán desde otra perspectiva. ¡Encuentra experiencias únicas pensadas especialmente para ti y crea nuevos recuerdos!",
       button: "¡VAMOS!",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
@@ -208,7 +210,8 @@ export const translations = {
     },
     homePort: {
       title: "Port Experience",
-      subtitle: "Have a taste of Roatan here!",
+      subtitle:
+        "Get ready for your next stop in Port Roatan! Pools, themed restaurants, bars, entertainment and lots of fun will be waiting for you.",
       button: "Find more",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
@@ -218,7 +221,8 @@ export const translations = {
     },
     homeDiscover: {
       title: "Discover Beyond the&nbsp;cruise",
-      subtitle: "New adventures ahead, are you ready?",
+      subtitle:
+        "Enjoy Roatan from another POV. Find unique experiences curated for you and make new memories to cherish forever!",
       button: "LET’S GO!",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },

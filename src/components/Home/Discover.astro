@@ -11,27 +11,22 @@ import SwiperClient from "../../components/js/SwiperClientDiscover";
 ---
 
 <div
-  class="discover-container items-center w-screen h-[700px] md:h-[34rem] flex flex-col md:flex-row lg:items-start justify-center relative overflow-hidden bg-[var(--primary-color)]"
+  class="discover-container items-center w-screen h-auto md:h-[34rem] flex flex-col md:flex-row lg:items-start justify-center relative overflow-hidden bg-[var(--primary-color)]"
 >
   <div
-    class="swiper-container w-full h-full md:w-1/2 text-center flex flex-col"
+    class="swiper-container w-full h-[350px] md:w-1/2 text-center flex flex-col"
   >
     <SwiperClient client:only="react" />
   </div>
   <div
-    class="text-container w-full md:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
+    class="text-container h-auto w-full md:w-1/2 text-center flex flex-col py-5 lg:py-20 gap-3 lg:gap-8"
   >
-    <!-- <h2
-      class="capitalize text-5xl md:text-7xl flex flex-col mx-auto max-w-[90%] font-alverata text-white"
-    >
-      {t.homeDiscover.title}
-    </h2> -->
     <h2
-      class="capitalize text-5xl md:text-7xl flex flex-col mx-auto max-w-[90%] font-alverata text-white"
+      class="capitalize text-4xl md:text-7xl flex flex-col mx-auto max-w-[90%] font-alverata text-white"
       set:html={t.homeDiscover.title}
     />
     <div class="w-16 self-center border-b-2 border-white"></div>
-    <p class="text-2xl text-white">
+    <p class="text-2xl mx-2 text-white">
       {t.homeDiscover.subtitle}
     </p>
     <a

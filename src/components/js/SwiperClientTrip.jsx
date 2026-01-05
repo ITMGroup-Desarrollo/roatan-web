@@ -1,10 +1,15 @@
-// src/components/SwiperClient.jsx
 import React, { useEffect } from "react";
 import Swiper from "swiper";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCreative,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-creative";
 import "../../assets/css/home.css";
 
 const slidesData = [
@@ -22,7 +27,7 @@ const slidesData = [
   },
   {
     img: "/img/home/tripadvisor/TA_3.jpg",
-    text: 'Great!!! Variety of shops, tours available, bars, restaurants. Dufry store...',
+    text: "Great!!! Variety of shops, tours available, bars, restaurants. Dufry store...",
     name: "SharyZepeda",
     url: "https://www.tripadvisor.es/ShowUserReviews-g303872-d10214401-r751097221-Town_Center_At_Port_of_Roatan-Coxen_Hole_Roatan_Bay_Islands.html",
   },
@@ -40,16 +45,20 @@ const slidesData = [
   },
   {
     img: "/img/home/tripadvisor/TA_6.jpg",
-    text: 'We visited this port in March 2020 and loved it. Some tourist shops...',
+    text: "We visited this port in March 2020 and loved it. Some tourist shops...",
     name: "patriciabrown2017",
     url: "https://www.tripadvisor.es/ShowUserReviews-g303872-d10214401-r752027509-Town_Center_At_Port_of_Roatan-Coxen_Hole_Roatan_Bay_Islands.html",
-  }
+  },
 ];
 
 function Slide({ img, name, text, url }) {
   return (
     <div className="swiper-slide md:mt-5 mb-16 h-full flex justify-center items-center  content-center">
-      <a href={`${url}`} target="blank" className="slide-content cursor-pointer relative justify-self-center bg-white rounded-3xl p-6 shadow-lg text-center w-72 transition-transform duration-300">
+      <a
+        href={`${url}`}
+        target="blank"
+        className="slide-content cursor-pointer relative justify-self-center bg-white rounded-3xl p-6 shadow-lg text-center w-72 transition-transform duration-300"
+      >
         <img
           src={`${img}`}
           alt="User Avatar"
@@ -75,6 +84,8 @@ export default function SwiperClient() {
     new Swiper("#Trip-swiper", {
       modules: [Navigation, Pagination, Autoplay],
       loop: true,
+      speed: 800, // Debe coincidir con la transición CSS
+      watchSlidesProgress: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -86,13 +97,16 @@ export default function SwiperClient() {
       breakpoints: {
         0: {
           slidesPerView: 1,
+          spaceBetween: 0,
         },
         769: {
           slidesPerView: 1,
           centeredSlides: true,
+          spaceBetween: 0,
         },
         1025: {
           slidesPerView: 3,
+          spaceBetween: 30,
           centeredSlides: true,
         },
       },
@@ -104,7 +118,10 @@ export default function SwiperClient() {
   }, []);
 
   return (
-    <div id="Trip-swiper" className="swiper w-full h-full justify-center content-center">
+    <div
+      id="Trip-swiper"
+      className="swiper w-full h-full justify-center content-center"
+    >
       <div className="swiper-wrapper  items-center ">
         {slidesData.map((slide, index) => (
           <Slide

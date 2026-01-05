@@ -134,6 +134,26 @@ const BlogSwiper = ({ posts, lang }) => {
                     className="w-8 mr-4"
                   />
                 </a>
+                <a
+                  href={`https://www.linkedin.com/company/itmgroupmx/`}
+                  className="share-link"
+                >
+                  <img
+                    src="/img/iconos/shareLI.svg"
+                    alt="LI icon"
+                    className="w-8 mr-4"
+                  />
+                </a>
+                <a
+                  href={`https://www.instagram.com/itmgroupmx/`}
+                  className="share-link"
+                >
+                  <img
+                    src="/img/iconos/shareIG.svg"
+                    alt="IG icon"
+                    className="w-8 mr-4"
+                  />
+                </a>
               </div>
             </div>
           </li>

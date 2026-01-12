@@ -1,30 +1,29 @@
 ---
-// flags.astro
-import { translations } from "../../locales.js";
 import flag_mx from "../../assets/img/iconos/header/flag_mx.svg";
 import flag_usa from "../../assets/img/iconos/header/flag_usa.svg";
+import flag_de from "../../assets/img/iconos/header/flag_de.svg";
+
 import Image from "astro/components/Image.astro";
 import "../../assets/css/main.css";
 import "../../assets/css/menu.css";
 
-const lang = Astro.props?.lang ?? "es";
 const isMobile = Astro.props?.mobile ?? false;
 
 const languages = {
   es: { flag: flag_mx, alt: "Español", path: "es" },
   en: { flag: flag_usa, alt: "English", path: "en" },
+  de: { flag: flag_de, alt: "Deutsch", path: "de" },
 };
 
 const currentPath = Astro.url.pathname;
 const getLocalizedPath = (targetLang: string) => 
-  currentPath.replace(/^\/(en|es)/, `/${targetLang}`);
+  currentPath.replace(/^\/(en|es|de)/, `/${targetLang}`);
 
 const currentLang = currentPath.includes("/en") ? "en" : "es";
 const otherLang = currentLang === "es" ? "en" : "es";
 ---
 
 {isMobile ? (
-  <!-- Versión móvil: solo muestra la bandera alternativa -->
   <a 
     href={getLocalizedPath(otherLang)} 
     class="block hover:opacity-80 transition-opacity"
@@ -38,7 +37,6 @@ const otherLang = currentLang === "es" ? "en" : "es";
     />
   </a>
 ) : (
-  <!-- Versión desktop: dropdown con bandera actual -->
   <div class="relative inline-block px-4">
     <button
       id="languageButton"

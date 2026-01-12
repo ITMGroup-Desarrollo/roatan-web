@@ -54,9 +54,15 @@ const content = [
     class="absolute lg:left-24 xl:left-36 lg:w-20 lg:h-auto transition-colors duration-300 ease-in-out"
     href={lang === "es" ? "/es/home" : "/en/home"}
   >
-    <Image class="w-full h-auto" src={roatanLogo} alt="logo" loading="eager" />
+    <Image
+      id="roatan_logo"
+      class="w-full h-auto"
+      src={roatanLogo}
+      alt="logo"
+      loading="eager"
+    />
   </a>
-  <nav class="text-white flex items-center">
+  <nav id="desktop_menu_items" class="text-white flex items-center hidden">
     {
       menuItems.map((item) => (
         <a
@@ -86,8 +92,17 @@ const content = [
 
     <Flags lang={lang} />
   </nav>
+  <div id="desktop_burger_menu" class="desktop_burger z-40 cursor-pointer">
+    <span class="desktop_burger_line"></span>
+    <span class="desktop_burger_line"></span>
+    <span class="desktop_burger_line"></span>
+  </div>
 </div>
-
+<div
+  id="menu_overlay"
+  class="fixed top-0 left-0 w-screen h-screen z-10 bg-black opacity-50 hidden"
+>
+</div>
 <div
   id="burger_menu"
   class="absolute lg:hidden bg-transparent top-9 right-5 z-40"
@@ -197,14 +212,93 @@ const content = [
 
   window.addEventListener("scroll", function () {
     const menu = document.getElementById("menu_desktop");
+    const desktopMenuItems = document.getElementById("desktop_menu_items");
+    const desktopBurgerMenu = document.getElementById("desktop_burger_menu");
     if (!menu) return;
 
     if (window.scrollY > 400) {
       menu.classList.remove("bg-transparent");
       menu.classList.add("bg-[var(--primary-color)]");
+      desktopMenuItems.classList.remove("hidden");
+      desktopMenuItems.classList.add("flex");
+      desktopBurgerMenu.classList.remove("flex");
+      desktopBurgerMenu.classList.add("hidden");
     } else {
       menu.classList.remove("bg-[var(--primary-color)]");
       menu.classList.add("bg-transparent");
+      desktopMenuItems.classList.remove("flex");
+      desktopMenuItems.classList.add("hidden");
+      desktopBurgerMenu.classList.remove("hidden");
+      desktopBurgerMenu.classList.add("flex");
     }
   });
 </script>
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burgerDesktop = document.getElementById("desktop_burger_menu");
+    const overlay = document.getElementById("menu_overlay");
+
+    if (!burgerDesktop || !overlay) return;
+
+    burgerDesktop.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isHidden = overlay.classList.contains("hidden");
+
+      overlay.classList.toggle("hidden", !isHidden);
+      document.body.classList.toggle("overflow-hidden", isHidden);
+      burgerDesktop.classList.toggle("is-open", isHidden);
+    });
+
+    overlay.addEventListener("click", () => {
+      overlay.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+      burgerDesktop.classList.remove("is-open");
+    });
+  });
+</script>
+
+<style>
+  .desktop_burger {
+    width: 32px;
+    height: 24px;
+    position: relative;
+  }
+
+  .desktop_burger_line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  .desktop_burger_line:nth-child(1) {
+    top: 0;
+  }
+
+  .desktop_burger_line:nth-child(2) {
+    top: 10px;
+  }
+
+  .desktop_burger_line:nth-child(3) {
+    bottom: 0;
+  }
+
+  /* ✨ ESTADO ABIERTO */
+  .desktop_burger.is-open .desktop_burger_line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .desktop_burger.is-open .desktop_burger_line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .desktop_burger.is-open .desktop_burger_line:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 11px;
+  }
+</style>

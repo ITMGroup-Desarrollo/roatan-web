@@ -2,20 +2,21 @@
 import { translations } from "../../locales.js";
 import "../../assets/css/main.css";
 import "../../assets/css/menu.css";
-const lang = Astro.props?.lang ?? "es";
-const t = translations[lang] ?? translations["es"];
 import { Image } from "astro:assets";
 import SearchContent from "../js/SearchContent.jsx";
 import roatanLogo from "../../assets/img/logo/Roatan-LogoSimple.png";
+import Flags from "./flags.astro";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+
 const menuItems = Object.entries(t.menu).map(([key, label]) => ({
   path: key,
   label,
 }));
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import "../../assets/css/main.css";
-import "../../assets/css/menu.css";
 
 function loadMarkdownFromDir(dirPath) {
   if (!fs.existsSync(dirPath)) return [];
@@ -42,9 +43,6 @@ const content = [
   ...loadMarkdownFromDir(`${baseDir}/posts/${lang}`),
   ...loadMarkdownFromDir(`${baseDir}/ports/${lang}`),
 ];
-const currentPath = Astro.url.pathname;
-const pathEs = currentPath.replace(/^\/(en|es)/, "/es");
-const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
 ---
 
 <div
@@ -85,17 +83,11 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
         target="_blank"><div class="icon-mask icon-mask-trip"></div></a
       >
     </div>
-    <a
-      class="uppercase mx-4 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl"
-      href={pathEs}>ES</a
-    >
-    <span class="text-2xl pb-2">|</span>
-    <a
-      class="uppercase mx-4 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl"
-      href={pathEn}>EN</a
-    >
+
+    <Flags lang={lang} />
   </nav>
 </div>
+
 <div
   id="burger_menu"
   class="absolute lg:hidden bg-transparent top-9 right-5 z-40"
@@ -107,6 +99,7 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
     <span class="burger-line bg-white"></span>
   </label>
 </div>
+
 <div
   id="menu_movil"
   class="absolute top-0 hidden lg:hidden text-center justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
@@ -134,18 +127,6 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
         </a>
       ))
     }
-
-    <div>
-      <a
-        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl ml-3"
-        href={pathEs}>ES</a
-      >
-      <span class="text-2xl pb-2">|</span>
-      <a
-        class="uppercase mx-1 hover:font-semibold underline-grow font-bebas text-lg xl:text-2xl"
-        href={pathEn}>EN</a
-      >
-    </div>
     <div
       class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1"
     >
@@ -160,8 +141,10 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
         target="_blank"><div class="icon-mask icon-mask-trip"></div></a
       >
     </div>
+    <Flags lang={lang} />
   </nav>
 </div>
+
 <script>
   const burger = document.getElementById("burger");
   const menuMovil = document.getElementById("menu_movil");
@@ -178,7 +161,6 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
         menuMovil.classList.add("flex");
         document.body.classList.add("overflow-hidden");
 
-        // Cambiar líneas a negro
         burgerLines.forEach((line) => {
           line.classList.remove("bg-white");
           line.classList.add("bg-[var(--secondary-color)]");
@@ -188,7 +170,6 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
         menuMovil.classList.add("hidden");
         document.body.classList.remove("overflow-hidden");
 
-        // Restaurar líneas a blanco
         burgerLines.forEach((line) => {
           line.classList.remove("bg-[var(--secondary-color)]");
           line.classList.add("bg-white");
@@ -196,7 +177,6 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
       }
     });
 
-    // Cerrar menú y restaurar scroll y color de líneas al hacer clic en enlace
     document.querySelectorAll("#menu_movil a").forEach((link) => {
       link.addEventListener("click", () => {
         if (menuMovil) {
@@ -204,14 +184,12 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
           menuMovil.classList.add("hidden");
           document.body.classList.remove("overflow-hidden");
 
-          // Restaurar líneas a blanco
           burgerLines.forEach((line) => {
             line.classList.remove("bg-black");
             line.classList.add("bg-white");
           });
         }
 
-        // Desactivar el checkbox visualmente
         (burger as HTMLInputElement).checked = false;
       });
     });
@@ -219,20 +197,14 @@ const pathEn = currentPath.replace(/^\/(en|es)/, "/en");
 
   window.addEventListener("scroll", function () {
     const menu = document.getElementById("menu_desktop");
-    const logo = document.getElementById("logo_menu");
     if (!menu) return;
+
     if (window.scrollY > 400) {
       menu.classList.remove("bg-transparent");
       menu.classList.add("bg-[var(--primary-color)]");
-      // if (logo) {
-      //   logo.classList.remove("hidden");
-      // }
     } else {
       menu.classList.remove("bg-[var(--primary-color)]");
       menu.classList.add("bg-transparent");
-      // if (logo) {
-      //   logo.classList.add("hidden");
-      // }
     }
   });
 </script>

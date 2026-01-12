@@ -104,7 +104,7 @@ const content = [
   id="menu_movil"
   class="absolute top-0 hidden lg:hidden text-center justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
 >
-  <nav class="text-white flex flex-col items-center justify-center gap-5">
+  <nav class="text-white flex flex-col items-center justify-center gap-6">
     <a
       id="logo_menu"
       class="w-28 h-auto"
@@ -120,7 +120,7 @@ const content = [
     {
       menuItems.map((item) => (
         <a
-          class=" uppercase text-center font-bebas text-4xl z-30"
+          class="text-center font-bebas text-4xl z-30"
           href={`/${lang}/${item.path}/`}
         >
           {item.label}
@@ -128,7 +128,7 @@ const content = [
       ))
     }
     <div
-      class="flex flex-row items-center social_media_container gap-2 xl:gap-4 mx-3 xl:mx-5 pt-1"
+      class="flex flex-row items-center social_media_container gap-4 xl:gap-4 mx-3 xl:mx-5 pt-1"
     >
       <a href="https://www.facebook.com/PortRoatan" target="_blank"
         ><div class="icon-mask icon-mask-face"></div></a
@@ -141,7 +141,7 @@ const content = [
         target="_blank"><div class="icon-mask icon-mask-trip"></div></a
       >
     </div>
-    <Flags lang={lang} />
+    <Flags lang={lang} mobile={true} />
   </nav>
 </div>
 

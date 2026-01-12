@@ -1,4 +1,5 @@
 ---
+// flags.astro
 import { translations } from "../../locales.js";
 import flag_mx from "../../assets/img/iconos/header/flag_mx.svg";
 import flag_usa from "../../assets/img/iconos/header/flag_usa.svg";
@@ -7,72 +8,83 @@ import "../../assets/css/main.css";
 import "../../assets/css/menu.css";
 
 const lang = Astro.props?.lang ?? "es";
-const t = translations[lang] ?? translations["es"];
+const isMobile = Astro.props?.mobile ?? false;
 
-const menuItems = Object.entries(t.menu).map(([key, label]) => ({
-  path: key,
-  label,
-}));
-
-// Configuración de idiomas
 const languages = {
   es: { flag: flag_mx, alt: "Español", path: "es" },
   en: { flag: flag_usa, alt: "English", path: "en" },
 };
 
 const currentPath = Astro.url.pathname;
-const getLocalizedPath = (targetLang: string) =>
+const getLocalizedPath = (targetLang: string) => 
   currentPath.replace(/^\/(en|es)/, `/${targetLang}`);
 
 const currentLang = currentPath.includes("/en") ? "en" : "es";
 const otherLang = currentLang === "es" ? "en" : "es";
 ---
 
-<div class="relative inline-block px-2">
-  <button
-    id="languageButton"
-    class="flex items-center cursor-pointer focus:outline-none hover:opacity-80 transition-opacity"
-    type="button"
-    aria-label="Change language"
+{isMobile ? (
+  <!-- Versión móvil: solo muestra la bandera alternativa -->
+  <a 
+    href={getLocalizedPath(otherLang)} 
+    class="block hover:opacity-80 transition-opacity"
+    aria-label={`Switch to ${languages[otherLang].alt}`}
   >
     <Image
-      class="w-6 h-6 rounded-full object-cover"
-      src={languages[currentLang].flag}
-      alt={languages[currentLang].alt}
+      class="w-8 h-8 rounded-full object-cover"
+      src={languages[otherLang].flag}
+      alt={languages[otherLang].alt}
       loading="eager"
     />
-  </button>
-
-  <div
-    id="languageDropdown"
-    class="hidden absolute right-0 mt-2 bg-transparent backdrop-blur-sm rounded-lg shadow-lg z-10 p-2"
-  >
-    <a
-      href={getLocalizedPath(otherLang)}
-      class="block hover:opacity-80 transition-opacity"
-      aria-label={`Switch to ${languages[otherLang].alt}`}
+  </a>
+) : (
+  <!-- Versión desktop: dropdown con bandera actual -->
+  <div class="relative inline-block px-4">
+    <button
+      id="languageButton"
+      class="flex items-center cursor-pointer focus:outline-none hover:opacity-80 transition-opacity"
+      type="button"
+      aria-label="Change language"
     >
       <Image
         class="w-6 h-6 rounded-full object-cover"
-        src={languages[otherLang].flag}
-        alt={languages[otherLang].alt}
+        src={languages[currentLang].flag}
+        alt={languages[currentLang].alt}
         loading="eager"
       />
-    </a>
+    </button>
+
+    <div
+      id="languageDropdown"
+      class="hidden absolute right-2 mt-2 bg-transparent backdrop-blur-sm rounded-lg shadow-lg z-10 p-2"
+    >
+      <a 
+        href={getLocalizedPath(otherLang)} 
+        class="block hover:opacity-80 transition-opacity"
+        aria-label={`Switch to ${languages[otherLang].alt}`}
+      >
+        <Image
+          class="w-6 h-6 rounded-full object-cover"
+          src={languages[otherLang].flag}
+          alt={languages[otherLang].alt}
+          loading="eager"
+        />
+      </a>
+    </div>
   </div>
-</div>
 
-<script>
-  const button = document.getElementById("languageButton");
-  const dropdown = document.getElementById("languageDropdown");
+  <script>
+    const button = document.getElementById("languageButton");
+    const dropdown = document.getElementById("languageDropdown");
 
-  const toggleDropdown = () => dropdown?.classList.toggle("hidden");
-  const closeDropdown = () => dropdown?.classList.add("hidden");
+    const toggleDropdown = () => dropdown?.classList.toggle("hidden");
+    const closeDropdown = () => dropdown?.classList.add("hidden");
 
-  button?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    toggleDropdown();
-  });
+    button?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleDropdown();
+    });
 
-  document.addEventListener("click", closeDropdown);
-</script>
+    document.addEventListener("click", closeDropdown);
+  </script>
+)}

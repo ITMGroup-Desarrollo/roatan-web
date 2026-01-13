@@ -5,9 +5,6 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoSimple.png";
 import { translations } from "../../locales.js";
 import "../../assets/css/main.css";
 import "../../assets/css/menu.css";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
@@ -16,46 +13,51 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
   path: key,
   label,
 }));
-
-function loadMarkdownFromDir(dirPath) {
-  if (!fs.existsSync(dirPath)) return [];
-  return fs.readdirSync(dirPath).map((filename) => {
-    const filePath = path.join(dirPath, filename);
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data } = matter(fileContent);
-    return {
-      ...data,
-      title: data.title || filename.replace(".md", ""),
-      slug: data.slug || filename.replace(".md", ""),
-      tags: data.tags || [],
-      category: dirPath.includes("posts")
-        ? "blog"
-        : dirPath.includes("ports")
-          ? "port-experience"
-          : "discover-beyond",
-    };
-  });
-}
-
-const baseDir = path.resolve(`./src`);
-const content = [
-  ...loadMarkdownFromDir(`${baseDir}/posts/${lang}`),
-  ...loadMarkdownFromDir(`${baseDir}/ports/${lang}`),
-];
 ---
 
 <div
   id="menu_overlay"
-  class="fixed grid grid-cols-8 grid-rows-7 top-0 left-0 w-screen h-screen z-20 bg-black hidden"
+  class="fixed grid grid-cols-10 grid-rows-7 top-0 left-0 w-screen h-screen z-20 hidden"
 >
-  <div class="div1"></div>
-  <div class="div2"></div>
-  <div class="div3"></div>
-  <div class="div4"></div>
-  <div class="div5">
+  <div class="div1 flex flex-col justify-center items-center">
+    <h2 class="text-white font-bebas text-xl mb-4">
+      {t.header.socialMedia}
+    </h2>
+    <div
+      class="flex flex-row items-center social_media_container gap-4 xl:gap-4 mx-3 xl:mx-5 pt-1"
+    >
+      <a href="https://www.facebook.com/PortRoatan" target="_blank"
+        ><div class="icon-mask icon-mask-face"></div></a
+      >
+      <a href="https://www.instagram.com/portroatan" target="_blank"
+        ><div class="icon-mask icon-mask-ig"></div></a
+      >
+      <a
+        href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
+        target="_blank"><div class="icon-mask icon-mask-trip"></div></a
+      >
+    </div>
+  </div>
+  <div
+    class="div2 bg-[url(/img/maquetado/header-discover.webp)] bg-cover bg-center"
+  >
+  </div>
+  <div class="div3 flex flex-col text-center h-full">
+    <p class="text-white font-bebas font-bold text-xl mt-4 mb-1">
+      {t.header.question}
+    </p>
+    <p class="text-white font-bebas font-bold text-xl mb-6">
+      {t.header.contact}
+    </p>
+    <p class="text-white font-bebas text-lg px-8">info@portroatan.com</p>
+    <p class="text-white font-bebas text-lg px-8" set:html={t.header.address} />
+  </div>
+  <div class="div4 bg-[url(/img/blogs/star-of-seas/1.webp)] bg-cover bg-center">
+  </div>
+  <div class="div5 justify-center items-center">
     <div
       id="menu_movil_overlay"
-      class="text-center justify-center p-6 items-center z-30 bg-[var(--primary-color)] h-full"
+      class="flex flex-col text-center justify-center p-6 items-center z-30 bg-[var(--primary-color)] h-full"
     >
       <nav class="text-white flex flex-col items-center justify-center gap-6">
         <a
@@ -73,27 +75,14 @@ const content = [
         {
           menuItems.map((item) => (
             <a
-              class="text-center font-bebas text-4xl z-30"
+              class="text-center font-bebas font-bold text-5xl z-30"
               href={`/${lang}/${item.path}/`}
             >
               {item.label}
             </a>
           ))
         }
-        <div
-          class="flex flex-row items-center social_media_container gap-4 xl:gap-4 mx-3 xl:mx-5 pt-1"
-        >
-          <a href="https://www.facebook.com/PortRoatan" target="_blank"
-            ><div class="icon-mask icon-mask-face"></div></a
-          >
-          <a href="https://www.instagram.com/portroatan" target="_blank"
-            ><div class="icon-mask icon-mask-ig"></div></a
-          >
-          <a
-            href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
-            target="_blank"><div class="icon-mask icon-mask-trip"></div></a
-          >
-        </div>
+
         <Flags lang={lang} mobile={true} />
       </nav>
     </div>
@@ -107,21 +96,21 @@ const content = [
 
   .div1 {
     grid-area: 1 / 1 / 5 / 3;
-    background-color: red;
+    background-color: var(--primary-color);
   }
   .div2 {
     grid-area: 5 / 1 / 8 / 3;
-    background-color: black;
+    background-color: transparent;
   }
   .div3 {
-    grid-area: 1 / 3 / 5 / 5;
-    background-color: blue;
+    grid-area: 5 / 3 / 8 / 6;
+    background-color: var(--secondary-color);
   }
   .div4 {
-    grid-area: 5 / 3 / 8 / 5;
-    background-color: green;
+    grid-area: 1 / 3 / 5 / 6;
+    background-color: transparent;
   }
   .div5 {
-    grid-area: 1 / 5 / 8 / 9;
+    grid-area: 1 / 6 / 8 / 11;
   }
 </style>

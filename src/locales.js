@@ -12,6 +12,11 @@ export const translations = {
       subtitle:
         "Caribe|Diversión|Energía|Emocionante|Impactante|Innovador|Conexión|Color|Paradisíaco|Espectacular|Vibrante|Genial",
       button: "leer más",
+      socialMedia: "Síguenos",
+      question: "¿Alguna pregunta?",
+      contact: "¡Contáctanos!",
+      address:
+        "Barrio Willie Warren, Coxen Hole, Roatan, Islas de la Bahía Roatan, Honduras 34101",
     },
     notFound: {
       notFound: "Ups! parece que te has perdido",
@@ -193,6 +198,11 @@ export const translations = {
       subtitle:
         "Fun|Caribbean|Good vibes|Energy|Emotion|Evolution|Impact|Innovation|Connection|Colorful|Vibrant|Stunning|Paradise|Everything",
       button: "Find more",
+      socialMedia: "Follow us",
+      question: "Any questions?",
+      contact: "Contact us!",
+      address:
+        "Barrio Willie Warren, Coxen Hole, Roatan, Islas de la Bahia Roatan, Honduras 34101",
     },
     notFound: {
       notFound: "Oops! Nothing to see here!",

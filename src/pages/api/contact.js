@@ -37,10 +37,12 @@ export async function POST({ request }) {
     );
   }
 
-  const nombre = form.get("nombre")?.toString() || "";
+  const name = form.get("nombre")?.toString() || "";
+  const lastName = form.get("apellido")?.toString() || "";
   const correo = form.get("correo")?.toString() || "";
+  const phone = form.get("telefono")?.toString() || "";
   const naviera = form.get("naviera")?.toString() || "";
-  const fecha = form.get("fecha")?.toString() || "";
+  const country = form.get("country")?.toString() || "";
   const mensaje = form.get("mensaje")?.toString() || "";
 
   const transporter = nodemailer.createTransport({
@@ -57,17 +59,18 @@ export async function POST({ request }) {
       from: `"Formulario Web" <itmgroupmxappsg@gmail.com>`,
       to: "cristian.mendoza.026@gmail.com",
       // to: "info@porttainobay.com",
-      subject: `Nuevo contacto de ${nombre}`,
+      subject: `Nuevo contacto de ${name} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
           <h2 style="color: #003366; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
             Nuevo mensaje desde el formulario de contacto
           </h2>
-          <p style="margin: 10px 0;"><strong>Origen:</strong>Port Roatan</p>
-          <p style="margin: 10px 0;"><strong>Nombre:</strong> ${nombre}</p>
+          <p style="margin: 10px 0;"><strong>Origen:</strong> Port Roatan</p>
+          <p style="margin: 10px 0;"><strong>Nombre:</strong> ${name} ${lastName}</p>
           <p style="margin: 10px 0;"><strong>Correo electrónico:</strong> <a href="mailto:${correo}" style="color: #0066cc;">${correo}</a></p>
           <p style="margin: 10px 0;"><strong>Naviera:</strong> ${naviera}</p>
-          <p style="margin: 10px 0;"><strong>Fecha de llegada:</strong> ${fecha}</p>
+          <p style="margin: 10px 0;"><strong>País:</strong> ${country}</p>
+          <p style="margin: 10px 0;"><strong>Teléfono:</strong> ${phone}</p>
           <p style="margin: 20px 0;"><strong>Mensaje:</strong></p>
           <div style="background-color: #fff; padding: 15px; border: 1px solid #ccc; border-radius: 4px;">
             ${mensaje.replace(/\n/g, "<br>")}

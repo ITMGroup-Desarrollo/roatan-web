@@ -103,7 +103,7 @@ const content = [
     <span class="desktop_burger_line"></span>
   </div>
 </div>
-<MenuOverlay />
+<MenuOverlay lang={lang} content={content} />
 <div
   id="burger_menu"
   class="absolute lg:hidden bg-transparent top-9 right-5 z-40"
@@ -193,6 +193,7 @@ const content = [
   document.addEventListener("DOMContentLoaded", () => {
     const burgerDesktop = document.getElementById("desktop_burger_menu");
     const overlay = document.getElementById("menu_overlay");
+    const logoMenu = document.getElementById("logo_menu");
 
     if (!burgerDesktop || !overlay) return;
 
@@ -201,14 +202,22 @@ const content = [
       e.stopPropagation();
 
       const isHidden = overlay.classList.contains("hidden");
-
-      overlay.classList.toggle("hidden", !isHidden);
-      document.body.classList.toggle("overflow-hidden", isHidden);
-      burgerDesktop.classList.toggle("is-open", isHidden);
+      if (isHidden) {
+        overlay.classList.toggle("hidden", !isHidden);
+        logoMenu.classList.add("hidden");
+        document.body.classList.toggle("overflow-hidden", isHidden);
+        burgerDesktop.classList.toggle("is-open", isHidden);
+      } else {
+        overlay.classList.toggle("hidden", !isHidden);
+        logoMenu.classList.remove("hidden");
+        document.body.classList.toggle("overflow-hidden", isHidden);
+        burgerDesktop.classList.toggle("is-open", isHidden);
+      }
     });
 
     overlay.addEventListener("click", () => {
       overlay.classList.add("hidden");
+      logoMenu.classList.remove("hidden");
       document.body.classList.remove("overflow-hidden");
       burgerDesktop.classList.remove("is-open");
     });

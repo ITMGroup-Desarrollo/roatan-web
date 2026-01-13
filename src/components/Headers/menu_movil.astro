@@ -1,0 +1,90 @@
+---
+import Flags from "./flags.astro";
+import Image from "astro/components/Image.astro";
+import roatanLogo from "../../assets/img/logo/Roatan-LogoSimple.png";
+import { translations } from "../../locales.js";
+import "../../assets/css/main.css";
+import "../../assets/css/menu.css";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+
+const menuItems = Object.entries(t.menu).map(([key, label]) => ({
+  path: key,
+  label,
+}));
+
+function loadMarkdownFromDir(dirPath) {
+  if (!fs.existsSync(dirPath)) return [];
+  return fs.readdirSync(dirPath).map((filename) => {
+    const filePath = path.join(dirPath, filename);
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { data } = matter(fileContent);
+    return {
+      ...data,
+      title: data.title || filename.replace(".md", ""),
+      slug: data.slug || filename.replace(".md", ""),
+      tags: data.tags || [],
+      category: dirPath.includes("posts")
+        ? "blog"
+        : dirPath.includes("ports")
+          ? "port-experience"
+          : "discover-beyond",
+    };
+  });
+}
+
+const baseDir = path.resolve(`./src`);
+const content = [
+  ...loadMarkdownFromDir(`${baseDir}/posts/${lang}`),
+  ...loadMarkdownFromDir(`${baseDir}/ports/${lang}`),
+];
+---
+
+<div
+  id="menu_movil"
+  class="absolute top-0 hidden lg:hidden text-center justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
+>
+  <nav class="text-white flex flex-col items-center justify-center gap-6">
+    <a
+      id="logo_menu"
+      class="w-28 h-auto"
+      href={lang === "es" ? "/es/home" : "/en/home"}
+    >
+      <Image
+        class="w-full h-auto"
+        src={roatanLogo}
+        alt="logo"
+        loading="eager"
+      />
+    </a>
+    {
+      menuItems.map((item) => (
+        <a
+          class="text-center font-bebas text-4xl z-30"
+          href={`/${lang}/${item.path}/`}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+    <div
+      class="flex flex-row items-center social_media_container gap-4 xl:gap-4 mx-3 xl:mx-5 pt-1"
+    >
+      <a href="https://www.facebook.com/PortRoatan" target="_blank"
+        ><div class="icon-mask icon-mask-face"></div></a
+      >
+      <a href="https://www.instagram.com/portroatan" target="_blank"
+        ><div class="icon-mask icon-mask-ig"></div></a
+      >
+      <a
+        href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
+        target="_blank"><div class="icon-mask icon-mask-trip"></div></a
+      >
+    </div>
+    <Flags lang={lang} mobile={true} />
+  </nav>
+</div>

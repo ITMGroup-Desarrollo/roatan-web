@@ -6,9 +6,11 @@ import { Image } from "astro:assets";
 import SearchContent from "../js/SearchContent.jsx";
 import roatanLogo from "../../assets/img/logo/Roatan-LogoSimple.png";
 import Flags from "./flags.astro";
+import MenuMovil from "./menu_movil.astro";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import MenuOverlay from "./menu_overlay.astro";
 
 const lang = Astro.props?.lang ?? "es";
 const t = translations[lang] ?? translations["es"];
@@ -92,17 +94,16 @@ const content = [
 
     <Flags lang={lang} />
   </nav>
-  <div id="desktop_burger_menu" class="desktop_burger z-40 cursor-pointer">
+  <div
+    id="desktop_burger_menu"
+    class="desktop_burger mx-4 mt-2 z-40 cursor-pointer"
+  >
     <span class="desktop_burger_line"></span>
     <span class="desktop_burger_line"></span>
     <span class="desktop_burger_line"></span>
   </div>
 </div>
-<div
-  id="menu_overlay"
-  class="fixed top-0 left-0 w-screen h-screen z-10 bg-black opacity-50 hidden"
->
-</div>
+<MenuOverlay />
 <div
   id="burger_menu"
   class="absolute lg:hidden bg-transparent top-9 right-5 z-40"
@@ -114,52 +115,7 @@ const content = [
     <span class="burger-line bg-white"></span>
   </label>
 </div>
-
-<div
-  id="menu_movil"
-  class="absolute top-0 hidden lg:hidden text-center justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
->
-  <nav class="text-white flex flex-col items-center justify-center gap-6">
-    <a
-      id="logo_menu"
-      class="w-28 h-auto"
-      href={lang === "es" ? "/es/home" : "/en/home"}
-    >
-      <Image
-        class="w-full h-auto"
-        src={roatanLogo}
-        alt="logo"
-        loading="eager"
-      />
-    </a>
-    {
-      menuItems.map((item) => (
-        <a
-          class="text-center font-bebas text-4xl z-30"
-          href={`/${lang}/${item.path}/`}
-        >
-          {item.label}
-        </a>
-      ))
-    }
-    <div
-      class="flex flex-row items-center social_media_container gap-4 xl:gap-4 mx-3 xl:mx-5 pt-1"
-    >
-      <a href="https://www.facebook.com/PortRoatan" target="_blank"
-        ><div class="icon-mask icon-mask-face"></div></a
-      >
-      <a href="https://www.instagram.com/portroatan" target="_blank"
-        ><div class="icon-mask icon-mask-ig"></div></a
-      >
-      <a
-        href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
-        target="_blank"><div class="icon-mask icon-mask-trip"></div></a
-      >
-    </div>
-    <Flags lang={lang} mobile={true} />
-  </nav>
-</div>
-
+<MenuMovil lang={lang} content={content} />
 <script>
   const burger = document.getElementById("burger");
   const menuMovil = document.getElementById("menu_movil");
@@ -291,14 +247,17 @@ const content = [
   .desktop_burger.is-open .desktop_burger_line:nth-child(1) {
     transform: rotate(45deg);
     top: 10px;
+    background-color: var(--secondary-color);
   }
 
   .desktop_burger.is-open .desktop_burger_line:nth-child(2) {
     opacity: 0;
+    background-color: var(--secondary-color);
   }
 
   .desktop_burger.is-open .desktop_burger_line:nth-child(3) {
     transform: rotate(-45deg);
     bottom: 11px;
+    background-color: var(--secondary-color);
   }
 </style>

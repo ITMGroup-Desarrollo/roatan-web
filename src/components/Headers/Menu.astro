@@ -206,13 +206,11 @@ const content = [
       const isHidden = overlay.classList.contains("hidden");
 
       if (isHidden) {
-        // Mostrar overlay
         overlay.classList.remove("hidden");
         logoMenu.classList.add("hidden");
         document.body.classList.add("overflow-hidden");
         burgerDesktop.classList.add("is-open");
 
-        // Agregar clase show para que se animen entrando
         overlayDivs.forEach((div) => {
           div.classList.remove("hideY");
           div.classList.add("showY");
@@ -222,10 +220,8 @@ const content = [
           div.classList.add("showX");
         });
       } else {
-        // Ocultar overlay
         burgerDesktop.classList.remove("is-open");
 
-        // Agregar clase hide para animar la salida
         overlayDivs.forEach((div) => {
           div.classList.remove("showY");
           div.classList.add("hideY");
@@ -235,7 +231,6 @@ const content = [
           div.classList.add("hideX");
         });
 
-        // Esperar a que termine la animación antes de ocultar completamente
         setTimeout(() => {
           overlay.classList.add("hidden");
           logoMenu.classList.remove("hidden");
@@ -247,7 +242,6 @@ const content = [
     overlay.addEventListener("click", () => {
       burgerDesktop.classList.remove("is-open");
 
-      // Animar salida
       overlayDivs.forEach((div) => {
         div.classList.remove("showY");
         div.classList.add("hideY");
@@ -257,7 +251,6 @@ const content = [
         div.classList.add("hideX");
       });
 
-      // Esperar a que termine la animación
       setTimeout(() => {
         overlay.classList.add("hidden");
         logoMenu.classList.remove("hidden");
@@ -295,7 +288,6 @@ const content = [
     bottom: 0;
   }
 
-  /* ✨ ESTADO ABIERTO */
   .desktop_burger.is-open .desktop_burger_line:nth-child(1) {
     transform: rotate(45deg);
     top: 10px;

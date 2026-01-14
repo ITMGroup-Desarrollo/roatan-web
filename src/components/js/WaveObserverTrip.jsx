@@ -17,8 +17,8 @@ export default function WaveObserver() {
           platanitotrip?.classList.add("animate-in");
           cockteltrip?.classList.add("animate-in");
         } else {
-          platanitotrip?.classList.remove("animate-in");
-          cockteltrip?.classList.remove("animate-in");
+          // platanitotrip?.classList.remove("animate-in");
+          // cockteltrip?.classList.remove("animate-in");
         }
       },
       {

@@ -50,8 +50,9 @@ export function getStaticPaths() {
     headerUrl="header-port.jpg"
     id="headerPort-container"
   />
+
   <Bienvenida lang={lang} />
-  <WaveObserver client:visible />
+
   <div
     class="experience-container bg-white md:w-4/5 md:mx-auto flex flex-col gap-12 md:gap-0 md:grid md:grid-cols-3 z-20"
   >
@@ -71,21 +72,23 @@ export function getStaticPaths() {
               style={{ backgroundImage: `url('${post.image}')` }}
             >
               <div class="absolute flex flex-col left-1/2 top-1/2 md:top-2/3 -translate-x-1/2 -translate-y-1/2 z-20 md:group-hover:-translate-y-36 transition-all duration-300">
-                <img
-                src={post.icon}
-                alt="icono ayb"
-                class=" w-20 z-20 self-center mb-2"
-              /><p
-                  class="text-4xl text-white font-bold mb-4 capitalize text-center"
-                  set:html={post.title}
-                />
+                <>
+                  <img
+                    src={post.icon}
+                    alt="icono ayb"
+                    class=" w-20 z-20 self-center mb-2"
+                  />
+                  <p
+                    class="text-4xl text-white font-bold mb-4 capitalize text-center"
+                    set:html={post.title}
+                  />
+                </>
               </div>
 
               <a
                 href={`/${lang}/port-experience/${post.slug}`}
                 class="text-container rounded-t-full rounded-b-full h-full w-full z-10 bg-gradient-item flex flex-col justify-center text-center md:translate-y-48 pt-56 md:group-hover:-translate-y-0 transition-all duration-300"
               >
-                
                 <Image
                   class="self-center mb-4 w-12 md:pt-8"
                   src={flecha}

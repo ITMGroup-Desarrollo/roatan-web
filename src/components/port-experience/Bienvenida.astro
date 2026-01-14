@@ -7,34 +7,34 @@ import "aos/dist/aos.css";
 import olas from "../../assets/img/iconos/port-experience/ola.png";
 import ave from "../../assets/img/iconos/port-experience/ave.png";
 import chica from "../../assets/img/iconos/port-experience/chica.png";
+import WaveObserver from "../js/WaveObserver";
 
 import "../../assets/css/home.css";
 ---
 
-<div 
+<div
   id="port-experience-welcome"
   class="welcome-container w-screen h-auto md:h-[38rem] flex flex-col md:flex-row justify-center relative overflow-hidden bg-white z-0"
 >
-  
   <div class="images-container absolute h-full w-screen flex flex-row">
     <Image
-      class="hidden md:block chica absolute w-32 md:w-60 lg:w-72 h-auto bottom-5 md:bottom-7 z-0"
+      class="hidden md:block chica absolute w-32 md:w-60 lg:w-72 xl:w-80 h-auto bottom-5 md:bottom-20 z-0"
       src={chica}
       alt="logo"
       loading="eager"
     />
     <Image
-      class="hidden md:block ave absolute w-20 md:w-60 lg:w-64 h-auto right-0 bottom-10 z-0"
+      class="hidden md:block ave absolute w-20 md:w-60 lg:w-64 xl:w-80 h-auto right-0 bottom-10 z-0"
       src={ave}
       alt="logo"
       loading="eager"
     />
   </div>
   <div
-    class="text-container w-full px-5 md:px-0 mx-auto md:mx-0 text-center mt-20 mb-5 md:mt-5 md:mb-0 lg:w-4/5 md:pt-5  flex flex-col "
+    class="text-container w-full px-5 md:px-0 mx-auto md:mx-0 text-center mt-20 mb-5 md:mt-5 md:mb-0 lg:w-4/5 md:pt-5 flex flex-col"
   >
     <p
-      class="text-5xl md:text-7xl self-center lg:mt-10 font-bebas text-[var(--secondary-color)]"
+      class="text-5xl md:text-5xl xl:text-7xl self-center lg:mt-10 font-bebas text-[var(--secondary-color)]"
     >
       {t.port.title}
     </p>
@@ -43,7 +43,7 @@ import "../../assets/css/home.css";
     >
     </div>
     <p
-      class="text-2xl px-4 md:px-0 text-justify md:text-center self-start md:self-center  text-black md:w-2/3"
+      class="text-2xl px-4 md:px-0 text-justify md:text-center self-start md:self-center text-black md:w-2/3"
     >
       {t.port.text}
     </p>
@@ -58,6 +58,6 @@ import "../../assets/css/home.css";
       loading="eager"
     />
     <div class="wave-cover"></div>
+    <WaveObserver client:visible />
   </div>
-  
 </div>

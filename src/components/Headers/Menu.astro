@@ -194,6 +194,8 @@ const content = [
     const burgerDesktop = document.getElementById("desktop_burger_menu");
     const overlay = document.getElementById("menu_overlay");
     const logoMenu = document.getElementById("logo_menu");
+    const overlayDivs = overlay?.querySelectorAll(".div1, .div3, .div5");
+    const overlayDivsX = overlay?.querySelectorAll(".div2, .div4");
 
     if (!burgerDesktop || !overlay) return;
 
@@ -202,24 +204,65 @@ const content = [
       e.stopPropagation();
 
       const isHidden = overlay.classList.contains("hidden");
+
       if (isHidden) {
-        overlay.classList.toggle("hidden", !isHidden);
+        // Mostrar overlay
+        overlay.classList.remove("hidden");
         logoMenu.classList.add("hidden");
-        document.body.classList.toggle("overflow-hidden", isHidden);
-        burgerDesktop.classList.toggle("is-open", isHidden);
+        document.body.classList.add("overflow-hidden");
+        burgerDesktop.classList.add("is-open");
+
+        // Agregar clase show para que se animen entrando
+        overlayDivs.forEach((div) => {
+          div.classList.remove("hideY");
+          div.classList.add("showY");
+        });
+        overlayDivsX.forEach((div) => {
+          div.classList.remove("hideX");
+          div.classList.add("showX");
+        });
       } else {
-        overlay.classList.toggle("hidden", !isHidden);
-        logoMenu.classList.remove("hidden");
-        document.body.classList.toggle("overflow-hidden", isHidden);
-        burgerDesktop.classList.toggle("is-open", isHidden);
+        // Ocultar overlay
+        burgerDesktop.classList.remove("is-open");
+
+        // Agregar clase hide para animar la salida
+        overlayDivs.forEach((div) => {
+          div.classList.remove("showY");
+          div.classList.add("hideY");
+        });
+        overlayDivsX.forEach((div) => {
+          div.classList.remove("showX");
+          div.classList.add("hideX");
+        });
+
+        // Esperar a que termine la animación antes de ocultar completamente
+        setTimeout(() => {
+          overlay.classList.add("hidden");
+          logoMenu.classList.remove("hidden");
+          document.body.classList.remove("overflow-hidden");
+        }, 500);
       }
     });
 
     overlay.addEventListener("click", () => {
-      overlay.classList.add("hidden");
-      logoMenu.classList.remove("hidden");
-      document.body.classList.remove("overflow-hidden");
       burgerDesktop.classList.remove("is-open");
+
+      // Animar salida
+      overlayDivs.forEach((div) => {
+        div.classList.remove("showY");
+        div.classList.add("hideY");
+      });
+      overlayDivsX.forEach((div) => {
+        div.classList.remove("showX");
+        div.classList.add("hideX");
+      });
+
+      // Esperar a que termine la animación
+      setTimeout(() => {
+        overlay.classList.add("hidden");
+        logoMenu.classList.remove("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }, 500);
     });
   });
 </script>

@@ -1,3 +1,5 @@
+import { map } from "astro:schema";
+
 export const translations = {
   //region Español
   es: {
@@ -5,6 +7,7 @@ export const translations = {
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
       blog: "Recent News",
+      map: "Mapa",
       contact: "Contacto",
     },
     header: {
@@ -16,7 +19,7 @@ export const translations = {
       question: "¿Alguna pregunta?",
       contact: "¡Contáctanos!",
       address:
-        "Barrio Willie Warren, Coxen Hole, Roatan, Islas de la Bahía Roatan, Honduras 34101",
+        "Barrio Willie Warren, Coxen Hole,<br> Roatan, Islas de la Bahía Roatan,<br> Honduras 34101",
     },
     notFound: {
       notFound: "Ups! parece que te has perdido",
@@ -191,6 +194,7 @@ export const translations = {
       "port-experience": "Port Experience",
       "discover-beyond": "Beyond the cruise",
       blog: "Recent News",
+      map: "Map",
       contact: "Contact",
     },
     header: {
@@ -202,7 +206,7 @@ export const translations = {
       question: "Any questions?",
       contact: "Contact us!",
       address:
-        "Barrio Willie Warren, Coxen Hole, Roatan, Islas de la Bahia Roatan, Honduras 34101",
+        "Barrio Willie Warren, Coxen Hole,<br> Roatan, Islas de la Bahia Roatan,<br> Honduras 34101",
     },
     notFound: {
       notFound: "Oops! Nothing to see here!",

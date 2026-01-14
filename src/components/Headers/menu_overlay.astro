@@ -42,15 +42,22 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
     class="div2 bg-[url(/img/maquetado/header-discover.webp)] bg-cover bg-center"
   >
   </div>
-  <div class="div3 flex flex-col text-center h-full">
-    <p class="text-white font-bebas font-bold text-xl mt-4 mb-1">
+  <div
+    class="div3 flex flex-col justify-center items-center text-center h-full"
+  >
+    <p class="text-white font-bebas font-bold text-xl mb-1">
       {t.header.question}
     </p>
     <p class="text-white font-bebas font-bold text-xl mb-6">
       {t.header.contact}
     </p>
-    <p class="text-white font-bebas text-lg px-8">info@portroatan.com</p>
-    <p class="text-white font-bebas text-lg px-8" set:html={t.header.address} />
+    <p class="text-white font-bebas font-bold text-lg px-12">
+      info@portroatan.com
+    </p>
+    <p
+      class="text-white font-bebas text-base px-12"
+      set:html={t.header.address}
+    />
   </div>
   <div class="div4 bg-[url(/img/blogs/star-of-seas/1.webp)] bg-cover bg-center">
   </div>
@@ -75,7 +82,7 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
         {
           menuItems.map((item) => (
             <a
-              class="text-center font-bebas font-bold text-5xl z-30"
+              class="text-center font-bebas font-bold md:text-4xl lg:text-5xl xl:text-6xl z-30"
               href={`/${lang}/${item.path}/`}
             >
               {item.label}
@@ -94,23 +101,191 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
     grid-row-gap: 0px;
   }
 
+  /* Animación de aparición */
+  @keyframes scaleInY {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+  /* Animación de desaparición */
+  @keyframes scaleOutY {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0);
+    }
+  }
+
+  @keyframes scaleInX {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes scaleOutX {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0);
+    }
+  }
+
+  /* Animación de fade in para el contenido */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Animación de fade out para el contenido */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .div1,
+  .div3,
+  .div5 {
+    transform: scaleY(0);
+  }
+  .div2,
+  .div4 {
+    transform: scaleX(0);
+  }
+
+  /* El contenido interno empieza invisible */
+  .div1 > *,
+  .div2 > *,
+  .div3 > *,
+  .div4 > *,
+  .div5 > * {
+    opacity: 0;
+  }
+
+  /* Cuando el div se muestra, su contenido hace fade in con delay */
+  .div1.showY > *,
+  .div1.showX > * {
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+  }
+
+  .div2.showY > *,
+  .div2.showX > * {
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+  }
+
+  .div3.showY > *,
+  .div3.showX > * {
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+  }
+
+  .div4.showY > *,
+  .div4.showX > * {
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+  }
+
+  .div5.showY > *,
+  .div5.showX > * {
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+  }
+
+  /* Cuando el div se oculta, su contenido hace fade out inmediatamente */
+  .div1.hideY > *,
+  .div1.hideX > *,
+  .div2.hideY > *,
+  .div2.hideX > *,
+  .div3.hideY > *,
+  .div3.hideX > *,
+  .div4.hideY > *,
+  .div4.hideX > *,
+  .div5.hideY > *,
+  .div5.hideX > * {
+    animation: fadeOut 0.3s ease-in forwards;
+  }
+
+  .div1 {
+    transform-origin: bottom;
+  }
+  .div2 {
+    transform-origin: right;
+  }
+  .div3 {
+    transform-origin: top;
+  }
+  .div4 {
+    transform-origin: left;
+  }
+  .div5 {
+    transform-origin: bottom;
+  }
+
+  .showY {
+    animation: scaleInY 0.3s ease-out forwards;
+  }
+
+  .hideY {
+    animation: scaleOutY 0.3s ease-in forwards;
+  }
+
+  .showX {
+    animation: scaleInX 0.3s ease-out forwards;
+  }
+
+  .hideX {
+    animation: scaleOutX 0.3s ease-in forwards;
+  }
+
   .div1 {
     grid-area: 1 / 1 / 5 / 3;
     background-color: var(--primary-color);
   }
+
   .div2 {
     grid-area: 5 / 1 / 8 / 3;
-    background-color: transparent;
   }
+
   .div3 {
     grid-area: 5 / 3 / 8 / 6;
     background-color: var(--secondary-color);
   }
+
   .div4 {
     grid-area: 1 / 3 / 5 / 6;
-    background-color: transparent;
   }
+
   .div5 {
     grid-area: 1 / 6 / 8 / 11;
+    background-color: var(--primary-color);
+  }
+
+  .div1.show {
+    animation-delay: 0.1s;
+  }
+  .div2.show {
+    animation-delay: 0.1s;
+  }
+  .div3.show {
+    animation-delay: 0.1s;
+  }
+  .div4.show {
+    animation-delay: 0.1s;
+  }
+  .div5.show {
+    animation-delay: 0.1s;
   }
 </style>

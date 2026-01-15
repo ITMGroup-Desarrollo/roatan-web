@@ -14,24 +14,27 @@ import "../../assets/css/home.css";
 
 <div
   id="port-experience-welcome"
-  class="welcome-container w-screen h-auto md:h-[38rem] flex flex-col md:flex-row justify-center relative overflow-hidden bg-white z-0"
+  class="welcome-container w-screen h-auto md:h-[42rem] xl:h-[48rem] flex flex-col md:flex-row justify-center relative overflow-hidden bg-white z-0"
 >
   <div class="images-container absolute h-full w-screen flex flex-row">
     <Image
-      class="hidden md:block chica absolute w-32 md:w-60 lg:w-72 xl:w-80 h-auto bottom-5 md:bottom-20 z-0"
+      class="md:block chica parallax-image absolute w-32 md:w-60 lg:w-72 xl:w-80 h-auto bottom-5 md:bottom-20 z-0 animate-in"
       src={chica}
       alt="logo"
       loading="eager"
+      data-speed="0.5"
     />
     <Image
-      class="hidden md:block ave absolute w-20 md:w-60 lg:w-64 xl:w-80 h-auto right-0 bottom-10 z-0"
+      class="md:block ave parallax-image absolute w-20 md:w-60 lg:w-64 xl:w-80 h-auto right-0 bottom-10 z-0 animate-in"
       src={ave}
       alt="logo"
       loading="eager"
+      data-speed="0.6"
     />
   </div>
   <div
-    class="text-container w-full px-5 md:px-0 mx-auto md:mx-0 text-center mt-20 mb-5 md:mt-5 md:mb-0 lg:w-4/5 md:pt-5 flex flex-col"
+    class="text-container parallax-text w-full px-5 md:px-0 mx-auto md:mx-0 text-center mt-16 mb-5 md:mt-5 md:mb-0 lg:w-4/5 md:pt-7 xl:pt-24 flex flex-col"
+    data-speed="0.3"
   >
     <p
       class="text-5xl md:text-5xl xl:text-7xl self-center lg:mt-10 font-bebas text-[var(--secondary-color)]"
@@ -49,7 +52,8 @@ import "../../assets/css/home.css";
     </p>
   </div>
   <div
-    class="wave-container w-full h-[24%] bottom-5 right-0 bg-transparent md:absolute z-1 overflow-hidden"
+    class="wave-container parallax-image w-full h-[24%] bottom-5 right-0 bg-transparent md:absolute z-1 overflow-hidden"
+    data-speed="0.4"
   >
     <Image
       class="wave w-[100%] h-[100%] right-0 top-0 object-fill"
@@ -57,7 +61,63 @@ import "../../assets/css/home.css";
       alt="logo"
       loading="eager"
     />
-    <div class="wave-cover"></div>
-    <WaveObserver client:visible />
+    <div class="wave-cover shrink"></div>
   </div>
 </div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const parallaxElements = document.querySelectorAll(
+      ".parallax-image, .parallax-text"
+    );
+
+    if (parallaxElements.length === 0) return;
+
+    // Obtener la posición de inicio de la sección
+    const section = document.getElementById("port-experience-welcome");
+    const sectionTop = section.offsetTop;
+    const startOffset = 500; // Ajusta este valor según necesites
+
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+
+      // Solo aplicar parallax cuando hayamos scrolleado más allá del offset
+      if (scrolled > startOffset) {
+        const adjustedScroll = scrolled - startOffset;
+
+        parallaxElements.forEach((element) => {
+          const speed = parseFloat(element.getAttribute("data-speed")) || 0.5;
+          const yPos = -(adjustedScroll * speed);
+
+          element.style.transform = `translateY(${yPos}px)`;
+        });
+      } else {
+        // Resetear posición cuando estamos arriba
+        parallaxElements.forEach((element) => {
+          element.style.transform = `translateY(0px)`;
+        });
+      }
+    };
+
+    // Usar requestAnimationFrame para mejor rendimiento
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  });
+</script>
+
+<style>
+  .parallax-image,
+  .parallax-text {
+    will-change: transform;
+    transition: transform 0.5s ease-out;
+  }
+</style>

@@ -7,7 +7,6 @@ import "aos/dist/aos.css";
 import olas from "../../assets/img/iconos/port-experience/ola.png";
 import ave from "../../assets/img/iconos/port-experience/ave.png";
 import chica from "../../assets/img/iconos/port-experience/chica.png";
-import WaveObserver from "../js/WaveObserver";
 
 import "../../assets/css/home.css";
 ---
@@ -18,14 +17,14 @@ import "../../assets/css/home.css";
 >
   <div class="images-container absolute h-full w-screen flex flex-row">
     <Image
-      class="md:block chica parallax-image absolute w-32 md:w-60 lg:w-72 xl:w-80 h-auto bottom-5 md:bottom-20 z-0 animate-in"
+      class="hidden md:block chica parallax-image absolute w-32 md:w-60 lg:w-72 xl:w-80 h-auto bottom-5 md:bottom-20 z-0 animate-in"
       src={chica}
       alt="logo"
       loading="eager"
       data-speed="0.5"
     />
     <Image
-      class="md:block ave parallax-image absolute w-20 md:w-60 lg:w-64 xl:w-80 h-auto right-0 bottom-10 z-0 animate-in"
+      class="hidden md:block ave parallax-image absolute w-20 md:w-60 lg:w-64 xl:w-80 h-auto right-0 bottom-10 z-0 animate-in"
       src={ave}
       alt="logo"
       loading="eager"
@@ -68,20 +67,27 @@ import "../../assets/css/home.css";
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const parallaxElements = document.querySelectorAll(
-      ".parallax-image, .parallax-text"
+      ".parallax-image, .parallax-text",
     );
 
     if (parallaxElements.length === 0) return;
 
-    // Obtener la posición de inicio de la sección
-    const section = document.getElementById("port-experience-welcome");
-    const sectionTop = section.offsetTop;
-    const startOffset = 500; // Ajusta este valor según necesites
+    const startOffset = 500;
+
+    // Función para verificar si estamos en mobile
+    const isMobile = () => window.innerWidth < 768; // 768px es el breakpoint md de Tailwind
 
     const handleScroll = () => {
+      // Si es mobile, no aplicar parallax
+      if (isMobile()) {
+        parallaxElements.forEach((element) => {
+          element.style.transform = "";
+        });
+        return;
+      }
+
       const scrolled = window.scrollY;
 
-      // Solo aplicar parallax cuando hayamos scrolleado más allá del offset
       if (scrolled > startOffset) {
         const adjustedScroll = scrolled - startOffset;
 
@@ -92,14 +98,12 @@ import "../../assets/css/home.css";
           element.style.transform = `translateY(${yPos}px)`;
         });
       } else {
-        // Resetear posición cuando estamos arriba
         parallaxElements.forEach((element) => {
           element.style.transform = `translateY(0px)`;
         });
       }
     };
 
-    // Usar requestAnimationFrame para mejor rendimiento
     let ticking = false;
 
     window.addEventListener("scroll", () => {
@@ -111,13 +115,30 @@ import "../../assets/css/home.css";
         ticking = true;
       }
     });
+
+    // Verificar también cuando se redimensiona la ventana
+    window.addEventListener("resize", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Ejecutar una vez al cargar para aplicar o no el efecto
+    handleScroll();
   });
 </script>
 
 <style>
-  .parallax-image,
-  .parallax-text {
-    will-change: transform;
-    transition: transform 0.5s ease-out;
+  /* Solo aplicar estilos parallax en desktop */
+  @media (min-width: 768px) {
+    .parallax-image,
+    .parallax-text {
+      will-change: transform;
+      transition: transform 0.5s ease-out;
+    }
   }
 </style>

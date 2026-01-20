@@ -66,15 +66,15 @@ export function getStaticPaths() {
             }`}
           >
             <div
-              class="rounded-t-full self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
+              class="card-wrapper rounded-t-full self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
               style={{ backgroundImage: `url('${post.image}')` }}
             >
-              <div class="absolute flex flex-col left-1/2 top-1/2 md:top-2/3 -translate-x-1/2 -translate-y-1/2 z-20 md:group-hover:-translate-y-36 transition-all duration-300">
+              <div class="content-layer absolute flex flex-col left-1/2 top-1/2 md:top-[63.5%] -translate-x-1/2 -translate-y-1/2 z-20 md:group-hover:-translate-y-36 transition-transform duration-300 ease-out">
                 <>
                   <img
                     src={post.icon}
                     alt="icono ayb"
-                    class=" w-20 z-20 self-center mb-2"
+                    class="w-20 z-20 self-center mb-2"
                   />
                   <p
                     class="text-4xl text-white font-bold mb-4 capitalize text-center"
@@ -82,10 +82,9 @@ export function getStaticPaths() {
                   />
                 </>
               </div>
-
               <a
                 href={`/${lang}/port-experience/${post.slug}`}
-                class="text-container rounded-t-full rounded-b-full h-full w-full z-10 bg-gradient-item flex flex-col justify-center text-center md:translate-y-48 pt-56 md:group-hover:-translate-y-0 transition-all duration-300"
+                class="overlay-layer rounded-t-full rounded-b-full h-full w-full z-10 bg-gradient-item flex flex-col justify-center text-center md:translate-y-48 pt-56 md:group-hover:translate-y-0 transition-transform duration-300 ease-out"
               >
                 <Image
                   class="self-center mb-4 w-12 md:pt-8"
@@ -103,3 +102,19 @@ export function getStaticPaths() {
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
 </Layout>
+
+<style>
+  .card-wrapper {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  .content-layer,
+  .overlay-layer {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+  }
+</style>

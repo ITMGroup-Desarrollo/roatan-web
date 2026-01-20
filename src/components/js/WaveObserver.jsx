@@ -19,12 +19,12 @@ export default function WaveObserver() {
           chica?.classList.add("animate-in");
           ave?.classList.add("animate-in");
         } else {
-          cover?.classList.remove("shrink");
-          chica?.classList.remove("animate-in");
-          ave?.classList.remove("animate-in");
+          // cover?.classList.remove("shrink");
+          // chica?.classList.remove("animate-in");
+          // ave?.classList.remove("animate-in");
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(trigger);

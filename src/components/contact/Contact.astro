@@ -7,9 +7,23 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
 ---
 
 <section class="bg-[var(--redSocial-color)] py-12 mt-12 relative">
+  <div
+    class="title-container w-full text-center items-center flex flex-col z-15 pt-8"
+  >
+    <h2
+      class="title md:block text-6xl md:text-8xl mb-6 md:mb-12 font-bebasBold text-[var(--primary-color)]"
+    >
+      {t.contact.title}
+    </h2>
+    <p
+      class="subtitle text-xl md:text-3xl font-bebas text-black mb-6 md:mb-12 px-5 w-full lg:w-3/5"
+    >
+      {t.contact.subtitle}
+    </p>
+  </div>
   <form
     id="contact-form"
-    class="max-w-4xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4"
+    class="lg:max-w-4xl xl:max-w-6xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4"
   >
     <input
       type="text"
@@ -85,7 +99,7 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
     <div class="md:col-span-2 flex justify-center mt-4">
       <button
         type="submit"
-        class="bg-primary-color font-bold text-white border-2 border-primary-color px-8 py-3 rounded-md hover:bg-white hover:text-primary-color transition-colors"
+        class="font-bold md:my-8 font-bebas bg-[var(--primary-color)] text-white border-2 border-[var(--primary-color)] hover:bg-white hover:text-[var(--darkblue-color)] hover:border-2 hover:border-[var(--darkblue-color)] text-left text-xl xl:text-2xl xl:mx-3 w-fit uppercase py-2 px-4 xl:py-4 xl:px-8 rounded-xl overflow-hidden"
       >
         {t.contact.send}
       </button>

@@ -6,26 +6,28 @@ const full = true;
 import PreguntasYRespuestas from "../../components/js/Faqslanding.jsx";
 ---
 
-<div class="faqs h-auto relative bg-[var(--redSocial-color)]  w-screen ">
+<div class="faqs h-auto relative bg-[var(--redSocial-color)] w-screen">
   <!-- <div class=" hidden h-fit justify-center md:flex md:col-span-1 md:w-[90%]">
     <img class="lg:w-3/4 xl:w-[55%]" src="/img/maquetado/header-faqs-mobile.png" alt="fondo FAWS">
   </div> -->
   <div
-    class="faqs-container  w-full h-auto flex flex-col items-center justify-start bg-[transparent] "
+    class="faqs-container w-full h-auto flex flex-col items-center justify-start bg-[transparent]"
   >
-    <div class="title-container w-full text-center items-center flex flex-col z-15 pt-8">
+    <div
+      class="title-container w-full text-center items-center flex flex-col z-15 pt-8"
+    >
       <h2
-        class="title md:block text-6xl md:text-8xl font-bebasBold text-[var(--primary-color)]"
+        class="title md:block text-6xl md:text-8xl mb-6 md:mb-12 font-bebasBold text-[var(--primary-color)]"
       >
         {t.homeFaqs.title}
       </h2>
       <p
-        class="subtitle text-3xl md:text-4xl font-bebas uppercase text-[var(--secondary-color)] mb-6 md:mb-12 px-5"
+        class="subtitle text-xl md:text-3xl font-bebas text-black mb-6 md:mb-12 px-5 w-full lg:w-3/4 xl:w-3/5"
       >
-        {t.homeFaqs.subtitle}
+        {t.homeFaqs.landingSubtitle}
       </p>
     </div>
-    <PreguntasYRespuestas client:only="react" t={t} full={full}/>
+    <PreguntasYRespuestas client:only="react" t={t} full={full} />
   </div>
 </div>
 <script>

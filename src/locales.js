@@ -56,6 +56,9 @@ export const translations = {
     homeFaqs: {
       title: "FAQ's",
       subtitle: "¡Estamos listos para ayudarte!",
+      landingSubtitle:
+        "¿Necesitas ayuda? ¡No te preocupes, te ayudamos! Resuelve tus dudas y prepárate para tus próximas vacaciones.",
+      pregunta1: "What can I find in Port Roatan?",
       pregunta1: "¿Qué puedo encontrar en Port Roatan?",
       pregunta2: "¿Hay actividades dentro de Port Roatan?",
       pregunta3: "¿Puedo visitar Port Roatan, aunque no venga en crucero?",
@@ -102,6 +105,8 @@ export const translations = {
     },
     contact: {
       title: "Contactanos",
+      subtitle:
+        "Déjanos tus datos para ayuda adicional, ¡estaremos encantados de atenderte!",
       name: "Nombre",
       lastName: "Apellido",
       email: "Correo",
@@ -243,6 +248,8 @@ export const translations = {
     homeFaqs: {
       title: "FAQ's",
       subtitle: "We’re here to answer!",
+      landingSubtitle:
+        "Need some help? Don’t worry, we got your back! Find the answers to your questions and get ready for your next vacation.",
       pregunta1: "What can I find in Port Roatan?",
       pregunta2: "Are there activities inside Port Roatan?",
       pregunta3: "Can I visit Port Roatan without a cruise?",
@@ -289,6 +296,8 @@ export const translations = {
     },
     contact: {
       title: "Contact Us",
+      subtitle:
+        "Leave your information for additional assistance, and we’ll be happy to help!",
       name: "Name",
       lastName: "Last name",
       email: "Email",

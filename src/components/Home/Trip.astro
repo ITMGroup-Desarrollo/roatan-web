@@ -15,7 +15,7 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
   class="trip-container w-screen h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center relative overflow-y-hidden overflow-x-hidden bg-[var(--redSocial-color)]"
 >
   <Image
-    class="platanito-trip w-48 top-30 md:top-20 left-0 absolute md:w-96 h-auto z-0"
+    class="platanito-trip parallax-image w-48 top-30 left-0 absolute md:w-96 h-auto z-0 md:top-24"
     src={platanitos}
     alt="platanitos"
     loading="eager"
@@ -35,9 +35,77 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
     <SwiperClient client:visible />
   </div>
   <Image
-    class="cocktel-trip w-48 md:w-80 absolute bottom-0 md:bottom-auto md:top-10 right-0 h-auto z-0"
+    class="cocktel-trip parallax-image w-48 md:w-80 absolute bottom-0 md:bottom-auto md:top-20 right-0 h-auto z-0"
     src={cocktel}
     alt="cocktel"
     loading="eager"
   />
 </div>
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ❌ No parallax en mobile
+    if (!window.matchMedia("(min-width: 768px)").matches) return;
+
+    const section = document.querySelector(".trip-container");
+    if (!section) return;
+
+    const parallaxElements = section.querySelectorAll(".parallax-image");
+    if (parallaxElements.length === 0) return;
+
+    let isActive = false;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isActive = entry.isIntersecting;
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(section);
+
+    const maxTranslate = 90;
+
+    const handleScroll = () => {
+      if (!isActive) return;
+
+      const scrolled = window.scrollY;
+      const startOffset = section.offsetTop - window.innerHeight * 0.3;
+
+      const adjustedScroll = scrolled - startOffset;
+      if (adjustedScroll < 0) return;
+
+      parallaxElements.forEach((el) => {
+        const speed = parseFloat(el.dataset.speed) || 0.4;
+
+        const yPos = Math.max(
+          Math.min(-(adjustedScroll * speed), maxTranslate),
+          -maxTranslate,
+        );
+
+        el.style.transform = `translateY(${yPos}px)`;
+      });
+    };
+
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  });
+</script>
+<style>
+  /* Solo aplicar estilos parallax en desktop */
+  @media (min-width: 768px) {
+    .parallax-image,
+    .parallax-text {
+      will-change: transform;
+      transition: transform 0.5s ease-out;
+    }
+  }
+</style>

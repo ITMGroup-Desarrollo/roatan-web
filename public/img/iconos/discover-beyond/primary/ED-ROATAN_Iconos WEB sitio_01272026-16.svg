@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 87.86 221.5">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #006ab7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_11" data-name="Capa_1">
+    <g>
+      <path class="st0" d="M30.1,34.74h27.66c13.85,0,25.1,11.25,25.1,25.1v24.47c0,4.42-3.58,8-8,8H13c-4.42,0-8-3.58-8-8v-24.47c0-13.85,11.25-25.1,25.1-25.1Z"/>
+      <rect class="st0" x="5" y="92.32" width="77.86" height="31.78" rx="8" ry="8"/>
+      <rect class="st0" x="5" y="124.09" width="77.86" height="31.78" rx="8" ry="8"/>
+      <path class="st0" d="M23.3,5h41.24c3.86,0,7,3.14,7,7v22.75H16.3V12c0-3.86,3.14-7,7-7h0Z"/>
+      <path class="st0" d="M82.86,168.28v35.24c0,7.17-5.82,12.98-12.98,12.98s-12.98-5.82-12.98-12.98c0,7.17-5.8,12.98-12.97,12.98s-12.98-5.82-12.98-12.98c0,7.17-5.82,12.98-12.98,12.98s-12.97-5.82-12.97-12.98v-35.24c0-6.86,5.55-12.41,12.41-12.41h53.04c6.86,0,12.41,5.55,12.41,12.41Z"/>
+    </g>
+  </g>
+</svg>

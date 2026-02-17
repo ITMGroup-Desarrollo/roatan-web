@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.38 29.82">
-  <path d="M1.52,17.42l1.86,8.64c.33,1.52,1.66,2.6,3.22,2.61l35.69.15s18.05.31,23.06-16.01c.15-.48-.25-.96-.75-.92L2.09,16.65c-.38.03-.65.39-.57.77Z" style="fill: none; stroke: #006ab7; stroke-miterlimit: 10; stroke-width: 2px;"/>
-  <polyline points="22.84 15.16 23.7 6.06 45.74 5.05 50.66 12.96" style="fill: none; stroke: #006ab7; stroke-miterlimit: 10; stroke-width: 2px;"/>
-  <path d="M24.45,1.44h20.68c1.72,0,3.11,1.4,3.11,3.11v.69c0,.15-.12.26-.26.26h-26.38c-.15,0-.26-.12-.26-.26v-.69c0-1.72,1.4-3.11,3.11-3.11Z" transform="translate(-.12 1.47) rotate(-2.41)" style="fill: none; stroke: #006ab7; stroke-miterlimit: 10; stroke-width: 2px;"/>
-  <line x1="7.49" y1="16.33" x2="7.17" y2="12.32" style="fill: none; stroke: #006ab7; stroke-miterlimit: 10; stroke-width: 2px;"/>
-  <line x1="14.61" y1="15.96" x2="14.39" y2="11.79" style="fill: none; stroke: #006ab7; stroke-miterlimit: 10; stroke-width: 2px;"/>
-  <path d="M18.19,10.63c-5.1.34-10.19.69-15.29,1.03-.73.05-1.47.1-2.2.15-.93.06-.94,1.52,0,1.46,5.1-.34,10.19-.69,15.29-1.03l2.2-.15c.93-.06.94-1.52,0-1.46h0Z" style="fill: #006ab7;"/>
-  <line x1="34.83" y1="5.58" x2="35.74" y2="14.3" style="fill: none; stroke: #006ab7; stroke-miterlimit: 10; stroke-width: 2px;"/>
-  <line x1="1.93" y1="20.77" x2="63.6" y2="16.39" style="fill: none; stroke: #006ab7; stroke-miterlimit: 10; stroke-width: 2px;"/>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 364.83 164.65">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke-width: 9.87px;
+      }
+
+      .st0, .st1 {
+        fill: none;
+        stroke: #006ab7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .st1 {
+        stroke-width: 9.87px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_11" data-name="Capa_1">
+    <path class="st1" d="M5.03,96.33l10.32,48.04c1.81,8.44,9.25,14.47,17.88,14.51l198.34.83s100.29,1.71,128.16-88.98c.82-2.67-1.38-5.31-4.16-5.1L8.2,92.08c-2.13.16-3.63,2.17-3.18,4.25h0Z"/>
+    <line class="st1" x1="250.74" y1="27.59" x2="278.09" y2="71.58"/>
+    <line class="st1" x1="123.57" y1="83.3" x2="128.28" y2="33.24"/>
+    <path class="st0" d="M131.98,10.19l114.78-5.23c9.54-.43,17.64,6.95,18.08,16.5l.17,3.82c.04.81-.59,1.49-1.39,1.52l-146.43,6.67c-.81.04-1.49-.59-1.52-1.39l-.17-3.82c-.43-9.54,6.95-17.64,16.5-18.08h-.02Z"/>
+    <line class="st1" x1="38.3" y1="89.78" x2="36.52" y2="67.49"/>
+    <line class="st1" x1="77.75" y1="86.78" x2="76.56" y2="64.25"/>
+    <path class="st1" d="M97.11,62.41h0c-28.29,2.39-56.57,4.78-84.86,7.16"/>
+    <line class="st1" x1="190.06" y1="30.13" x2="195.04" y2="77.86"/>
+    <line class="st1" x1="9.14" y1="114.71" x2="351.93" y2="90.48"/>
+  </g>
 </svg>

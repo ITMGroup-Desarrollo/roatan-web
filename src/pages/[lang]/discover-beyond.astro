@@ -148,7 +148,7 @@ export function getStaticPaths() {
                 <img
                   src={post.image}
                   alt={post.alt}
-                  class={`object-contain w-auto md:h-[90%] xl:h-[60rem] ${post.direction === "left" ? "fill-primary-color" : "fill-secondary-color"} md:order-1`}
+                  class={`object-contain w-auto md:h-[90%] ${post.direction === "left" ? "fill-primary-color" : "fill-secondary-color"} md:order-1`}
                 />
               </div>
             </div>
@@ -165,7 +165,7 @@ export function getStaticPaths() {
                     </p>
                   </div>
                   <div class="flex justify-center items-start">
-                    <ol class="pt-6 text-[var(--darkblue-color)] w-[90%] pl-6 space-y-4 md:columns-1 md:[column-count:2] max-h-[20rem] overflow-y-auto list-none">
+                    <ol class="pt-6 text-[var(--darkblue-color)] w-[90%] pl-12 space-y-4 md:columns-1 md:[column-count:2] max-h-[20rem] overflow-y-auto list-none">
                       {post.requirements.map((item) => (
                         <li class="break-inside-avoid w-[90%] relative pl-4 before:content-['•'] before:absolute before:left-0 before:top-0">
                           {item.name}

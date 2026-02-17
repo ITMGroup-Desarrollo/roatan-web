@@ -2,14 +2,9 @@
 title: 'Beach Day <br class="hidden md:block">at Brady’s Cay'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "bradys-cay"
-direction: "left"
+direction: "right"
 date: "2024-05-01"
-excerpt: "Brady’s Cay is the perfect getaway for a day full of fun and sun. Spend your day
-unwinding on a beautiful stretch of white sand, shaded by swaying palm trees or a
-comfy umbrella, with a refreshing drink in hand. Located on the eastern side of the
-island, Brady’s Cay offers everything you need for the perfect beach day, including
-beachside amenities, crystal-clear waters, and laid-back vibes. Dive into the sea for a
-swim, paddle along the coast in a kayak, or simply bask in the Caribbean sunshine"
+excerpt: "Brady's Cay es el escape perfecto para un día especial. Descansa en una hermosa playa de arena blanca, a la sombra de unas palmeras o de una cómoda sombrilla, con una bebida refrescante en la mano. Situado al este de la isla, Brady's Cay ofrece todo lo necesario para pasar un día de playa perfecto: servicios de playa, aguas cristalinas y un ambiente relajado. Un chapuzón, remar por la costa en kayak o simplemente disfrutar del sol caribeño. ¡Este es tu momento!"
 description: "Tour Beach Day at Brady’s Cay"
 author: ""
 fondo:
@@ -21,34 +16,27 @@ image:
 icons:
   - url: "/img/iconos/discover-beyond/secondary/bus.svg"
     alt: "icon"
-    name: "Round trip transportation"
+    name: "Transporte de ida y vuelta"
   - url: "/img/iconos/discover-beyond/secondary/boat.svg"
     alt: "icon"
-    name: "Transfer by boat to Brady's Cay"
+    name: "Traslado en barco a Brady's Cay"
   - url: "/img/iconos/discover-beyond/secondary/softdrink.svg"
     alt: "icon"
-    name: "Welcome drink at Brady's Cay"
+    name: "Bebida de bienvenida en Brady's Cay"
   - url: "/img/iconos/discover-beyond/secondary/club.svg"
     alt: "icon"
-    name: "Beach club services and amenities"
+    name: "Servicios e instalaciones del club de playa"
 requirements:
-  - name: "Swimming suit and towel"
-  - name: "Comfortable clothing for outdoor activities"
-  - name: "Camera or cellphone"
-  - name: "Hat and sunglasses"
-  - name: "Eco friendly insect repellent"
-  - name: "Biodegradable sun block"
-  - name: "Extra spending money"
+  - name: "Bañador y toalla"
+  - name: "Ropa cómoda para actividades al aire libre"
+  - name: "Cámara o teléfono móvil"
+  - name: "Sombrero y gafas de sol"
+  - name: "Repelente de insectos ecológico"
+  - name: "Protector solar biodegradable"
+  - name: "Dinero en efectivo"
 capacity: "100 Pax"
 duration: "4.5 Hrs"
-note: "Requirements and restrictions: Guests who are hard of hearing / hearing
-impaired or blind, are kindly requested to be accompanied by an assistant, friend, or
-family member to ensure their comfort and safety. Participants must be between 3 and
-70 years old. For safety reasons, this activity is not suitable for guests with recent
-surgeries, or expectant mothers. This excursion includes walking on uneven surfaces,
-so participants should be able to walk independently without assistance. Unfortunately,
-this excursion is not suitable for guests who rely on mobility aids such as walkers,
-canes, wheelchairs, or scooters."
+note: "Se solicita a los visitantes con problemas de audición o ceguera que vayan acompañados de un asistente, amigo o familiar para garantizar su comodidad y seguridad. Los participantes deben tener entre 3 y 70 años. Por motivos de seguridad, esta actividad no es apta para personas que hayan sido operadas recientemente ni para mujeres embarazadas. Esta excursión incluye caminar por superficies irregulares, por lo que los participantes deben ser capaces de caminar de forma independiente sin ayuda. Esta excursión no es apta para personas con movilidad reducida, como andadores, bastones, sillas de ruedas o scooter."
 firstgallery:
   - url: "/img/discover-beyond/bradys-cay/1.webp"
     alt: "imagen del post 1"
@@ -134,6 +122,5 @@ combinedgallery:
     alt: "imagen del post 21"
 tags: ["astro", "comer", "aprender en público"]
 ---
-
 
 Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.

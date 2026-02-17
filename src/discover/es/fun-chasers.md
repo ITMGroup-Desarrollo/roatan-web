@@ -4,7 +4,7 @@ subtitle: "Non reprehenderit ad deserunt."
 slug: "fun-chasers"
 direction: "right"
 date: "2024-05-01"
-excerpt: 'Libera a tu explorador interior en un viaje inolvidable que combina la emoción del descubrimiento submarino con la serenidad de un pintoresco paseo en barco. Deslízate entre impresionantes formaciones de manglares, sumérgete en aguas cristalinas con una increíble vida marina y disfruta la belleza del mar Caribe en un restaurante flotante único en el corazón de la barrera de arrecifes. Relájate con todas las comodidades, deliciosa comida y un ambiente tropical.'
+excerpt: "Libera a tu explorador interior en un viaje inolvidable que combina la emoción del descubrimiento submarino con la serenidad de un pintoresco paseo en barco. Deslízate entre impresionantes formaciones de manglares, sumérgete en aguas cristalinas con una increíble vida marina y disfruta la belleza del mar Caribe en un restaurante flotante único en el corazón de la barrera de arrecifes. Relájate con todas las comodidades, deliciosa comida y un ambiente tropical."
 description: "snorkel"
 author: ""
 fondo:
@@ -34,7 +34,7 @@ icons:
     name: "Dos bebidas no alcohólicas"
   - url: "/img/iconos/discover-beyond/primary/playa.svg"
     alt: "icon"
-    name: "Tiempo de playa en el restaurante flotante Fun Chasers"
+    name: "Tiempo de playa en el restaurante flotante"
   - url: "/img/iconos/discover-beyond/primary/club.svg"
     alt: "icon"
     name: "Sillas lounge y zonas de sombra"
@@ -178,6 +178,7 @@ combinedgallery:
     alt: "imagen del post 31"
 tags: ["astro", "comer", "aprender en público"]
 ---
+
 -
 
 Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.

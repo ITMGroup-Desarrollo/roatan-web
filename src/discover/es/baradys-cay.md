@@ -20,7 +20,7 @@ icons:
   - url: "/img/iconos/discover-beyond/secondary/boat.svg"
     alt: "icon"
     name: "Traslado en barco a Brady's Cay"
-  - url: "/img/iconos/discover-beyond/secondary/softdrink.svg"
+  - url: "/img/iconos/discover-beyond/secondary/bebida_bienvenida.svg"
     alt: "icon"
     name: "Bebida de bienvenida en Brady's Cay"
   - url: "/img/iconos/discover-beyond/secondary/club.svg"

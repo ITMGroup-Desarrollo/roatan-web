@@ -5,14 +5,16 @@
     <style>
       .st0 {
         fill: none;
-        stroke: #54c0e8;
+        stroke: #006ab7;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 10px;
       }
     </style>
   </defs>
-  <polyline class="st0" points="68.72 38.32 68.72 68.72 88.63 55"/>
-  <circle class="st0" cx="68.72" cy="68.72" r="48.78"/>
-  <circle class="st0" cx="68.72" cy="68.72" r="63.72"/>
+  <g id="Capa_11">
+    <polyline class="st0" points="68.72 38.32 68.72 68.72 88.63 55"/>
+    <circle class="st0" cx="68.72" cy="68.72" r="48.78"/>
+    <circle class="st0" cx="68.72" cy="68.72" r="63.72"/>
+  </g>
 </svg>

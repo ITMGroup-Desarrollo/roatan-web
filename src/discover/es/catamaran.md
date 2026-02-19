@@ -26,7 +26,7 @@ icons:
   - url: "/img/iconos/discover-beyond/primary/bar.svg"
     alt: "icon"
     name: "Barra libre a bordo"
-  - url: "/img/iconos/discover-beyond/primary/excursion.svg"
+  - url: "/img/iconos/discover-beyond/primary/snorkel_guide.svg"
     alt: "icon"
     name: "Excursión guiada de snorkel"
 requirements:
@@ -67,6 +67,5 @@ combinedgallery:
     alt: "imagen del post 6"
 tags: ["astro", "comer", "aprender en público"]
 ---
-
 
 Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.

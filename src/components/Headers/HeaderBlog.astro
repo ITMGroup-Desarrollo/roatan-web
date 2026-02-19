@@ -5,15 +5,16 @@ const t = translations[lang] ?? translations["es"];
 const headerTitle = Astro.props.headerTitle ?? "";
 const headerSubtitle = Astro.props.headerSubtitle ?? "";
 const headerUrl = Astro.props.headerUrl ?? "";
+const style = Astro.props.style ?? "";
 const id = Astro.props.id ?? "";
 ---
 
-<header id={id} class="relative bg-image-header h-96 lg:w-screen">
+<header id={id} class="relative bg-image-header h-96 xl:h-[36rem] lg:w-screen">
   <div class="absolute top-0 w-full h-full z-0">
     <img
       src={`/img/maquetado/${headerUrl}`}
       alt="Fondo del header del blog"
-      class="bg-header absolute z-0 w-full h-full object-cover"
+      class={`bg-header absolute z-0 w-full h-full object-cover ${style}`}
       loading="eager"
     />
     <div class="absolute w-full h-full bg-gradient-header z-1"></div>

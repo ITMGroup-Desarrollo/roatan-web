@@ -19,12 +19,16 @@ const id = Astro.props.id ?? "";
     />
     <div class="absolute w-full h-full bg-gradient-header z-1"></div>
   </div>
-  <div class="absolute w-full h-full z-1 flex items-center justify-center">
-    <h1 class="text-white text-center">
-      <p class="text-5xl md:text-6xl font-bebas font-bold uppercase">
-        {headerTitle}
-      </p>
-      <p class="text-3xl md:text-3xl">{headerSubtitle}</p>
-    </h1>
+  <div class="relative w-full h-full flex items-center justify-center">
+    <div
+      class="sticky top-0 h-96 xl:h-[24rem] flex items-center justify-center"
+    >
+      <h1 class="text-white text-center">
+        <p class="text-5xl md:text-6xl font-bebas font-bold uppercase">
+          {headerTitle}
+        </p>
+        <p class="text-3xl md:text-3xl">{headerSubtitle}</p>
+      </h1>
+    </div>
   </div>
 </header>

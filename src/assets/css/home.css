@@ -47,6 +47,7 @@ body {
 }
 
 .chica,
+.planta,
 .chica-port,
 .platanito-trip,
 .cocktel-trip,
@@ -64,12 +65,17 @@ body {
   transform: translateX(-150%);
 }
 
+.planta {
+  transform: translateX(-200%);
+}
+
 .ave,
 .cocktel-trip {
   transform: translateX(150%);
 }
 
 .chica.animate-in,
+.planta.animate-in,
 .chica-port.animate-in,
 .platanito-trip.animate-in,
 .cocktel-trip.animate-in,

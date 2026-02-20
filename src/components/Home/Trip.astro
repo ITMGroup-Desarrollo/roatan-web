@@ -6,6 +6,8 @@ import { Image } from "astro:assets";
 import trip from "../../assets/img/iconos/home/tripadvisor.png";
 import cocktel from "../../assets/img/iconos/home/cocktel.png";
 import platanitos from "../../assets/img/iconos/home/platanitos.png";
+import palmita from "../../assets/img/iconos/home/palmita.png";
+import planta from "../../assets/img/iconos/home/planta.png";
 import "aos/dist/aos.css";
 import SwiperClient from "../../components/js/SwiperClientTrip";
 import WaveObserverTrip from "../../components/js/WaveObserverTrip";
@@ -14,12 +16,25 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
 <div
   class="trip-container w-screen h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center relative overflow-y-hidden overflow-x-hidden bg-[var(--redSocial-color)]"
 >
-  <Image
-    class="platanito-trip parallax-image w-48 top-30 left-0 absolute md:w-96 h-auto z-0 md:top-24"
-    src={platanitos}
-    alt="platanitos"
-    loading="eager"
-  />
+  <div
+    class="platanito-trip absolute top-30 left-0 md:bottom-10 w-48 md:w-96 h-auto"
+  >
+    <!-- Palmita (atrás) -->
+    <Image
+      class="absolute bottom-[-4rem] md:bottom-[-4rem] left-0 md:h-[900px] h-[600px] rotate-12 z-0"
+      src={palmita}
+      alt="palmita"
+      loading="eager"
+    />
+
+    <!-- Platanitos (adelante) -->
+    <Image
+      class="absolute parallax-image bottom-0 left-[-4rem] md:h-[600px] h-[300px] z-10"
+      src={platanitos}
+      alt="platanitos"
+      loading="eager"
+    />
+  </div>
   <div class="logo-trip-container w-full flex justify-center z-10">
     <WaveObserverTrip client:visible />
     <Image
@@ -34,12 +49,28 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
   >
     <SwiperClient client:visible />
   </div>
-  <Image
-    class="cocktel-trip parallax-image w-48 md:w-80 absolute bottom-0 md:bottom-auto md:top-20 right-0 h-auto z-0"
-    src={cocktel}
-    alt="cocktel"
-    loading="eager"
-  />
+
+  <div
+    class="cocktel-trip absolute bottom-0 md:bottom-0 right-0 w-48 md:w-80 h-auto"
+  >
+    <!-- Planta (atrás) -->
+    <Image
+      class="absolute bottom-0 right-[-4rem] md:h-[800px] h-[600px] z-0"
+      src={planta}
+      alt="planta"
+      loading="eager"
+      data-speed="0.3"
+    />
+
+    <!-- Cocktel (adelante) -->
+    <Image
+      class="absolute bottom-20 right-0 w-full h-auto z-10 parallax-image"
+      src={cocktel}
+      alt="cocktel"
+      loading="eager"
+      data-speed="0.5"
+    />
+  </div>
 </div>
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {

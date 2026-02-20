@@ -1,175 +1,31 @@
 ---
 import { translations } from "../../locales.js";
 const lang = Astro.props?.lang ?? "es";
-const videoFile = Astro.props.videoFile ?? "default.mp4";
 import "../../assets/css/footer.css";
 import "../../assets/css/menu.css";
 import "../../assets/css/main.css";
 const t = translations[lang] ?? translations["es"];
-const videoSrc = `/video/${videoFile}`;
 import roatanLogo from "../../assets/img/logo/Roatan-LogoBlanco.png";
 import faceIcon from "../../assets/img/iconos/footer/facebook.svg";
 import igIcon from "../../assets/img/iconos/footer/ig.svg";
 import tripIcon from "../../assets/img/iconos/footer/trip.svg";
+import fondosrc from "../../assets/video/fondo.svg";
 import { Image } from "astro:assets";
 ---
 
 <footer
   class="relative w-screen h-[36vh] md:h-full lg:h-full bg-[transparent] z-5"
 >
-  <video
+  <Image
     id="footerVideo"
-    src={videoSrc}
+    src={fondosrc}
     class="absolute w-full h-auto md:h-full lg:h-full md:relative bottom-0 z-2"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"></video>
-
+    alt="palmita"
+    loading="eager"
+  />
+  <!-- footer desktop -->
   <div
-    class="absolute z-10 bottom-0 lg:bottom-10 flex flex-col lg:hidden lg:grid-cols-4 gap-3 w-screen items-end"
-  >
-    <div class="lg:col-span-1 lg:flex lg:justify-center">
-      <nav
-        class="flex flex-col absolute left-4 md:left-44 text-left top-16 md:top-20 text-white lg:hidden"
-      >
-        <a href={`/${lang}/port-experience/`}>{t.menu["port-experience"]}</a>
-        <a href={`/${lang}/discover-beyond/`}>{t.menu["discover-beyond"]}</a>
-        <a href={`/${lang}/blog/`}>{t.menu.blog}</a>
-      </nav>
-      <nav
-        class="hidden text-white lg:flex flex-col text-left text-xl lg:gap-5"
-      >
-        <a
-          class="hover:text-[var(--secondary-color)]"
-          href={`/${lang}/port-experience/`}>{t.menu["port-experience"]}</a
-        >
-        <a
-          class="hover:text-[var(--secondary-color)]"
-          href={`/${lang}/discover-beyond/`}>{t.menu["discover-beyond"]}</a
-        >
-        <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/blog/`}
-          >{t.menu.blog}</a
-        >
-        <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/faqs/`}
-          >{t.menu.faqs}</a
-        >
-      </nav>
-    </div>
-    <div
-      class="lg:col-span-2 flex flex-col justify-center items-center gap-3 lg:gap-10"
-    >
-      <a href={`/${lang}/home/`}
-        ><Image
-          class="w-16 md:w-24 lg:w-36 xl:w-36 mb-20 md:pb-20 lg:pb-14 h-auto"
-          src={roatanLogo}
-          alt="logo"
-          loading="eager"
-        /></a
-      >
-      <div
-        class="footer-textbox-container w-screen lg:w-5/6 h-auto flex flex-row gap-5 px-4 justify-center"
-      >
-        <div class="footer-textbox flex w-full md:w-1/2 lg:w-full">
-          <input
-            type="text"
-            class="form-control lg:text-base placeholder:italic uppercase h-6 lg:h-10 w-2/3 pl-4 bg-transparent text-white placeholder:text-white border-2 border-white rounded-s-full focus:outline-none focus:border-transparent focus:text-black focus:pl-4 focus:bg-white transition-all duration-300 ease-in-out"
-            placeholder={t.footer.textboxPlaceholder}
-          />
-          <div
-            class="button-container uppercase cursor-pointer flex items-center justify-center h-6 lg:h-10 w-1/3 border-2 rounded-e-full bg-white hover:bg-[var(--secondary-color)] outline-none border-white hover:border-[var(--secondary-color)] transition-all duration-300 ease-in-out font-lato"
-          >
-            <a class="button-sub font-lato lg:text-base"
-              >{t.footer.textboxButton}</a
-            >
-          </div>
-        </div>
-        <div class="lg:hidden flex flex-row gap-2 items-center">
-          <a href="https://www.facebook.com/PortRoatan" target="_blank"
-            ><Image
-              class="w-8"
-              src={faceIcon}
-              alt="facebook"
-              loading="eager"
-            /></a
-          >
-          <a href="https://www.instagram.com/portroatan" target="_blank"
-            ><Image
-              class="w-8"
-              src={igIcon}
-              alt="instagram"
-              loading="eager"
-            /></a
-          >
-
-          <a
-            href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
-            target="_blank"
-            ><Image
-              class="w-8"
-              src={tripIcon}
-              alt="tripadvisor"
-              loading="eager"
-            /></a
-          >
-        </div>
-      </div>
-      <div class="text-copyright text-white text-xs lg:text-base">
-        <p>Copyright © 2025 │ By ITM Group</p>
-      </div>
-    </div>
-    <div class="lg:col-span-1 lg:flex lg:justify-center flex-col gap-10">
-      <nav
-        class="flex flex-col lg:hidden absolute right-4 md:right-44 text-right top-16 md:top-20 text-white"
-      >
-        <a href={`/${lang}/faqs/`}>{t.menu.faqs}</a>
-        <a href={`/${lang}/contact/`}>{t.menu.contact}</a>
-        <a href={`/${lang}/policy/`}>{t.footer.policy}</a>
-      </nav>
-      <nav
-        class="hidden text-white lg:flex flex-col self-center text-right text-xl lg:gap-5"
-      >
-        <a
-          class="hover:text-[var(--secondary-color)]"
-          href={`/${lang}/contact/`}>{t.menu.contact}</a
-        >
-        <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/policy/`}
-          >{t.footer.policy}</a
-        >
-        <div class="hidden lg:flex flex-row-reverse gap-2 justify-right">
-          <a
-            href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
-            target="_blank"
-            ><Image
-              class="w-8"
-              src={tripIcon}
-              alt="tripadvisor"
-              loading="eager"
-            /></a
-          >
-          <a href="https://www.instagram.com/portroatan" target="_blank"
-            ><Image
-              class="w-8"
-              src={igIcon}
-              alt="instagram"
-              loading="eager"
-            /></a
-          >
-          <a href="https://www.facebook.com/PortRoatan" target="_blank"
-            ><Image
-              class="w-8"
-              src={faceIcon}
-              alt="facebook"
-              loading="eager"
-            /></a
-          >
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div
-    class="absolute hidden z-10 bottom-0 lg:bottom-10 lg:flex lg:flex-col gap-3 w-screen items-center"
+    class="absolute z-10 bottom-0 lg:bottom-10 flex flex-col gap-2 lg:gap-8 w-screen items-center"
   >
     <div
       class="lg:col-span-2 flex flex-col justify-center items-center gap-3 lg:gap-10"
@@ -182,43 +38,11 @@ import { Image } from "astro:assets";
           loading="eager"
         /></a
       >
-      <div
-        class="footer-textbox-container w-screen lg:w-5/6 h-auto flex flex-row gap-5 px-4 justify-center"
-      >
-        <div class="lg:hidden flex flex-row gap-2 items-center">
-          <a href="https://www.facebook.com/PortRoatan" target="_blank"
-            ><Image
-              class="w-8"
-              src={faceIcon}
-              alt="facebook"
-              loading="eager"
-            /></a
-          >
-          <a href="https://www.instagram.com/portroatan" target="_blank"
-            ><Image
-              class="w-8"
-              src={igIcon}
-              alt="instagram"
-              loading="eager"
-            /></a
-          >
-
-          <a
-            href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
-            target="_blank"
-            ><Image
-              class="w-8"
-              src={tripIcon}
-              alt="tripadvisor"
-              loading="eager"
-            /></a
-          >
-        </div>
-      </div>
     </div>
-    <div class="lg:flex lg:justify-center">
+    <!-- links desktop -->
+    <div class="flex justify-center">
       <nav
-        class="hidden text-white lg:flex flex-row text-left text-xl lg:gap-5"
+        class="text-white flex flex-col lg:flex-row text-center lg:text-left text-xl lg:gap-5"
       >
         <a
           class="hover:text-[var(--secondary-color)]"
@@ -243,7 +67,7 @@ import { Image } from "astro:assets";
         >
       </nav>
     </div>
-    <div class="footer-textbox flex w-full md:w-1/2 lg:w-1/2 my-8">
+    <!-- <div class="footer-textbox flex w-full md:w-1/2 lg:w-1/2 my-8">
       <input
         type="text"
         class="form-control lg:text-base placeholder:italic uppercase h-6 lg:h-10 w-2/3 pl-4 bg-transparent text-white placeholder:text-white border-2 border-white rounded-s-full focus:outline-none focus:border-transparent focus:text-black focus:pl-4 focus:bg-white transition-all duration-300 ease-in-out"
@@ -255,12 +79,13 @@ import { Image } from "astro:assets";
         <a class="button-sub font-lato lg:text-base">{t.footer.textboxButton}</a
         >
       </div>
-    </div>
-    <div class="lg:col-span-1 lg:flex lg:justify-center flex-col gap-10">
+    </div> -->
+    <!-- iconos desktop -->
+    <div class="col-span-1 flex justify-center flex-col gap-5">
       <nav
-        class="hidden text-white lg:flex flex-col self-center text-right text-xl lg:gap-5"
+        class="text-white flex flex-col self-center text-right text-xl lg:gap-5"
       >
-        <div class="hidden lg:flex flex-row-reverse gap-2 justify-right">
+        <div class="flex flex-row-reverse gap-2 justify-right">
           <a
             href="https://www.tripadvisor.com.mx/Attraction_Review-g292019-d25290415-Reviews-Roatan_Cruise_Port-Roatan_Bay_Islands.html"
             target="_blank"
@@ -290,6 +115,7 @@ import { Image } from "astro:assets";
         </div>
       </nav>
     </div>
+    <!-- copyright desktop -->
     <div class="text-copyright text-white text-xs lg:text-base">
       <p>Copyright © 2025 │ By ITM Group</p>
     </div>

@@ -10,6 +10,7 @@ export default function WaveObserver() {
 
     const cover = document.querySelector(".wave-cover");
     const chica = document.querySelector(".chica");
+    const planta = document.querySelector(".planta");
     const ave = document.querySelector(".ave");
 
     const observer = new IntersectionObserver(
@@ -17,6 +18,7 @@ export default function WaveObserver() {
         if (entry.isIntersecting) {
           cover?.classList.add("shrink");
           chica?.classList.add("animate-in");
+          planta?.classList.add("animate-in");
           ave?.classList.add("animate-in");
         } else {
           // cover?.classList.remove("shrink");

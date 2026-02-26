@@ -123,13 +123,6 @@ body {
   height: 100vh;
 }
 
-#headerDiscover-container .bg-header {
-  object-position: bottom;
-}
-
-#headerBlog-container .bg-header {
-  object-position: bottom;
-}
 
 .title_container h1,
 h2 {

@@ -67,7 +67,7 @@ export function getStaticPaths() {
   />
   <div
     id="tours-container"
-    class="tours-containe bg-white max-w-full overflow-hidden mb-10 md:mb-0"
+    class="tours-containe bg-white max-w-full overflow-hidden"
   >
     {
       posts.map((post) => {
@@ -270,7 +270,13 @@ export function getStaticPaths() {
       })
     }
   </div>
-
+  <!-- <div
+    class="w-full text-center text-xl md:text-2xl font-bold text-[var(--primary-color)]"
+    style="background: #F2F2F2;
+background: linear-gradient(0deg, rgba(242, 242, 242, 1) 0%, rgba(255, 255, 255, 1) 100%);"
+  >
+    <p>{t.discover.belt}</p>
+  </div> -->
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
   <script is:inline>
     function toggleSecondView(event) {

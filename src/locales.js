@@ -57,7 +57,7 @@ export const translations = {
       title: "FAQ's",
       subtitle: "¡Estamos listos para ayudarte!",
       landingSubtitle:
-        "¿Necesitas ayuda? ¡No te preocupes, te ayudamos! Resuelve tus dudas y prepárate para tus próximas vacaciones.",
+        "¿Necesitas ayuda? ¡No te preocupes! Resuelve tus dudas y prepárate para tus próximas vacaciones.",
       pregunta1: "What can I find in Port Roatan?",
       pregunta1: "¿Qué puedo encontrar en Port Roatan?",
       pregunta2: "¿Hay actividades dentro de Port Roatan?",
@@ -90,7 +90,7 @@ export const translations = {
       subtitle: "Todos los artículos",
       button: "Read more",
       search_placeholder: "¿Buscando?",
-      text: "Port Roatan es un puerto de cruceros diseñado para brindarte lo mejor del Caribe desde el primer momento. Inspirado en la vibrante esencia de Honduras, aquí encontrarás todo lo necesario para disfrutar al máximo tu visita. Restaurantes y bares temáticos con sabores locales y drinks refrescantes (sí, también los clásicos), piscinas, zonas para relajarte y photo spots ideales para tus fotos. Estamos seguros de que Port Roatan te enamorará y siempre querrás regresar. ",
+      text: "Port Roatan es un puerto de cruceros diseñado para brindarte lo mejor del Caribe desde el primer momento. Inspirado en la vibrante esencia de Honduras, aquí encontrarás todo lo necesario para disfrutar al máximo tu visita. Restaurantes y bares temáticos con sabores locales y drinks refrescantes (sí, también los clásicos), piscinas, zonas para relajarte y photo spots ideales para tus fotos. Estamos seguros de que Port Roatan te enamorará y siempre querrás&nbsp;regresar. ",
     },
     discover: {
       title: "Discover",
@@ -102,11 +102,11 @@ export const translations = {
       Duration: "Duración",
       Note: "Toma en cuenta",
       secondbutton: "Volver",
+      belt: "¡Nuevas aventuras te esperan!",
     },
     contact: {
-      title: "Contactanos",
-      subtitle:
-        "Déjanos tus datos para ayuda adicional, ¡estaremos encantados de atenderte!",
+      title: "Contáctanos",
+      subtitle: "Déjanos tus datos. Estaremos encantados de atenderte.",
       name: "Nombre",
       lastName: "Apellido",
       email: "Correo",
@@ -293,6 +293,7 @@ export const translations = {
       Duration: "Duration",
       Note: "Please note",
       secondbutton: "Go back",
+      belt: "New adventures ahead",
     },
     contact: {
       title: "Contact Us",

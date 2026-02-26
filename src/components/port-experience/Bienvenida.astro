@@ -47,9 +47,8 @@ import "../../assets/css/home.css";
     </div>
     <p
       class="text-2xl px-4 md:px-0 text-justify md:text-center self-start md:self-center text-black md:w-2/3"
-    >
-      {t.port.text}
-    </p>
+      set:html={t.port.text}
+    />
   </div>
   <div
     class="wave-container parallax-image w-full h-[24%] bottom-5 right-0 bg-transparent md:absolute z-1 overflow-hidden"

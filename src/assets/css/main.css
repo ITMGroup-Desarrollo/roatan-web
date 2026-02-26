@@ -110,9 +110,6 @@ body {
   height: 100vh;
 }
 
-#headerPort-container .bg-header {
-  object-position: top;
-}
 
 #headerDiscover-container .bg-gradient-header {
   background: var(--primary-color);

@@ -17,11 +17,11 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
   class="trip-container w-screen h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center relative overflow-y-hidden overflow-x-hidden bg-[var(--redSocial-color)]"
 >
   <div
-    class="platanito-trip absolute top-30 left-0 md:bottom-10 w-48 md:w-96 h-auto"
+    class="platanito-trip absolute top-30 left-0 md:bottom-10 w-[24rem] md:w-[36rem] h-auto"
   >
     <!-- Palmita (atrás) -->
     <Image
-      class="absolute bottom-[-8rem] translate-x-[-4rem] md:bottom-[-4rem] left-0 h-[600px] md:h-[900px] rotate-12 z-0"
+      class="absolute bottom-[-8rem] translate-x-[-4rem] bottom-[-8rem] md:bottom-[-4rem] left-[-4rem] h-auto w-full rotate-12 z-0"
       src={palmita}
       alt="palmita"
       loading="eager"
@@ -29,7 +29,7 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
 
     <!-- Platanitos (adelante) -->
     <Image
-      class="absolute parallax-image bottom-0 left-[-4rem] md:h-[600px] w-[800px] z-10"
+      class="absolute parallax-image bottom-[-5rem] left-[-4rem] h-auto w-3/4 z-10"
       src={platanitos}
       alt="platanitos"
       loading="eager"
@@ -51,11 +51,11 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
   </div>
 
   <div
-    class="cocktel-trip absolute bottom-0 md:bottom-0 right-0 w-48 md:w-80 h-auto"
+    class="cocktel-trip absolute bottom-0 md:bottom-0 right-0 w-[24rem] md:w-[36rem] h-auto"
   >
     <!-- Planta (atrás) -->
     <Image
-      class="absolute bottom-0 right-[-4rem] md:h-[800px] h-[600px] z-0"
+      class="absolute bottom-0 right-[-8rem] h-auto w-full translate-x-[8rem] z-0"
       src={planta}
       alt="planta"
       loading="eager"
@@ -64,7 +64,7 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
 
     <!-- Cocktel (adelante) -->
     <Image
-      class="absolute bottom-20 right-0 w-full h-auto z-10 parallax-image"
+      class="absolute bottom-20 right-[-4rem] h-auto w-1/2 z-10 parallax-image"
       src={cocktel}
       alt="cocktel"
       loading="eager"

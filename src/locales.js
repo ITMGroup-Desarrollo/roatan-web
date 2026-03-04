@@ -105,7 +105,7 @@ export const translations = {
       belt: "¡Nuevas aventuras te esperan!",
     },
     contact: {
-      title: "Contáctanos",
+      title: "Contacto",
       subtitle: "Déjanos tus datos. Estaremos encantados de atenderte.",
       name: "Nombre",
       lastName: "Apellido",

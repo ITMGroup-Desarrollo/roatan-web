@@ -26,9 +26,10 @@ const id = Astro.props.id ?? "";
       class="sticky top-0 flex items-end justify-center pb-8 md:h-96 xl:h-[24rem] md:items-center md:pb-0"
     >
       <h1 class="text-white text-center">
-        <p class="text-5xl md:text-6xl font-bebas font-bold uppercase">
-          {headerTitle}
-        </p>
+        <p
+          class="text-5xl md:text-6xl font-bebas font-bold uppercase"
+          set:html={headerTitle}
+        />
         <p class="text-3xl md:text-3xl">{headerSubtitle}</p>
       </h1>
     </div>

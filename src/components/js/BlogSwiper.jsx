@@ -42,14 +42,12 @@ const BlogSwiper = ({ posts, lang }) => {
         {currentPosts.map((post, index) => (
           <li
             key={post.slug}
-            className={`Blog-item relative ${
-              index === 0 ? "md:col-span-2" : "md:col-span-1"
-            } bg-[var(--redSocial-color)] shadow-md rounded-xl`}
+            className={`Blog-item relative ${index === 0 ? "md:col-span-2" : "md:col-span-1"
+              } bg-white shadow-md rounded-xl`}
           >
             <div
-              className={`flex flex-col z-10 ${
-                index === 0 ? "md:flex-row" : ""
-              } h-full`}
+              className={`flex flex-col z-10 ${index === 0 ? "md:flex-row" : ""
+                } h-full`}
             >
               <a
                 href={`/${lang}/blog/${post.slug}`}
@@ -58,17 +56,15 @@ const BlogSwiper = ({ posts, lang }) => {
                 <img
                   src={post.image}
                   alt={post.alt}
-                  className={`w-full h-full object-cover rounded-t-xl ${
-                    index === 0
-                      ? "md:rounded-t-none md:rounded-tl-xl md:rounded-bl-xl"
-                      : ""
-                  }`}
+                  className={`w-full h-full object-cover rounded-t-xl ${index === 0
+                    ? "md:rounded-t-none md:rounded-tl-xl md:rounded-bl-xl"
+                    : ""
+                    }`}
                 />
               </a>
               <div
-                className={`${
-                  index === 0 ? "basis-1/2" : ""
-                } p-5 flex flex-col`}
+                className={`${index === 0 ? "basis-1/2" : ""
+                  } p-5 flex flex-col`}
               >
                 <p className="text-justify font-latoBold text-[var(--darkblue-color)] text-2xl mb-4  uppercase">
                   {post.date}
@@ -177,11 +173,10 @@ const BlogSwiper = ({ posts, lang }) => {
           <button
             key={i}
             onClick={() => setCurrentPage(i + 1)}
-            className={`px-3 py-1 text-xl font-latoBold rounded hover:underline hover:underline-offset-2 hover:decoration-2 focus:underline focus:underline-offset-2 focus:decoration-2 ${
-              currentPage === i + 1
-                ? " text-[var(--primary-color)] "
-                : " text-[var(--primary-color)] "
-            }`}
+            className={`px-3 py-1 text-xl font-latoBold rounded hover:underline hover:underline-offset-2 hover:decoration-2 focus:underline focus:underline-offset-2 focus:decoration-2 ${currentPage === i + 1
+              ? " text-[var(--primary-color)] "
+              : " text-[var(--primary-color)] "
+              }`}
           >
             {i + 1}
           </button>

@@ -106,7 +106,7 @@ export const translations = {
     },
     contact: {
       title: "Contacto",
-      subtitle: "Déjanos tus datos. Estaremos encantados de atenderte.",
+      subtitle: "Déjanos tus datos.<br> Estaremos encantados de atenderte.",
       name: "Nombre",
       lastName: "Apellido",
       email: "Correo",

@@ -15,7 +15,7 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
     <p
       class="subtitle text-xl md:text-3xl font-bebas text-black mb-6 md:mb-12 px-5 w-full lg:w-3/5"
     >
-      {t.contact.subtitle}
+      <Fragment set:html={t.contact.subtitle} />
     </p>
   </div>
   <form

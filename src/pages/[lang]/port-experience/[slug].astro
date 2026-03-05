@@ -48,16 +48,14 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   <div class="w-screen py-8 flex flex-col bg-white justify-center">
     <WaveObserver client:visible />
     <Logo content={content} logo={data.logo} />
-    
+
     <div class="w-4/5 md:w-3/4 px-4 my-12 self-center md:mx-auto">
       <div
-        class="
-          grid gap-4
+        class="grid gap-4
           grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))]
           auto-rows-[180px]
           md:grid-cols-12 md:auto-rows-[150px]
-          xl:auto-rows-[200px]
-        "
+          xl:auto-rows-[200px]"
       >
         {
           data.gridgallery?.map((img, index) => {
@@ -86,9 +84,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             }
 
             return (
-              <div
-                class={`overflow-hidden rounded-2xl ${sizeClass}`}
-              >
+              <div class={`overflow-hidden rounded-2xl ${sizeClass}`}>
                 <img
                   src={img.url}
                   alt={img.alt ?? `Imagen ${index + 1}`}
@@ -103,6 +99,15 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
     </div>
   </div>
 
+  <!-- Botón regresar -->
+  <div class="w-full flex justify-center my-8">
+    <a
+      href={`/${lang}/port-experience`}
+      class="inline-flex items-center gap-2 text-[var(--primary-color)] border-2 border-[var(--primary-color)] px-10 py-4 rounded-lg uppercase text-2xl font-bold hover:bg-[var(--primary-color)] hover:text-white transition-colors duration-300"
+    >
+      ← {lang === "es" ? "Regresar" : "Go back"}
+    </a>
+  </div>
+
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
 </Layout>
-

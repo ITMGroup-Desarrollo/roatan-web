@@ -102,20 +102,20 @@ export function getStaticPaths() {
   </div>
 
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
+
+  <style>
+    .card-wrapper {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
+    .content-layer,
+    .overlay-layer {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      will-change: transform;
+    }
+  </style>
 </Layout>
-
-<style>
-  .card-wrapper {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-  }
-
-  .content-layer,
-  .overlay-layer {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    will-change: transform;
-  }
-</style>

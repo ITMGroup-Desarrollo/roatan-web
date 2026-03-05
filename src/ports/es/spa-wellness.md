@@ -5,7 +5,7 @@ slug: "spa-wellness"
 date: "2024-05-01"
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
-icon: "/img/port-experience/icons/icondrink.png"
+icon: "/img/port-experience/icons/spa.png"
 logo: "/img/port-experience/logos/spa-wellness.png"
 image:
   url: "/img/port-experience/spa.webp"

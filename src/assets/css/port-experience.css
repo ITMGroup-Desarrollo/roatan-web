@@ -1,12 +1,13 @@
-.bg-gradient-item{
+.bg-gradient-item {
     background: var(--primary-color);
     background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
 }
+
 /* .item-background{
     background-image: url("/img/port-experience/fruteria.webp");
     background-position: center;
     background-size: contain;
 } */
- body{
-    background-color: white !important;
- }
+body {
+    background-color: #f2f2f2;
+}

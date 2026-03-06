@@ -59,12 +59,12 @@ export const translations = {
       landingSubtitle:
         "¿Necesitas ayuda? ¡No te preocupes! Resuelve tus dudas y prepárate para tus próximas vacaciones.",
       pregunta1: "What can I find in Port Roatan?",
-      pregunta1: "¿Qué puedo encontrar en Port Roatan?",
-      pregunta2: "¿Hay actividades dentro de Port Roatan?",
-      pregunta3: "¿Puedo visitar Port Roatan, aunque no venga en crucero?",
-      pregunta4: "¿Las piscinas y zonas lounge son gratis?",
-      pregunta5: "¿Qué me recomiendan llevar al llegar?",
-      pregunta6: "¿Quisiera explorar Roatán, ¿hay tours disponibles?",
+      pregunta1: "¿Qué puedo encontrar en Port\u00A0Roatan?",
+      pregunta2: "¿Hay actividades dentro de Port\u00A0Roatan?",
+      pregunta3: "¿Puedo visitar Port Roatan, aunque no venga en\u00A0crucero?",
+      pregunta4: "¿Las piscinas y zonas lounge son\u00A0gratis?",
+      pregunta5: "¿Qué me recomiendan llevar al\u00A0llegar?",
+      pregunta6: "¿Quisiera explorar Roatán, ¿hay tours\u00A0disponibles?",
       respuesta1:
         "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatan te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
       respuesta2:
@@ -105,8 +105,8 @@ export const translations = {
       belt: "¡Nuevas aventuras te esperan!",
     },
     contact: {
-      title: "Contáctanos",
-      subtitle: "Déjanos tus datos. Estaremos encantados de atenderte.",
+      title: "Contacto",
+      subtitle: "Déjanos tus datos.<br> Estaremos encantados de atenderte.",
       name: "Nombre",
       lastName: "Apellido",
       email: "Correo",
@@ -250,13 +250,12 @@ export const translations = {
       subtitle: "We’re here to answer!",
       landingSubtitle:
         "Need some help? Don’t worry, we got your back! Find the answers to your questions and get ready for your next vacation.",
-      pregunta1: "What can I find in Port Roatan?",
-      pregunta2: "Are there activities inside Port Roatan?",
-      pregunta3: "Can I visit Port Roatan without a cruise?",
-      pregunta4: "Are pools and lounge areas free?",
-      pregunta5: "Any suggestions on what to bring upon arrival?",
-      pregunta6:
-        "I would love to explore Roatan. Are there any tours available?",
+      pregunta1: "What can I find in Port\u00A0Roatan?",
+      pregunta2: "Are there activities inside Port\u00A0Roatan?",
+      pregunta3: "Can I visit Port Roatan without a\u00A0cruise?",
+      pregunta4: "Are pools and lounge areas\u00A0free?",
+      pregunta5: "Any suggestions on what to bring upon\u00A0arrival?",
+      pregunta6: "I would love to explore Roatan. Are there any tours\u00A0available?",
       respuesta1:
         "A cruise port you'll be dreaming of! Inspired by its Caribbean location, Port Roatan is a cruise port that offers various activities for cruise guests to enjoy. From themed restaurants, to an exclusive retail area, we want to make the best out of your Port Roatan stop.",
       respuesta2:

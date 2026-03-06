@@ -9,7 +9,6 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
   z-index: 2;
   transition: width 1.2s ease-in-out;
 }
@@ -22,7 +21,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color) !important;
   top: 0;
   right: 0;
   transition: width 1.5s ease-in-out;
@@ -36,10 +35,11 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
   top: 0;
   left: 0;
   transition: width 1.5s ease-in-out;
+
 }
 
 .wave-cover-discover.shrink {
@@ -179,7 +179,7 @@ body {
     left: 0;
     height: 15%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--secondary-color);
     z-index: 2;
     transition: width 1.5s ease-in-out;
   }
@@ -187,7 +187,7 @@ body {
   #port-experience-welcome-single .wave-cover {
     left: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
     z-index: 2;
     transition: width 1.5s ease-in-out;
   }

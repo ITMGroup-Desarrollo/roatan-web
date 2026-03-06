@@ -3,17 +3,17 @@ const logo = Astro.props?.logo ?? "es";
 const content = Astro.props?.content ?? "es";
 import { Image } from "astro:assets";
 import "aos/dist/aos.css";
-import olas from "../../assets/img/iconos/port-experience/ola.png";
+import olas from "../../assets/img/iconos/port-experience/olita.png";
 
 import "../../assets/css/home.css";
 ---
 
 <div
   id="port-experience-welcome-single"
-  class="welcome-container w-screen h-auto relative flex flex-col justify-center overflow-hidden bg-white z-0"
+  class="welcome-container w-screen h-auto relative flex flex-col justify-center overflow-hidden bg-[#f2f2f2] z-0"
 >
   <div
-    class="logo-container relative w-full px-5 md:px-0 mx-auto md:mx-0  mb-10 md:mb-10  flex flex-col"
+    class="logo-container relative w-full px-5 md:px-0 mx-auto md:mx-0 mb-10 md:mb-10 flex flex-col"
   >
     <img
       class="h-[12rem] max-w-[16rem] md:h-[14rem] md:max-w-[24rem] object-scale-down self-center mb-8 md:mb-4"
@@ -36,6 +36,6 @@ import "../../assets/css/home.css";
       alt="logo"
       loading="eager"
     />
-    <div class="wave-cover"></div>
+    <div class="wave-cover bg-[#f2f2f2]"></div>
   </div>
 </div>

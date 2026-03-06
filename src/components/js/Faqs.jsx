@@ -67,30 +67,26 @@ const PreguntasYRespuestas = ({ t, full }) => {
           <div key={id} className="flex flex-col gap-2">
             <div
               onClick={() => toggle(id)}
-              className={`pregunta flex flex-row rounded-full md:mr-8 items-center justify-left cursor-pointer transition-all duration-300 ease-in-out ${
-                activa === id ? "bg-[var(--secondary-color)]" : "bg-transparent"
-              }`}
+              className={`pregunta flex flex-row rounded-full md:mr-8 pr-4 items-center justify-left cursor-pointer transition-all duration-300 ease-in-out ${activa === id ? "bg-[var(--secondary-color)]" : "bg-transparent"
+                }`}
             >
               <img
-                className={`mas-icon w-8 md:w-12 ${
-                  activa === id ? "hidden" : ""
-                }`}
+                className={`mas-icon w-8 md:w-12 ${activa === id ? "hidden" : ""
+                  }`}
                 src={mas.src}
                 alt="mas"
               />
               <img
-                className={`menos-icon w-8 md:w-12 ${
-                  activa === id ? "" : "hidden"
-                }`}
+                className={`menos-icon w-8 md:w-12 ${activa === id ? "" : "hidden"
+                  }`}
                 src={menos.src}
                 alt="menos"
               />
               <p
-                className={`pregunta-texto pl-6 py-2 text-xl md:text-2xl text-left ${
-                  activa === id
-                    ? "text-[var(--darkblue-color)]"
-                    : "text-[var(--primary-color)]"
-                }`}
+                className={`pregunta-texto px-6 py-2 text-xl md:text-2xl text-left ${activa === id
+                  ? "text-[var(--darkblue-color)]"
+                  : "text-[var(--primary-color)]"
+                  }`}
               >
                 {pregunta}
               </p>
@@ -98,9 +94,8 @@ const PreguntasYRespuestas = ({ t, full }) => {
 
             {/* RESPUESTA SOLO EN MOBILE */}
             <div
-              className={`respuesta md:hidden bg-white flex px-4 py-2 rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${
-                activa === id ? "" : "hidden"
-              }`}
+              className={`respuesta md:hidden bg-white flex px-4 py-2 rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${activa === id ? "" : "hidden"
+                }`}
             >
               <p className="respuesta-texto text-xl text-[var(--primary-color)] text-justify">
                 {respuesta}
@@ -115,9 +110,8 @@ const PreguntasYRespuestas = ({ t, full }) => {
         {faqs.map(({ id, respuesta }) => (
           <div
             key={id}
-            className={`respuesta bg-white flex md:ml-6 px-4 flex-row rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${
-              activa === id ? "" : "hidden"
-            }`}
+            className={`respuesta bg-white flex md:ml-6 px-4 flex-row rounded-lg items-center justify-left transition-all duration-300 ease-in-out ${activa === id ? "" : "hidden"
+              }`}
           >
             <p className="respuesta-texto my-4 md:my-0 text-2xl text-[var(--primary-color)] text-left">
               {respuesta}

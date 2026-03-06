@@ -185,7 +185,7 @@ body {
   #port-experience-welcome-single .wave-cover {
     left: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
     z-index: 2;
     transition: width 1.5s ease-in-out;
   }

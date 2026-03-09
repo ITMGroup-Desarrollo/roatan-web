@@ -9,12 +9,13 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
+  background-color: #f2f2f2;
   z-index: 2;
   transition: width 1.2s ease-in-out;
 }
 
 .wave-cover.shrink {
-  width: 0;
+  width: 0%
 }
 
 .wave-cover-port {

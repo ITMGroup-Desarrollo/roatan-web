@@ -109,5 +109,14 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
     </a>
   </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cover = document.querySelector(".wave-cover");
+      if (cover) {
+        cover.classList.add("shrink");
+      }
+    });
+  </script>
+
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
 </Layout>

@@ -4,7 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import Layout from "../../../layouts/Layout.astro";
 import Footer from "../../../components/Footer/Footer.astro";
-import Menu from "../../../components/Headers/MenuBlog.astro";
+import Menu from "../../../components/Headers/Menu.astro";
 import "../../../assets/css/blog.css";
 import type { APIContext } from "astro";
 import BlogSingleSwiper from "../../../components/js/BlogSingleSwiper.jsx";
@@ -66,7 +66,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
 <Layout lang={lang}>
   <Menu lang={lang} />
   <article
-    class="Article-container bg-white w-screen flex flex-col items-center justify-center"
+    class="Article-container bg-[#f2f2f2] w-screen flex flex-col items-center justify-center"
   >
     <div class="w-full px-8 md:px-0 md:w-3/4 md:-0">
       <h2

@@ -3,7 +3,9 @@
   <defs>
     <filter id="outer-glow-1" x="0" y="0" width="160.46" height="103.03" filterUnits="userSpaceOnUse">
       <feOffset dx="0" dy="0"/>
-      <feFlood flood-color="#000" flood-opacity="0"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".25"/>
+      <feComposite in2="blur" operator="in"/>
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>

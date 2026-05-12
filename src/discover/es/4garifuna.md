@@ -46,8 +46,8 @@ requirements:
   - name: "Repelente de insectos ecológico"
   - name: "Protector solar biodegradable"
   - name: "Dinero en efectivo"
-capacity: "80 Pax"
-duration: "4.5 Hrs"
+capacity: "90 Pax"
+duration: "4 Hrs"
 note: "Requisitos y restricciones: Las personas con discapacidad auditiva deben ir acompañadas de un asistente, amigo o familiar. Por razones de seguridad, no pueden participar en esta excursión los huéspedes con lesiones de cuello o espalda, cirugías recientes o pacientes con asma, diabetes, esquizofrenia, pánico, epilepsia, ceguera, embarazo u otras afecciones cardíacas o respiratorias. El límite de peso es de 120 kilos o 264 libras. La edad mínima para participar es de 8 años y la máxima de 65. Esta excursión es apropiada para huéspedes que puedan caminar sin dificultades. Los visitantes con andador, bastón, silla de ruedas plegable manual o plegable ligera, scooter / silla de ruedas eléctrica no son elegibles para participar en la excursión."
 firstgallery:
   - url: "/img/discover-beyond/garifuna/1.webp"

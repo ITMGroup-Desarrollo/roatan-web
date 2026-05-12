@@ -80,7 +80,7 @@ const menuItems = Object.entries(t.menu).map(([key, label]) => ({
         {
           menuItems.map((item) => (
             <a
-              class="text-center font-bebas font-bold md:text-4xl lg:text-5xl xl:text-6xl z-30"
+              class="text-center font-bebas hover:text-[var(--secondary-color)] font-bold md:text-4xl lg:text-5xl xl:text-6xl z-30"
               href={`/${lang}/${item.path}/`}
             >
               {item.label}

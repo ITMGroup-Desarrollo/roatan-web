@@ -113,20 +113,17 @@
 .icon-mask-face {
   width: 1.2rem;
   height: 1.2rem;
-  -webkit-mask-image: url('/img/iconos/menu-face.svg');
   mask-image: url('/img/iconos/menu-face.svg');
 }
 
 .icon-mask-ig {
   width: 1.2rem;
   height: 1.2rem;
-  -webkit-mask-image: url('/img/iconos/menu-ig.svg');
   mask-image: url('/img/iconos/menu-ig.svg');
 }
 
 .icon-mask-trip {
   width: 1.5rem;
   height: 1.5rem;
-  -webkit-mask-image: url('/img/iconos/menu-trip.svg');
   mask-image: url('/img/iconos/menu-trip.svg');
 }

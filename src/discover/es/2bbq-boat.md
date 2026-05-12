@@ -14,13 +14,13 @@ image:
   url: "/img/discover-beyond/bbq/intro.png"
   alt: "intro"
 icons:
-  - url: "/img/iconos/discover-beyond/primary/guide.svg"
+  - url: "/img/iconos/discover-beyond/secondary/guide.svg"
     alt: "icon"
     name: "Guía turístico bilingüe"
-  - url: "/img/iconos/discover-beyond/primary/food.svg"
+  - url: "/img/iconos/discover-beyond/secondary/food.svg"
     alt: "icon"
     name: "Menú a la parrilla"
-  - url: "/img/iconos/discover-beyond/primary/softdrink.svg"
+  - url: "/img/iconos/discover-beyond/secondary/softdrink.svg"
     alt: "icon"
     name: "Bebidas no alcohólicas"
 requirements:

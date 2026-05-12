@@ -14,32 +14,19 @@ image:
   url: "/img/discover-beyond/garifuna/9.webp"
   alt: "intro"
 icons:
-  - url: "/img/iconos/discover-beyond/primary/guide.svg"
+  - url: "/img/iconos/discover-beyond/secondary/guide.svg"
     alt: "icon"
-    name: "Certified bilingual tour guide"
-  - url: "/img/iconos/discover-beyond/primary/bus.svg"
+    name: "Tour guide"
+  - url: "/img/iconos/discover-beyond/secondary/bus.svg"
     alt: "icon"
     name: "Round trip transportation"
-  - url: "/img/iconos/discover-beyond/primary/boat.svg"
+  - url: "/img/iconos/discover-beyond/secondary/food.svg"
     alt: "icon"
-    name: "Boat tour through mangroves"
-  - url: "/img/iconos/discover-beyond/primary/salvavidas.svg"
+    name: "Garifuna food tasting and a drink"
+  - url: "/img/iconos/discover-beyond/secondary/softdrink.svg"
     alt: "icon"
-    name: "Snorkel safety equipment"
-  - url: "/img/iconos/discover-beyond/primary/burger.svg"
-    alt: "icon"
-    name: "Fish sticks or cheeseburger with fries"
-  - url: "/img/iconos/discover-beyond/primary/softdrink.svg"
-    alt: "icon"
-    name: "Two nonalcoholic drinks"
-  - url: "/img/iconos/discover-beyond/primary/playa.svg"
-    alt: "icon"
-    name: "Beach time at Floating restaurant"
-  - url: "/img/iconos/discover-beyond/primary/club.svg"
-    alt: "icon"
-    name: "Lounge chairs and shaded areas"
+    name: "Alcoholic or non-alcoholic welcome drink"
 requirements:
-  - name: "Swimming suit and towel"
   - name: "Comfortable clothing for outdoor activities"
   - name: "Camera or cellphone"
   - name: "Hat and sunglasses"
@@ -48,16 +35,7 @@ requirements:
   - name: "Extra spending money"
 capacity: "90 Pax"
 duration: "4 Hrs"
-note: "Requirements and restrictions: The use of lifejacket is mandatory during
-navigation and snorkel portion.
-Guests who are hard of hearing or hearing impaired are kindly asked to be accompanied by an assistant, friend, or family
-member for their comfort and safety. Participants must be between 08 and 65 years
-old, and the maximum weight for this activity is 120 kilos (260 pounds). For safety
-reasons, this activity is not suitable for guests with heart or respiratory conditions,
-blood pressure issues, epilepsy, asthma, diabetes, back or neck problems,
-schizophrenia, panic disorders, blindness, recent surgeries, or expectant mothers. The
-excursion involves walking on uneven surfaces and requires physical activity, so participants must be able to walk independently. Unfortunately, it is not suitable for
-those who rely on mobility aids such as walkers, canes, wheelchairs, or scooters."
+note: "Requirements and restrictions: Guests with hearing impairments must be accompanied by an assistant, friend, or family member."
 firstgallery:
   - url: "/img/discover-beyond/garifuna/1.webp"
     alt: "imagen del post 1"

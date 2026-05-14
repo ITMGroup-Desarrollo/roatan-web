@@ -8,10 +8,10 @@ excerpt: "Sumérgete en la tradición garífuna con música en vivo, danzas ance
 description: "snorkel"
 author: ""
 fondo:
-  url: "/img/discover-beyond/garifuna/fondo.webp"
+  url: "/img/discover-beyond/garifuna/9.webp"
   alt: "fondo"
 image:
-  url: "/img/discover-beyond/garifuna/9.webp"
+  url: "/img/discover-beyond/garifuna/intro.png"
   alt: "intro"
 icons:
   - url: "/img/iconos/discover-beyond/secondary/guide.svg"

@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Headers/HeaderBlog.astro";
+import Footer from "../../components/Footer/Footer.astro";
+import Menu from "../../components/Headers/Menu.astro";
+import MapInteractive from "../../components/Map/MapInteractive.jsx";
+import { translations } from "../../locales.js";
+
+export const prerender = true;
+export function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+const lang = Astro.params.lang || "es";
+const t = translations[lang] ?? translations["es"];
+---
+
+<Layout lang={lang}>
+  <head>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/map.css" />
+    
+    <!-- Leaflet JS -->
+    <script is:inline src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script is:inline>
+      const idioma = "{lang}";
+    </script>
+  </head>
+
+  <Menu lang={lang} />
+  <!-- Menu spacing / padding -->
+  <div style="height: 100px; background: var(--blue-color, #0056b3);"></div>
+
+  <!-- Map Component -->
+  <main id="main" class="shock-main">
+    <MapInteractive lang={lang} />
+  </main>
+
+  <Footer lang={lang} videoFile="fondo-footer-gris.mp4" />
+  
+  <!-- Add jQuery since map.js depends on it -->
+  <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Add map script at the end if it exists in public -->
+  <script is:inline src="/assets/js/vendor/map.js"></script>
+
+  <script is:inline>
+    // Collapse filters on load just like in PHP
+    document.querySelector('.leaflet-control-filter.shop .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.fun .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.restaurants .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.shop .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.fun .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.restaurants .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .switch')?.click();
+  </script>
+</Layout>
+
+<style>
+  body {
+    background-color: #f5f5f5;
+  }
+</style>

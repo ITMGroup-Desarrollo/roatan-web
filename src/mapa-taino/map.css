@@ -1,0 +1,448 @@
+:root {
+  --blog-icono: #1c355e;
+  --blog-yellow: #f5a23a;
+}
+
+div#map {
+  border-radius: 10px;
+}
+section.map-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+button.minimize-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--blog-yellow);
+}
+
+button.minimize-btn.show {
+  margin: -25px -15px 0px 10px;
+}
+
+.leaflet-control-filter {
+  /* align-self: end; */
+  background: white;
+  padding: 5px 5px 20px 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin: 0.5rem 0;
+  opacity: 90%;
+  z-index: 1001;
+  color: var(--blog-icono);
+}
+
+.leaflet-control-filter table {
+  margin: 0;
+  border-collapse: collapse;
+  width: max-content;
+}
+
+.leaflet-control-filter td {
+  padding: 5px;
+}
+
+.leaflet-control-filter img {
+  width: 20px;
+  height: 20px;
+}
+
+.leaflet-control-filter tr:hover {
+  cursor: pointer;
+  color: #f5a23a;
+}
+.leaflet-control-filter tr.selected {
+  color: #f5a23a;
+  background-color: rgba(245, 162, 58, 0.3); /* Un fondo más notorio */
+  font-weight: bold;
+}
+
+.popupTitle {
+  font-weight: bold;
+  color: #1c355e;
+}
+.leaflet-control-filter tr.active {
+  background-color: #ddd;
+}
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: -1rem;
+}
+
+.filter-content {
+  margin-top: 1.5rem;
+}
+
+.header-text {
+  cursor: pointer;
+  padding-left: 1rem;
+  font-weight: bolder;
+  width: max-content;
+}
+
+.tabla-icons tr {
+  cursor: pointer;
+}
+
+.tabla-icons tbody {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+td:first-child {
+  text-align: center;
+}
+
+.leaflet-popup-content-wrapper {
+  height: auto !important;
+  width: 15vw !important;
+}
+
+.leaflet-popup-content {
+  margin: 5px 19px 10px !important;
+}
+
+.leaflet-popup-content p {
+  margin: 0 0 1rem 0 !important;
+}
+
+.custom-icon:hover img {
+  transform: scale(1.4); /* Escala el tamaño del icono en un 5% */
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--blog-icono);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--blog-yellow);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--blog-yellow);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.pop {
+  padding: 10px 0px 0px 0px;
+}
+
+body.shock-body {
+  background-color: #ddd !important;
+}
+.shadowMarker {
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 1));
+}
+.leaflet-marker-icon img {
+  border: 1.5px solid white;
+  border-radius: 50%;
+  
+}
+.leaflet-overlay-pane path {
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
+}
+.salidaCaminoIcon{
+  border: none !important; 
+  width: 30px !important;
+  height: 30px !important;
+}
+.regresoCaminoIcon{
+  border: none !important; 
+  width: 30px !important;
+  height: 30px !important;
+}
+@media (min-width: 769px) {
+  .service .header-text {
+    padding-right: 20%;
+  }
+  .fun .header-text {
+    padding-right: 15%;
+  }
+  .restaurants .header-text {
+    padding-right: 15%;
+  }
+  .shop .header-text {
+    padding-right: 30%;
+  }
+  .filter-container p,
+  .filter-container span,
+  .filter-container td {
+    font-size: 10px;
+  }
+  .filter-container {
+    position: absolute;
+    width: fit-content;
+    left: 3%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    bottom: 0%;
+    padding-left: 10px;
+  }
+  /* .filter-container {
+        z-index: 1001;
+        position: absolute;
+        gap: 10px;
+        left: 15%;
+        top: 95%;
+    }
+
+    .filter-container .fun {
+        position: absolute;
+        left: 17vw;
+        bottom: 0%;
+    }
+
+    .filter-container .restaurants {
+        position: absolute;
+        left: 32vw;
+        bottom: 0%;
+    }
+
+    .filter-container .shop {
+        position: absolute;
+        left: 80%;
+        bottom: 0%;
+    }
+
+    .filter-container .service {
+        position: absolute;
+        bottom: 40vh;
+        height: fit-content;
+        align-self: end;
+        z-index: 999;
+    } */
+
+  .leaflet-control-filter {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .service .header-text {
+    /* padding-right: 1rem; */
+  }
+
+  /* .filter-container .restaurants {
+        height: fit-content;
+        align-self: end;
+    }
+
+    .filter-container .shop {
+        height: fit-content;
+        align-self: end;
+    } */
+}
+
+@media (max-height: 769px) {
+  /* .filter-container {
+        left: 15%;
+        bottom: 0%;
+    }
+    .filter-container .shop{
+        position: absolute;
+        left: 2vw;
+    }
+    .filter-container .fun{
+        position: absolute;
+        left: 43vw;
+    }
+    .filter-container .restaurants{
+        position: absolute;
+        left: 56vw;
+    } */
+}
+.custom-icon img {
+  transition: width 0.2s ease, height 0.2s ease;
+  /* Ajusta la duración y tipo de transición según tu preferencia */
+}
+
+@media (max-width: 768px) {
+  .filter-content {
+    font-size: 0.8rem;
+  }
+  .header-text {
+    width: auto;
+  }
+  .leaflet-popup-content-wrapper {
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .leaflet-popup-content {
+    width: auto !important;
+    min-width: 8rem !important;
+  }
+
+  /* .header-text {
+        padding: 5px 10px;
+    }
+
+    .filter-header {
+        justify-content: center;
+    } */
+
+  section.map-section {
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .leaflet-control-filter.service.leaflet-control,
+  .leaflet-control-filter.restaurants.leaflet-control {
+    opacity: 100%;
+  }
+
+  /* .filter-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        z-index: 1001;
+        width: 97vw;
+        margin: auto;
+    } */
+  .filter-container {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    min-width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Añadido para el desplazamiento suave */
+    -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos táctiles */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    margin-bottom: 10px;
+    scrollbar-width: none;
+  }
+  #map {
+    order: 1;
+  }
+  .filter-container > * {
+    scroll-snap-align: start; /* Añadido para el desplazamiento suave */
+    flex: 0 0 auto; /* Asegura que los elementos no se reduzcan */
+    min-width: 200px; /* Ajusta el ancho mínimo de los elementos */
+    margin-right: 10px; /* Espacio entre los elementos */
+  }
+  .leaflet-control-filter {
+    margin: 0.5rem 0.5rem;
+    opacity: 80%;
+    height: min-content;
+  }
+
+  div#map {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  section.map-section {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .filter-container {
+    width: 96vw;
+    left: 0%;
+    grid-template-columns: 1fr;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .shop,
+  .fun,
+  .service,
+  .restaurants {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+  div#map {
+    margin: 0 1rem 1rem 1rem;
+  }
+  .tabla-icons tbody {
+    justify-content: center;
+  }
+}
+@keyframes scale-easeOutBounce {
+  0% {
+    transform: scale(0);
+  }
+  24% {
+    transform: scale(2);
+  }
+  54% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.custom-icon-animation {
+  animation: scale-easeOutBounce 1.5s ease-out;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[data-aos="fade-zoom-in"].aos-animate {
+  opacity: 1;
+  animation: scale-easeOutBounce 2s ease-out forwards;
+}

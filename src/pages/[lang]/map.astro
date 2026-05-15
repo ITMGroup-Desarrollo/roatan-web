@@ -22,9 +22,7 @@ const t = translations[lang] ?? translations["es"];
     
     <!-- Leaflet JS -->
     <script is:inline src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script is:inline>
-      const idioma = "{lang}";
-    </script>
+    <script is:inline set:html={`const idioma = "${lang}";`}></script>
   </head>
 
   <Menu lang={lang} />
@@ -42,7 +40,7 @@ const t = translations[lang] ?? translations["es"];
   <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <!-- Add map script at the end if it exists in public -->
-  <script is:inline src="/assets/js/vendor/map.js"></script>
+  <script is:inline src="/assets/js/vendor/map.js?v=2"></script>
 
   <script is:inline>
     // Collapse filters on load just like in PHP

@@ -101,10 +101,10 @@ $(document).on("click", ".minimize-btn", function () {
 
 // #region Definición de íconos usando L.divIcon
 // var retailIcon = L.divIcon({
-//   html: `<div class="custom-icon" data-aos="fade-zoom-in"
-//      data-aos-easing="ease-in-back"
-//      data-aos-delay="300"
-//      data-aos-offset="0">
+//   html: `<div class="custom-icon" 
+//      
+//      
+//      >
 //                <img src="/assets/icons/map/retail.svg" alt="retail" width="20" height="20">
 //            </div>`,
 //   className: "shadowMarker", // Puedes usar tu propia clase CSS o dejarla vacía
@@ -113,10 +113,10 @@ $(document).on("click", ".minimize-btn", function () {
 //   popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
 // });
 var retailIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-  data-aos-easing="ease-in-back"
-  data-aos-delay="200"
-  data-aos-offset="0">
+  html: `<div class="custom-icon" 
+  
+  
+  >
             <img src="/assets/icons/map/retail.svg" alt="retail" width="20" height="20">
         </div>`,
   className: "shadowMarker",
@@ -126,10 +126,10 @@ var retailIcon = L.divIcon({
 });
 
 var restroomsIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/restrooms.svg" alt="restrooms" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -138,10 +138,10 @@ var restroomsIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var barIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="400"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/bar.svg" alt="bar" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -150,10 +150,10 @@ var barIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var foodIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="100"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/food.svg" alt="food" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -162,10 +162,10 @@ var foodIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var drugstoreIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/drugstore.svg" alt="drugstore" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -174,10 +174,10 @@ var drugstoreIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var experienceIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/experience.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -186,10 +186,10 @@ var experienceIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var showIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="400"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/show.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -198,10 +198,10 @@ var showIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var fruitIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="100"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/coco.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -210,10 +210,10 @@ var fruitIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var camaraIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/camara.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -222,10 +222,10 @@ var camaraIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var starIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/star.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -234,10 +234,10 @@ var starIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var taxiIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="400"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/taxi.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -246,10 +246,10 @@ var taxiIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var shorexIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="100"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/shorex.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -258,10 +258,10 @@ var shorexIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var poolIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/pool-marker.svg" alt="pool" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -270,10 +270,10 @@ var poolIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var beachIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/beach-marker.svg" alt="beach" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -282,10 +282,10 @@ var beachIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var rumquestIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="400"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/rum-quest-marker.svg" alt="rum-quest" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -294,10 +294,10 @@ var rumquestIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var riverIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="100"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/lazy-river-marker.svg" alt="lazy-river" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -306,10 +306,10 @@ var riverIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var splashIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/splash-marker.svg" alt="splash-surfing" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -318,10 +318,10 @@ var splashIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var BeachPlayIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/beach-play.svg" alt="beach-playground" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -330,10 +330,10 @@ var BeachPlayIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var YongolIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/yongol.svg" alt="yongol" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -342,10 +342,10 @@ var YongolIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var AviarioIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="200"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/aviario.svg" alt="aviarius" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -354,10 +354,10 @@ var AviarioIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var spaIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/spa-marker.svg" alt="spa wellness" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -366,10 +366,10 @@ var spaIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var monkeyIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="400"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img src="/assets/icons/map/port-experience/monkey-marker.svg" alt="monkey-island" width="20" height="20">
            </div>`,
   className: "shadowMarker",
@@ -379,10 +379,10 @@ var monkeyIcon = L.divIcon({
 });
 
 var salidaCaminoIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="0"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img class="salidaCaminoIcon" src="/assets/icons/map/arrowRed.svg" alt="PORT EXIT" width="30" height="30">
            </div>`,
   className: "shadowMarker",
@@ -402,10 +402,10 @@ var salidaIcon = L.divIcon({
   popupAnchor: [0, 0],
 });
 var regresoCaminoIcon = L.divIcon({
-  html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="0"
-     data-aos-offset="0">
+  html: `<div class="custom-icon" 
+     
+     
+     >
                <img class="regresoCaminoIcon" src="/assets/icons/map/arrowGreen.svg" alt="PORT EXIT" width="30" height="30">
            </div>`,
   className: "shadowMarker",

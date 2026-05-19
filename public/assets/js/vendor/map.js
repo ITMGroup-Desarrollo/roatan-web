@@ -46,9 +46,7 @@ if (isMobile) {
 // #endregion
 
 // #region Agrega la imagen del mapa
-L.imageOverlay("/assets/images/media/taino-actualizado-2026.webp", bounds).addTo(
-  map,
-);
+L.imageOverlay("/assets/images/media/mapa-roatan.webp", bounds).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
@@ -100,23 +98,9 @@ $(document).on("click", ".minimize-btn", function () {
 // #endregion
 
 // #region Definición de íconos usando L.divIcon
-// var retailIcon = L.divIcon({
-//   html: `<div class="custom-icon" 
-//      
-//      
-//      >
-//                <img src="/assets/icons/map/retail.svg" alt="retail" width="20" height="20">
-//            </div>`,
-//   className: "shadowMarker", // Puedes usar tu propia clase CSS o dejarla vacía
-//   iconSize: [20, 20],
-//   iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
-//   popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
-// });
+
 var retailIcon = L.divIcon({
-  html: `<div class="custom-icon" 
-  
-  
-  >
+  html: `<div class="custom-icon">
             <img src="/assets/icons/map/retail.svg" alt="retail" width="20" height="20">
         </div>`,
   className: "shadowMarker",
@@ -632,59 +616,19 @@ var camino2 = L.polyline(caminoCoordenadas2, {
 
 var markers = {
   2: [
-    L.marker([890, 650], { icon: rumquestIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "Sigue a Mr Rum y acompáñalo en este viaje a través de la historia."
-                    : "Follow Mr Rum and enjoy a fun journey through history!"
-                }</p>
-                <a href="${idioma}/port-experience/mr-rum-quest" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
+    L.marker([890, 650], { icon: regresoCaminoIcon }).addTo(map),
+    L.marker([890, 650], { icon: regresoIcon }).addTo(map),
   ],
   3: [
-    L.marker([470, 300], { icon: riverIcon })
+    L.marker([470, 300], { icon: restroomsIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">LAZY RIVER</p>
-                <p>${
-                  idioma === "es"
-                    ? "¡Flotemos y disfrutemos!"
-                    : "Let’s float around and enjoy the ride!"
-                }</p>
-                <a href="${idioma}/port-experience/lazy-river" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/restrooms.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">BAÑOS / RESTROOMS</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -695,58 +639,19 @@ var markers = {
       }),
   ],
   4: [
-    L.marker([520, 560], { icon: splashIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "¡Sol, arena y mucha&nbsp;diversión!"
-                    : "Sun, sand, and lots of&nbsp;fun!"
-                }</p>
-                <a href="${idioma}/port-experience/splash-surfing" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
+    L.marker([520, 560], { icon: salidaCaminoIcon }).addTo(map),
+    L.marker([520, 560], { icon: salidaIcon }).addTo(map),
   ],
   5: [
-    L.marker([880, 1105], { icon: spaIcon })
+    L.marker([880, 1105], { icon: showIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "Consiéntete y relájate con un masaje."
-                    : "Treat yourself and relax with a massage."
-                }</p>
-                <a href="${idioma}/port-experience/spa-wellness" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SHOWS</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -757,28 +662,15 @@ var markers = {
       }),
   ],
   6: [
-    L.marker([1030, 770], { icon: monkeyIcon })
+    L.marker([1030, 770], { icon: camaraIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/monkey-island.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">MONKEY ISLAND</p>
-                <p>${
-                  idioma === "es"
-                    ? "Nuevos amigos, grandes recuerdos. "
-                    : "Make new monkey friends and have a great time!"
-                }</p>
-                <a href="${idioma}/port-experience/monkey-island" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PHOTO SPOT</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -789,58 +681,15 @@ var markers = {
       }),
   ],
   7: [
-    L.marker([750, 580], { icon: poolIcon })
+    L.marker([750, 580], { icon: starIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === "es" ? "PISCINA" : "POOL"}</p>
-            <p>${
-              idioma === "es"
-                ? "Nada, relájate y disfruta."
-                : "Swim, relax, and enjoy. "
-            }</p>
-            <a href="${idioma}/port-experience/pool" >
-                     <button 
-                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                       onmouseover="this.style.backgroundColor='#f5a23a';" 
-                       onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === "es" ? "Ver más" : "View more"}
-                     </button>
-                 </a>
+            <img src="/assets/icons/map/star.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">LAST MINUTE</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([360, 390], { icon: poolIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === "es" ? "PISCINA" : "POOL"}</p>
-            <p>${
-              idioma === "es"
-                ? "¡Refréscate al llegar! No te pierdas la fiesta y los shows."
-                : "Freshen up upon arrival. Grab a spot and don’t miss the party and shows"
-            }</p>            
-            <a href="${idioma}/port-experience/pool" >
-                     <button 
-                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                       onmouseover="this.style.backgroundColor='#f5a23a';" 
-                       onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === "es" ? "Ver más" : "View more"}
-                     </button>
-                 </a>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -851,118 +700,15 @@ var markers = {
       }),
   ],
   8: [
-    L.marker([830, 900], { icon: beachIcon })
+    L.marker([360, 390], { icon: taxiIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${
-              idioma === "es"
-                ? "¡La playa en el puerto! Descansa y broncéate."
-                : "Beach vibes at port! Lay by a sunbed for a nice tan."
-            }</p>
-            <a href="${idioma}/port-experience/beach" >
-                     <button 
-                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                       onmouseover="this.style.backgroundColor='#f5a23a';" 
-                       onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === "es" ? "Ver más" : "View more"}
-                     </button>
-                 </a>
+            <img src="/assets/icons/map/taxi.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SHUTTLE</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([650, 680], { icon: beachIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${
-              idioma === "es"
-                ? "¡La playa en el puerto! Descansa y broncéate."
-                : "Beach vibes at port! Lay by a sunbed for a nice tan."
-            }</p>
-            <a href="${idioma}/port-experience/beach" >
-                     <button 
-                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                       onmouseover="this.style.backgroundColor='#f5a23a';" 
-                       onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === "es" ? "Ver más" : "View more"}
-                     </button>
-                 </a>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([560, 395], { icon: beachIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${
-              idioma === "es"
-                ? "¡La playa en el puerto! Descansa y broncéate."
-                : "Beach vibes at port! Lay by a sunbed for a nice tan."
-            }</p>
-            <a href="${idioma}/port-experience/beach" >
-                     <button 
-                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                       onmouseover="this.style.backgroundColor='#f5a23a';" 
-                       onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === "es" ? "Ver más" : "View more"}
-                     </button>
-                 </a>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([330, 315], { icon: beachIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${
-              idioma === "es"
-                ? "¡La playa en el puerto! Descansa y broncéate."
-                : "Beach vibes at port! Lay by a sunbed for a nice tan."
-            }</p>
-            <a href="${idioma}/port-experience/beach" >
-                     <button 
-                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                       onmouseover="this.style.backgroundColor='#f5a23a';" 
-                       onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === "es" ? "Ver más" : "View more"}
-                     </button>
-                 </a>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -973,712 +719,15 @@ var markers = {
       }),
   ],
   9: [
-    L.marker([863, 1290], { icon: restroomsIcon })
-      .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="/assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_self">
-      //               <button
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([1000, 1100], { icon: restroomsIcon })
-      .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="/assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_self">
-      //               <button
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([585, 490], { icon: restroomsIcon })
-      .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="/assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_self">
-      //               <button
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([800, 760], { icon: restroomsIcon })
-      .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="/assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_self">
-      //               <button
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  10: [
-    L.marker([883, 1260], { icon: showIcon })
+    L.marker([830, 900], { icon: shorexIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
-                    : "The best of Dominican entertainment for you to&nbspenjoy!"
-                }</p>
+            <img src="/assets/icons/map/shorex.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PRE-BOOKED SHOREX</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([975, 1070], { icon: showIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
-                    : "The best of Dominican entertainment for you to&nbspenjoy!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([825, 495], { icon: showIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
-                    : "The best of Dominican entertainment for you to&nbspenjoy!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([745, 605], { icon: showIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No te pierdas del show principal! "
-                    : "Don't miss the main&nbspshow!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([445, 395], { icon: showIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
-                    : "The best of Dominican entertainment for you to&nbspenjoy!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  11: [
-    L.marker([945, 950], { icon: fruitIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
-                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([825, 695], { icon: fruitIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
-                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([625, 525], { icon: fruitIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
-                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([505, 360], { icon: fruitIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
-                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([430, 275], { icon: fruitIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
-                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([255, 305], { icon: fruitIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
-                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  12: [
-    L.marker([800, 1300], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([940, 1090], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([945, 915], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([1040, 845], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([645, 715], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([900, 535], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([410, 430], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([300, 260], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([220, 335], { icon: camaraIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-                    : "Don't forget to share your pics and tag us on Instagram!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  13: [
-    L.marker([835, 1265], { icon: starIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¿Sin reserva? Aparta tu tour favorito al llegar."
-                    : "Don't Forget to book your favorite tour upon arrival"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([900, 1130], { icon: starIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¿Sin reserva? Aparta tu tour favorito al llegar."
-                    : "Don't Forget to book your favorite tour upon arrival"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  14: [
-    L.marker([185, 270], { icon: taxiIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/taxi-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "Servicios de transportación."
-                    : "Transportation services"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  15: [
-    L.marker([920, 1280], { icon: shorexIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/shorex-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "¡Encuentra tu tour al llegar!"
-                    : "Find your excursion upon arrival!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  16: [
-    L.marker([570, 580], { icon: BeachPlayIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/beach-play-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "¡Sol, arena y mucha&nbsp;diversión!"
-                    : "Sun, sand, and lots of&nbsp;fun!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  17: [
-    L.marker([700, 700], { icon: YongolIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/yongol-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "¡Ejercitarse en el paraíso siempre será&nbsp;divertido!"
-                    : "Working out in paradise is always&nbsp;fun!"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  18: [
-    L.marker([820, 850], { icon: AviarioIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/aviario-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "¡Pasa un día genial en compañía de las&nbsp;aves!"
-                    : "Have a great day in the company of our feathery&nbsp;friends!"
-                }</p>
-                <a href="${idioma}/port-experience/aviary" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  20: [
-    L.marker([840, 1177], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">DIAMONDS INTERNATIONAL</p>
-            <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
-            
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1689,16 +738,15 @@ var markers = {
       }),
   ],
   21: [
-    L.marker([930, 1157], { icon: retailIcon })
+    L.marker([650, 680], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">DUFRY</p>
-                <p>${idioma === "es" ? "Tienda" : "Big Retailer"}</p>
+            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">MONKEY BAR</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1709,34 +757,15 @@ var markers = {
       }),
   ],
   22: [
-    L.marker([990, 960], { icon: retailIcon })
+    L.marker([560, 395], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">BLUE STONE</p>
-                <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
+            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">THE COFFEE FACTORY</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([595, 297], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">BLUE STONE</p>
-                <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1747,64 +776,15 @@ var markers = {
       }),
   ],
   23: [
-    L.marker([995, 896], { icon: retailIcon })
+    L.marker([330, 315], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">MORENA MIA</p>
-                <p>${
-                  idioma === "es"
-                    ? "Perfumeria y cosmetica"
-                    : "Perfumery and Cosmetics"
-                }</p>
+            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">ICEKERY</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([890, 1002], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">MORENA MIA</p>
-                <p>${
-                  idioma === "es"
-                    ? "Perfumeria y cosmetica"
-                    : "Perfumery and Cosmetics"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([885, 738], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">MORENA MIA</p>
-                <p>${
-                  idioma === "es"
-                    ? "Perfumeria y cosmetica"
-                    : "Perfumery and Cosmetics"
-                }</p>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1815,16 +795,15 @@ var markers = {
       }),
   ],
   24: [
-    L.marker([995, 862], { icon: retailIcon })
+    L.marker([863, 1290], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">PAWS BY THE SEA</p>
-                <p>${idioma === "es" ? "Tienda de regalos" : "Gift Shop"}</p>
+            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">CANTINA LATINA</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1835,16 +814,15 @@ var markers = {
       }),
   ],
   25: [
-    L.marker([995, 830], { icon: retailIcon })
+    L.marker([1000, 1100], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">TSUNAMI XL</p>
-                <p>${idioma === "es" ? "Conveniencia" : "Convenience Store"}</p>
+            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">BLUE PARROT</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1855,20 +833,15 @@ var markers = {
       }),
   ],
   26: [
-    L.marker([1000, 799], { icon: retailIcon })
+    L.marker([585, 490], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">PIRAÑA JOE</p>
-                <p>${
-                  idioma === "es"
-                    ? "Ropa y accesorios"
-                    : "Fashion & Accessories"
-                }</p>
+            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">TACO LOVER</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1879,20 +852,15 @@ var markers = {
       }),
   ],
   27: [
-    L.marker([985, 725], { icon: retailIcon })
+    L.marker([800, 760], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">ISLAND LIFE - SURF SHOP</p>
-                <p>${
-                  idioma === "es"
-                    ? "Ropa y accesorios"
-                    : "Fashion & Accessories"
-                }</p>
+            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">THE BOAT BAR</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1903,64 +871,15 @@ var markers = {
       }),
   ],
   28: [
-    L.marker([966, 683], { icon: retailIcon })
+    L.marker([883, 1260], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">DOMINICAN THINGS'</p>
-                <p>${
-                  idioma === "es"
-                    ? "Ropa y accesorios"
-                    : "Fashion & Accessories"
-                }</p>
+            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">TIKI TIKI BAR</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([895, 910], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">DOMINICAN THINGS</p>
-                <p>${
-                  idioma === "es"
-                    ? "Ropa y accesorios"
-                    : "Fashion & Accessories"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([280, 225], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">DOMINICAN THINGS</p>
-                <p>${
-                  idioma === "es"
-                    ? "Ropa y accesorios"
-                    : "Fashion & Accessories"
-                }</p>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1971,313 +890,15 @@ var markers = {
       }),
   ],
   29: [
-    L.marker([957, 650], { icon: retailIcon })
+    L.marker([975, 1070], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">CHRISTMAS BY THE SEA</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
+            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">THE SPORT COVE BAR</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  30: [
-    L.marker([953, 620], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">RUTA DE LAS INDAS</p>
-                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  31: [
-    L.marker([880, 1065], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">THE TIE DYE HUT</p>
-                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  32: [
-    L.marker([882, 1035], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">PIÑA COLADA BOUTIQUE</p>
-                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  33: [
-    L.marker([895, 955], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SHARK ATTACK</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([510, 250], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SHARK ATTACK</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  34: [
-    L.marker([871, 835], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">BLOSSOM SOAP</p>
-                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  35: [
-    L.marker([845, 802], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SEA SALT</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([461, 233], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SEA SALT</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  36: [
-    L.marker([920, 785], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">RIVIERA</p>
-                <p>${idioma === "es" ? "Cosmetología" : "Cosmetology"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  37: [
-    L.marker([870, 595], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">MEXICAN EXPERIENCE</p>
-                <p>${
-                  idioma === "es"
-                    ? "Tienda de regalos/Tabaco"
-                    : "Gift Shop/Tobacco"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  38: [
-    L.marker([995, 925], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">MUSEO DEL TABACO</p>
-                <p>${idioma === "es" ? "Tabaco" : "Tobacco"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  39: [
-    L.marker([860, 622], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([320, 220], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([250, 240], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  40: [
-    L.marker([865, 648], { icon: drugstoreIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">${
-                  idioma === "es" ? "FARMACIA TAINO BAY" : "TAINO BAY DRUGSTORE"
-                }</p>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2288,16 +909,15 @@ var markers = {
       }),
   ],
   41: [
-    L.marker([868, 675], { icon: retailIcon })
+    L.marker([825, 495], { icon: poolIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">TAINO LOGO SHOP</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
+            <img src="/assets/icons/map/port-experience/pool-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">POOL</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2308,20 +928,15 @@ var markers = {
       }),
   ],
   42: [
-    L.marker([878, 710], { icon: retailIcon })
+    L.marker([745, 605], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">DOMINICAN YUCAYAQUE</p>
-                <p>${
-                  idioma === "es"
-                    ? "Ropa y accesorios"
-                    : "Fashion & Accessories"
-                }</p>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">OFICIAL STORE</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2332,34 +947,15 @@ var markers = {
       }),
   ],
   43: [
-    L.marker([900, 763], { icon: retailIcon })
+    L.marker([445, 395], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">TURQUESA</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">MARKET STREET</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([360, 230], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">TURQUESA</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2370,178 +966,15 @@ var markers = {
       }),
   ],
   44: [
-    L.marker([660, 355], { icon: retailIcon })
+    L.marker([945, 950], { icon: spaIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">NATURAL BEAUTY</p>
-                <p>${
-                  idioma === "es"
-                    ? "Perfumeria y cosmetica"
-                    : "Perfumery and Cosmetics"
-                }</p>
+            <img src="/assets/icons/map/port-experience/spa-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SPA WELLNESS RETREAT</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  45: [
-    L.marker([651, 334], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">HARD ROCK CAFE</p>
-                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  46: [
-    L.marker([640, 320], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">DEL SOL</p>
-                <p>${
-                  idioma === "es"
-                    ? "Ropa y accesorios"
-                    : "Fashion & Accessories"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  47: [
-    L.marker([627, 309], { icon: drugstoreIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">${
-                  idioma === "es" ? "FARMACIA" : "DRUGSTORE"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  48: [
-    L.marker([612, 302], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">VEARI PIEL</p>
-                <p>${
-                  idioma === "es" ? "Artículos de Piel " : "Leather goods"
-                }</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  49: [
-    L.marker([578, 295], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">ABYSSAL</p>
-                <p>${idioma === "es" ? "Tienda destino " : "Store"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  50: [
-    L.marker([533, 273], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle" >VELASCO HABANOS</p>
-                <p>${idioma === "es" ? "Tabaco" : "Tobacco"}</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
-  60: [
-    L.marker([990, 1250], { icon: foodIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
-            <p>${
-              idioma === "es"
-                ? "¡Empecemos la fiesta con un drink!"
-                : "Let’s start this party with a drink"
-            }</p>
-            <a href="${idioma}/port-experience/keloke">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2552,26 +985,15 @@ var markers = {
       }),
   ],
   61: [
-    L.marker([890, 860], { icon: foodIcon })
+    L.marker([825, 695], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
-        `   <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es"
-                    ? "Visita y disfruta el auténtico café dominicano."
-                    : "Make a stop, and fuel up with Dominican coffee!"
-                }</p>
-                <a href="${idioma}/port-experience/coffee-factory" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">DUFRY</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2582,27 +1004,15 @@ var markers = {
       }),
   ],
   62: [
-    L.marker([920, 740], { icon: foodIcon })
+    L.marker([625, 525], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 70px; height: 70px;">
-                <p>${
-                  idioma === "es"
-                    ? "Un delicioso postre te espera."
-                    : "Have a delicious treat!"
-                }</p>
-                <a href="${idioma}/port-experience/icekery" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SILVER SUN</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2613,56 +1023,15 @@ var markers = {
       }),
   ],
   63: [
-    L.marker([908, 703], { icon: barIcon })
+    L.marker([505, 360], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;" >
-                <p>${
-                  idioma === "es"
-                    ? "Un mojito siempre es una buena idea."
-                    : "A mojito is always a great idea!"
-                }</p>
-                <a href="${idioma}/port-experience/mojito-bar" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SILVER EMPORIO</p>
             </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([662, 472], { icon: barIcon })
-      .addTo(map)
-      .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "Un mojito siempre es una buena idea."
-                    : "A mojito is always a great idea!"
-                }</p>
-                <a href="${idioma}/port-experience/mojito-bar" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
-            </div>
-        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2673,27 +1042,15 @@ var markers = {
       }),
   ],
   64: [
-    L.marker([965, 1008], { icon: foodIcon })
+    L.marker([430, 275], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 80px; height: 80px; ">
-                <p>${
-                  idioma === "es"
-                    ? "¡El mejor spot para el sabor caribeño!"
-                    : "The top spot for Caribbean food! "
-                }</p>
-                <a href="${idioma}/port-experience/cantina-latina" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">HONDURAS WOODEN CRAFT</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2704,27 +1061,15 @@ var markers = {
       }),
   ],
   65: [
-    L.marker([775, 695], { icon: foodIcon })
+    L.marker([255, 305], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/mexican-grill.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "Tacos y snacks, ¡no hay nada mejor!"
-                    : "Tacos and grilled snacks, it doesn't get any better than that!"
-                }</p>
-                <a href="${idioma}/port-experience/mexican-grill" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">VIVA SOL</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2735,27 +1080,15 @@ var markers = {
       }),
   ],
   66: [
-    L.marker([748, 465], { icon: foodIcon })
+    L.marker([800, 1300], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "¡Mariscos y good vibes!"
-                    : "Fresh seafood and good vibes!"
-                }</p>
-                <a href="${idioma}/port-experience/blue-parrot" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SEA GODDESS</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2766,25 +1099,15 @@ var markers = {
       }),
   ],
   67: [
-    L.marker([393, 250], { icon: foodIcon })
+    L.marker([940, 1090], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${
-                  idioma === "es" ? "¡Échale picante! " : "Let’s get spicy!"
-                }</p>
-                <a href="${idioma}/port-experience/taco-lover" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PIRAÑA JOE</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2795,27 +1118,15 @@ var markers = {
       }),
   ],
   68: [
-    L.marker([938, 815], { icon: barIcon })
+    L.marker([945, 915], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 80px; height: 80px;"">
-                <p>${
-                  idioma === "es"
-                    ? "Mango, fresa, limón y más, ¡elige tu favorito!"
-                    : "Mango, strawberry, lime, and more, you choose!"
-                }</p>
-                <a href="${idioma}/port-experience/margarita-bar" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">DEL SOL</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2826,27 +1137,15 @@ var markers = {
       }),
   ],
   69: [
-    L.marker([760, 638], { icon: barIcon })
+    L.marker([1040, 845], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/dom-dom-bar.svg" alt="Logo" style="width: 90px; height: 90px; ">
-                <p>${
-                  idioma === "es"
-                    ? "¿Drinks en la piscina? ¡Aquí es el lugar!"
-                    : "Drinks by the pool? We got you!"
-                }</p>
-                <a href="${idioma}/port-experience/dom-dom-bar" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">CASA TEQUILA</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2857,27 +1156,15 @@ var markers = {
       }),
   ],
   70: [
-    L.marker([665, 565], { icon: barIcon })
+    L.marker([645, 715], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-            <p>${
-              idioma === "es"
-                ? "Un drink en la piscina te espera. "
-                : "Need a drink for the pool? We got you!"
-            }</p>
-            <a href="${idioma}/port-experience/huracan-bar" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SILVER BY THE SEA</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2888,27 +1175,15 @@ var markers = {
       }),
   ],
   71: [
-    L.marker([550, 300], { icon: barIcon })
+    L.marker([900, 535], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "¿Listos? Navega y disfruta un drink. "
-                    : "Ready, sail, drink!"
-                }</p>
-                <a href="${idioma}/port-experience/boat-bar" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">AV CACAO</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2919,27 +1194,15 @@ var markers = {
       }),
   ],
   72: [
-    L.marker([380, 347], { icon: barIcon })
+    L.marker([410, 430], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${
-                  idioma === "es"
-                    ? "¡Drinks frescos y diversión!"
-                    : "Fresh drinks & fun!"
-                }</p>
-                <a href="${idioma}/port-experience/tiki-tiki" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">OCEAN DRIVE</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2950,27 +1213,15 @@ var markers = {
       }),
   ],
   73: [
-    L.marker([945, 590], { icon: barIcon })
+    L.marker([300, 260], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="/assets/icons/map/port-experience/batting-legends-logo.svg" alt="Logo" style="width: 100px; height: 100px; ">
-                <p>${
-                  idioma === "es"
-                    ? "¡Un homerun de sabor!"
-                    : "A homerun of flavor!"
-                }</p>
-                <a href="${idioma}/port-experience/rum-rum-bar" >
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">THE ROATAN STORE</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2981,16 +1232,15 @@ var markers = {
       }),
   ],
   74: [
-    L.marker([420, 240], { icon: retailIcon })
+    L.marker([220, 335], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">CHOCOLATE WORLD</p>
-                <p>Store</p>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">VEARI</p>
             </div>
-        `,
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -3001,38 +1251,186 @@ var markers = {
       }),
   ],
   75: [
-    L.marker([165, 270], { icon: salidaCaminoIcon }).addTo(map),
-    //Marker del texto salida sin que sea afectado por los eventos de los otros markers
-    L.marker(idioma === "es" ? [165, 190] : [165, 210], {
-      icon: salidaIcon,
-    }).addTo(map),
-  ],
-  76: [
-    L.marker([165, 270], { icon: regresoCaminoIcon }).addTo(map),
-    L.marker(idioma === "es" ? [193, 220] : [193, 220], {
-      icon: regresoIcon,
-    }).addTo(map),
-  ],
-  77: [
-    L.marker(idioma === "es" ? [165, 220] : [165, 235], {
-      icon: exitIcon,
-    }).addTo(map),
-  ],
-  78: [
-    L.marker([520, 510], { icon: foodIcon })
+    L.marker([835, 1265], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SPLASH GRILL & CHILL</p>
-                <p>${
-                  idioma === "es"
-                    ? "¡Relájate después de nadar!"
-                    : "Relax after a day of swimming!"
-                }</p>
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">TURTLE BAY</p>
             </div>
-        `,
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  76: [
+    L.marker([900, 1130], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">DIAMONDS INTERNATIONAL</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  77: [
+    L.marker([185, 270], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">ESTHETIX</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  78: [
+    L.marker([920, 1280], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">MUSEO DEL TABACO</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  79: [
+    L.marker([570, 580], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">ROATAN TREASURES</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  80: [
+    L.marker([700, 700], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">ARCADE ITM</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  81: [
+    L.marker([820, 850], { icon: drugstoreIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">FARMACIAS DEL MUNDO</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  82: [
+    L.marker([840, 1177], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">CARILOHA</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  83: [
+    L.marker([930, 1157], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">BANCO FIHCOHSA (ATM)</p>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  84: [
+    L.marker([990, 960], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">EL TUCAN GIFT SHOP</p>
+            </div>
+        `
       )
       .on("click", function (e) {
         this.openPopup();
@@ -3043,6 +1441,7 @@ var markers = {
       }),
   ],
 };
+
 
 // Evento para ajustar el tamaño de los íconos en función del zoom
 map.on("zoom", function () {
@@ -3094,7 +1493,7 @@ $(document).on("click", ".tabla-icons tr", function () {
 
     filterContainer.find(".tabla-icons tr").each(function () {
       var rowMarkerId = $(this).data("marker-id");
-      if (markers[rowMarkerId] && rowMarkerId !== 75 && rowMarkerId !== 76) {
+      if (markers[rowMarkerId] && rowMarkerId !== 4 && rowMarkerId !== 2) {
         tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
       }
     });
@@ -3128,20 +1527,20 @@ $(document).on("click", ".tabla-icons tr", function () {
     map.addLayer(marker);
   });
 
-  if (markerId === 75) {
+  if (markerId === 4) {
     map.addLayer(bordeCamino);
     map.addLayer(bordeCamino2);
     map.addLayer(camino);
     map.addLayer(camino2);
-    map.addLayer(markers[75][0]); // Agregar salidaCaminoIcon
-    map.addLayer(markers[75][1]); // Agregar salidaIcon
-  } else if (markerId === 76) {
+    map.addLayer(markers[4][0]); // Agregar salidaCaminoIcon
+    map.addLayer(markers[4][1]); // Agregar salidaIcon
+  } else if (markerId === 2) {
     map.addLayer(bordeCamino3);
     map.addLayer(bordeCamino4);
     map.addLayer(camino3);
     map.addLayer(camino4);
-    map.addLayer(markers[76][0]); // Agregar regresoCaminoIcon
-    map.addLayer(markers[76][1]); // Agregar regresoIcon
+    map.addLayer(markers[2][0]); // Agregar regresoCaminoIcon
+    map.addLayer(markers[2][1]); // Agregar regresoIcon
   }
 
   $(".filter-header .switch input[type='checkbox']").prop("checked", false);
@@ -3161,7 +1560,7 @@ $(document).on(
 
     filterContainer.find(".tabla-icons tr").each(function () {
       var rowMarkerId = $(this).data("marker-id");
-      if (markers[rowMarkerId] && rowMarkerId !== 75 && rowMarkerId !== 76) {
+      if (markers[rowMarkerId] && rowMarkerId !== 4 && rowMarkerId !== 2) {
         tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
       }
     });
@@ -3185,8 +1584,8 @@ $(document).on(
     map.removeLayer(bordeCamino2);
     map.removeLayer(bordeCamino3);
     map.removeLayer(bordeCamino4);
-    markers[75]?.forEach((marker) => map.removeLayer(marker));
-    markers[76]?.forEach((marker) => map.removeLayer(marker));
+    markers[4]?.forEach((marker) => map.removeLayer(marker));
+    markers[2]?.forEach((marker) => map.removeLayer(marker));
   },
 );
 

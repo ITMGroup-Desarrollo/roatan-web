@@ -21,7 +21,7 @@ var map = L.map("map", {
 // Agrega un nuevo control de zoom en la posición deseada
 L.control
   .zoom({
-    position: "topright", // Cambia 'topright' a la posición deseada ('topleft', 'bottomleft', 'bottomright')
+    position: "bottomright", // Cambia 'topright' a la posición deseada ('topleft', 'bottomleft', 'bottomright')
   })
   .addTo(map);
 // Deshabilitar el zoom con el scroll del mouse si no es un dispositivo móvil
@@ -616,22 +616,29 @@ var camino2 = L.polyline(caminoCoordenadas2, {
 
 var markers = {
   2: [
-    L.marker([890, 650], { icon: regresoCaminoIcon }).addTo(map),
-    L.marker([890, 650], { icon: regresoIcon }).addTo(map),
+    L.marker([400, 750], { icon: regresoCaminoIcon }).addTo(map),
+    L.marker([450, 650], { icon: regresoIcon }).addTo(map),
   ],
   3: [
-    L.marker([470, 300], { icon: restroomsIcon })
+    L.marker([850, 510], { icon: restroomsIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/restrooms.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">BAÑOS / RESTROOMS</p>
-            </div>
-        `
-      )
       .on("click", function (e) {
-        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([770, 755], { icon: restroomsIcon })
+      .addTo(map)
+      .on("click", function (e) {
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([680, 1030], { icon: restroomsIcon })
+      .addTo(map)
+      .on("click", function (e) {
         map.setView(this.getLatLng(), map.getZoom(), {
           animate: true,
           pan: { duration: 1 },
@@ -639,11 +646,11 @@ var markers = {
       }),
   ],
   4: [
-    L.marker([520, 560], { icon: salidaCaminoIcon }).addTo(map),
-    L.marker([520, 560], { icon: salidaIcon }).addTo(map),
+    L.marker([410, 730], { icon: salidaCaminoIcon }).addTo(map),
+    L.marker([450, 710], { icon: salidaIcon }).addTo(map),
   ],
   5: [
-    L.marker([880, 1105], { icon: showIcon })
+    L.marker([480, 950], { icon: showIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -651,7 +658,7 @@ var markers = {
             <img src="/assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHOWS</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -662,7 +669,7 @@ var markers = {
       }),
   ],
   6: [
-    L.marker([1030, 770], { icon: camaraIcon })
+    L.marker([805, 495], { icon: camaraIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -670,7 +677,41 @@ var markers = {
             <img src="/assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PHOTO SPOT</p>
             </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([695, 490], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
         `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PHOTO SPOT</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([285, 1085], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PHOTO SPOT</p>
+            </div>
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -681,7 +722,7 @@ var markers = {
       }),
   ],
   7: [
-    L.marker([750, 580], { icon: starIcon })
+    L.marker([585, 1220], { icon: starIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -689,7 +730,7 @@ var markers = {
             <img src="/assets/icons/map/star.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LAST MINUTE</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -700,7 +741,7 @@ var markers = {
       }),
   ],
   8: [
-    L.marker([360, 390], { icon: taxiIcon })
+    L.marker([640, 1220], { icon: taxiIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -708,7 +749,7 @@ var markers = {
             <img src="/assets/icons/map/taxi.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHUTTLE</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -719,7 +760,7 @@ var markers = {
       }),
   ],
   9: [
-    L.marker([830, 900], { icon: shorexIcon })
+    L.marker([300, 1330], { icon: shorexIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -727,7 +768,7 @@ var markers = {
             <img src="/assets/icons/map/shorex.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PRE-BOOKED SHOREX</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -738,7 +779,7 @@ var markers = {
       }),
   ],
   21: [
-    L.marker([650, 680], { icon: foodIcon })
+    L.marker([600, 950], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -746,7 +787,7 @@ var markers = {
             <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MONKEY BAR</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -757,15 +798,15 @@ var markers = {
       }),
   ],
   22: [
-    L.marker([560, 395], { icon: foodIcon })
+    L.marker([250, 1160], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE COFFEE FACTORY</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -776,7 +817,7 @@ var markers = {
       }),
   ],
   23: [
-    L.marker([330, 315], { icon: foodIcon })
+    L.marker([800, 800], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -784,7 +825,7 @@ var markers = {
             <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ICEKERY</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -795,7 +836,7 @@ var markers = {
       }),
   ],
   24: [
-    L.marker([863, 1290], { icon: foodIcon })
+    L.marker([550, 1140], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -803,7 +844,7 @@ var markers = {
             <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CANTINA LATINA</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -814,7 +855,7 @@ var markers = {
       }),
   ],
   25: [
-    L.marker([1000, 1100], { icon: foodIcon })
+    L.marker([790, 410], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -822,7 +863,7 @@ var markers = {
             <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BLUE PARROT</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -833,7 +874,7 @@ var markers = {
       }),
   ],
   26: [
-    L.marker([585, 490], { icon: foodIcon })
+    L.marker([700, 840], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -841,7 +882,7 @@ var markers = {
             <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TACO LOVER</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -852,7 +893,7 @@ var markers = {
       }),
   ],
   27: [
-    L.marker([800, 760], { icon: barIcon })
+    L.marker([370, 745], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -860,7 +901,7 @@ var markers = {
             <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE BOAT BAR</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -871,7 +912,7 @@ var markers = {
       }),
   ],
   28: [
-    L.marker([883, 1260], { icon: barIcon })
+    L.marker([490, 1000], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -879,7 +920,7 @@ var markers = {
             <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TIKI TIKI BAR</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -898,7 +939,45 @@ var markers = {
             <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE SPORT COVE BAR</p>
             </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  30: [
+    L.marker([440, 1195], { icon: foodIcon })
+      .addTo(map)
+      .bindPopup(
         `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">LA CATRACHITA</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  31: [
+    L.marker([460, 790], { icon: barIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">LA FRUTERIA</p>
+            </div>
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -909,7 +988,7 @@ var markers = {
       }),
   ],
   41: [
-    L.marker([825, 495], { icon: poolIcon })
+    L.marker([450, 920], { icon: poolIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -917,7 +996,7 @@ var markers = {
             <img src="/assets/icons/map/port-experience/pool-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">POOL</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -928,7 +1007,7 @@ var markers = {
       }),
   ],
   42: [
-    L.marker([745, 605], { icon: retailIcon })
+    L.marker([510, 1190], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -936,7 +1015,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">OFICIAL STORE</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -947,7 +1026,7 @@ var markers = {
       }),
   ],
   43: [
-    L.marker([445, 395], { icon: retailIcon })
+    L.marker([480, 1185], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -955,7 +1034,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MARKET STREET</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -966,7 +1045,7 @@ var markers = {
       }),
   ],
   44: [
-    L.marker([945, 950], { icon: spaIcon })
+    L.marker([680, 620], { icon: spaIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -974,7 +1053,7 @@ var markers = {
             <img src="/assets/icons/map/port-experience/spa-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SPA WELLNESS RETREAT</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -985,7 +1064,7 @@ var markers = {
       }),
   ],
   61: [
-    L.marker([825, 695], { icon: retailIcon })
+    L.marker([300, 1210], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -993,7 +1072,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DUFRY</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1004,7 +1083,7 @@ var markers = {
       }),
   ],
   62: [
-    L.marker([625, 525], { icon: retailIcon })
+    L.marker([350, 1225], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1012,7 +1091,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER SUN</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1023,7 +1102,7 @@ var markers = {
       }),
   ],
   63: [
-    L.marker([505, 360], { icon: retailIcon })
+    L.marker([350, 1195], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1031,7 +1110,24 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER EMPORIO</p>
             </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([730, 635], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
         `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SILVER EMPORIO</p>
+            </div>
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1042,7 +1138,7 @@ var markers = {
       }),
   ],
   64: [
-    L.marker([430, 275], { icon: retailIcon })
+    L.marker([507, 1143], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1050,7 +1146,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">HONDURAS WOODEN CRAFT</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1061,7 +1157,7 @@ var markers = {
       }),
   ],
   65: [
-    L.marker([255, 305], { icon: retailIcon })
+    L.marker([525, 1125], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1069,7 +1165,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VIVA SOL</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1080,7 +1176,7 @@ var markers = {
       }),
   ],
   66: [
-    L.marker([800, 1300], { icon: retailIcon })
+    L.marker([565, 1090], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1088,7 +1184,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SEA GODDESS</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1099,7 +1195,7 @@ var markers = {
       }),
   ],
   67: [
-    L.marker([940, 1090], { icon: retailIcon })
+    L.marker([585, 1070], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1107,7 +1203,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIRAÑA JOE</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1118,7 +1214,7 @@ var markers = {
       }),
   ],
   68: [
-    L.marker([945, 915], { icon: retailIcon })
+    L.marker([605, 1055], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1126,7 +1222,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DEL SOL</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1137,7 +1233,7 @@ var markers = {
       }),
   ],
   69: [
-    L.marker([1040, 845], { icon: retailIcon })
+    L.marker([695, 935], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1145,7 +1241,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CASA TEQUILA</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1156,7 +1252,7 @@ var markers = {
       }),
   ],
   70: [
-    L.marker([645, 715], { icon: retailIcon })
+    L.marker([705, 915], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1164,7 +1260,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1175,7 +1271,7 @@ var markers = {
       }),
   ],
   71: [
-    L.marker([900, 535], { icon: retailIcon })
+    L.marker([710, 890], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1183,7 +1279,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">AV CACAO</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1194,7 +1290,7 @@ var markers = {
       }),
   ],
   72: [
-    L.marker([410, 430], { icon: retailIcon })
+    L.marker([760, 840], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1202,7 +1298,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">OCEAN DRIVE</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1213,7 +1309,7 @@ var markers = {
       }),
   ],
   73: [
-    L.marker([300, 260], { icon: retailIcon })
+    L.marker([730, 700], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1221,7 +1317,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE ROATAN STORE</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1232,7 +1328,7 @@ var markers = {
       }),
   ],
   74: [
-    L.marker([220, 335], { icon: retailIcon })
+    L.marker([740, 610], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1240,7 +1336,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VEARI</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1251,7 +1347,7 @@ var markers = {
       }),
   ],
   75: [
-    L.marker([835, 1265], { icon: retailIcon })
+    L.marker([780, 540], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1259,7 +1355,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TURTLE BAY</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1270,7 +1366,7 @@ var markers = {
       }),
   ],
   76: [
-    L.marker([900, 1130], { icon: retailIcon })
+    L.marker([328, 1008], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1278,7 +1374,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DIAMONDS INTERNATIONAL</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1289,7 +1385,7 @@ var markers = {
       }),
   ],
   77: [
-    L.marker([185, 270], { icon: retailIcon })
+    L.marker([750, 580], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1297,7 +1393,24 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ESTHETIX</p>
             </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([328, 925], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
         `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">ESTHETIX</p>
+            </div>
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1308,7 +1421,7 @@ var markers = {
       }),
   ],
   78: [
-    L.marker([920, 1280], { icon: retailIcon })
+    L.marker([328, 895], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1316,7 +1429,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MUSEO DEL TABACO</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1327,7 +1440,7 @@ var markers = {
       }),
   ],
   79: [
-    L.marker([570, 580], { icon: retailIcon })
+    L.marker([328, 845], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1335,7 +1448,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ROATAN TREASURES</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1346,7 +1459,7 @@ var markers = {
       }),
   ],
   80: [
-    L.marker([700, 700], { icon: retailIcon })
+    L.marker([420, 1195], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1354,7 +1467,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ARCADE ITM</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1365,7 +1478,7 @@ var markers = {
       }),
   ],
   81: [
-    L.marker([820, 850], { icon: drugstoreIcon })
+    L.marker([545, 1110], { icon: drugstoreIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1373,7 +1486,24 @@ var markers = {
             <img src="/assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">FARMACIAS DEL MUNDO</p>
             </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([727, 660], { icon: drugstoreIcon })
+      .addTo(map)
+      .bindPopup(
         `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">FARMACIAS DEL MUNDO</p>
+            </div>
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1384,7 +1514,7 @@ var markers = {
       }),
   ],
   82: [
-    L.marker([840, 1177], { icon: retailIcon })
+    L.marker([625, 1040], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1392,7 +1522,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CARILOHA</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1403,7 +1533,7 @@ var markers = {
       }),
   ],
   83: [
-    L.marker([930, 1157], { icon: retailIcon })
+    L.marker([650, 1020], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1411,7 +1541,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BANCO FIHCOHSA (ATM)</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1422,7 +1552,7 @@ var markers = {
       }),
   ],
   84: [
-    L.marker([990, 960], { icon: retailIcon })
+    L.marker([670, 990], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1430,7 +1560,7 @@ var markers = {
             <img src="/assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">EL TUCAN GIFT SHOP</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1441,7 +1571,6 @@ var markers = {
       }),
   ],
 };
-
 
 // Evento para ajustar el tamaño de los íconos en función del zoom
 map.on("zoom", function () {

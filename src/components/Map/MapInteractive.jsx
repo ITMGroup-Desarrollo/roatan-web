@@ -120,7 +120,7 @@ export default function MapInteractive({ lang }) {
                 <tr data-marker-id="22">
                   <td>
                     <img
-                      src="/assets/icons/map/food.svg"
+                      src="/assets/icons/map/bar.svg"
                       alt="THE COFFEE FACTORY"
                     />
                   </td>
@@ -173,6 +173,18 @@ export default function MapInteractive({ lang }) {
                     />
                   </td>
                   <td>THE SPORT COVE BAR</td>
+                </tr>
+                <tr data-marker-id="30">
+                  <td>
+                    <img src="/assets/icons/map/food.svg" alt="LA CATRACHITA" />
+                  </td>
+                  <td>LA CATRACHITA</td>
+                </tr>
+                <tr data-marker-id="31">
+                  <td>
+                    <img src="/assets/icons/map/bar.svg" alt="LA FRUTERIA" />
+                  </td>
+                  <td>LA FRUTERIA</td>
                 </tr>
               </tbody>
             </table>

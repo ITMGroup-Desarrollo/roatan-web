@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Headers/HeaderBlog.astro";
 import Footer from "../../components/Footer/Footer.astro";
 import Menu from "../../components/Headers/Menu.astro";
+import "../../assets/css/map.css";
 import MapInteractive from "../../components/Map/MapInteractive.jsx";
 import { translations } from "../../locales.js";
 
@@ -21,7 +22,6 @@ const t = translations[lang] ?? translations["es"];
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
-    <link rel="stylesheet" href="/assets/css/vendor/map.css" />
 
     <!-- Leaflet JS -->
     <script is:inline src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"

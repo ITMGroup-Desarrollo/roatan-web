@@ -1776,4 +1776,21 @@ if (!isMobile) {
       });
   });
 }
+
+// Remove all markers and paths from map initially so they start off
+$.each(markers, function (id, markerGroup) {
+  if (markerGroup) {
+    markerGroup.forEach(function (marker) {
+      if (marker) map.removeLayer(marker);
+    });
+  }
+});
+if (typeof camino !== 'undefined') map.removeLayer(camino);
+if (typeof camino2 !== 'undefined') map.removeLayer(camino2);
+if (typeof camino3 !== 'undefined') map.removeLayer(camino3);
+if (typeof camino4 !== 'undefined') map.removeLayer(camino4);
+if (typeof bordeCamino !== 'undefined') map.removeLayer(bordeCamino);
+if (typeof bordeCamino2 !== 'undefined') map.removeLayer(bordeCamino2);
+if (typeof bordeCamino3 !== 'undefined') map.removeLayer(bordeCamino3);
+if (typeof bordeCamino4 !== 'undefined') map.removeLayer(bordeCamino4);
 // #endregion

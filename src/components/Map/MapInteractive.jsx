@@ -18,18 +18,18 @@ export default function MapInteractive({ lang }) {
         {/* Service */}
         <div className="leaflet-control-filter service">
           <div className="filter-header">
-            <span className="header-text">
+            <span className="header-text" style={{ paddingRight: "0rem" }}>
               {isEs ? "SERVICIOS" : "SERVICES"}
             </span>
             <label className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>
             </label>
-            <button className="minimize-btn show" aria-label="Cerrar filtro">
-              <img src="/assets/icons/map/x.svg" alt="close" />
+            <button className="minimize-btn hide" aria-label="Cerrar filtro">
+              ☰
             </button>
           </div>
-          <div className="filter-content">
+          <div className="filter-content" style={{ display: "none" }}>
             <table className="tabla-icons">
               <tbody>
                 <tr data-marker-id="1" style={{ display: "none" }}>
@@ -97,18 +97,18 @@ export default function MapInteractive({ lang }) {
         {/* restaurants */}
         <div className="leaflet-control-filter restaurants">
           <div className="filter-header">
-            <span className="header-text">
+            <span className="header-text" style={{ paddingRight: "0rem" }}>
               {isEs ? "ALIMENTOS Y BEBIDAS" : "FOOD & BEVERAGE"}
             </span>
             <label className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>
             </label>
-            <button className="minimize-btn show" aria-label="Cerrar filtro">
-              <img src="/assets/icons/map/x.svg" alt="close" />
+            <button className="minimize-btn hide" aria-label="Cerrar filtro">
+              ☰
             </button>
           </div>
-          <div className="filter-content">
+          <div className="filter-content" style={{ display: "none" }}>
             <table className="tabla-icons">
               <tbody>
                 <tr data-marker-id="21">
@@ -194,16 +194,18 @@ export default function MapInteractive({ lang }) {
         {/* fun */}
         <div className="leaflet-control-filter fun">
           <div className="filter-header">
-            <span className="header-text">PORT EXPERIENCE</span>
+            <span className="header-text" style={{ paddingRight: "0rem" }}>
+              PORT EXPERIENCE
+            </span>
             <label className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>
             </label>
-            <button className="minimize-btn show" aria-label="Cerrar filtro">
-              <img src="/assets/icons/map/x.svg" alt="close" />
+            <button className="minimize-btn hide" aria-label="Cerrar filtro">
+              ☰
             </button>
           </div>
-          <div className="filter-content">
+          <div className="filter-content" style={{ display: "none" }}>
             <table className="tabla-icons">
               <tbody>
                 <tr data-marker-id="41">
@@ -250,16 +252,18 @@ export default function MapInteractive({ lang }) {
         {/* shop */}
         <div className="leaflet-control-filter shop">
           <div className="filter-header">
-            <span className="header-text">SHOPPING EXPERIENCE</span>
+            <span className="header-text" style={{ paddingRight: "0rem" }}>
+              SHOPPING EXPERIENCE
+            </span>
             <label className="switch">
               <input type="checkbox" />
               <span className="slider round"></span>
             </label>
-            <button className="minimize-btn show" aria-label="Cerrar filtro">
-              <img src="/assets/icons/map/x.svg" alt="close" />
+            <button className="minimize-btn hide" aria-label="Cerrar filtro">
+              ☰
             </button>
           </div>
-          <div className="filter-content">
+          <div className="filter-content" style={{ display: "none" }}>
             <table className="tabla-icons">
               <tbody>
                 <tr data-marker-id="61">

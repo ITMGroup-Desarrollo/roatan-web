@@ -45,50 +45,6 @@ const t = translations[lang] ?? translations["es"];
 
   <!-- Add map script at the end if it exists in public -->
   <script is:inline src="/assets/js/vendor/map.js?v=2"></script>
-
-  <script is:inline>
-    // Collapse filters on load just like in PHP
-    document
-      .querySelector(
-        ".leaflet-control-filter.shop .filter-header .minimize-btn.show",
-      )
-      ?.click();
-    document
-      .querySelector(
-        ".leaflet-control-filter.fun .filter-header .minimize-btn.show",
-      )
-      ?.click();
-    document
-      .querySelector(
-        ".leaflet-control-filter.restaurants .filter-header .minimize-btn.show",
-      )
-      ?.click();
-    document
-      .querySelector(
-        ".leaflet-control-filter.service .filter-header .minimize-btn.show",
-      )
-      ?.click();
-    document
-      .querySelector(".leaflet-control-filter.shop .filter-header .switch")
-      ?.click();
-    document
-      .querySelector(".leaflet-control-filter.fun .filter-header .switch")
-      ?.click();
-    document
-      .querySelector(
-        ".leaflet-control-filter.restaurants .filter-header .switch",
-      )
-      ?.click();
-    document
-      .querySelector(".leaflet-control-filter.service .filter-header .switch")
-      ?.click();
-    document
-      .querySelector(".leaflet-control-filter.service .filter-header .switch")
-      ?.click();
-    document
-      .querySelector(".leaflet-control-filter.service .filter-header .switch")
-      ?.click();
-  </script>
 </Layout>
 
 <style>

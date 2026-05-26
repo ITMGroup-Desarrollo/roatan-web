@@ -497,3 +497,25 @@ body.shock-body {
   opacity: 1;
   animation: scale-easeOutBounce 2s ease-out forwards;
 }
+
+@keyframes popcorn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popcorn-animation {
+  animation: popcorn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform-origin: center center;
+}

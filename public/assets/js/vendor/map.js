@@ -1588,6 +1588,29 @@ map.on("zoom", function () {
   });
 });
 
+// Evento para aplicar animación de palomita de maíz al agregar marcadores
+map.on("layeradd", function (e) {
+  var layer = e.layer;
+  if (layer instanceof L.Marker) {
+    // Esperar un tick para asegurar que el DOM esté listo
+    setTimeout(function () {
+      var element = layer.getElement();
+      if (element) {
+        var target = element.querySelector(".custom-icon") || element.firstElementChild;
+        if (target) {
+          target.classList.remove("popcorn-animation");
+          // Forzar reflujo para reiniciar la animación
+          void target.offsetWidth;
+          target.classList.add("popcorn-animation");
+          setTimeout(function () {
+            target.classList.remove("popcorn-animation");
+          }, 500);
+        }
+      }
+    }, 0);
+  }
+});
+
 // #endregion
 
 // #region Manejo de la visibilidad de los marcadores al hacer clic en el filtro
@@ -1687,6 +1710,12 @@ $(document).on(
     var filterContainer = $(this).closest(".leaflet-control-filter");
     var tableMarkers = [];
 
+    // Limpiar timeouts pendientes en este contenedor de filtros
+    var pendingTimeouts = filterContainer.data("pendingTimeouts") || [];
+    pendingTimeouts.forEach(clearTimeout);
+    pendingTimeouts = [];
+    filterContainer.data("pendingTimeouts", pendingTimeouts);
+
     filterContainer.find(".tabla-icons tr").each(function () {
       var rowMarkerId = $(this).data("marker-id");
       if (markers[rowMarkerId] && rowMarkerId !== 4 && rowMarkerId !== 2) {
@@ -1696,8 +1725,14 @@ $(document).on(
 
     if (isChecked) {
       tableMarkers.forEach(function (marker) {
-        map.addLayer(marker);
+        // Retrasar cada marcador aleatoriamente para simular el efecto palomitas de maíz
+        var delay = Math.random() * 600;
+        var tId = setTimeout(function () {
+          map.addLayer(marker);
+        }, delay);
+        pendingTimeouts.push(tId);
       });
+      filterContainer.data("pendingTimeouts", pendingTimeouts);
     } else {
       tableMarkers.forEach(function (marker) {
         map.removeLayer(marker);
@@ -1768,7 +1803,7 @@ if (!isMobile) {
 
         if (switchInput && minimizeButton) {
           switchInput.addEventListener("change", function () {
-            if (switchInput.checked) {
+            if (switchInput.checked && !window.isInitialMapLoad) {
               minimizeButton.click();
             }
           });

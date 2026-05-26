@@ -45,6 +45,22 @@ const t = translations[lang] ?? translations["es"];
 
   <!-- Add map script at the end if it exists in public -->
   <script is:inline src="/assets/js/vendor/map.js?v=2"></script>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Esperar 600ms después de que cargue el DOM y activar todos los switches sin abrir los paneles
+      setTimeout(function () {
+        window.isInitialMapLoad = true;
+        document.querySelectorAll(".leaflet-control-filter").forEach(function (filter) {
+          var checkbox = filter.querySelector(".switch input[type='checkbox']");
+          if (checkbox && !checkbox.checked) {
+            checkbox.click();
+          }
+        });
+        window.isInitialMapLoad = false;
+      }, 600);
+    });
+  </script>
 </Layout>
 
 <style>

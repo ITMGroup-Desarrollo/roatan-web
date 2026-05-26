@@ -172,7 +172,11 @@ const content = [
     const desktopBurgerMenu = document.getElementById("desktop_burger_menu");
     if (!menu) return;
 
-    if (window.scrollY > 400) {
+    // Si es la página del mapa, el umbral es casi instantáneo (e.g. 20px)
+    const isMapPage = !!document.getElementById("map");
+    const threshold = isMapPage ? 20 : 400;
+
+    if (window.scrollY > threshold) {
       menu.classList.remove("bg-transparent");
       menu.classList.add("bg-[var(--primary-color)]");
       desktopMenuItems.classList.remove("hidden");

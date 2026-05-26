@@ -31,7 +31,7 @@ const t = translations[lang] ?? translations["es"];
 
   <Menu lang={lang} />
   <!-- Menu spacing / padding -->
-  <div style="height: 100px; background: var(--blue-color, #0056b3);"></div>
+  <div style="height: 100px; background: var(--primary-color);"></div>
 
   <!-- Map Component -->
   <main id="main" class="shock-main mt-[2rem]">
@@ -51,12 +51,16 @@ const t = translations[lang] ?? translations["es"];
       // Esperar 600ms después de que cargue el DOM y activar todos los switches sin abrir los paneles
       setTimeout(function () {
         window.isInitialMapLoad = true;
-        document.querySelectorAll(".leaflet-control-filter").forEach(function (filter) {
-          var checkbox = filter.querySelector(".switch input[type='checkbox']");
-          if (checkbox && !checkbox.checked) {
-            checkbox.click();
-          }
-        });
+        document
+          .querySelectorAll(".leaflet-control-filter")
+          .forEach(function (filter) {
+            var checkbox = filter.querySelector(
+              ".switch input[type='checkbox']",
+            );
+            if (checkbox && !checkbox.checked) {
+              checkbox.click();
+            }
+          });
         window.isInitialMapLoad = false;
       }, 600);
     });

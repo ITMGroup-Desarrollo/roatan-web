@@ -1,5 +1,5 @@
 .shock-header .navbar {
-    background-color: var(--blue-color, #0056b3);
+    background-color: var(--primary-color);
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -51,7 +51,7 @@ section.map-section {
 .leaflet-control-filter {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     width: 300px;
 }
@@ -132,11 +132,11 @@ section.map-section {
     transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(14px);
 }
 

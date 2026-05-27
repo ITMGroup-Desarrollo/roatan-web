@@ -1764,8 +1764,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Cuenta el número de filas en el tbody de la tabla
       var filas = tabla.querySelectorAll("tbody tr").length;
 
-      // Aplica el estilo CSS si hay más de 5 filas
-      if (filas > 6 && filas <= 22) {
+      // Aplica el estilo CSS si hay más de 3 filas
+      if (filas > 3 && filas <= 22) {
         tabla.querySelector("tbody").style.display = "grid";
         tabla.querySelector("tbody").style.gridTemplateColumns =
           "repeat(2, 1fr)";
@@ -1774,7 +1774,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tabla.querySelector("tbody").style.gridTemplateColumns =
           "repeat(3, 1fr)";
       } else {
-        // Asegúrate de que se use el estilo original si hay 6 o menos filas
+        // Asegúrate de que se use el estilo original si hay 3 o menos filas
         tabla.querySelector("tbody").style.display = "table-row-group";
         tabla.querySelector("tbody").style.gridTemplateColumns = "";
       }

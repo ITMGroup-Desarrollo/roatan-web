@@ -19,6 +19,7 @@ section.map-section {
 
 button.minimize-btn {
   background-color: transparent;
+  padding-right: 0.5rem;
   border: none;
   font-size: 20px;
   font-weight: bolder;
@@ -92,7 +93,7 @@ button.minimize-btn.show {
 
 .header-text {
   cursor: pointer;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   font-weight: bolder;
   width: max-content;
 }

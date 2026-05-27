@@ -20,7 +20,8 @@ section.map-section {
 button.minimize-btn {
   background-color: transparent;
   border: none;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bolder;
   cursor: pointer;
   color: var(--primary-color);
 }
@@ -70,6 +71,7 @@ button.minimize-btn.show {
 
 .popupTitle {
   font-weight: bold;
+  font-size: 16px;
   color: var(--primary-color);
 }
 
@@ -248,7 +250,7 @@ body.shock-body {
   .filter-container p,
   .filter-container span,
   .filter-container td {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .filter-container {

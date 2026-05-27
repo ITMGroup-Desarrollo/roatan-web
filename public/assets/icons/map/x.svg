@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 12 16">
-<ellipse cx="6" cy="8.2" rx="7.8" ry="7.8" fill="#f5a23a"/>
+<ellipse cx="6" cy="8.2" rx="7.8" ry="7.8" fill="#54c0e8"/>
     <path fill-rule="white" d="M 7.5 8 l 3.8 3.8 l -1.5 1.5 L 6 9.5 l -3.8 3.8 l -1.5 -1.5 L 4.5 8 L 0.8 4.3 l 1.5 -1.5 L 6 6.5 l 3.8 -3.8 l 1.5 1.5 L 7.5 8 z" fill="rgb(255, 255, 255)"/>
 </svg>

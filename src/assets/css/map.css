@@ -22,7 +22,7 @@ button.minimize-btn {
   border: none;
   font-size: 16px;
   cursor: pointer;
-  color: var(--blog-yellow);
+  color: var(--primary-color);
 }
 
 button.minimize-btn.show {
@@ -38,7 +38,7 @@ button.minimize-btn.show {
   margin: 0.5rem 0;
   opacity: 90%;
   z-index: 1001;
-  color: var(--blog-icono);
+  color: var(--primary-color);
 }
 
 .leaflet-control-filter table {
@@ -70,7 +70,7 @@ button.minimize-btn.show {
 
 .popupTitle {
   font-weight: bold;
-  color: #1c355e;
+  color: var(--primary-color);
 }
 
 .leaflet-control-filter tr.active {
@@ -150,7 +150,7 @@ td:first-child {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--blog-icono);
+  background-color: var(--primary-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -168,11 +168,11 @@ td:first-child {
 }
 
 input:checked+.slider {
-  background-color: var(--blog-yellow);
+  background-color: var(--secondary-color);
 }
 
 input:focus+.slider {
-  box-shadow: 0 0 1px var(--blog-yellow);
+  box-shadow: 0 0 1px var(--secondary-color);
 }
 
 input:checked+.slider:before {
@@ -503,13 +503,16 @@ body.shock-body {
     transform: scale(0);
     opacity: 0;
   }
+
   30% {
     transform: scale(1.35);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }

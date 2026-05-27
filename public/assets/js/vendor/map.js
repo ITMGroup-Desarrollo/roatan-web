@@ -931,7 +931,7 @@ var markers = {
       }),
   ],
   29: [
-    L.marker([975, 1070], { icon: barIcon })
+    L.marker([430, 1170], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1596,7 +1596,8 @@ map.on("layeradd", function (e) {
     setTimeout(function () {
       var element = layer.getElement();
       if (element) {
-        var target = element.querySelector(".custom-icon") || element.firstElementChild;
+        var target =
+          element.querySelector(".custom-icon") || element.firstElementChild;
         if (target) {
           target.classList.remove("popcorn-animation");
           // Forzar reflujo para reiniciar la animación
@@ -1820,12 +1821,12 @@ $.each(markers, function (id, markerGroup) {
     });
   }
 });
-if (typeof camino !== 'undefined') map.removeLayer(camino);
-if (typeof camino2 !== 'undefined') map.removeLayer(camino2);
-if (typeof camino3 !== 'undefined') map.removeLayer(camino3);
-if (typeof camino4 !== 'undefined') map.removeLayer(camino4);
-if (typeof bordeCamino !== 'undefined') map.removeLayer(bordeCamino);
-if (typeof bordeCamino2 !== 'undefined') map.removeLayer(bordeCamino2);
-if (typeof bordeCamino3 !== 'undefined') map.removeLayer(bordeCamino3);
-if (typeof bordeCamino4 !== 'undefined') map.removeLayer(bordeCamino4);
+if (typeof camino !== "undefined") map.removeLayer(camino);
+if (typeof camino2 !== "undefined") map.removeLayer(camino2);
+if (typeof camino3 !== "undefined") map.removeLayer(camino3);
+if (typeof camino4 !== "undefined") map.removeLayer(camino4);
+if (typeof bordeCamino !== "undefined") map.removeLayer(bordeCamino);
+if (typeof bordeCamino2 !== "undefined") map.removeLayer(bordeCamino2);
+if (typeof bordeCamino3 !== "undefined") map.removeLayer(bordeCamino3);
+if (typeof bordeCamino4 !== "undefined") map.removeLayer(bordeCamino4);
 // #endregion

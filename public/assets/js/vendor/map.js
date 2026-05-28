@@ -667,6 +667,23 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
+    L.marker([840, 415], { icon: showIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="/assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SHOWS</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
   ],
   6: [
     L.marker([805, 495], { icon: camaraIcon })
@@ -802,10 +819,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">THE COFFEE FACTORY</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/coffee-factory.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 100px; height: 100px; margin-bottom: 1rem;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "Deliciosa experiencia de café."
+                    : "Delicious coffee experience."
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/coffee-factory">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -821,10 +856,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">ICEKERY</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/icekery.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 80px; height: 80px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "Deliciosos helados."
+                    : "Delicious ice cream."
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/icekery">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -840,10 +893,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">CANTINA LATINA</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/cantina-latina.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 120px; height: 120px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "Bar en el agua con gran ambiente."
+                    : "Floating bar with great vibes."
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/cantina-latina">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -859,10 +930,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">BLUE PARROT</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/blue-parrot.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 120px; height: 120px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "¡Mariscos y good vibes!"
+                    : "Fresh seafood and good vibes!"
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/blue-parrot">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -878,10 +967,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">TACO LOVER</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/taco-lover.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 120px; height: 120px; margin-bottom: 1rem;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "Los mejores tacos de la isla."
+                    : "The best tacos on the island."
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/taco-lover">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -897,10 +1004,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">THE BOAT BAR</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/boat-bar.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 100px; height: 100px; margin-bottom: 1rem;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "Bar en el agua con gran ambiente."
+                    : "Floating bar with great vibes."
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/boat-bar">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -916,10 +1041,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">TIKI TIKI BAR</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/tiki-tiki.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 120px; height: 120px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "El mejor lugar para relajarse con una bebida."
+                    : "The best place to relax with a drink."
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/tiki-bar">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -1049,10 +1192,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="/assets/icons/map/port-experience/spa-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">SPA WELLNESS RETREAT</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="/assets/icons/map/port-experience/spa-wellness.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 120px; height: 120px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "Disfruta de un momento de relajación y déjate consentir."
+                    : "Enjoy a moment of relaxation and let yourself be pampered."
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/spa-wellness">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {

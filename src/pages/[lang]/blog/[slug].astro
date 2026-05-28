@@ -139,7 +139,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
                 class={`${recentPosts.length === 1 ? "md:w-[40vw]" : "md:w-auto"} bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden`}
               >
                 <img
-                  src={post.image.url}
+                  src={`${import.meta.env.BASE_URL}${post.image.url.startsWith('/') ? post.image.url.slice(1) : post.image.url}`}
                   alt={post.image.alt ?? post.title}
                   class="w-full object-cover"
                 />

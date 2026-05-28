@@ -46,7 +46,10 @@ if (isMobile) {
 // #endregion
 
 // #region Agrega la imagen del mapa
-L.imageOverlay((window.BASE_URL || "/") + "assets/images/media/mapa-roatan.webp", bounds).addTo(map);
+L.imageOverlay(
+  (window.BASE_URL || "/") + "assets/images/media/mapa-roatan.webp",
+  bounds,
+).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
@@ -85,7 +88,11 @@ $(document).on("click", ".minimize-btn", function () {
   if (isExpanding) {
     $minimizeBtn.removeClass("hide").addClass("show"); // Cambia a "show"
     $filterContent.slideDown(200); // Expande el contenido
-    $minimizeBtn.html('<img src="' + (window.BASE_URL || '/') + 'assets/icons/map/x.svg" alt="close">'); // Cambia el contenido del botón
+    $minimizeBtn.html(
+      '<img src="' +
+        (window.BASE_URL || "/") +
+        'assets/icons/map/x.svg" alt="close">',
+    ); // Cambia el contenido del botón
     $headerText.get(0).style.paddingRight = ""; // Restablece el relleno
   } else {
     $minimizeBtn.removeClass("show").addClass("hide"); // Cambia a "hide"
@@ -101,7 +108,7 @@ $(document).on("click", ".minimize-btn", function () {
 
 var retailIcon = L.divIcon({
   html: `<div class="custom-icon">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="retail" width="20" height="20">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="retail" width="20" height="20">
         </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -114,7 +121,7 @@ var restroomsIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/restrooms.svg" alt="restrooms" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/restrooms.svg" alt="restrooms" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -126,7 +133,19 @@ var barIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/bar.svg" alt="bar" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/bar.svg" alt="bar" width="20" height="20">
+           </div>`,
+  className: "shadowMarker",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var foodbarIcon = L.divIcon({
+  html: `<div class="custom-icon" 
+     
+     
+     >
+               <img src="${window.BASE_URL || "/"}assets/icons/map/foodbar.svg" alt="bar" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -138,7 +157,7 @@ var foodIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/food.svg" alt="food" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/food.svg" alt="food" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -150,7 +169,7 @@ var drugstoreIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/drugstore.svg" alt="drugstore" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/drugstore.svg" alt="drugstore" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -162,7 +181,7 @@ var experienceIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/experience.svg" alt="experience" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/experience.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -174,7 +193,7 @@ var showIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/show.svg" alt="experience" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/show.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -186,7 +205,7 @@ var fruitIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/coco.svg" alt="experience" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/coco.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -198,7 +217,7 @@ var camaraIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/camara.svg" alt="experience" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/camara.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -210,7 +229,7 @@ var starIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/star.svg" alt="experience" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/star.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -222,7 +241,7 @@ var taxiIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/taxi.svg" alt="experience" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/taxi.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -234,7 +253,7 @@ var shorexIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/shorex.svg" alt="experience" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/shorex.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -246,7 +265,7 @@ var poolIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/pool-marker.svg" alt="pool" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/pool-marker.svg" alt="pool" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -258,7 +277,7 @@ var beachIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/beach-marker.svg" alt="beach" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/beach-marker.svg" alt="beach" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -270,7 +289,7 @@ var rumquestIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/rum-quest-marker.svg" alt="rum-quest" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/rum-quest-marker.svg" alt="rum-quest" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -282,7 +301,7 @@ var riverIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/lazy-river-marker.svg" alt="lazy-river" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/lazy-river-marker.svg" alt="lazy-river" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -294,7 +313,7 @@ var splashIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/splash-marker.svg" alt="splash-surfing" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/splash-marker.svg" alt="splash-surfing" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -306,7 +325,7 @@ var BeachPlayIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/beach-play.svg" alt="beach-playground" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/beach-play.svg" alt="beach-playground" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -318,7 +337,7 @@ var YongolIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/yongol.svg" alt="yongol" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/yongol.svg" alt="yongol" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -330,7 +349,7 @@ var AviarioIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/aviario.svg" alt="aviarius" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/aviario.svg" alt="aviarius" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -342,7 +361,7 @@ var spaIcon = L.divIcon({
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/spa-marker.svg" alt="spa wellness" width="20" height="20">
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/spa-marker.svg" alt="spa wellness" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -350,12 +369,14 @@ var spaIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var monkeyIcon = L.divIcon({
-  html: `<div class="custom-icon" 
+  html: `
+  <div class="custom-icon" 
      
      
      >
-               <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/monkey-marker.svg" alt="monkey-island" width="20" height="20">
-           </div>`,
+               <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/monkey-marker.svg" alt="monkey-island" width="20" height="20">
+           </div>
+           `,
   className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
@@ -367,7 +388,7 @@ var salidaCaminoIcon = L.divIcon({
      
      
      >
-               <img class="salidaCaminoIcon" src="${window.BASE_URL || '/'}assets/icons/map/arrowRed.svg" alt="PORT EXIT" width="30" height="30">
+               <img class="salidaCaminoIcon" src="${window.BASE_URL || "/"}assets/icons/map/arrowRed.svg" alt="PORT EXIT" width="30" height="30">
            </div>`,
   className: "shadowMarker",
   iconSize: [30, 30],
@@ -390,7 +411,7 @@ var regresoCaminoIcon = L.divIcon({
      
      
      >
-               <img class="regresoCaminoIcon" src="${window.BASE_URL || '/'}assets/icons/map/arrowGreen.svg" alt="PORT EXIT" width="30" height="30">
+               <img class="regresoCaminoIcon" src="${window.BASE_URL || "/"}assets/icons/map/arrowGreen.svg" alt="PORT EXIT" width="30" height="30">
            </div>`,
   className: "shadowMarker",
   iconSize: [30, 30],
@@ -655,7 +676,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHOWS</p>
             </div>
         `,
@@ -672,7 +693,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHOWS</p>
             </div>
         `,
@@ -691,7 +712,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PHOTO SPOT</p>
             </div>
         `,
@@ -708,7 +729,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PHOTO SPOT</p>
             </div>
         `,
@@ -725,7 +746,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PHOTO SPOT</p>
             </div>
         `,
@@ -744,7 +765,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/star.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/star.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LAST MINUTE</p>
             </div>
         `,
@@ -763,7 +784,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/taxi.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/taxi.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHUTTLE</p>
             </div>
         `,
@@ -782,7 +803,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/shorex.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/shorex.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PRE-BOOKED SHOREX</p>
             </div>
         `,
@@ -796,14 +817,32 @@ var markers = {
       }),
   ],
   21: [
-    L.marker([600, 950], { icon: foodIcon })
+    L.marker([600, 950], { icon: foodbarIcon })
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">MONKEY BAR</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/monkey-bar.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 140px; height: 140px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "¡Mariscos y good vibes!"
+                    : "Fresh seafood and good vibes!"
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/monkey-bar">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -821,7 +860,7 @@ var markers = {
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/coffee-factory.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/coffee-factory.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 100px; height: 100px; margin-bottom: 1rem;"
@@ -858,7 +897,7 @@ var markers = {
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/icekery.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/icekery.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 80px; height: 80px;"
@@ -889,13 +928,13 @@ var markers = {
       }),
   ],
   24: [
-    L.marker([550, 1140], { icon: foodIcon })
+    L.marker([550, 1140], { icon: foodbarIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/cantina-latina.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/cantina-latina.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 120px; height: 120px;"
@@ -926,13 +965,13 @@ var markers = {
       }),
   ],
   25: [
-    L.marker([790, 410], { icon: foodIcon })
+    L.marker([790, 410], { icon: foodbarIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/blue-parrot.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/blue-parrot.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 120px; height: 120px;"
@@ -969,7 +1008,7 @@ var markers = {
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/taco-lover.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/taco-lover.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 120px; height: 120px; margin-bottom: 1rem;"
@@ -1000,13 +1039,13 @@ var markers = {
       }),
   ],
   27: [
-    L.marker([370, 745], { icon: barIcon })
+    L.marker([370, 745], { icon: foodbarIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/boat-bar.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/boat-bar.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 100px; height: 100px; margin-bottom: 1rem;"
@@ -1043,7 +1082,7 @@ var markers = {
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/tiki-tiki.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/tiki-tiki.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 120px; height: 120px;"
@@ -1078,10 +1117,22 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">THE SPORT COVE BAR</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/sport-cove.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 100px; height: 100px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "El mejor lugar para relajarse con una bebida."
+                    : "The best place to relax with a drink."
+                }
+              </p>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -1093,14 +1144,32 @@ var markers = {
       }),
   ],
   30: [
-    L.marker([440, 1195], { icon: foodIcon })
+    L.marker([440, 1195], { icon: foodbarIcon })
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">LA CATRACHITA</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/catrachita.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 120px; height: 120px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "¡Mariscos y good vibes!"
+                    : "Fresh seafood and good vibes!"
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/la-catrachita">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -1116,10 +1185,28 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">LA FRUTERIA</p>
-            </div>
+            <div class="pop">
+              <img 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/fruteria.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 140px; height: 140px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "¡Mariscos y good vibes!"
+                    : "Fresh seafood and good vibes!"
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/la-fruteria">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
         `,
       )
       .on("click", function (e) {
@@ -1136,7 +1223,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/port-experience/pool-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/pool-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">POOL</p>
             </div>
         `,
@@ -1155,7 +1242,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">OFICIAL STORE</p>
             </div>
         `,
@@ -1174,7 +1261,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MARKET STREET</p>
             </div>
         `,
@@ -1194,7 +1281,7 @@ var markers = {
         `
             <div class="pop">
               <img 
-                src="${window.BASE_URL || '/'}assets/icons/map/port-experience/spa-wellness.svg" 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/spa-wellness.svg" 
                 alt="Logo" 
                 class="popup-logo"
                 style="width: 120px; height: 120px;"
@@ -1230,7 +1317,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DUFRY</p>
             </div>
         `,
@@ -1249,7 +1336,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER SUN</p>
             </div>
         `,
@@ -1268,7 +1355,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER EMPORIO</p>
             </div>
         `,
@@ -1285,7 +1372,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER EMPORIO</p>
             </div>
         `,
@@ -1304,7 +1391,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">HONDURAS WOODEN CRAFT</p>
             </div>
         `,
@@ -1323,7 +1410,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VIVA SOL</p>
             </div>
         `,
@@ -1342,7 +1429,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SEA GODDESS</p>
             </div>
         `,
@@ -1361,7 +1448,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIRAÑA JOE</p>
             </div>
         `,
@@ -1380,7 +1467,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DEL SOL</p>
             </div>
         `,
@@ -1399,7 +1486,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CASA TEQUILA</p>
             </div>
         `,
@@ -1418,7 +1505,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
             </div>
         `,
@@ -1437,7 +1524,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">AV CACAO</p>
             </div>
         `,
@@ -1456,7 +1543,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">OCEAN DRIVE</p>
             </div>
         `,
@@ -1475,7 +1562,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE ROATAN STORE</p>
             </div>
         `,
@@ -1494,7 +1581,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VEARI</p>
             </div>
         `,
@@ -1513,7 +1600,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TURTLE BAY</p>
             </div>
         `,
@@ -1532,7 +1619,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DIAMONDS INTERNATIONAL</p>
             </div>
         `,
@@ -1551,7 +1638,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ESTHETIX</p>
             </div>
         `,
@@ -1568,7 +1655,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ESTHETIX</p>
             </div>
         `,
@@ -1587,7 +1674,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MUSEO DEL TABACO</p>
             </div>
         `,
@@ -1606,7 +1693,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ROATAN TREASURES</p>
             </div>
         `,
@@ -1625,7 +1712,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ARCADE ITM</p>
             </div>
         `,
@@ -1644,7 +1731,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">FARMACIAS DEL MUNDO</p>
             </div>
         `,
@@ -1661,7 +1748,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">FARMACIAS DEL MUNDO</p>
             </div>
         `,
@@ -1680,7 +1767,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CARILOHA</p>
             </div>
         `,
@@ -1699,7 +1786,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BANCO FIHCOHSA (ATM)</p>
             </div>
         `,
@@ -1718,7 +1805,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || '/'}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">EL TUCAN GIFT SHOP</p>
             </div>
         `,

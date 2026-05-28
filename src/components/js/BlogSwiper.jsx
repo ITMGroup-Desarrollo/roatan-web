@@ -79,7 +79,7 @@ const BlogSwiper = ({ posts, lang }) => {
                 />
                 <a
                   href={`${import.meta.env.BASE_URL}${lang}/blog/${post.slug}`}
-                  class="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
+                  className="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
                 >
                   {lang === "es" ? "Leer más" : "Read more"}
                 </a>

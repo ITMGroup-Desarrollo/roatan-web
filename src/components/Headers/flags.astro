@@ -15,11 +15,24 @@ const languages = {
   de: { flag: flag_de, alt: "Deutsch", path: "de" },
 };
 
+const basePath = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
-const getLocalizedPath = (targetLang: string) => 
-  currentPath.replace(/^\/(en|es|de)/, `/${targetLang}`);
+const getLocalizedPath = (targetLang: string) => {
+  let relativePath = currentPath;
+  if (currentPath.startsWith(basePath)) {
+    relativePath = currentPath.substring(basePath.length);
+  }
+  if (!relativePath.startsWith('/')) {
+    relativePath = '/' + relativePath;
+  }
+  const newRelativePath = relativePath.replace(/^\/(en|es|de)/, `/${targetLang}`);
+  const cleanBase = basePath.endsWith('/') ? basePath : `${basePath}/`;
+  const cleanNewPath = newRelativePath.startsWith('/') ? newRelativePath.slice(1) : newRelativePath;
+  return `${cleanBase}${cleanNewPath}`;
+};
 
-const currentLang = currentPath.includes("/en") ? "en" : "es";
+const relativeForLang = currentPath.startsWith(basePath) ? currentPath.substring(basePath.length) : currentPath;
+const currentLang = relativeForLang.startsWith("en") || relativeForLang.startsWith("/en") ? "en" : "es";
 const otherLang = currentLang === "es" ? "en" : "es";
 ---
 

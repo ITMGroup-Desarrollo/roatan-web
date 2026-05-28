@@ -30,7 +30,7 @@ import { Image } from "astro:assets";
     <div
       class="lg:col-span-2 flex flex-col justify-center items-center gap-3 lg:gap-10"
     >
-      <a href={`/${lang}/home/`}
+      <a href={`${import.meta.env.BASE_URL}${lang}/home/`}
         ><Image
           class="w-16 md:w-24 lg:w-36 xl:w-36 h-auto"
           src={roatanLogo}
@@ -46,23 +46,23 @@ import { Image } from "astro:assets";
       >
         <a
           class="hover:text-[var(--secondary-color)]"
-          href={`/${lang}/port-experience/`}>{t.menu["port-experience"]}</a
+          href={`${import.meta.env.BASE_URL}${lang}/port-experience/`}>{t.menu["port-experience"]}</a
         >
         <a
           class="hover:text-[var(--secondary-color)]"
-          href={`/${lang}/discover-beyond/`}>{t.menu["discover-beyond"]}</a
+          href={`${import.meta.env.BASE_URL}${lang}/discover-beyond/`}>{t.menu["discover-beyond"]}</a
         >
-        <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/blog/`}
+        <a class="hover:text-[var(--secondary-color)]" href={`${import.meta.env.BASE_URL}${lang}/blog/`}
           >{t.menu.blog}</a
         >
-        <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/faqs/`}
+        <a class="hover:text-[var(--secondary-color)]" href={`${import.meta.env.BASE_URL}${lang}/faqs/`}
           >{t.menu.faqs}</a
         >
         <a
           class="hover:text-[var(--secondary-color)]"
-          href={`/${lang}/contact/`}>{t.menu.contact}</a
+          href={`${import.meta.env.BASE_URL}${lang}/contact/`}>{t.menu.contact}</a
         >
-        <a class="hover:text-[var(--secondary-color)]" href={`/${lang}/policy/`}
+        <a class="hover:text-[var(--secondary-color)]" href={`${import.meta.env.BASE_URL}${lang}/policy/`}
           >{t.footer.policy}</a
         >
       </nav>

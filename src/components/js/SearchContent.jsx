@@ -32,7 +32,7 @@ export default function SearchContent({ lang, content }) {
       />
       <img
         className="absolute right-6 top-1.5"
-        src="/img/iconos/lupa.svg"
+        src={`${import.meta.env.BASE_URL}img/iconos/lupa.svg`}
         alt="lupa"
         width="15"
         height="15"
@@ -45,7 +45,7 @@ export default function SearchContent({ lang, content }) {
               key={index}
               className="px-3 py-1 hover:bg-gray-200 cursor-pointer text-sm"
               onClick={() =>
-                (window.location.href = `/${lang}/${item.category}/${item.slug}`)
+                (window.location.href = `${import.meta.env.BASE_URL}${lang}/${item.category}/${item.slug}`)
               }
             >
               {item.title

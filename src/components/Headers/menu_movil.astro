@@ -52,7 +52,7 @@ const content = [
     <a
       id="logo_menu"
       class="w-28 h-auto"
-      href={lang === "es" ? "/es/home" : "/en/home"}
+      href={lang === "es" ? `${import.meta.env.BASE_URL}es/home` : `${import.meta.env.BASE_URL}en/home`}
     >
       <Image
         class="w-full h-auto"
@@ -65,7 +65,7 @@ const content = [
       menuItems.map((item) => (
         <a
           class="text-center font-bebas text-4xl z-30"
-          href={`/${lang}/${item.path}/`}
+          href={`${import.meta.env.BASE_URL}${lang}/${item.path}/`}
         >
           {item.label}
         </a>

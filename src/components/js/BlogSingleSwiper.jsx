@@ -8,11 +8,11 @@ function Slide({ post, lang }) {
   return (
     <div className="swiper-slide ">
       <a
-        href={`/${lang}/blog/${post.slug}`}
+        href={`${import.meta.env.BASE_URL}${lang}/blog/${post.slug}`}
         className="bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden"
       >
         <img
-          src={post.image.url}
+          src={`${import.meta.env.BASE_URL}${post.image.url.startsWith('/') ? post.image.url.slice(1) : post.image.url}`}
           alt={post.image.alt ?? post.title}
           className="w-full object-cover rounded-xl"
         />
@@ -22,7 +22,7 @@ function Slide({ post, lang }) {
             {post.excerpt}
           </p>
           <a
-            href={`/${lang}/blog/${post.slug}`}
+            href={`${import.meta.env.BASE_URL}${lang}/blog/${post.slug}`}
             class="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
           >
             {lang === "es" ? "Leer más" : "Read more"}

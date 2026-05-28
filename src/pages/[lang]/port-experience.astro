@@ -84,7 +84,7 @@ export function getStaticPaths() {
                 </>
               </div>
               <a
-                href={`/${lang}/port-experience/${post.slug}`}
+                href={`${import.meta.env.BASE_URL}${lang}/port-experience/${post.slug}`}
                 class="overlay-layer rounded-t-full rounded-b-full h-full w-full z-10 bg-gradient-item flex flex-col justify-center text-center md:translate-y-48 pt-56 md:group-hover:translate-y-0 transition-transform duration-300 ease-out"
               >
                 <Image

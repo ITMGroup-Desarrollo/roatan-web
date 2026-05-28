@@ -60,7 +60,7 @@ export default function SwiperClient() {
         {images.map((src, i) => (
           <div key={i} className="swiper-slide h-full w-full">
             <img
-              src={src}
+              src={`${import.meta.env.BASE_URL}${src.startsWith('/') ? src.slice(1) : src}`}
               alt={`swiperfoto${i + 1}`}
               className="h-full w-full object-cover"
             />

@@ -50,11 +50,11 @@ const BlogSwiper = ({ posts, lang }) => {
                 } h-full`}
             >
               <a
-                href={`/${lang}/blog/${post.slug}`}
+                href={`${import.meta.env.BASE_URL}${lang}/blog/${post.slug}`}
                 className={`${index === 0 ? "basis-1/2 md:pr-4" : ""}`}
               >
                 <img
-                  src={post.image}
+                  src={`${import.meta.env.BASE_URL}${post.image.startsWith('/') ? post.image.slice(1) : post.image}`}
                   alt={post.alt}
                   className={`w-full h-full object-cover rounded-t-xl ${index === 0
                     ? "md:rounded-t-none md:rounded-tl-xl md:rounded-bl-xl"
@@ -78,7 +78,7 @@ const BlogSwiper = ({ posts, lang }) => {
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 />
                 <a
-                  href={`/${lang}/blog/${post.slug}`}
+                  href={`${import.meta.env.BASE_URL}${lang}/blog/${post.slug}`}
                   class="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]"
                 >
                   {lang === "es" ? "Leer más" : "Read more"}
@@ -91,7 +91,7 @@ const BlogSwiper = ({ posts, lang }) => {
                 className="h-[32px]"
               >
                 <img
-                  src="/img/iconos/share.svg"
+                  src={`${import.meta.env.BASE_URL}img/iconos/share.svg`}
                   alt="share"
                   className="w-6 self-center"
                 />
@@ -105,7 +105,7 @@ const BlogSwiper = ({ posts, lang }) => {
                   className="share-link"
                 >
                   <img
-                    src="/img/iconos/shareWP.svg"
+                    src={`${import.meta.env.BASE_URL}img/iconos/shareWP.svg`}
                     alt="WP icon"
                     className="w-8 mr-4"
                   />
@@ -115,7 +115,7 @@ const BlogSwiper = ({ posts, lang }) => {
                   className="share-link"
                 >
                   <img
-                    src="/img/iconos/shareX.svg"
+                    src={`${import.meta.env.BASE_URL}img/iconos/shareX.svg`}
                     alt="X icon"
                     className="w-8 mr-4"
                   />
@@ -125,7 +125,7 @@ const BlogSwiper = ({ posts, lang }) => {
                   className="share-link"
                 >
                   <img
-                    src="/img/iconos/shareFB.svg"
+                    src={`${import.meta.env.BASE_URL}img/iconos/shareFB.svg`}
                     alt="FB icon"
                     className="w-8 mr-4"
                   />
@@ -135,7 +135,7 @@ const BlogSwiper = ({ posts, lang }) => {
                   className="share-link"
                 >
                   <img
-                    src="/img/iconos/shareLI.svg"
+                    src={`${import.meta.env.BASE_URL}img/iconos/shareLI.svg`}
                     alt="LI icon"
                     className="w-8 mr-4"
                   />
@@ -145,7 +145,7 @@ const BlogSwiper = ({ posts, lang }) => {
                   className="share-link"
                 >
                   <img
-                    src="/img/iconos/shareIG.svg"
+                    src={`${import.meta.env.BASE_URL}img/iconos/shareIG.svg`}
                     alt="IG icon"
                     className="w-8 mr-4"
                   />

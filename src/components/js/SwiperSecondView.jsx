@@ -80,7 +80,7 @@ export default function SwiperClient({ slug, images = [] }) {
           images.map((img, idx) => (
             <div key={idx} className="swiper-slide h-full w-full">
               <img
-                src={img.url}
+                src={`${import.meta.env.BASE_URL}${img.url.startsWith('/') ? img.url.slice(1) : img.url}`}
                 alt={img.alt || `slide-${idx + 1}`}
                 className="h-full w-full object-cover"
               />
@@ -90,21 +90,21 @@ export default function SwiperClient({ slug, images = [] }) {
           <>
             <div className="swiper-slide h-full w-full">
               <img
-                src="/img/home/recursos/roatan.webp"
+                src={`${import.meta.env.BASE_URL}img/home/recursos/roatan.webp`}
                 alt="swiperfoto1"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="swiper-slide h-full w-full">
               <img
-                src="/img/home/recursos/shutter.webp"
+                src={`${import.meta.env.BASE_URL}img/home/recursos/shutter.webp`}
                 alt="swiperfoto2"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="swiper-slide h-full w-full">
               <img
-                src="/img/home/recursos/tikibar.webp"
+                src={`${import.meta.env.BASE_URL}img/home/recursos/tikibar.webp`}
                 alt="swiperfoto3"
                 className="h-full w-full object-cover"
               />

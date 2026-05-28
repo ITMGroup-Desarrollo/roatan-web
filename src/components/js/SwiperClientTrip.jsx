@@ -60,13 +60,13 @@ function Slide({ img, name, text, url }) {
         className="slide-content cursor-pointer relative justify-self-center bg-white rounded-3xl p-6 shadow-lg text-center w-72 transition-transform duration-300"
       >
         <img
-          src={`${img}`}
+          src={`${import.meta.env.BASE_URL}${img.startsWith('/') ? img.slice(1) : img}`}
           alt="User Avatar"
           className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-md"
         />
         <div className="flex justify-center mb-2">
           <img
-            src="/img/iconos/estrellas.png"
+            src={`${import.meta.env.BASE_URL}img/iconos/estrellas.png`}
             alt="estrellas"
             className="w-32"
           />

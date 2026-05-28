@@ -84,7 +84,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
               <div class="rounded-xl" style={`grid-area:image-${index + 1}`}>
                 <img
                   class={`${index === 0 ? "h-[28vh] md:h-[76vh]" : "h-[13vh] md:h-[37vh]"} w-full rounded-xl object-cover object-center`}
-                  src={img.url}
+                  src={`${import.meta.env.BASE_URL}${img.url.startsWith('/') ? img.url.slice(1) : img.url}`}
                   alt={img.alt ?? `Imagen${index + 1}`}
                 />
               </div>
@@ -102,7 +102,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
               <div class="rounded-xl">
                 <img
                   class={`h-[25vh] md:h-[75vh] w-full rounded-xl object-cover object-center `}
-                  src={img.url}
+                  src={`${import.meta.env.BASE_URL}${img.url.startsWith('/') ? img.url.slice(1) : img.url}`}
                   alt={img.alt ?? `Imagen${index + 1}`}
                 />
               </div>

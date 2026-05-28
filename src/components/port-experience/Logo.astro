@@ -17,7 +17,7 @@ import "../../assets/css/home.css";
   >
     <img
       class="h-[12rem] max-w-[16rem] md:h-[14rem] md:max-w-[24rem] object-scale-down self-center mb-8 md:mb-4"
-      src={logo}
+      src={`${import.meta.env.BASE_URL}${logo.startsWith('/') ? logo.slice(1) : logo}`}
       alt="logo"
       loading="eager"
     />

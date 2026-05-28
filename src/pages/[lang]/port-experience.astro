@@ -68,12 +68,12 @@ export function getStaticPaths() {
           >
             <div
               class="card-wrapper rounded-t-full self-center col-span-1 rounded-b-full h-[24rem] w-[18rem] bg-center bg-cover bg-no-repeat z-20 relative group overflow-hidden"
-              style={{ backgroundImage: `url('${post.image}')` }}
+              style={{ backgroundImage: `url('${import.meta.env.BASE_URL}${post.image.startsWith('/') ? post.image.slice(1) : post.image}')` }}
             >
               <div class="content-layer absolute flex flex-col left-1/2 top-1/2 md:top-[63.5%] -translate-x-1/2 -translate-y-1/2 z-20 md:group-hover:-translate-y-36 transition-transform duration-300 ease-out">
                 <>
                   <img
-                    src={post.icon}
+                    src={`${import.meta.env.BASE_URL}${post.icon.startsWith('/') ? post.icon.slice(1) : post.icon}`}
                     alt="icono ayb"
                     class="w-20 z-20 self-center mb-2"
                   />

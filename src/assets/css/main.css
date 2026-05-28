@@ -81,7 +81,7 @@ body {
 }
 
 .bg-image-header-404 {
-  background-image: url('../../../public/img/home/recursos/bg_404.webp');
+  background-image: url('../img/home/recursos/bg_404.webp');
   background-size: cover;
   background-position: center;
 

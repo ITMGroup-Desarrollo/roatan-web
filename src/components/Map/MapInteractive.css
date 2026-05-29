@@ -65,6 +65,10 @@ section.map-section {
     border-bottom: 1px solid #eee;
 }
 
+.filter-header .switch {
+    margin-right: auto;
+}
+
 .header-text {
     font-weight: bold;
     font-size: 14px;

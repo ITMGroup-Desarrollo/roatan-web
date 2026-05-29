@@ -20,6 +20,7 @@ section.map-section {
 button.minimize-btn {
   background-color: transparent;
   padding-right: 0.5rem;
+  padding-left: 0.5rem;
   border: none;
   font-size: 20px;
   font-weight: bolder;
@@ -79,8 +80,12 @@ button.minimize-btn.show {
 .filter-header {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   margin-bottom: -1rem;
+}
+
+.filter-header .switch {
+  margin-right: auto;
 }
 
 .filter-content {
@@ -256,7 +261,7 @@ body.shock-body {
 }
 
 @media (min-width: 769px) {
-  .service .header-text {
+  /* .service .header-text {
     padding-right: 20%;
   }
 
@@ -270,7 +275,7 @@ body.shock-body {
 
   .shop .header-text {
     padding-right: 30%;
-  }
+  } */
 
   .filter-container p,
   .filter-container span,

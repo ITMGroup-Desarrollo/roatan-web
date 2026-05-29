@@ -724,6 +724,23 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
+    L.marker([770, 805], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PHOTO SPOT</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
     L.marker([695, 490], { icon: camaraIcon })
       .addTo(map)
       .bindPopup(
@@ -742,6 +759,40 @@ var markers = {
         });
       }),
     L.marker([285, 1085], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PHOTO SPOT</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([530, 1090], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/camara.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">PHOTO SPOT</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([225, 1160], { icon: camaraIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -928,7 +979,7 @@ var markers = {
       }),
   ],
   24: [
-    L.marker([550, 1140], { icon: foodbarIcon })
+    L.marker([585, 1120], { icon: foodbarIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1256,7 +1307,7 @@ var markers = {
       }),
   ],
   43: [
-    L.marker([480, 1185], { icon: retailIcon })
+    L.marker([470, 1230], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1331,7 +1382,7 @@ var markers = {
       }),
   ],
   62: [
-    L.marker([350, 1225], { icon: retailIcon })
+    L.marker([350, 1205], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1350,7 +1401,7 @@ var markers = {
       }),
   ],
   63: [
-    L.marker([350, 1195], { icon: retailIcon })
+    L.marker([390, 1205], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1404,25 +1455,7 @@ var markers = {
         });
       }),
   ],
-  65: [
-    L.marker([525, 1125], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">VIVA SOL</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
+
   66: [
     L.marker([565, 1090], { icon: retailIcon })
       .addTo(map)
@@ -1667,6 +1700,23 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
+    L.marker([525, 1125], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">ESTHETIX</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
   ],
   78: [
     L.marker([328, 895], { icon: retailIcon })
@@ -1706,25 +1756,7 @@ var markers = {
         });
       }),
   ],
-  80: [
-    L.marker([420, 1195], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">ARCADE ITM</p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
+
   81: [
     L.marker([545, 1110], { icon: drugstoreIcon })
       .addTo(map)

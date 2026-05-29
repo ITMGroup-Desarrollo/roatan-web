@@ -12,7 +12,7 @@ export default function SearchContent({ lang, content }) {
       const results = content.filter((item) => {
         const matchSlug = item.slug.toLowerCase().includes(val);
         const matchTags = item.tags.some((tag) =>
-          tag.toLowerCase().includes(val)
+          tag.toLowerCase().includes(val),
         );
         return matchSlug || matchTags;
       });
@@ -26,7 +26,7 @@ export default function SearchContent({ lang, content }) {
     <div className="pb-1 relative search_container">
       <input
         className="search_input font text-xs italic uppercase mx-3 rounded-full border-2 border-white w-auto py-1 px-2"
-        placeholder="What to find?"
+        placeholder={lang === "es" ? "Buscar" : "What to find?"}
         value={query}
         onChange={handleInput}
       />

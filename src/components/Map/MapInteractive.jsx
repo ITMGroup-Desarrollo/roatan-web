@@ -582,17 +582,6 @@ export default function MapInteractive({ lang }) {
                   </td>
                   <td>ROATAN TREASURES</td>
                 </tr>
-                <tr data-marker-id="80">
-                  <td>
-                    <img
-                      src={
-                        import.meta.env.BASE_URL + "assets/icons/map/retail.svg"
-                      }
-                      alt="ARCADE ITM"
-                    />
-                  </td>
-                  <td>ARCADE ITM</td>
-                </tr>
                 <tr data-marker-id="81">
                   <td>
                     <img

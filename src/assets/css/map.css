@@ -61,12 +61,12 @@ button.minimize-btn.show {
 
 .leaflet-control-filter tr:hover {
   cursor: pointer;
-  color: #f5a23a;
+  color: var(--secondary-color);
 }
 
 .leaflet-control-filter tr.selected {
-  color: #f5a23a;
-  background-color: rgba(245, 162, 58, 0.3);
+  color: var(--secondary-color);
+  background-color: rgba(84, 192, 232, 0.3);
   /* Un fondo más notorio */
   font-weight: bold;
 }

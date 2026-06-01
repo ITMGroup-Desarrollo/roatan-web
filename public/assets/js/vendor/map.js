@@ -506,69 +506,32 @@ var caminoCoordenadas2 = [
   [895, 1090], //union de la bifurcación
 ];
 var caminoCoordenadas3 = [
-  [150, 310],
-  [180, 320],
-  [230, 325],
-  [250, 305],
-  [280, 270],
-  [300, 260],
-  [320, 260],
-  [370, 290],
-  [400, 290],
-  [440, 275],
-  [465, 275],
-  [495, 300],
-  [510, 330],
-  [520, 340],
-  [590, 340],
-  [615, 360],
-  [625, 400],
-  [610, 450],
-  [595, 480],
-  [610, 510],
-  [620, 515],
-  [660, 525], //Bifurcación
-
-  [680, 520],
-  [710, 505],
-  [740, 505],
-  [850, 550],
-  [885, 575],
-  [905, 600],
-  [915, 650],
-  [920, 700],
-  [945, 750],
-  [955, 790],
-  [960, 850],
-  [955, 980],
-  [900, 1100], //union de la bifurcación
-  [910, 1130],
-  [890, 1210],
-  [880, 1210],
-  [860, 1230],
-  [850, 1245],
-  [730, 1300],
-  [500, 1235],
+  [430, 710],
+  [380, 800],
+  [380, 880],
+  [380, 920],
+  [380, 960],
+  [385, 1000],
+  [385, 1040],
+  [370, 1080],
+  [350, 1110],
+  [310, 1120],
+  [270, 1130], // Bifurcación al muelle inferior
+  // Camino hacia el muelle inferior
+  [240, 1135],
+  [190, 1135],
+  [140, 1135],
 ];
 var caminoCoordenadas4 = [
-  [665, 532], //Bifurcación
-  [690, 540],
-  [720, 535],
-  [755, 532],
-  [775, 540],
-  [800, 560],
-  [810, 580],
-  [810, 640],
-  [835, 720],
-  [845, 765],
-  [870, 810],
-  [910, 870],
-  [912, 880],
-  [912, 950],
-  [910, 1000],
-  [895, 1050],
-
-  [895, 1090], //union de la bifurcación
+  [240, 1135], // Bifurcación al muelle inferior
+  // Camino hacia la derecha (Coffee Factory y tiendas derechas)
+  [240, 1150],
+  [240, 1160],
+  [240, 1180],
+  [220, 1200],
+  [220, 1250],
+  [230, 1300],
+  [240, 1340],
 ];
 // Dibujar el camino en el mapa
 // Capa de borde para camino3 (línea más gruesa en blanco)
@@ -637,8 +600,10 @@ var camino2 = L.polyline(caminoCoordenadas2, {
 
 var markers = {
   2: [
-    L.marker([400, 750], { icon: regresoCaminoIcon }).addTo(map),
-    L.marker([450, 650], { icon: regresoIcon }).addTo(map),
+    L.marker([420, 660], { icon: regresoCaminoIcon }).addTo(map),
+    L.marker([450, 580], { icon: regresoIcon }).addTo(map),
+    L.marker([140, 1115], { icon: regresoCaminoIcon }).addTo(map),
+    L.marker([170, 1035], { icon: regresoIcon }).addTo(map),
   ],
   3: [
     L.marker([850, 510], { icon: restroomsIcon })

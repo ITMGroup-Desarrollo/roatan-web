@@ -32,18 +32,6 @@ export default function MapInteractive({ lang }) {
           <div className="filter-content" style={{ display: "none" }}>
             <table className="tabla-icons">
               <tbody>
-                <tr data-marker-id="1" style={{ display: "none" }}>
-                  <td>
-                    <img
-                      src={
-                        import.meta.env.BASE_URL +
-                        "assets/icons/map/arrowGreen.svg"
-                      }
-                      alt="SHOWS"
-                    />
-                  </td>
-                  <td>{isEs ? "REGRESO CRUCERO" : "BACK TO SHIP"}</td>
-                </tr>
                 <tr data-marker-id="2">
                   <td>
                     <img

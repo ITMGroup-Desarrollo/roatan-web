@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #008f39;
+        fill: #ed1654;
         stroke: #ffffff; /* Borde blanco */
         stroke-width: 15px; /* Grosor del borde */
         stroke-linejoin: round;

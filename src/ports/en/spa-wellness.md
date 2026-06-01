@@ -36,15 +36,14 @@ gallery:
     alt: "imagen del post 2"
 tags:
   [
-    "restaurants",
-    "bars",
-    "food",
-    "cuisine",
-    "menu",
-    "foodie",
-    "pool bar",
-    "drinks",
-    "beer",
+    "spa",
+    "bienestar",
+    "relajacion",
+    "masajes",
+    "terapia",
+    "cuidado personal",
+    "descanso",
+    "tratamientos corporales",
   ]
 ---
 

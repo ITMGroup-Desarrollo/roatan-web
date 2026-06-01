@@ -311,10 +311,10 @@ export default function MapInteractive({ lang }) {
                       src={
                         import.meta.env.BASE_URL + "assets/icons/map/retail.svg"
                       }
-                      alt="OFICIAL STORE"
+                      alt="OFFICIAL STORE"
                     />
                   </td>
-                  <td>OFICIAL STORE</td>
+                  <td>OFFICIAL STORE</td>
                 </tr>
                 <tr data-marker-id="43">
                   <td>

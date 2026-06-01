@@ -1231,7 +1231,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">OFICIAL STORE</p>
+                <p class="popupTitle">OFFICIAL STORE</p>
             </div>
         `,
       )

@@ -405,17 +405,7 @@ export default function MapInteractive({ lang }) {
                   </td>
                   <td>HONDURAS WOODEN CRAFT</td>
                 </tr>
-                <tr data-marker-id="65">
-                  <td>
-                    <img
-                      src={
-                        import.meta.env.BASE_URL + "assets/icons/map/retail.svg"
-                      }
-                      alt="VIVA SOL"
-                    />
-                  </td>
-                  <td>VIVA SOL</td>
-                </tr>
+
                 <tr data-marker-id="66">
                   <td>
                     <img

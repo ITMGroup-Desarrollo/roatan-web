@@ -820,8 +820,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "¡Mariscos y good vibes!"
-                    : "Fresh seafood and good vibes!"
+                    ? "¡Un bar muy especial!"
+                    : "This bar is bananas!"
                 }
               </p>
 
@@ -857,8 +857,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "Deliciosa experiencia de café."
-                    : "Delicious coffee experience."
+                    ? "¡La mejor forma para empezar tu día en el puerto!"
+                    : "Best way to start your day at the port!"
                 }
               </p>
 
@@ -894,8 +894,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "Deliciosos helados."
-                    : "Delicious ice cream."
+                    ? "¡Un rico helado es todo lo que necesitas!"
+                    : "A scoop a day keeps the doctor away!"
                 }
               </p>
 
@@ -931,8 +931,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "Bar en el agua con gran ambiente."
-                    : "Floating bar with great vibes."
+                    ? "¡Disfruta del sabor latino hecho en casa!"
+                    : "Enjoy the homemade latin taste!"
                 }
               </p>
 
@@ -968,8 +968,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "¡Mariscos y good vibes!"
-                    : "Fresh seafood and good vibes!"
+                    ? "Mariscos del Caribe para el alma"
+                    : "Caribbean Seafood for the soul"
                 }
               </p>
 
@@ -1005,8 +1005,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "Los mejores tacos de la isla."
-                    : "The best tacos on the island."
+                    ? "¡Los mejores tacos de Roatán!"
+                    : "The best tacos in Roatan!"
                 }
               </p>
 
@@ -1042,8 +1042,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "Bar en el agua con gran ambiente."
-                    : "Floating bar with great vibes."
+                    ? "¡Necesitas unos drinks para llevar al mar! Encuéntralos aquí"
+                    : "You’ll need some good drinks for the sea, find them here!"
                 }
               </p>
 
@@ -1079,8 +1079,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "El mejor lugar para relajarse con una bebida."
-                    : "The best place to relax with a drink."
+                    ? "¡Ponte en el mood con unos drinks y diversión!"
+                    : "Get in the mood with drinks and fun!"
                 }
               </p>
 
@@ -1116,8 +1116,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "El mejor lugar para relajarse con una bebida."
-                    : "The best place to relax with a drink."
+                    ? "¡Un MUST para disfrutar tus deportes favoritos!"
+                    : "A MUST for cold drinks and your favorite sports!"
                 }
               </p>
           </div>
@@ -1147,8 +1147,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "¡Mariscos y good vibes!"
-                    : "Fresh seafood and good vibes!"
+                    ? "Auténticas delicias hondureñas"
+                    : "Authentic Honduran delicacies"
                 }
               </p>
 
@@ -1184,8 +1184,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "¡Mariscos y good vibes!"
-                    : "Fresh seafood and good vibes!"
+                    ? "¿Calor? Refréscate con nuestros drinks de frutas"
+                    : "Fresh fruit drinks to beat the heat!"
                 }
               </p>
 
@@ -1307,6 +1307,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DUFRY</p>
+                <p>
+                ${idioma === "es" ? "Retail" : "Retail"}
+              </p>
             </div>
         `,
       )
@@ -1326,6 +1329,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER SUN</p>
+                <p>
+                ${idioma === "es" ? "Joyería" : "Jewelry store"}
+              </p>
             </div>
         `,
       )
@@ -1345,6 +1351,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER EMPORIO</p>
+                <p>
+                ${idioma === "es" ? "Platería" : "Silver store"}
+              </p>
             </div>
         `,
       )
@@ -1362,6 +1371,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER EMPORIO</p>
+                <p>
+                ${idioma === "es" ? "Platería" : "Silver store"}
+              </p>
             </div>
         `,
       )
@@ -1381,6 +1393,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">HONDURAS WOODEN CRAFT</p>
+                <p>
+                ${idioma === "es" ? "Tienda de artesanías" : "Handicrafts store"}
+              </p>
             </div>
         `,
       )
@@ -1401,6 +1416,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SEA GODDESS</p>
+                <p>
+                ${idioma === "es" ? "Joyería" : "Jewelry store"}
+              </p>
             </div>
         `,
       )
@@ -1420,6 +1438,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIRAÑA JOE</p>
+                <p>
+                ${idioma === "es" ? "Tienda de ropa" : "Clothing store"}
+              </p>
             </div>
         `,
       )
@@ -1439,6 +1460,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DEL SOL</p>
+                <p>
+                ${idioma === "es" ? "Tienda de ropa" : "Clothing store"}
+              </p>
             </div>
         `,
       )
@@ -1458,6 +1482,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CASA TEQUILA</p>
+                <p>
+                ${idioma === "es" ? "Tequilería" : "Tequila store"}
+              </p>
             </div>
         `,
       )
@@ -1477,6 +1504,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
+                <p>
+                ${idioma === "es" ? "Platería" : "Silver store"}
+              </p>
             </div>
         `,
       )
@@ -1496,6 +1526,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">AV CACAO</p>
+                <p>
+                ${idioma === "es" ? "Chocolatería" : "Chocolate store"}
+              </p>
             </div>
         `,
       )
@@ -1515,6 +1548,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">OCEAN DRIVE</p>
+                <p>
+                ${idioma === "es" ? "Gift shop & souvenirs" : "Gift shop & souvenirs"}
+              </p>
             </div>
         `,
       )
@@ -1534,6 +1570,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE ROATAN STORE</p>
+                <p>
+                ${idioma === "es" ? "Gift shop & souvenirs" : "Gift shop & souvenirs"}
+              </p>
             </div>
         `,
       )
@@ -1553,6 +1592,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VEARI</p>
+                <p>
+                ${idioma === "es" ? "Souvenirs de piel" : "Leather souvenirs"}
+              </p>
             </div>
         `,
       )
@@ -1572,6 +1614,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TURTLE BAY</p>
+                <p>
+                ${idioma === "es" ? "Gift shop & souvenirs" : "Gift shop & souvenirs"}
+              </p>
             </div>
         `,
       )
@@ -1591,6 +1636,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DIAMONDS INTERNATIONAL</p>
+                <p>
+                ${idioma === "es" ? "Joyería" : "Jewelry store"}
+              </p>
             </div>
         `,
       )
@@ -1610,6 +1658,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ESTHETIX</p>
+                <p>
+                ${idioma === "es" ? "Belleza y cosmetología" : "Beauty & cosmetology"}
+              </p>
             </div>
         `,
       )
@@ -1627,6 +1678,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ESTHETIX</p>
+                <p>
+                ${idioma === "es" ? "Belleza y cosmetología" : "Beauty & cosmetology"}
+              </p>
             </div>
         `,
       )
@@ -1644,6 +1698,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ESTHETIX</p>
+                <p>
+                ${idioma === "es" ? "Belleza y cosmetología" : "Beauty & cosmetology"}
+              </p>
             </div>
         `,
       )
@@ -1663,6 +1720,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MUSEO DEL TABACO</p>
+                <p>
+                ${idioma === "es" ? "Tabaquería" : "Tobacco shop"}
+              </p>
             </div>
         `,
       )
@@ -1682,6 +1742,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ROATAN TREASURES</p>
+                <p>
+                ${idioma === "es" ? "Souvenirs locales" : "Local souvenirs"}
+              </p>
             </div>
         `,
       )
@@ -1702,6 +1765,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">FARMACIAS DEL MUNDO</p>
+                <p>
+                ${idioma === "es" ? "Farmacia" : "Drugstore"}
+              </p>
             </div>
         `,
       )
@@ -1719,6 +1785,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/drugstore.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">FARMACIAS DEL MUNDO</p>
+                <p>
+                ${idioma === "es" ? "Farmacia" : "Drugstore"}
+              </p>
             </div>
         `,
       )
@@ -1738,6 +1807,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CARILOHA</p>
+                <p>
+                ${idioma === "es" ? "Boutique" : "Boutique"}
+              </p>
             </div>
         `,
       )
@@ -1757,6 +1829,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BANCO FIHCOHSA (ATM)</p>
+                <p>
+                ${idioma === "es" ? "ATM" : "ATM"}
+              </p>
             </div>
         `,
       )
@@ -1776,6 +1851,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">EL TUCAN GIFT SHOP</p>
+                <p>
+                ${idioma === "es" ? "Gift shop & souvenirs" : "Gift shop & souvenirs"}
+              </p>
             </div>
         `,
       )

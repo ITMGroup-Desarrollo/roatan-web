@@ -320,7 +320,8 @@ export default function MapInteractive({ lang }) {
                   <td>
                     <img
                       src={
-                        import.meta.env.BASE_URL + "assets/icons/map/retail.svg"
+                        import.meta.env.BASE_URL +
+                        "assets/icons/map/artesania.svg"
                       }
                       alt="MARKET STREET"
                     />

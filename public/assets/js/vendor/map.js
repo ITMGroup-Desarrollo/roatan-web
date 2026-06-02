@@ -115,6 +115,15 @@ var retailIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
+var artesaniaIcon = L.divIcon({
+  html: `<div class="custom-icon">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/artesania.svg" alt="retail" width="20" height="20">
+        </div>`,
+  className: "shadowMarker",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
 
 var restroomsIcon = L.divIcon({
   html: `<div class="custom-icon" 
@@ -755,6 +764,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/star.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LAST MINUTE</p>
+                <p>
+                ${idioma === "es" ? "¿Sin reserva? Aparta tu tour favorito al&nbsp;llegar." : "Don't Forget to book your favorite tour upon arrival"}
+              </p>
             </div>
         `,
       )
@@ -793,6 +805,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/shorex.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PRE-BOOKED SHOREX</p>
+                <p>
+                ${idioma === "es" ? "¡Encuentra tu tour al llegar!" : "Find your excursion upon arrival!"}
+              </p>
             </div>
         `,
       )
@@ -1213,6 +1228,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/port-experience/pool-marker.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">POOL</p>
+                <p>
+                ${idioma === "es" ? "Refréscate y disfruta del sol en nuestras piscinas" : "Freshen up and enjoy the sun at our pools!"}
+              </p>
             </div>
         `,
       )
@@ -1232,6 +1250,14 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">OFFICIAL STORE</p>
+                <p>
+                ${
+                  idioma === "es"
+                    ? "De Port Roatan, con amor. ¡Souvenirs y más!"
+                    : "From Port Roatan with love. Souvenirs and more!"
+                }
+              </p>
+
             </div>
         `,
       )
@@ -1244,13 +1270,17 @@ var markers = {
       }),
   ],
   43: [
-    L.marker([470, 1230], { icon: retailIcon })
+    L.marker([470, 1230], { icon: artesaniaIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <img src="${window.BASE_URL || "/"}assets/icons/map/artesania.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MARKET STREET</p>
+                <p>
+                ${idioma === "es" ? "Gift shop y souvenirs" : "Gift shop & souvenirs"}
+              </p>
+
             </div>
         `,
       )
@@ -1278,8 +1308,8 @@ var markers = {
               <p>
                 ${
                   idioma === "es"
-                    ? "Disfruta de un momento de relajación y déjate consentir."
-                    : "Enjoy a moment of relaxation and let yourself be pampered."
+                    ? "¡Relájate y disfruta de un día conectando con tus sentidos!"
+                    : "Relax, and enjoy a day connecting with yourself!"
                 }
               </p>
 

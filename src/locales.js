@@ -5,7 +5,7 @@ export const translations = {
   es: {
     menu: {
       "port-experience": "Port Experience",
-      "discover-beyond": "Beyond the cruise",
+      "discover-beyond": "Beyond the Cruise",
       blog: "Recent News",
       map: "Mapa",
       contact: "Contacto",
@@ -94,7 +94,7 @@ export const translations = {
     },
     discover: {
       title: "Discover",
-      subtitle: "Beyond the cruise",
+      subtitle: "beyond the cruise",
       buttonopen: "Ver más",
       buttonclose: "Ver menos",
       requirements: "¿Qué debo llevar?",
@@ -197,7 +197,7 @@ export const translations = {
   en: {
     menu: {
       "port-experience": "Port Experience",
-      "discover-beyond": "Beyond the cruise",
+      "discover-beyond": "Beyond the Cruise",
       blog: "Recent News",
       map: "Map",
       contact: "Contact",
@@ -255,7 +255,8 @@ export const translations = {
       pregunta3: "Can I visit Port Roatan without a\u00A0cruise?",
       pregunta4: "Are pools and lounge areas\u00A0free?",
       pregunta5: "Any suggestions on what to bring upon\u00A0arrival?",
-      pregunta6: "I would love to explore Roatan. Are there any tours\u00A0available?",
+      pregunta6:
+        "I would love to explore Roatan. Are there any tours\u00A0available?",
       respuesta1:
         "A cruise port you'll be dreaming of! Inspired by its Caribbean location, Port Roatan is a cruise port that offers various activities for cruise guests to enjoy. From themed restaurants, to an exclusive retail area, we want to make the best out of your Port Roatan stop.",
       respuesta2:
@@ -284,7 +285,7 @@ export const translations = {
     },
     discover: {
       title: "Discover",
-      subtitle: "Beyond the cruise",
+      subtitle: "beyond the cruise",
       buttonopen: "See more",
       buttonclose: "See less",
       requirements: "What to bring?",

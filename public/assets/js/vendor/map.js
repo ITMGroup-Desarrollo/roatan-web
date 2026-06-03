@@ -624,6 +624,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHOWS</p>
+                <p>
+                ${idioma === "es" ? "¡Lo mejor del entretenimiento hondureño en el puerto!" : "The best of Honduran entertainment for you to enjoy!"}
+              </p>
             </div>
         `,
       )
@@ -641,6 +644,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="${window.BASE_URL || "/"}assets/icons/map/show.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHOWS</p>
+                <p>
+                ${idioma === "es" ? "¡Lo mejor del entretenimiento hondureño en el puerto!" : "The best of Honduran entertainment for you to enjoy!"}
+              </p>
             </div>
         `,
       )

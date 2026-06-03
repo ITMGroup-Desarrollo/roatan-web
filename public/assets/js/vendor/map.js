@@ -1047,43 +1047,7 @@ var markers = {
         });
       }),
   ],
-  27: [
-    L.marker([370, 745], { icon: foodbarIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop">
-              <img 
-                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/boat-bar.svg" 
-                alt="Logo" 
-                class="popup-logo"
-                style="width: 100px; height: 100px; margin-bottom: 1rem;"
-              >
 
-              <p>
-                ${
-                  idioma === "es"
-                    ? "¡Necesitas unos drinks para llevar al mar! Encuéntralos aquí"
-                    : "You’ll need some good drinks for the sea, find them here!"
-                }
-              </p>
-
-              <a href="../../${idioma}/port-experience/boat-bar">
-                  <button class="popup-btn">
-                    ${idioma === "es" ? "Ver más" : "View more"}
-                  </button>
-              </a>
-          </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
   28: [
     L.marker([490, 1000], { icon: barIcon })
       .addTo(map)

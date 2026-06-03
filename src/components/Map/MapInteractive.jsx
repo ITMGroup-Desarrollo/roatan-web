@@ -214,7 +214,7 @@ export default function MapInteractive({ lang }) {
                   </td>
                   <td>TACO LOVER</td>
                 </tr>
-                <tr data-marker-id="27">
+                {/* <tr data-marker-id="27">
                   <td>
                     <img
                       src={
@@ -225,7 +225,7 @@ export default function MapInteractive({ lang }) {
                     />
                   </td>
                   <td>THE BOAT BAR</td>
-                </tr>
+                </tr> */}
                 <tr data-marker-id="28">
                   <td>
                     <img

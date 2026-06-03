@@ -5,7 +5,7 @@ slug: "spa-wellness"
 date: "2024-05-01"
 description: "Esta es la primera publicación de mi nuevo blog de Astro."
 author: "Alumno de Astro"
-icon: "/img/port-experience/icons/spa.png"
+icon: "/img/port-experience/icons/spanew.png"
 logo: "/img/port-experience/logos/spa-wellness.png"
 image:
   url: "/img/port-experience/spa.webp"
@@ -34,7 +34,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["Spa","bienestar","relajacion","masajes","terapia","cuidado"]
+tags: ["Spa", "bienestar", "relajacion", "masajes", "terapia", "cuidado"]
 ---
 
 Relájate, disfruta y déjate llevar en nuestro Port Roatan Spa. Estás en las mejores manos para disfrutar de un masaje relajante y un momento de pura desconexión.<br> Vive esta experiencia única, ¡lo mereces!

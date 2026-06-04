@@ -102,7 +102,13 @@ export function getStaticPaths() {
       })
     }
   </div>
-
+  <div class="flex justify-center mt-12 md:mt-20">
+    <a
+      href={`/${lang}/map/`}
+      class="text-[var(--primary-color)] font-bold md:text-xl xl:text-2xl border-2 border-[var(--primary-color)] self-center p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--primary-color)]"
+      >{t.port.map}</a
+    >
+  </div>
   <Footer lang={lang} videoFile="fondo-footer-blanco.mp4" />
 
   <style>

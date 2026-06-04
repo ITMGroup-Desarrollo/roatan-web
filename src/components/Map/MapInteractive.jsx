@@ -429,17 +429,6 @@ export default function MapInteractive({ lang }) {
                   </td>
                   <td>PIRAÑA JOE</td>
                 </tr>
-                <tr data-marker-id="68">
-                  <td>
-                    <img
-                      src={
-                        import.meta.env.BASE_URL + "assets/icons/map/retail.svg"
-                      }
-                      alt="DEL SOL"
-                    />
-                  </td>
-                  <td>DEL SOL</td>
-                </tr>
                 <tr data-marker-id="69">
                   <td>
                     <img

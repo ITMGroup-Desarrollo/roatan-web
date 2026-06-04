@@ -1452,28 +1452,7 @@ var markers = {
         });
       }),
   ],
-  68: [
-    L.marker([605, 1055], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="${window.BASE_URL || "/"}assets/icons/map/retail.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">DEL SOL</p>
-                <p>
-                ${idioma === "es" ? "Tienda de ropa" : "Clothing store"}
-              </p>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
+
   69: [
     L.marker([695, 935], { icon: retailIcon })
       .addTo(map)

@@ -42,27 +42,34 @@ import { Image } from "astro:assets";
     <!-- links desktop -->
     <div class="flex justify-center">
       <nav
-        class="text-white flex flex-col lg:flex-row text-center lg:text-left text-lg lg:gap-5"
+        class="text-white flex flex-col lg:flex-row text-center lg:text-left text-2xl lg:gap-5"
       >
         <a
           class="hover:text-[var(--secondary-color)]"
-          href={`${import.meta.env.BASE_URL}${lang}/port-experience/`}>{t.menu["port-experience"]}</a
+          href={`${import.meta.env.BASE_URL}${lang}/port-experience/`}
+          >{t.menu["port-experience"]}</a
         >
         <a
           class="hover:text-[var(--secondary-color)]"
-          href={`${import.meta.env.BASE_URL}${lang}/discover-beyond/`}>{t.menu["discover-beyond"]}</a
-        >
-        <a class="hover:text-[var(--secondary-color)]" href={`${import.meta.env.BASE_URL}${lang}/blog/`}
-          >{t.menu.blog}</a
-        >
-        <a class="hover:text-[var(--secondary-color)]" href={`${import.meta.env.BASE_URL}${lang}/faqs/`}
-          >{t.menu.faqs}</a
+          href={`${import.meta.env.BASE_URL}${lang}/discover-beyond/`}
+          >{t.menu["discover-beyond"]}</a
         >
         <a
           class="hover:text-[var(--secondary-color)]"
-          href={`${import.meta.env.BASE_URL}${lang}/contact/`}>{t.menu.contact}</a
+          href={`${import.meta.env.BASE_URL}${lang}/blog/`}>{t.menu.blog}</a
         >
-        <a class="hover:text-[var(--secondary-color)]" href={`${import.meta.env.BASE_URL}${lang}/policy/`}
+        <a
+          class="hover:text-[var(--secondary-color)]"
+          href={`${import.meta.env.BASE_URL}${lang}/faqs/`}>{t.menu.faqs}</a
+        >
+        <a
+          class="hover:text-[var(--secondary-color)]"
+          href={`${import.meta.env.BASE_URL}${lang}/contact/`}
+          >{t.menu.contact}</a
+        >
+        <a
+          class="hover:text-[var(--secondary-color)]"
+          href={`${import.meta.env.BASE_URL}${lang}/policy/`}
           >{t.footer.policy}</a
         >
       </nav>
@@ -116,7 +123,7 @@ import { Image } from "astro:assets";
       </nav>
     </div>
     <!-- copyright desktop -->
-    <div class="text-copyright text-white text-xs lg:text-base">
+    <div class="text-copyright text-white text-sm lg:text-base">
       <p>Copyright © 2026 │ By ITM Group</p>
     </div>
   </div>

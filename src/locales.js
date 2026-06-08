@@ -58,25 +58,69 @@ export const translations = {
       subtitle: "¡Estamos listos para ayudarte!",
       landingSubtitle:
         "¿Necesitas ayuda? ¡No te preocupes! Resuelve tus dudas y prepárate para tus próximas vacaciones.",
-      pregunta1: "What can I find in Port Roatan?",
-      pregunta1: "¿Qué puedo encontrar en Port\u00A0Roatan?",
-      pregunta2: "¿Hay actividades dentro de Port\u00A0Roatan?",
-      pregunta3: "¿Puedo visitar Port Roatan, aunque no venga en\u00A0crucero?",
-      pregunta4: "¿Las piscinas y zonas lounge son\u00A0gratis?",
-      pregunta5: "¿Qué me recomiendan llevar al\u00A0llegar?",
-      pregunta6: "¿Quisiera explorar Roatán, ¿hay tours\u00A0disponibles?",
+      pregunta1: "¿Qué es Port\u00A0Roatan?",
       respuesta1:
-        "¡Un puerto de cruceros con el que vas a soñar! Inspirado en su ubicación caribeña, Port Roatan te ofrece una variedad de actividades pensadas para que disfrutes al máximo tu parada. Desde restaurantes temáticos hasta una zona exclusiva de tiendas, queremos que vivas una experiencia inolvidable.",
+        "¡Bienvenido a Port Roatan! Un puerto de cruceros con el que soñarás. Inspirado en su ubicación caribeña, Port Roatan es un puerto de cruceros que ofrece diversas actividades para que los huéspedes disfruten durante su visita.",
+      pregunta2: "¿Qué puedo encontrar en Port\u00A0Roatan?",
       respuesta2:
-        " ¡Claro que sí! Piscinas refrescantes, zonas lounge, tiendas, hamacas y hasta un spa relajante (con costo adicional).",
+        "Port Roatan ofrece una experiencia completa para huéspedes de todas las edades. A tu llegada encontrarás bares y restaurantes temáticos, piscinas, áreas de descanso, una exclusiva zona comercial y mucho más.",
+      pregunta3: "¿Port Roatan es un puerto todo\u00A0incluido?",
       respuesta3:
-        " ¡Gracias por tu interés! Al momento, el acceso a Port Roatan es exclusivo para cruceristas.",
-      respuesta4:
-        "¡Sí! Solo ten en cuenta que no hay reservaciones, así que puedes elegir tu lugar favorito al llegar.",
-      respuesta5:
-        "¡Un outfit fresco y cómodo (playero), bloqueador solar, lentes de sol y sombrero! También te sugerimos llevar efectivo para tus actividades y souvenirs.",
+        "No, no somos una experiencia todo incluido. Sin embargo, contamos con actividades gratuitas para que las disfrutes al máximo.",
+      pregunta4: "¿Hay actividades gratuitas dentro de Port\u00A0Roatan?",
+      respuesta4: "¡Sí! Nuestras piscinas y áreas de descanso son gratuitas.",
+      pregunta5: "¿El spa también es gratuito en el\u00A0puerto?",
+      respuesta5: "Por el momento, nuestro relajante spa no es gratuito.",
+      pregunta6: "¿Hay conexión Wi-Fi en el\u00A0puerto?",
       respuesta6:
-        "Roatán es un destino espectacular. Te recomendamos explorar el puerto y visitar los Last-minute booths al llegar.",
+        "Disfruta de tu bebida o platillo favorito y obtén un código para el Wi-Fi.",
+      pregunta7:
+        "¿Hay casilleros (lockers) disponibles para alquilar en Port\u00A0Roatan?",
+      respuesta7: "No contamos con casilleros en el puerto.",
+      pregunta8: "¿Puedo visitar Port Roatan sin viajar en\u00A0crucero?",
+      respuesta8:
+        "¡Gracias por tu interés! Port Roatan es exclusivo para huéspedes de cruceros.",
+      pregunta9: "¿Puedo pasar la noche en Port\u00A0Roatan?",
+      respuesta9:
+        "Lo sentimos, no ofrecemos alojamiento para estancias nocturnas.",
+      pregunta10:
+        "¿Las personas que utilizan ayudas de movilidad, como sillas de ruedas, andadores o scooters, pueden disfrutar del\u00A0puerto?",
+      respuesta10:
+        "¡Por supuesto! No te preocupes, puedes utilizar tu ayuda de movilidad dentro del puerto.",
+      pregunta11: "¿Las piscinas y áreas de descanso son\u00A0gratuitas?",
+      respuesta11: "¡Sí! No se requiere reservación para disfrutarlas.",
+      pregunta12: "¿Hay salvavidas en todas las piscinas de Port\u00A0Roatan?",
+      respuesta12:
+        "¡Sí! Y siempre estarán listos para ayudar. Sin embargo, te recomendamos mantener una supervisión constante de los niños.",
+      pregunta13: "¿Se pueden reservar las áreas de\u00A0descanso?",
+      respuesta13:
+        "Como queremos que todos disfruten de su visita, todas nuestras áreas de descanso funcionan por orden de llegada.",
+      pregunta14:
+        "¿Ofrecen toallas gratuitas para las áreas de descanso\u00A0y\u00A0piscinas?",
+      respuesta14:
+        "Lo sentimos. Por el momento no ofrecemos toallas gratuitas en el puerto.",
+      pregunta15:
+        "¿Puedo utilizar mis paquetes del crucero en Port\u00A0Roatan?",
+      respuesta15:
+        "Los paquetes del crucero son exclusivos para su uso a bordo de tu barco.",
+      pregunta16:
+        "¿Tienen alguna recomendación sobre qué llevar al\u00A0llegar?",
+      respuesta16:
+        "¡Sí! Lleva ropa fresca y cómoda (estilo playero), protector solar, gafas de sol, toalla y sombrero o gorra.",
+      pregunta17:
+        "¿Cuál es la edad mínima para consumir bebidas alcohólicas en Port\u00A0Roatan?",
+      respuesta17:
+        "Los huéspedes deben tener 18 años o más para comprar y disfrutar nuestras bebidas alcohólicas.",
+      pregunta18:
+        "¿Cómo puedo disfrutar de actividades fuera de Port\u00A0Roatan?",
+      respuesta18:
+        "Puedes reservar una excursión al llegar en los módulos de Last-minute. Consulta nuestra sección Beyond the Cruise para descubrir las experiencias disponibles.",
+      pregunta19: "¿Qué métodos de pago acepta Port\u00A0Roatan?",
+      respuesta19:
+        "Aceptamos tarjetas de crédito y débito, billeteras digitales y efectivo. Siempre recomendamos llevar efectivo disponible.",
+      pregunta20:
+        "Voy a visitar Port Roatan pronto, ¿dónde puedo encontrar un mapa del\u00A0puerto?",
+      respuesta20: "¡Nuestro mapa está siempre disponible para ti aquí!",
     },
     blog: {
       title: "Port Roatan News",
@@ -251,24 +295,63 @@ export const translations = {
       subtitle: "We’re here to answer!",
       landingSubtitle:
         "Need some help? Don’t worry, we got your back! Find the answers to your questions and get ready for your next vacation.",
-      pregunta1: "What can I find in Port\u00A0Roatan?",
-      pregunta2: "Are there activities inside Port\u00A0Roatan?",
-      pregunta3: "Can I visit Port Roatan without a\u00A0cruise?",
-      pregunta4: "Are pools and lounge areas\u00A0free?",
-      pregunta5: "Any suggestions on what to bring upon\u00A0arrival?",
-      pregunta6:
-        "I would love to explore Roatan. Are there any tours\u00A0available?",
+      pregunta1: "What is Port\u00A0Roatan?",
       respuesta1:
-        "A cruise port you'll be dreaming of! Inspired by its Caribbean location, Port Roatan is a cruise port that offers various activities for cruise guests to enjoy. From themed restaurants, to an exclusive retail area, we want to make the best out of your Port Roatan stop.",
+        "Welcome to Port Roatan! A cruise port you’ll be dreaming of. Inspired by its Caribbean location, Port Roatan is a cruise port that offers various activities for cruise guests to enjoy.",
+      pregunta2: "What can I find in Port\u00A0Roatan?",
       respuesta2:
-        "Yes! Refreshing pools, lounge areas, shopping, hammocks, and a relaxing spa (at extra cost).",
+        "Port Roatan provides a full experience for guests of all ages. Upon arrival, you’ll find themed bars and restaurants, pools, lounge areas, an exclusive retail area, and more!",
+      pregunta3: "Is Port Roatan an all-inclusive\u00A0port?",
       respuesta3:
+        "No, we are not an all-inclusive experience. However, we do have complimentary activities for you to enjoy.",
+      pregunta4: "Are there free activities inside Port\u00A0Roatan?",
+      respuesta4: "Yes! Our pools and lounge areas are free.",
+      pregunta5: "Is the spa free at the port, too?",
+      respuesta5: "At the moment, our relaxing spa is not free.",
+      pregunta6: "Are there Wi-Fi connections at the\u00A0port?",
+      respuesta6: "Enjoy your favorite drink or dish and get a code",
+      pregunta7: "Are there lockers available for rent at Port\u00A0Roatan?",
+      respuesta7: "We do not have lockers at the port.",
+      pregunta8: "Can I visit Port Roatan without traveling by\u00A0cruise?",
+      respuesta8:
         "Thank you for your interest! Port Roatan is exclusive to cruise ship guests.",
-      respuesta4:
-        "Yes, they are! There is no reservation needed for you to enjoy them. Please note, these areas are first come, first serve.",
-      respuesta5:
-        "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, and hat. We recommend bringing cash for your activities and souvenirs.",
-      respuesta6: "Roatan is a stunning destination. We recommend visiting",
+      pregunta9: "Can I stay for a night at Port\u00A0Roatan?",
+      respuesta9:
+        "We are sorry, we do not offer accommodation for overnight stays.",
+      pregunta10:
+        "Can visitors using mobility aids, such as wheelchairs, walkers, or scooters enjoy the\u00A0port?",
+      respuesta10:
+        "Of course! Don’t worry, you can use your mobility aid at the port.",
+      pregunta11: "Are pools and lounge areas\u00A0free?",
+      respuesta11:
+        "Yes, they are! There is no reservation needed for you to enjoy them.",
+      pregunta12: "Are there lifeguards at every pool in Port\u00A0Roatan?",
+      respuesta12:
+        "Yes! And they will always be ready to help. However, we encourage you to please keep a watchful eye for children.",
+      pregunta13: "Are there any reservations for lounge\u00A0areas?",
+      respuesta13:
+        "Since we want everyone to enjoy their time upon arrival, all our lounge areas are first come, first serve.",
+      pregunta14:
+        "Do you offer free towels for the lounge and pool\u00A0areas?",
+      respuesta14:
+        "We are sorry. At the moment, we do not offer free towels at the port.",
+      pregunta15: "Can I use my cruise packages at Port\u00A0Roatan?",
+      respuesta15: "Cruise packages are exclusive to your ship.",
+      pregunta16: "Any suggestions on what to bring upon\u00A0arrival?",
+      respuesta16:
+        "Yes! Pack a cool and comfy outfit (beach vibes), sunblock, sunglasses, towel and a hat or cap.",
+      pregunta17:
+        "What is the age requirement for alcoholic beverages at Port\u00A0Roatan?",
+      respuesta17:
+        "Guests must be 18 years of age or older to purchase and enjoy our drinks.",
+      pregunta18: "How can I enjoy activities outside Port\u00A0Roatan?",
+      respuesta18:
+        "You can book an excursion upon arrival at the Last-minute booths. Check our Beyond the Cruise  section to discover the experiences.",
+      pregunta19: "What payment methods does Port Roatan\u00A0accept?",
+      respuesta19:
+        "We accept credit & debit cards, digital wallets, and cash. We always recommend having cash in hand.",
+      pregunta20: "I’m visiting soon, where can I find a Port Roatan\u00A0map?",
+      respuesta20: "Our map is always available for you here!",
     },
     blog: {
       title: "Port Roatan News",

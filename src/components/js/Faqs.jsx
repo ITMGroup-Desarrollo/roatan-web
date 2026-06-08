@@ -11,52 +11,18 @@ const PreguntasYRespuestas = ({ t, full }) => {
   };
   let faqs;
 
-  if (full) {
-    faqs = [
-      {
-        id: 1,
-        pregunta: t.homeFaqs.pregunta1,
-        respuesta: t.homeFaqs.respuesta1,
-      },
-      {
-        id: 2,
-        pregunta: t.homeFaqs.pregunta2,
-        respuesta: t.homeFaqs.respuesta2,
-      },
-      {
-        id: 3,
-        pregunta: t.homeFaqs.pregunta3,
-        respuesta: t.homeFaqs.respuesta3,
-      },
-      {
-        id: 4,
-        pregunta: t.homeFaqs.pregunta4,
-        respuesta: t.homeFaqs.respuesta4,
-      },
-      {
-        id: 5,
-        pregunta: t.homeFaqs.pregunta5,
-        respuesta: t.homeFaqs.respuesta5,
-      },
-    ];
-  } else {
-    faqs = [
-      {
-        id: 1,
-        pregunta: t.homeFaqs.pregunta1,
-        respuesta: t.homeFaqs.respuesta1,
-      },
-      {
-        id: 2,
-        pregunta: t.homeFaqs.pregunta2,
-        respuesta: t.homeFaqs.respuesta2,
-      },
-      {
-        id: 3,
-        pregunta: t.homeFaqs.pregunta3,
-        respuesta: t.homeFaqs.respuesta3,
-      },
-    ];
+  faqs = [];
+  const limit = full ? 20 : 3;
+  for (let i = 1; i <= limit; i++) {
+    const pregunta = t.homeFaqs[`pregunta${i}`];
+    const respuesta = t.homeFaqs[`respuesta${i}`];
+    if (pregunta && respuesta) {
+      faqs.push({
+        id: i,
+        pregunta,
+        respuesta,
+      });
+    }
   }
 
   return (

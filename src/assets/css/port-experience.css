@@ -1,6 +1,13 @@
 .bg-gradient-item {
-    background: var(--primary-color);
-    background: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
+    background-image: linear-gradient(0deg, var(--primary-color) 5%, rgba(255, 255, 255, 0) 70%);
+    background-color: rgba(0, 106, 183, 0);
+    transition: background-color 0.3s ease-out;
+}
+
+@media (min-width: 768px) {
+    .group:hover .bg-gradient-item {
+        background-color: rgba(0, 106, 183, 0.6);
+    }
 }
 
 /* .item-background{

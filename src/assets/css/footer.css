@@ -23,3 +23,7 @@
 .social-link:hover .social-icon-path {
     fill: #006ab7;
 }
+
+.bg-footer-gradient {
+    background: linear-gradient(to top, #002955 0%, #0069be 30%, #008fdb 50%, #f2f2f2 85%, #f2f2f2 100%);
+}

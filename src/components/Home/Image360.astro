@@ -107,7 +107,7 @@ const t = translations[lang] ?? translations["es"];
 
               const cameraEntity = document.createElement("a-entity");
               cameraEntity.id = "myCamera";
-              cameraEntity.setAttribute("camera", "");
+              cameraEntity.setAttribute("camera", "fov: 95");
               cameraEntity.setAttribute(
                 "look-controls",
                 "reverseMouseDrag: true",

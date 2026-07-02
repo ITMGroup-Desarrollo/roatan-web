@@ -6,6 +6,7 @@ const headerTitle = Astro.props.headerTitle ?? "";
 const headerSubtitle = Astro.props.headerSubtitle ?? "";
 const headerUrl = Astro.props.headerUrl ?? "";
 const style = Astro.props.style ?? "";
+const css = Astro.props.css ?? "";
 const id = Astro.props.id ?? "";
 ---
 
@@ -16,6 +17,7 @@ const id = Astro.props.id ?? "";
       alt="Fondo del header del blog"
       class={`bg-header absolute z-0 w-full h-full object-cover ${style}`}
       loading="eager"
+      style={css}
     />
     <div class="absolute w-full h-full bg-gradient-header z-1"></div>
   </div>

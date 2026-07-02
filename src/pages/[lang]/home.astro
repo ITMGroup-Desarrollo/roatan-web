@@ -8,6 +8,7 @@ import PortExperience from "../../components/Home/Port.astro";
 import Travel from "../../components/Home/Travel.astro";
 import Discover from "../../components/Home/Discover.astro";
 import Trip from "../../components/Home/Trip.astro";
+import Image360 from "../../components/Home/Image360.astro";
 import Faqs from "../../components/Home/Faqs.astro";
 export const prerender = true;
 export function getStaticPaths() {
@@ -24,6 +25,7 @@ const lang = Astro.params.lang || "es";
   <Travel lang={lang} />
   <Discover lang={lang} />
   <Trip lang={lang} />
+  <Image360 lang={lang} />
   <Faqs lang={lang} />
   <Footer lang={lang} videoFile="fondo-footer-gris.mp4"/>
 </Layout>

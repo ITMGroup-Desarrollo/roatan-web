@@ -1,0 +1,148 @@
+---
+import { translations } from "../../locales.js";
+const lang = Astro.props?.lang ?? "es";
+const t = translations[lang] ?? translations["es"];
+---
+
+<section
+  id="image-360-container"
+  class="w-full mt-10 bg-[var(--redSocial-color)] relative overflow-hidden"
+>
+  <!-- The 360 Viewport covering full width -->
+  <div
+    id="image-360"
+    class="w-full h-[450px] md:h-[650px] lg:h-[800px] relative bg-black/10"
+  >
+    <!-- A-scene will be injected/hydrated here if IntersectionObserver triggers -->
+    <!-- We can show a nice placeholder/loader while A-Frame is loading -->
+    <div
+      id="image-360-placeholder"
+      class="absolute inset-0 flex flex-col items-center justify-center bg-cover bg-center transition-opacity duration-700"
+      style="background-image: url('/img/maquetado/panoramic.jpeg');"
+    >
+      <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+      <div class="z-10 flex flex-col items-center text-white p-6 text-center">
+        <!-- A nice pulsating finger/drag/360 icon to invite interaction -->
+        <div
+          class="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center animate-pulse mb-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include script to load A-Frame on intersection -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("image-360");
+    const placeholder = document.getElementById("image-360-placeholder");
+    if (!container) return;
+
+    const observer360 = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          // Start loading A-Frame library
+          const script = document.createElement("script");
+          script.src = "https://aframe.io/releases/1.7.0/aframe.min.js";
+          script.onload = () => {
+            // Register the component after AFRAME is loaded
+            if (typeof AFRAME !== "undefined") {
+              AFRAME.registerComponent("limit-rotation", {
+                tick: function () {
+                  const rot = this.el.object3D.rotation;
+                  // Limit pitch (looking up/down) to avoid flipping camera upside down
+                  rot.x = Math.max(-Math.PI / 4, Math.min(Math.PI / 4, rot.x));
+                  // Horizontal rotation (rot.y / yaw) has no limit, enabling infinite 360 loop
+                },
+              });
+
+              // Create A-Frame HTML programmatically so it initializes correctly after library load
+              const scene = document.createElement("a-scene");
+              scene.setAttribute("embedded", "");
+              scene.setAttribute("keyboard-shortcuts", "enterVR: false");
+              scene.setAttribute("vr-mode-ui", "enabled: false");
+
+              const assets = document.createElement("a-assets");
+              const img = document.createElement("img");
+              img.id = "sky-img";
+              img.src = "/img/maquetado/panoramic.jpeg";
+              img.setAttribute("crossorigin", "anonymous");
+
+              // Once the panoramic image inside A-Assets is loaded, hide the placeholder
+              img.onload = () => {
+                if (placeholder) {
+                  placeholder.classList.add("opacity-0");
+                  setTimeout(() => placeholder.remove(), 700);
+                }
+              };
+              img.addEventListener("load", () => {
+                if (placeholder) {
+                  placeholder.classList.add("opacity-0");
+                  setTimeout(() => placeholder.remove(), 700);
+                }
+              });
+
+              assets.appendChild(img);
+              scene.appendChild(assets);
+
+              const sky = document.createElement("a-sky");
+              sky.setAttribute("src", "#sky-img");
+              sky.setAttribute("rotation", "0 -100 0");
+              scene.appendChild(sky);
+
+              const cameraEntity = document.createElement("a-entity");
+              cameraEntity.id = "myCamera";
+              cameraEntity.setAttribute("camera", "");
+              cameraEntity.setAttribute(
+                "look-controls",
+                "reverseMouseDrag: true",
+              );
+              cameraEntity.setAttribute("wasd-controls", "enabled: false");
+              cameraEntity.setAttribute("position", "0 1.6 0");
+              cameraEntity.setAttribute("limit-rotation", "");
+              scene.appendChild(cameraEntity);
+
+              container.appendChild(scene);
+
+              // If the image was already cached, it might not fire onload, let's check scene loaded
+              scene.addEventListener("renderstart", () => {
+                if (placeholder) {
+                  placeholder.classList.add("opacity-0");
+                  setTimeout(() => placeholder.remove(), 700);
+                }
+              });
+            }
+          };
+          document.head.appendChild(script);
+          observer360.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    observer360.observe(container);
+  });
+</script>
+
+<style>
+  /* A-Frame scene embedded custom adjustments */
+  a-scene {
+    width: 100% !important;
+    height: 100% !important;
+  }
+</style>

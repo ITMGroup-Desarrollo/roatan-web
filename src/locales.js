@@ -122,6 +122,10 @@ export const translations = {
         "Voy a visitar Port Roatan pronto, ¿dónde puedo encontrar un mapa del\u00A0puerto?",
       respuesta20: "¡Nuestro mapa está siempre disponible para ti aquí!",
     },
+    homeImage360: {
+      title: "Experiencia 360°",
+      subtitle: "Siente el ambiente de Port Roatan antes de llegar.",
+    },
     blog: {
       title: "Port Roatan News",
       subtitle: "Todos los artículos",
@@ -352,6 +356,10 @@ export const translations = {
         "We accept credit & debit cards, digital wallets, and cash. We always recommend having cash in hand.",
       pregunta20: "I’m visiting soon, where can I find a Port Roatan\u00A0map?",
       respuesta20: "Our map is always available for you here!",
+    },
+    homeImage360: {
+      title: "360° Experience",
+      subtitle: "Feel the vibe of Port Roatan before you arrive.",
     },
     blog: {
       title: "Port Roatan News",

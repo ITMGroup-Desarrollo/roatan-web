@@ -65,9 +65,8 @@ const t = translations[lang] ?? translations["es"];
               AFRAME.registerComponent("limit-rotation", {
                 tick: function () {
                   const rot = this.el.object3D.rotation;
-                  // Limit pitch (looking up/down) to avoid flipping camera upside down
-                  rot.x = Math.max(-Math.PI / 4, Math.min(Math.PI / 4, rot.x));
-                  // Horizontal rotation (rot.y / yaw) has no limit, enabling infinite 360 loop
+                  rot.y = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rot.y)); // yaw
+                  rot.x = Math.max(-Math.PI / 4, Math.min(Math.PI / 4, rot.x)); // pitch
                 },
               });
 
@@ -107,7 +106,7 @@ const t = translations[lang] ?? translations["es"];
 
               const cameraEntity = document.createElement("a-entity");
               cameraEntity.id = "myCamera";
-              cameraEntity.setAttribute("camera", "fov: 95");
+              cameraEntity.setAttribute("camera", "");
               cameraEntity.setAttribute(
                 "look-controls",
                 "reverseMouseDrag: true",

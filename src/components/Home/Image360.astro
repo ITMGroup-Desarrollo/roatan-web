@@ -18,7 +18,7 @@ const t = translations[lang] ?? translations["es"];
     <div
       id="image-360-placeholder"
       class="absolute inset-0 flex flex-col items-center justify-center bg-cover bg-center transition-opacity duration-700"
-      style="background-image: url('/img/maquetado/panoramic.jpeg');"
+      style="background-image: url('/img/maquetado/panoramic.webp');"
     >
       <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
       <div class="z-10 flex flex-col items-center text-white p-6 text-center">
@@ -79,7 +79,7 @@ const t = translations[lang] ?? translations["es"];
               const assets = document.createElement("a-assets");
               const img = document.createElement("img");
               img.id = "sky-img";
-              img.src = "/img/maquetado/panoramic.jpeg";
+              img.src = "/img/maquetado/panoramic.webp";
               img.setAttribute("crossorigin", "anonymous");
 
               // Once the panoramic image inside A-Assets is loaded, hide the placeholder

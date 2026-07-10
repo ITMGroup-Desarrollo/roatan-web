@@ -2,7 +2,7 @@
 title: 'Garifuna folklore, <br class="hidden md:block">flavors & heritage'
 subtitle: "Non reprehenderit ad deserunt."
 slug: "garifuna"
-direction: "left"
+direction: "right"
 date: "2024-05-01"
 excerpt: "Step into Garifuna tradition with live drumming, ancestral dances, and a flavorful tasting of authentic local cuisine; all set in a rustic hacienda surrounded by nature."
 description: "snorkel"
@@ -83,7 +83,20 @@ combinedgallery:
     alt: "imagen del post 10"
   - url: "/img/discover-beyond/garifuna/11.webp"
     alt: "imagen del post 11"
-tags: ["tours", "folklore", "culture", "heritage", "history", "local food", "flavors", "tradition", "dance", "music", "fun"]
+tags:
+  [
+    "tours",
+    "folklore",
+    "culture",
+    "heritage",
+    "history",
+    "local food",
+    "flavors",
+    "tradition",
+    "dance",
+    "music",
+    "fun",
+  ]
 ---
 
 -

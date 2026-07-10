@@ -44,6 +44,7 @@ const baseDir = path.resolve(`./src`);
 const content = [
   ...loadMarkdownFromDir(`${baseDir}/posts/${lang}`),
   ...loadMarkdownFromDir(`${baseDir}/ports/${lang}`),
+  ...loadMarkdownFromDir(`${baseDir}/discover/${lang}`),
 ];
 ---
 

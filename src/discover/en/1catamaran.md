@@ -4,7 +4,10 @@ subtitle: "Non reprehenderit ad deserunt."
 slug: "catamaran"
 direction: "right"
 date: "2024-05-01"
-excerpt: "¡Navegar es genial!<br>Zarpa para disfrutar de un día de sol, mar y diversión en nuestro catamarán hacia las costas vírgenes de Roatán. Embarca y descubre la impresionante costa de la isla mientras navegas por sus aguas cristalinas y te sumerges en el vibrante mundo submarino del Mar Caribe. "
+excerpt: "Sailing is fun for all!<br>
+Set sail for a day of sun, sea, and fun on our catamaran to the pristine shores of
+Roatán. Step aboard and discover the island's stunning coastline as you navigate its
+crystal-clear waters and dive into the vibrant underwater world of the Caribbean Sea."
 description: "Catamarán y snorkel"
 author: ""
 fondo:
@@ -16,30 +19,38 @@ image:
 icons:
   - url: "/img/iconos/discover-beyond/primary/catamaran.svg"
     alt: "icon"
-    name: "Paseo en catamarán"
+    name: "Catamaran cruise"
   - url: "/img/iconos/discover-beyond/primary/snorkel.svg"
     alt: "icon"
-    name: "Equipo de snorkel"
+    name: "Snorkel equipment"
   - url: "/img/iconos/discover-beyond/primary/capitan.svg"
     alt: "icon"
-    name: "Capitán, guía y tripulación"
+    name: "Captain, tour guide and crew"
   - url: "/img/iconos/discover-beyond/primary/bar.svg"
     alt: "icon"
-    name: "Barra libre a bordo"
+    name: "Open bar onboard"
   - url: "/img/iconos/discover-beyond/primary/snorkel_guide.svg"
     alt: "icon"
-    name: "Excursión guiada de snorkel"
+    name: "Guided snorkel tour"
 requirements:
-  - name: "Bañador y toalla"
-  - name: "Ropa cómoda para actividades al aire libre"
-  - name: "Cámara o teléfono móvil"
-  - name: "Sombrero y gafas de sol"
-  - name: "Repelente de insectos ecológico"
-  - name: "Protector solar biodegradable"
-  - name: "Dinero en efectivo"
+  - name: "Swimming suit and towel"
+  - name: "Comfortable clothing for outdoor activities"
+  - name: "Camera or cellphone"
+  - name: "Hat and sunglasses"
+  - name: "Eco friendly insect repellent"
+  - name: "Biodegradable sun block"
+  - name: "Extra spending money"
 capacity: "140 Pax"
 duration: "3 Hrs"
-note: "Requisitos y restricciones: Las personas con discapacidad auditiva deben ir acompañadas de un asistente, amigo o familiar. Por razones de seguridad, no pueden participar en esta excursión los huéspedes con lesiones de cuello o espalda, cirugías recientes o pacientes con asma, diabetes, esquizofrenia, pánico, epilepsia, ceguera, embarazo u otras afecciones cardíacas o respiratorias. El límite de peso es de 120 kilos o 264 libras. La edad mínima para participar es de 8 años y la máxima de 65. Esta excursión es apropiada para huéspedes que puedan caminar sin dificultades. Los visitantes con andador, bastón, silla de ruedas plegable manual o plegable ligera, scooter / silla de ruedas eléctrica no son elegibles para participar en la excursión."
+note: "Requirements and restrictions: Hard of hearing / hearing impaired guests
+must be accompanied by an assistant, friend, or family member. For safety reasons,
+guest with neck or back injuries, recent surgeries or patients with asthma, diabetes
+schizophrenia, panic, epilepsy, blindness, pregnancy or other heart or respiratory
+conditions are not eligible for this excursion. The weight limit 120 kilos or 264 pounds.
+Minimum age to participate is 8 years old and maximum is 65 years old. This tour is
+appropriate for guests who can walk with no difficulties. Nevertheless, guests with
+walker, cane, folding manual or folding lightweight wheelchair, scooter / electric
+wheelchair are not eligible to participate in the excursion."
 firstgallery:
   - url: "/img/discover-beyond/catamaran/1.webp"
     alt: "imagen del post 1"
@@ -65,7 +76,7 @@ combinedgallery:
     alt: "imagen del post 5"
   - url: "/img/discover-beyond/catamaran/6.webp"
     alt: "imagen del post 6"
-tags: ["astro", "comer", "aprender en público"]
+tags: ["tours", "catamaran", "cruise", "snorkel", "adventure", "fun", "beach", "sea", "marine life"]
 ---
 
 Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.

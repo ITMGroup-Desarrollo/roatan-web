@@ -4,11 +4,7 @@ subtitle: "Non reprehenderit ad deserunt."
 slug: "ocean-harvest"
 direction: "left"
 date: "2024-05-01"
-excerpt: 'Handpick your own freshly caught spiny king crab or spiny lobster at the "Catch of the
-Day Market Display" from one of the pioneer seafood restaurants in town. Sit back,
-relax, and take in stunning coastal views as the chef prepares your ocean harvest to
-perfection. Savor each bite of your feast, showcasing the delicate flavors of your
-handpicked catch and immersing you in the rich coastal traditions of Roatán.'
+excerpt: "Escoge tu cangrejo real o langosta espinosa de la «pesca del día» de uno de los restaurantes emblemáticos de la ciudad. Siéntate, relájate y disfruta de las impresionantes vistas de la costa mientras el chef prepara su cosecha marina a la perfección. Saborea cada bocado de su festín, mostrando los delicados sabores de su captura elegida a mano y sumergiéndose en las ricas tradiciones costeras de Roatán."
 description: "snorkel"
 author: ""
 fondo:
@@ -20,35 +16,30 @@ image:
 icons:
   - url: "/img/iconos/discover-beyond/secondary/guide.svg"
     alt: "icon"
-    name: "Certified bilingual tour guide"
+    name: "Guía bilingüe certificado"
   - url: "/img/iconos/discover-beyond/secondary/bus.svg"
     alt: "icon"
-    name: "Round trip transportation"
+    name: "Transportación de ida y vuelta"
   - url: "/img/iconos/discover-beyond/secondary/langosta.svg"
     alt: "icon"
-    name: "Tasting of King crab and lobster"
+    name: "Degustación de cangrejo real y langosta"
   - url: "/img/iconos/discover-beyond/secondary/softdrink.svg"
     alt: "icon"
-    name: "Two non-alcoholic drinks"
+    name: "Dos bebidas no alcohólicas"
   - url: "/img/iconos/discover-beyond/secondary/servicios.svg"
     alt: "icon"
-    name: "Restaurant services and amenities"
+    name: "Servicios y comodidades del restaurante"
 requirements:
-  - name: "Swimming suit and towel"
-  - name: "Comfortable clothing for outdoor activities"
-  - name: "Camera or cellphone"
-  - name: "Hat and sunglasses"
-  - name: "Eco friendly insect repellent"
-  - name: "Biodegradable sun block"
-  - name: "Extra spending money"
+  - name: "Bañador y toalla"
+  - name: "Ropa cómoda para actividades al aire libre"
+  - name: "Cámara o teléfono móvil"
+  - name: "Sombrero y gafas de sol"
+  - name: "Repelente de insectos ecológico"
+  - name: "Protector solar biodegradable"
+  - name: "Dinero en efectivo"
 capacity: "28 Pax"
 duration: "4.5 Hrs"
-note: "Requirements and restrictions: Guests who are hard of hearing, hearing
-impaired, or blind must be accompanied by an assistant, friend, or family member. The
-tour is open to participants aged from 13 to 80 years old. This excursion is suitable for
-guests who can walk independently without assistance. While guests using a walker or
-cane are welcome to participate, those using a manual or lightweight folding
-wheelchair, scooter, or electric wheelchair will not be eligible to join."
+note: "Requisitos y restricciones: Los visitantes con problemas de audición o ceguera deben ir acompañados de un asistente, amigo o familiar. La excursión está abierta a participantes de 13 a 80 años. Esta excursión es adecuada para personas que puedan caminar de forma independiente sin ayuda. Aunque los visitantes que utilicen andador o bastón son bienvenidos, los que utilicen silla de ruedas manual o plegable ligera, scooter o silla de ruedas eléctrica no podrán participar. "
 firstgallery:
   - url: "/img/discover-beyond/ocean-harvest/1.webp"
     alt: "imagen del post 1"
@@ -132,8 +123,9 @@ combinedgallery:
     alt: "imagen del post 20"
   - url: "/img/discover-beyond/ocean-harvest/21.webp"
     alt: "imagen del post 21"
-tags: ["astro", "comer", "aprender en público"]
+tags: ["tours", "cosecha marina", "cangrejo", "langosta", "banquete", "mariscos", "comida", "cena", "experiencia culinaria", "diversión"]
 ---
+
 -
 
 Nostrud adipisicing tempor commodo fugiat labore tempor ad ad dolore ea veniam labore magna tempor. Velit incididunt dolore id veniam est id adipisicing non nostrud elit consequat est. Lorem officia velit reprehenderit aute irure Lorem velit ullamco. Elit sit voluptate pariatur voluptate. Sit ad nisi ipsum voluptate minim labore amet nostrud cillum aliqua officia occaecat non.

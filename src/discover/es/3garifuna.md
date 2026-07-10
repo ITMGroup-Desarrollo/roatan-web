@@ -83,7 +83,7 @@ combinedgallery:
     alt: "imagen del post 10"
   - url: "/img/discover-beyond/garifuna/11.webp"
     alt: "imagen del post 11"
-tags: ["astro", "comer", "aprender en público"]
+tags: ["tours", "folklore", "cultura", "herencia", "historia", "comida local", "sabores", "tradición", "danza", "música", "diversión"]
 ---
 
 -

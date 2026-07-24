@@ -47,11 +47,8 @@ export default function SwiperClient() {
     "/img/home/swiperDiscover/8.webp",
     "/img/home/swiperDiscover/9.webp",
     "/img/home/swiperDiscover/10.webp",
-    "/img/home/swiperDiscover/11.webp",
-    "/img/home/swiperDiscover/12.webp",
     "/img/home/swiperDiscover/13.webp",
     "/img/home/swiperDiscover/14.webp",
-    "/img/home/swiperDiscover/15.webp",
   ];
 
   return (
@@ -60,7 +57,7 @@ export default function SwiperClient() {
         {images.map((src, i) => (
           <div key={i} className="swiper-slide h-full w-full">
             <img
-              src={`${import.meta.env.BASE_URL}${src.startsWith('/') ? src.slice(1) : src}`}
+              src={`${import.meta.env.BASE_URL}${src.startsWith("/") ? src.slice(1) : src}`}
               alt={`swiperfoto${i + 1}`}
               className="h-full w-full object-cover"
             />

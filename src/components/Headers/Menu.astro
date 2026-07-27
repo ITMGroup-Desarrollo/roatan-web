@@ -107,6 +107,21 @@ const content = [
   </div>
 </div>
 <MenuOverlay lang={lang} content={content} />
+<a
+  id="logo_menu_mobile"
+  class="absolute lg:hidden left-5 top-9 w-24 h-auto z-[2010] transition-opacity duration-300"
+  href={lang === "es"
+    ? `${import.meta.env.BASE_URL}es/home`
+    : `${import.meta.env.BASE_URL}en/home`}
+>
+  <Image
+    id="roatan_logo_mobile"
+    class="w-full h-auto"
+    src={roatanLogo}
+    alt="logo"
+    loading="eager"
+  />
+</a>
 <div
   id="burger_menu"
   class="absolute lg:hidden bg-transparent top-9 right-5 z-[2010]"
@@ -122,6 +137,7 @@ const content = [
 <script>
   const burger = document.getElementById("burger");
   const menuMovil = document.getElementById("menu_movil");
+  const logoMobile = document.getElementById("logo_menu_mobile");
   const burgerLines = document.querySelectorAll("#burger_menu .burger-line");
 
   if (burger) {
@@ -134,6 +150,9 @@ const content = [
         menuMovil.classList.remove("hidden");
         menuMovil.classList.add("flex");
         document.body.classList.add("overflow-hidden");
+        if (logoMobile) {
+          logoMobile.classList.add("opacity-0", "pointer-events-none");
+        }
 
         burgerLines.forEach((line) => {
           line.classList.remove("bg-white");
@@ -143,6 +162,9 @@ const content = [
         menuMovil.classList.remove("flex");
         menuMovil.classList.add("hidden");
         document.body.classList.remove("overflow-hidden");
+        if (logoMobile) {
+          logoMobile.classList.remove("opacity-0", "pointer-events-none");
+        }
 
         burgerLines.forEach((line) => {
           line.classList.remove("bg-[var(--secondary-color)]");
@@ -157,6 +179,9 @@ const content = [
           menuMovil.classList.remove("flex");
           menuMovil.classList.add("hidden");
           document.body.classList.remove("overflow-hidden");
+          if (logoMobile) {
+            logoMobile.classList.remove("opacity-0", "pointer-events-none");
+          }
 
           burgerLines.forEach((line) => {
             line.classList.remove("bg-black");

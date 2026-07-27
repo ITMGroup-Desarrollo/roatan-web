@@ -108,6 +108,21 @@ const pathEn = getPathForLang("en");
     <Flags lang={lang} />
   </nav>
 </div>
+<a
+  id="logo_menu_mobile"
+  class="absolute lg:hidden left-5 top-9 w-24 h-auto z-40 transition-opacity duration-300"
+  href={lang === "es"
+    ? `${import.meta.env.BASE_URL}es/home`
+    : `${import.meta.env.BASE_URL}en/home`}
+>
+  <Image
+    id="roatan_logo_mobile"
+    class="w-full h-auto"
+    src={roatanLogo}
+    alt="logo"
+    loading="eager"
+  />
+</a>
 <div
   id="burger_menu"
   class="relative h-0 flex flex-row-reverse w-screen lg:hidden z-40"
@@ -124,6 +139,18 @@ const pathEn = getPathForLang("en");
   class="absolute top-0 hidden lg:hidden justify-center p-6 items-center z-30 bg-[var(--primary-color)] w-screen min-h-screen"
 >
   <nav class="text-white flex flex-col items-center justify-center gap-5">
+    <a
+      id="logo_menu_overlay"
+      class="w-28 h-auto mb-4"
+      href={lang === "es" ? `${import.meta.env.BASE_URL}es/home` : `${import.meta.env.BASE_URL}en/home`}
+    >
+      <Image
+        class="w-full h-auto"
+        src={roatanLogo}
+        alt="logo"
+        loading="eager"
+      />
+    </a>
     {
       menuItems.map((item) => (
         <a
@@ -155,6 +182,7 @@ const pathEn = getPathForLang("en");
 <script>
   const burger = document.getElementById("burger");
   const menuMovil = document.getElementById("menu_movil");
+  const logoMobile = document.getElementById("logo_menu_mobile");
   const burgerLines = document.querySelectorAll("#burger_menu .burger-line");
 
   if (burger) {
@@ -167,6 +195,9 @@ const pathEn = getPathForLang("en");
         menuMovil.classList.remove("hidden");
         menuMovil.classList.add("flex");
         document.body.classList.add("overflow-hidden");
+        if (logoMobile) {
+          logoMobile.classList.add("opacity-0", "pointer-events-none");
+        }
 
         // Cambiar líneas a negro
         burgerLines.forEach((line) => {
@@ -177,6 +208,9 @@ const pathEn = getPathForLang("en");
         menuMovil.classList.remove("flex");
         menuMovil.classList.add("hidden");
         document.body.classList.remove("overflow-hidden");
+        if (logoMobile) {
+          logoMobile.classList.remove("opacity-0", "pointer-events-none");
+        }
 
         // Restaurar líneas a blanco
         burgerLines.forEach((line) => {
@@ -193,6 +227,9 @@ const pathEn = getPathForLang("en");
           menuMovil.classList.remove("flex");
           menuMovil.classList.add("hidden");
           document.body.classList.remove("overflow-hidden");
+          if (logoMobile) {
+            logoMobile.classList.remove("opacity-0", "pointer-events-none");
+          }
 
           // Restaurar líneas a blanco
           burgerLines.forEach((line) => {

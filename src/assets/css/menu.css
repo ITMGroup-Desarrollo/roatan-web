@@ -61,9 +61,9 @@
   width: max-content;
 }
 
-.menu_element:hover {
+/* .menu_element:hover {
   font-weight: bold;
-}
+} */
 
 .search_input {
   background-color: rgba(255, 255, 255, 0.0);

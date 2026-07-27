@@ -132,6 +132,10 @@ h2 {
   font-size: 3rem;
 }
 
+span#subtitle-text {
+  font-size: 4rem;
+}
+
 .headerSubtitle {
   margin-top: -2rem;
 }
@@ -149,6 +153,10 @@ h2 {
     font-size: 5rem;
   }
 
+  span#subtitle-text {
+    font-size: 6rem;
+  }
+
   .headerSubtitle {
     margin-top: -3rem;
   }
@@ -160,6 +168,10 @@ h2 {
   .title_container h1,
   h2 {
     font-size: 8rem;
+  }
+
+  span#subtitle-text {
+    font-size: 9rem;
   }
 
 }

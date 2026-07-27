@@ -42,7 +42,7 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoSimple.png";
         class="text-white font-bebasBold headerTitle"
         set:html={t.header.title}
       />
-      <h2 class="text-white font-bebasBold headerSubtitle">
+      <h2 class="text-white font-bebasBold uppercase headerSubtitle">
         <span
           id="subtitle-text"
           data-subtitles={t.header.subtitle}
@@ -71,7 +71,7 @@ import roatanLogo from "../../assets/img/logo/Roatan-LogoSimple.png";
     }
 
     updateSubtitle();
-    setInterval(updateSubtitle, 130);
+    setInterval(updateSubtitle, 200);
   });
 </script>
 <script is:inline>

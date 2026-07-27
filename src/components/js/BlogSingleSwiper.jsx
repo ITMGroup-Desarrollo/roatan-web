@@ -18,7 +18,7 @@ function Slide({ post, lang }) {
         />
         <div className="p-4 flex flex-col justify-between flex-grow rounded-b-xl">
           <h4 className="text-4xl font-bold mb-2" dangerouslySetInnerHTML={{ __html: post.title }} />
-          <p className="text-2xl text-justify text-gray-700 mb-4">
+          <p className="text-2xl text-justify text-darkblue-color mb-4">
             {post.excerpt}
           </p>
           <a

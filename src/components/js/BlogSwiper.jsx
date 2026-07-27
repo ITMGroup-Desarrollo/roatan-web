@@ -74,7 +74,7 @@ const BlogSwiper = ({ posts, lang }) => {
                   dangerouslySetInnerHTML={{ __html: post.title }}
                 ></p>
                 <p
-                  className="text-justify text-2xl pb-8"
+                  className="text-justify text-2xl pb-8 text-darkblue-color"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 />
                 <a

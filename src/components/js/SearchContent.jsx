@@ -39,7 +39,7 @@ export default function SearchContent({ lang, content }) {
         loading="eager"
       />
       {filtered.length > 0 && (
-        <ul className="absolute left-3 bg-white text-black mt-2 w-[87%] z-10 rounded-2xl shadow-md max-h-60 overflow-y-auto no-scrollbar">
+        <ul className="absolute left-3 bg-white text-darkblue-color mt-2 w-[87%] z-10 rounded-2xl shadow-md max-h-60 overflow-y-auto no-scrollbar">
           {filtered.map((item, index) => (
             <li
               key={index}

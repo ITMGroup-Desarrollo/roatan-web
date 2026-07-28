@@ -22,7 +22,7 @@ import "../../assets/css/home.css";
     <div class="bottom-0 chica hidden md:block relative w-20 md:w-60 lg:w-80">
       <!-- Planta (atrás) -->
       <Image
-        class="absolute bottom-[-0rem] left-[-4rem] h-[450px] w-auto max-w-none z-0"
+        class="absolute bottom-[-0rem] left-[-4rem] md:left-[-12rem] lg:left-[-6rem] h-[450px] w-auto max-w-none z-0"
         src={planta}
         alt="planta"
         loading="eager"
@@ -31,7 +31,7 @@ import "../../assets/css/home.css";
 
       <!-- Chica (adelante) -->
       <Image
-        class="absolute parallax-image bottom-[-8rem] left-[-4rem] w-auto h-[450px] max-w-none z-10"
+        class="absolute parallax-image bottom-[-8rem] left-[-4rem] md:left-[-8rem] lg:left-[-6rem] w-auto h-[450px] max-w-none z-10"
         src={chica}
         alt="chica"
         loading="eager"
@@ -39,7 +39,7 @@ import "../../assets/css/home.css";
       />
       <!-- Planta Dos -->
       <Image
-        class="absolute bottom-[-0rem] left-[-4rem] h-[450px] w-auto max-w-none z-20"
+        class="absolute bottom-[-0rem] left-[-4rem] md:left-[-8rem] lg:left-[-6rem] h-[450px] w-auto max-w-none z-20"
         src={plantaDos}
         alt="planta"
         loading="eager"
@@ -48,7 +48,7 @@ import "../../assets/css/home.css";
     </div>
 
     <Image
-      class="ave parallax-image absolute w-28 md:w-60 lg:w-64 h-auto right-5 md:right-20 lg:right-36 xl:right-1/5 bottom-0 md:bottom-6 top-auto md:top-20 lg:top-[8rem] z-10"
+      class="ave parallax-image absolute w-28 md:w-60 lg:w-64 h-auto right-5 md:right-0 lg:right-36 xl:right-1/5 bottom-0 md:bottom-6 top-auto md:top-20 lg:top-[8rem] z-10"
       src={ave}
       alt="logo"
       loading="eager"
@@ -56,7 +56,7 @@ import "../../assets/css/home.css";
     />
   </div>
   <div
-    class="text-container parallax-text md:pt-16 w-full px-5 md:px-0 lg:w-1/2 text-center flex flex-col lg:block pb-8"
+    class="text-container parallax-text md:pt-28 lg:pt-16 w-full px-5 md:px-0 md:w-1/2 text-center flex flex-col lg:block pb-8"
     data-speed="0.25"
   >
     <h1>
@@ -64,7 +64,7 @@ import "../../assets/css/home.css";
         {t.homeWelcome.title}
       </p>
       <p
-        class="text-3xl flex mb-5 flex-col md:text-7xl font-bebasBold text-[var(--primary-color)]"
+        class="text-3xl flex mb-5 flex-col md:text-5xl lg:text-7xl font-bebasBold text-[var(--primary-color)]"
       >
         {t.homeWelcome.subtitle}
       </p>
@@ -72,7 +72,7 @@ import "../../assets/css/home.css";
     <div class="w-16 mx-auto border-b-4 lg:mb-5 border-[transparent] mb-4">
     </div>
     <p
-      class="text-2xl md:text-2xl text-justify px-4 md:text-center text-darkblue-color"
+      class="text-2xl md:text-xl lg:text-2xl text-justify px-4 md:text-center text-darkblue-color"
     >
       {t.homeWelcome.text}
     </p>

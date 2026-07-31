@@ -229,6 +229,8 @@ body {
     overflow: visible !important;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12vw, black 88vw, transparent 100%);
     mask-image: linear-gradient(to right, transparent 0%, black 12vw, black 88vw, transparent 100%);
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 
   .trip-container .swiper {

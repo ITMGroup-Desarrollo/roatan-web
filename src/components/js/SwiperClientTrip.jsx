@@ -81,7 +81,7 @@ function Slide({ img, name, text, url }) {
 
 export default function SwiperClient() {
   useEffect(() => {
-    new Swiper("#Trip-swiper", {
+    const swiper = new Swiper("#Trip-swiper", {
       modules: [Navigation, Pagination, Autoplay],
       loop: true,
       speed: 800, // Debe coincidir con la transición CSS
@@ -89,10 +89,6 @@ export default function SwiperClient() {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
       },
       breakpoints: {
         0: {
@@ -116,6 +112,10 @@ export default function SwiperClient() {
         pauseOnMouseEnter: true,
       },
     });
+
+    return () => {
+      swiper.destroy(true, true);
+    };
   }, []);
 
   return (
@@ -134,11 +134,6 @@ export default function SwiperClient() {
           />
         ))}
       </div>
-      {/* 
-      <div className="block swiper-button-prev custom-nav"></div>
-      <div className="block swiper-button-next custom-nav"></div> */}
-      <div className="swiper-pagination absolute right-0"></div>
-      {/* <div className=" swiper-pagination relative  left-1/2 -translate-x-1/2 z-10 " /> */}
     </div>
   );
 }

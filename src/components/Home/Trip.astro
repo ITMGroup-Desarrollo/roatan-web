@@ -14,14 +14,14 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
 ---
 
 <div
-  class="trip-container w-screen h-[40rem] lg:h-[48rem] flex flex-col items-center justify-center relative overflow-y-hidden overflow-x-hidden bg-[var(--redSocial-color)]"
+  class="trip-container w-screen h-[44rem] lg:h-[52rem] flex flex-col items-center justify-center relative overflow-y-hidden overflow-x-hidden bg-[var(--redSocial-color)]"
 >
   <div
     class="platanito-trip absolute top-30 left-0 md:bottom-10 w-[24rem] md:w-[36rem] h-auto"
   >
     <!-- Palmita (atrás) -->
     <Image
-      class="absolute bottom-[-8rem] translate-x-[-4rem] bottom-[-8rem] md:bottom-[-4rem] left-[-4rem] h-auto w-full rotate-12 z-0"
+      class="absolute translate-x-[-4rem] bottom-[-8rem] md:bottom-[-4rem] left-[-4rem] h-auto w-full rotate-12 z-0"
       src={palmita}
       alt="palmita"
       loading="eager"
@@ -45,10 +45,17 @@ import WaveObserverTrip from "../../components/js/WaveObserverTrip";
     />
   </div>
   <div
-    class="swiper-container z-10 w-full h-[26rem] lg:h-full overflow-hidden"
+    class="swiper-container z-10 w-full h-[26rem] lg:h-[36rem] overflow-hidden"
   >
-    <SwiperClient client:visible />
+    <SwiperClient client:only="react" />
   </div>
+  <a
+    href="https://www.tripadvisor.com/ShowUserReviews-g292019-d25290415-Port_Of_Roatan-Roatan_Bay_Islands.html"
+    target="_blank"
+    class="text-[var(--primary-color)] font-bold border-2 border-[var(--primary-color)] py-2 px-6 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white z-10 mt-6 lg:mt-4"
+  >
+    {t.homePort.leaveReview}
+  </a>
 
   <div
     class="cocktel-trip absolute bottom-0 md:bottom-0 right-0 w-[24rem] md:w-[36rem] h-auto"

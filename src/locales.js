@@ -40,6 +40,7 @@ export const translations = {
       subtitle:
         "¡Prepárate para tu llegada a Port Roatan! Piscinas, restaurantes temáticos, bares, entretenimiento y mucha diversión te están esperando.",
       button: "Ver más",
+      leaveReview: "Dejar una reseña",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeTravel: {
@@ -281,6 +282,7 @@ export const translations = {
       subtitle:
         "Get ready for your next stop in Port Roatan! Pools, themed restaurants, bars, entertainment and lots of fun will be waiting for you.",
       button: "Find more",
+      leaveReview: "Leave a review",
       text: "Mollit sit enim in eiusmod laborum sunt commodo cupidatat pariatur laborum consectetur magna anim anim. Veniam aliquip ut sint ex esse amet dolor eiusmod incididunt reprehenderit reprehenderit sunt ipsum.",
     },
     homeTravel: {

@@ -113,6 +113,7 @@ export default function SwiperClient() {
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
     });
   }, []);

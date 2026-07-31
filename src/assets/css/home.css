@@ -225,12 +225,26 @@ body {
 }
 
 @media screen and (min-width: 1025px) {
+  .trip-container .swiper-container {
+    overflow: visible !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12vw, black 88vw, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 12vw, black 88vw, transparent 100%);
+  }
+
+  .trip-container .swiper {
+    width: 75% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+  }
+
   .trip-container .swiper-slide {
     transition: transform 0.3s ease;
   }
 
-  .trip-container .swiper-slide-active .slide-content {
+  .trip-container .slide-content:hover,
+  .trip-container .slide-content:focus-within {
     transform: scale(1.1) translateY(-4rem);
+    outline: none;
   }
-
 }

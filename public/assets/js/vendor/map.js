@@ -52,6 +52,25 @@ L.imageOverlay(
 ).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
+// Crear un panel (pane) para el overlay oscuro, ubicado entre la imagen de fondo y los marcadores
+map.createPane('darkOverlayPane');
+var pane = map.getPane('darkOverlayPane');
+pane.style.zIndex = 450;
+pane.classList.add('leaflet-dark-overlay-pane');
+
+// Crear un panel (pane) para las polylines (caminos), ubicado encima del overlay oscuro pero debajo de los marcadores
+map.createPane('polylinePane');
+var polylinePane = map.getPane('polylinePane');
+polylinePane.style.zIndex = 480;
+
+var darkOverlay = L.rectangle(bounds, {
+  color: "transparent",
+  fillColor: "#000000",
+  fillOpacity: 0.5, // Opacidad del overlay oscuro
+  interactive: false,
+  pane: 'darkOverlayPane'
+}).addTo(map);
+
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
 if (!isMobile) {
   map.setZoom(0); // Zoom inicial en escritorio
@@ -521,6 +540,7 @@ var bordeCamino3 = L.polyline(caminoCoordenadas3, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 // Capa principal para camino3
@@ -529,6 +549,7 @@ var camino3 = L.polyline(caminoCoordenadas3, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 // Capa de borde para camino4
@@ -537,6 +558,7 @@ var bordeCamino4 = L.polyline(caminoCoordenadas4, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 // Capa principal para camino4
@@ -545,6 +567,7 @@ var camino4 = L.polyline(caminoCoordenadas4, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 // Capa de borde para camino
@@ -553,6 +576,7 @@ var bordeCamino = L.polyline(caminoCoordenadas, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 // Capa principal para camino
@@ -561,6 +585,7 @@ var camino = L.polyline(caminoCoordenadas, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 // Capa de borde para camino2
@@ -569,6 +594,7 @@ var bordeCamino2 = L.polyline(caminoCoordenadas2, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 // Capa principal para camino2
@@ -577,6 +603,7 @@ var camino2 = L.polyline(caminoCoordenadas2, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
+  pane: 'polylinePane'
 }).addTo(map);
 
 var markers = {
@@ -2103,4 +2130,49 @@ if (typeof bordeCamino !== "undefined") map.removeLayer(bordeCamino);
 if (typeof bordeCamino2 !== "undefined") map.removeLayer(bordeCamino2);
 if (typeof bordeCamino3 !== "undefined") map.removeLayer(bordeCamino3);
 if (typeof bordeCamino4 !== "undefined") map.removeLayer(bordeCamino4);
+
+// Función para verificar si hay marcadores o caminos activos y alternar la clase en el contenedor del mapa
+function updateOverlayVisibility() {
+  var hasActiveMarkers = false;
+
+  $.each(markers, function (id, markerGroup) {
+    if (markerGroup) {
+      markerGroup.forEach(function (marker) {
+        if (marker && map.hasLayer(marker)) {
+          hasActiveMarkers = true;
+        }
+      });
+    }
+  });
+
+  if (typeof camino !== "undefined" && map.hasLayer(camino)) hasActiveMarkers = true;
+  if (typeof camino2 !== "undefined" && map.hasLayer(camino2)) hasActiveMarkers = true;
+  if (typeof camino3 !== "undefined" && map.hasLayer(camino3)) hasActiveMarkers = true;
+  if (typeof camino4 !== "undefined" && map.hasLayer(camino4)) hasActiveMarkers = true;
+
+  var mapElement = document.getElementById('map');
+  if (mapElement) {
+    if (hasActiveMarkers) {
+      mapElement.classList.add('map-has-markers');
+    } else {
+      mapElement.classList.remove('map-has-markers');
+    }
+  }
+}
+
+// Registrar eventos de Leaflet para detectar cuándo se agregan o quitan capas
+map.on("layeradd", function (e) {
+  if (e.layer instanceof L.Marker || e.layer instanceof L.Polyline) {
+    updateOverlayVisibility();
+  }
+});
+
+map.on("layerremove", function (e) {
+  if (e.layer instanceof L.Marker || e.layer instanceof L.Polyline) {
+    updateOverlayVisibility();
+  }
+});
+
+// Llamada inicial para establecer el estado correcto al cargar
+updateOverlayVisibility();
 // #endregion

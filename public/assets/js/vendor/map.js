@@ -53,14 +53,14 @@ L.imageOverlay(
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
 // Crear un panel (pane) para el overlay oscuro, ubicado entre la imagen de fondo y los marcadores
-map.createPane('darkOverlayPane');
-var pane = map.getPane('darkOverlayPane');
+map.createPane("darkOverlayPane");
+var pane = map.getPane("darkOverlayPane");
 pane.style.zIndex = 450;
-pane.classList.add('leaflet-dark-overlay-pane');
+pane.classList.add("leaflet-dark-overlay-pane");
 
 // Crear un panel (pane) para las polylines (caminos), ubicado encima del overlay oscuro pero debajo de los marcadores
-map.createPane('polylinePane');
-var polylinePane = map.getPane('polylinePane');
+map.createPane("polylinePane");
+var polylinePane = map.getPane("polylinePane");
 polylinePane.style.zIndex = 480;
 
 var darkOverlay = L.rectangle(bounds, {
@@ -68,7 +68,7 @@ var darkOverlay = L.rectangle(bounds, {
   fillColor: "#000000",
   fillOpacity: 0.5, // Opacidad del overlay oscuro
   interactive: false,
-  pane: 'darkOverlayPane'
+  pane: "darkOverlayPane",
 }).addTo(map);
 
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
@@ -468,6 +468,8 @@ var exitIcon = L.divIcon({
 // #endregion
 
 var caminoCoordenadas = [
+  [410, 150],
+  [530, 500],
   [430, 710],
   [400, 770],
   [390, 810],
@@ -506,6 +508,8 @@ var caminoCoordenadas2 = [
   [630, 1030],
 ];
 var caminoCoordenadas3 = [
+  [410, 150],
+  [530, 500],
   [430, 710],
   [380, 800],
   [380, 880],
@@ -540,7 +544,7 @@ var bordeCamino3 = L.polyline(caminoCoordenadas3, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 // Capa principal para camino3
@@ -549,7 +553,7 @@ var camino3 = L.polyline(caminoCoordenadas3, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 // Capa de borde para camino4
@@ -558,7 +562,7 @@ var bordeCamino4 = L.polyline(caminoCoordenadas4, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 // Capa principal para camino4
@@ -567,7 +571,7 @@ var camino4 = L.polyline(caminoCoordenadas4, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 // Capa de borde para camino
@@ -576,7 +580,7 @@ var bordeCamino = L.polyline(caminoCoordenadas, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 // Capa principal para camino
@@ -585,7 +589,7 @@ var camino = L.polyline(caminoCoordenadas, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 // Capa de borde para camino2
@@ -594,7 +598,7 @@ var bordeCamino2 = L.polyline(caminoCoordenadas2, {
   weight: 6,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 // Capa principal para camino2
@@ -603,13 +607,13 @@ var camino2 = L.polyline(caminoCoordenadas2, {
   weight: 3,
   opacity: 1,
   dashArray: "8, 10",
-  pane: 'polylinePane'
+  pane: "polylinePane",
 }).addTo(map);
 
 var markers = {
   2: [
-    L.marker([420, 660], { icon: regresoCaminoIcon }).addTo(map),
-    L.marker([450, 580], { icon: regresoIcon }).addTo(map),
+    L.marker([420, 240], { icon: regresoCaminoIcon }).addTo(map),
+    L.marker([450, 280], { icon: regresoIcon }).addTo(map),
     L.marker([140, 1115], { icon: regresoCaminoIcon }).addTo(map),
     L.marker([170, 1035], { icon: regresoIcon }).addTo(map),
   ],
@@ -2145,17 +2149,21 @@ function updateOverlayVisibility() {
     }
   });
 
-  if (typeof camino !== "undefined" && map.hasLayer(camino)) hasActiveMarkers = true;
-  if (typeof camino2 !== "undefined" && map.hasLayer(camino2)) hasActiveMarkers = true;
-  if (typeof camino3 !== "undefined" && map.hasLayer(camino3)) hasActiveMarkers = true;
-  if (typeof camino4 !== "undefined" && map.hasLayer(camino4)) hasActiveMarkers = true;
+  if (typeof camino !== "undefined" && map.hasLayer(camino))
+    hasActiveMarkers = true;
+  if (typeof camino2 !== "undefined" && map.hasLayer(camino2))
+    hasActiveMarkers = true;
+  if (typeof camino3 !== "undefined" && map.hasLayer(camino3))
+    hasActiveMarkers = true;
+  if (typeof camino4 !== "undefined" && map.hasLayer(camino4))
+    hasActiveMarkers = true;
 
-  var mapElement = document.getElementById('map');
+  var mapElement = document.getElementById("map");
   if (mapElement) {
     if (hasActiveMarkers) {
-      mapElement.classList.add('map-has-markers');
+      mapElement.classList.add("map-has-markers");
     } else {
-      mapElement.classList.remove('map-has-markers');
+      mapElement.classList.remove("map-has-markers");
     }
   }
 }

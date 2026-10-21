@@ -42,4 +42,4 @@ tags:
   ]
 ---
 
-¡Un último yeehaw! Rodeo Bar es un restaurante temático inspirado en el salvaje oeste. ¡Toro mecánico, botanas, mariscos, hamburguesas y mucho más! Nos vemos en&nbsp;Rodeo&nbsp;Bar.
+¡Un último yeehaw! Rodeo Bar es un restaurante temático inspirado en el salvaje oeste. <br>¡Toro mecánico, botanas, mariscos, hamburguesas y mucho más! Nos vemos en&nbsp;Rodeo&nbsp;Bar.

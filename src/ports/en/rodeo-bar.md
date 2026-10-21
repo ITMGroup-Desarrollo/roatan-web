@@ -42,4 +42,4 @@ tags:
   ]
 ---
 
-One last yeehaw! Rodeo Bar is a themed restaurant inspired by the wild wild west. Mechanical Bull, appetizers, seafood, burgers, and more! See you at&nbsp;Rodeo&nbsp;Bar.
+One last yeehaw! Rodeo Bar is a themed restaurant inspired by the wild wild west. <br>Mechanical Bull, appetizers, seafood, burgers, and more! See you at&nbsp;Rodeo&nbsp;Bar.

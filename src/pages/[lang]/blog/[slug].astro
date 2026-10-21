@@ -70,10 +70,10 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
   >
     <div class="w-full px-8 md:px-0 md:w-3/4 md:-0">
       <h2
-        class="text-5xl md:text-7xl text-center pt-8 text-[var(--primary-color)]"
+        class="text-3xl md:text-5xl text-center pt-8 text-[var(--primary-color)]"
         set:html={data.title}
       />
-      <div class="first-text-container text-justify text-2xl pt-8 text-darkblue-color">
+      <div class="first-text-container text-justify text-base xl:text-lg pt-8 text-darkblue-color">
         <div set:html={contentBlocks[0]} />
       </div>
       <div class="gallery-container grid gap-[2vh] pt-8">
@@ -91,7 +91,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
             ))
         }
       </div>
-      <div class="second-text-container text-2xl text-justify pt-8 text-darkblue-color">
+      <div class="second-text-container text-base xl:text-lg text-justify pt-8 text-darkblue-color">
         <div set:html={contentBlocks[1]} />
       </div>
       <div class="second-gallery-container flex flex-col gap-4 pt-8">
@@ -113,7 +113,7 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
     {
       recentPosts.length >= 1 && (
         <section class="w-full px-8 md:px-0 md:w-3/4 py-16">
-          <h3 class="text-5xl md:text-7xl font-bold text-center text-[var(--primary-color)] py-8 mb-8">
+          <h3 class="text-3xl md:text-5xl font-bold text-center text-[var(--primary-color)] py-8 mb-8">
             {lang === "es" ? "PODRÍA INTERESARTE" : "YOU MAY ALSO LIKE"}
           </h3>
           <div class="md:hidden">
@@ -144,12 +144,12 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
                   class="w-full object-cover"
                 />
                 <div class="p-4 flex flex-col justify-between flex-grow ">
-                  <h4 class="text-4xl font-bold mb-2" set:html={post.title} />
+                  <h4 class="text-xl md:text-2xl font-bold mb-2" set:html={post.title} />
                   <p
-                    class="text-2xl text-justify text-darkblue-color mb-4"
+                    class="text-sm md:text-base text-justify text-darkblue-color mb-4"
                     set:html={post.excerpt}
                   />
-                  <span class="text-[var(--primary-color)] md:text-2xl border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-base font hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]">
+                  <span class="text-[var(--primary-color)] border-2 border-[var(--primary-color)] self-start p-2 rounded-lg w-fit uppercase text-xs md:text-sm tracking-wider font-bold hover:bg-white hover:border-white hover:text-[var(--darkblue-color)]">
                     {lang === "es" ? "Leer más" : "Read more"}
                   </span>
                 </div>

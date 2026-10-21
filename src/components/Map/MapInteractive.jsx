@@ -271,6 +271,18 @@ export default function MapInteractive({ lang }) {
                   </td>
                   <td>LA FRUTERIA</td>
                 </tr>
+                <tr data-marker-id="32">
+                  <td>
+                    <img
+                      src={
+                        import.meta.env.BASE_URL +
+                        "assets/icons/map/foodbar.svg"
+                      }
+                      alt="RODEO BAR"
+                    />
+                  </td>
+                  <td>RODEO BAR</td>
+                </tr>
               </tbody>
             </table>
           </div>

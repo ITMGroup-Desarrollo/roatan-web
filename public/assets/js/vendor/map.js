@@ -1221,6 +1221,43 @@ var markers = {
         });
       }),
   ],
+  32: [
+    L.marker([340, 770], { icon: barIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop">
+              <img 
+                src="${window.BASE_URL || "/"}assets/icons/map/port-experience/rodeo-bar.svg" 
+                alt="Logo" 
+                class="popup-logo"
+                style="width: 140px; height: 140px;"
+              >
+
+              <p>
+                ${
+                  idioma === "es"
+                    ? "¡Un rodeo de sabor!"
+                    : "A flavor-filled rodeo!"
+                }
+              </p>
+
+              <a href="../../${idioma}/port-experience/rodeo-bar">
+                  <button class="popup-btn">
+                    ${idioma === "es" ? "Ver más" : "View more"}
+                  </button>
+              </a>
+          </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
   41: [
     L.marker([450, 920], { icon: poolIcon })
       .addTo(map)

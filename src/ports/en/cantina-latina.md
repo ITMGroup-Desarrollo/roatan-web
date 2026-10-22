@@ -37,7 +37,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["Restaurants","bars","caribbean","drinks","cocktails","food"]
+tags: ["Restaurants", "bars", "caribbean", "drinks", "cocktails", "food"]
 ---
 
-The top spot for flavors of the Caribbean! Colorful, flavorful, and of course, delicious! With a delicious drink&nbsp;in&nbsp;hand.
+The top spot for flavors of the Caribbean! <br>Colorful, flavorful, and of course, delicious! With a delicious drink&nbsp;in&nbsp;hand.

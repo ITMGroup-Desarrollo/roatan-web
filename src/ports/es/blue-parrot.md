@@ -37,8 +37,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["Restaurantes","bares","comida","cocina","menu","foodie"]
+tags: ["Restaurantes", "bares", "comida", "cocina", "menu", "foodie"]
 ---
 
-
-¡El lugar ideal para los amantes del marisco! Delicioso, fresco y único, el menú de Blue Parrot es una experiencia que tienes que vivir&nbsp;apenas&nbsp;llegues.
+¡El lugar ideal para los amantes del marisco! <br>Delicioso, fresco y único, el menú de Blue Parrot es una experiencia que tienes que vivir&nbsp;apenas&nbsp;llegues.

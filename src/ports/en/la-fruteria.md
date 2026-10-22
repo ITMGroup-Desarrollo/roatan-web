@@ -1,5 +1,5 @@
 ---
-title: 'La Fruteria'
+title: "La Fruteria"
 subtitle: "Non reprehenderit ad deserunt."
 slug: "la-fruteria"
 date: "2024-05-01"
@@ -28,7 +28,22 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["restaurants", "bars", "food", "cuisine", "menu", "foodie", "fruits", "fresh fruits", "fruit drinks", "cold coconut", "coco", "pineapple", "piña colada"]
+tags:
+  [
+    "restaurants",
+    "bars",
+    "food",
+    "cuisine",
+    "menu",
+    "foodie",
+    "fruits",
+    "fresh fruits",
+    "fruit drinks",
+    "cold coconut",
+    "coco",
+    "pineapple",
+    "piña colada",
+  ]
 ---
 
-Funky drinks and fresh drinks, we are SO IN! A coconut or a crazy pineapple while visiting Port Roatan is&nbsp;a&nbsp;MUST.  
+Funky drinks and fresh drinks, we are SO IN! <br>A coconut or a crazy pineapple while visiting Port Roatan is&nbsp;a&nbsp;MUST.

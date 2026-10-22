@@ -37,8 +37,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["Restaurants","bars","food","cuisine","menu","foodie"]
+tags: ["Restaurants", "bars", "food", "cuisine", "menu", "foodie"]
 ---
 
-
-Top spot for seafood lovers! Delicious, fresh, and unique, Blue Parrot's menu is an experience you must enjoy&nbsp;upon&nbsp;arrival!  
+Top spot for seafood lovers! <br>Delicious, fresh, and unique, Blue Parrot's menu is an experience you must enjoy&nbsp;upon&nbsp;arrival!

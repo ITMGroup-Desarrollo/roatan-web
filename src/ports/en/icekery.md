@@ -1,5 +1,5 @@
 ---
-title: 'Icekery<br>&nbsp;'
+title: "Icekery<br>&nbsp;"
 subtitle: "Non reprehenderit ad deserunt."
 slug: "icekery"
 date: "2024-05-01"
@@ -24,15 +24,25 @@ gridgallery:
     alt: "imagen del post 4"
     size: "lg"
 
-
-
-
 gallery:
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["restaurants", "bars", "food", "cuisine", "menu", "foodie", "dessert", "ice cream", "icecream", "sweet", "scoop"]
+tags:
+  [
+    "restaurants",
+    "bars",
+    "food",
+    "cuisine",
+    "menu",
+    "foodie",
+    "dessert",
+    "ice cream",
+    "icecream",
+    "sweet",
+    "scoop",
+  ]
 ---
 
-An ice cream a day, gives you a smile for the day! Forget the heat and have an artisanal ice cream with your&nbsp;favorite&nbsp;toppings.
+An ice cream a day, gives you a smile for the day! <br>Forget the heat and have an artisanal ice cream with your&nbsp;favorite&nbsp;toppings.

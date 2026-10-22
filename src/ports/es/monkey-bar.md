@@ -40,7 +40,7 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["Restaurantes","bares","nachos","mariscos","bebidas","celebracion"]
+tags: ["Restaurantes", "bares", "nachos", "mariscos", "bebidas", "celebracion"]
 ---
 
-¡Nachos, mariscos, drinks… Monkey Bar lo tiene todo! Pide tu favorito, celebra&nbsp;y&nbsp;¡salud! 
+¡Nachos, mariscos, drinks… Monkey Bar lo tiene todo! <br>Pide tu favorito, celebra&nbsp;y&nbsp;¡salud!

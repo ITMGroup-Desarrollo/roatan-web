@@ -1,5 +1,5 @@
 ---
-title: 'Icekery<br>&nbsp;'
+title: "Icekery<br>&nbsp;"
 subtitle: "Non reprehenderit ad deserunt."
 slug: "icekery"
 date: "2024-05-01"
@@ -24,15 +24,12 @@ gridgallery:
     alt: "imagen del post 4"
     size: "lg"
 
-
-
-
 gallery:
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["Restaurantes","helados","postres","dulces","gelato","toppings"]
+tags: ["Restaurantes", "helados", "postres", "dulces", "gelato", "toppings"]
 ---
 
-¡Un helado al día te saca una sonrisa! Olvídate del calor y disfruta un helado artesanal con tus&nbsp;toppings&nbsp;favoritos.
+¡Un helado al día te saca una sonrisa! <br>Olvídate del calor y disfruta un helado artesanal con tus&nbsp;toppings&nbsp;favoritos.

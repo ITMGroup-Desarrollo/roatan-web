@@ -1,5 +1,5 @@
 ---
-title: 'La Catrachita'
+title: "La Catrachita"
 subtitle: "Non reprehenderit ad deserunt."
 slug: "la-catrachita"
 date: "2024-05-01"
@@ -28,7 +28,8 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["Restaurantes","bares","ceviche","hamburguesas","cerveza","margaritas"]
+tags:
+  ["Restaurantes", "bares", "ceviche", "hamburguesas", "cerveza", "margaritas"]
 ---
 
-¡Desde ceviche hasta hamburguesas, te encantará La Catrachita! Y no te preocupes por las bebidas, hay muchas opciones para elegir. Cervezas bien frías, margaritas y más… ¡es hora de entrar&nbsp;en&nbsp;ambiente!
+¡Desde ceviche hasta hamburguesas, te encantará La Catrachita! <br>Y no te preocupes por las bebidas, hay muchas opciones para elegir. <br>Cervezas bien frías, margaritas y más… ¡es hora de entrar&nbsp;en&nbsp;ambiente!

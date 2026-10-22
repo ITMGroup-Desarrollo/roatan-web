@@ -28,6 +28,21 @@ gallery:
     alt: "imagen del post 1"
   - url: "/img/blogs/primer-blog/2.webp"
     alt: "imagen del post 2"
-tags: ["restaurants", "bars", "food", "cuisine", "menu", "foodie", "taco", "tacos", "mexican food", "vegetarian", "comida vegetariana", "mexican"]
+tags:
+  [
+    "restaurants",
+    "bars",
+    "food",
+    "cuisine",
+    "menu",
+    "foodie",
+    "taco",
+    "tacos",
+    "mexican food",
+    "vegetarian",
+    "comida vegetariana",
+    "mexican",
+  ]
 ---
-A piece of Mexico in Port Roatan. Delicious tacos with a beer? It’s a match!  You’ll find veggie&nbsp;options&nbsp;too!
+
+A piece of Mexico in Port Roatan. Delicious tacos with a beer? It’s a match! <br>You’ll find veggie&nbsp;options&nbsp;too!

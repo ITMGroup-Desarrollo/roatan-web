@@ -136,13 +136,19 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
       </div>
       <!-- Contenido del mensaje -->
       <div class="bg-[#F2F2F2] p-6">
-        <h2 class="text-4xl font-bold text-primary-color mb-2">THANK YOU!</h2>
-        <p class="text-primary-color mb-4">We have received your message</p>
+        <h2 class="text-4xl font-bold text-primary-color mb-2">
+          {lang === "en" ? "THANK YOU!" : "¡GRACIAS!"}
+        </h2>
+        <p class="text-primary-color mb-4">
+          {lang === "en"
+            ? "Thank you for getting in touch. We have received your message and will reply soon."
+            : "Gracias por ponerse en contacto. Recibimos su mensaje y le responderemos pronto."}
+        </p>
         <button
           id="popup-back-btn"
           class="bg-primary-color text-white px-6 py-2 border-2 border-primary-color rounded hover:bg-white hover:text-primary-color hover:border-primary-color hover: transition"
         >
-          BACK!
+          {lang === "en" ? "BACK" : "VOLVER"}
         </button>
       </div>
     </div>
@@ -161,6 +167,10 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
           : "No pudimos enviar tu mensaje. Inténtalo más tarde.";
       const messageBox = document.getElementById("form-message");
       const submitBtn = form.querySelector('button[type="submit"]');
+      const submitText = submitBtn.textContent;
+      const popup = document.getElementById("thank-you-popup");
+      const showPopup = () => { popup?.classList.remove("hidden"); popup?.classList.add("flex"); };
+      const hidePopup = () => { popup?.classList.add("hidden"); popup?.classList.remove("flex"); };
 
       async function loadToken() {
         try {
@@ -186,6 +196,8 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         submitBtn.disabled = true;
+        submitBtn.textContent = lang === "en" ? "Sending..." : "Enviando...";
+        messageBox.textContent = "";
         let result = { ok: false, error: fallback };
         try {
           const response = await fetch(ENDPOINT, {
@@ -193,7 +205,12 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
             body: new FormData(form),
             credentials: "same-origin",
           });
-          result = await response.json();
+          const text = await response.text();
+          try {
+            result = JSON.parse(text);
+          } catch {
+            console.error("Respuesta no JSON del servidor (" + response.status + "):", text.slice(0, 300));
+          }
         } catch (err) {
           console.error("Error al enviar el formulario", err);
         }
@@ -201,7 +218,7 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
         if (result.ok) {
           showMessage(result.message || "", true);
           form.reset();
-          document.getElementById("thank-you-popup")?.classList.remove("hidden");
+          showPopup();
         } else {
           showMessage(result.error || fallback, false);
         }
@@ -209,11 +226,12 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
         // El token es de un solo uso: pedimos uno nuevo para el siguiente envío
         await loadToken();
         submitBtn.disabled = false;
+        submitBtn.textContent = submitText;
       });
 
       // Botón BACK: cierra popup y redirige a home
       document.getElementById("popup-back-btn")?.addEventListener("click", () => {
-        document.getElementById("thank-you-popup")?.classList.add("hidden");
+        hidePopup();
         window.location.href = "/";
       });
     })();

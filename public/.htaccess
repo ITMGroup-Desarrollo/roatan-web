@@ -1,0 +1,7 @@
+# Bloquea el acceso web a archivos ocultos (.env, .gitignore...), excepto .well-known (SSL)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Sin listado de carpetas
+Options -Indexes

@@ -20,8 +20,15 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
   </div>
   <form
     id="contact-form"
+    data-lang={lang}
     class="lg:max-w-4xl xl:max-w-6xl mx-auto px-4 grid bg-transparent grid-cols-1 md:grid-cols-2 gap-4"
   >
+    <!-- Antibot: token de un solo uso + honeypot (igual que portsamana) -->
+    <input type="hidden" name="token" value="" />
+    <input type="hidden" name="lang" value={lang} />
+    <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
+      <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+    </div>
     <input
       type="text"
       name="nombre"
@@ -122,7 +129,7 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
       <!-- Parte superior con color y la imagen -->
       <div class="bg-secondary-color p-6">
         <img
-          src="/src/assets/img/logo/thanks.png"
+          src="/img/logo/thanks.png"
           alt="Success Icon"
           class="mx-auto w-28 h-28"
         />
@@ -143,39 +150,72 @@ const siteKey = "6Lc4uH0rAAAAAJkaECv7UEzKCp8NVUcgUrEXbPSK";
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script is:inline>
-    document
-      .getElementById("contact-form")
-      ?.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
+    (function () {
+      const form = document.getElementById("contact-form");
+      if (!form) return;
+      const ENDPOINT = "/api/contact.php";
+      const lang = form.dataset.lang === "en" ? "en" : "es";
+      const fallback =
+        lang === "en"
+          ? "We could not send your message. Please try again later."
+          : "No pudimos enviar tu mensaje. Inténtalo más tarde.";
+      const messageBox = document.getElementById("form-message");
+      const submitBtn = form.querySelector('button[type="submit"]');
 
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          body: formData,
-        });
+      async function loadToken() {
+        try {
+          const res = await fetch(ENDPOINT + "?lang=" + lang, {
+            credentials: "same-origin",
+            cache: "no-store",
+          });
+          const data = await res.json();
+          form.elements.token.value = data.token || "";
+        } catch (err) {
+          console.error("No se pudo obtener el token del formulario", err);
+        }
+      }
+      loadToken();
 
-        const result = await response.json();
-
-        const messageBox = document.getElementById("form-message");
-        messageBox.textContent = result.message;
-        messageBox.className = result.success
+      function showMessage(text, ok) {
+        messageBox.textContent = text;
+        messageBox.className = ok
           ? "md:col-span-2 text-green-600 mt-4 text-center"
           : "md:col-span-2 text-red-600 mt-4 text-center";
+      }
 
-        if (result.success) {
-          form.reset();
-          grecaptcha.reset();
-          document
-            .getElementById("thank-you-popup")
-            ?.classList.remove("hidden");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        let result = { ok: false, error: fallback };
+        try {
+          const response = await fetch(ENDPOINT, {
+            method: "POST",
+            body: new FormData(form),
+            credentials: "same-origin",
+          });
+          result = await response.json();
+        } catch (err) {
+          console.error("Error al enviar el formulario", err);
         }
+
+        if (result.ok) {
+          showMessage(result.message || "", true);
+          form.reset();
+          document.getElementById("thank-you-popup")?.classList.remove("hidden");
+        } else {
+          showMessage(result.error || fallback, false);
+        }
+        if (window.grecaptcha) grecaptcha.reset();
+        // El token es de un solo uso: pedimos uno nuevo para el siguiente envío
+        await loadToken();
+        submitBtn.disabled = false;
       });
 
-    // Botón BACK: cierra popup y redirige a home
-    document.getElementById("popup-back-btn")?.addEventListener("click", () => {
-      document.getElementById("thank-you-popup")?.classList.add("hidden");
-      window.location.href = "/";
-    });
+      // Botón BACK: cierra popup y redirige a home
+      document.getElementById("popup-back-btn")?.addEventListener("click", () => {
+        document.getElementById("thank-you-popup")?.classList.add("hidden");
+        window.location.href = "/";
+      });
+    })();
   </script>
 </section>

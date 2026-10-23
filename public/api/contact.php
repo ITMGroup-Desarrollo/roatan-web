@@ -3,8 +3,9 @@
 //   GET  -> entrega un token de un solo uso y marca la hora de carga.
 //   POST -> valida, aplica los filtros antibot y envía el aviso por SMTP.
 //
-// La configuración (.env) y los datos (storage/) viven FUERA de la carpeta pública,
-// en ~/roatan-form/, para que el despliegue (rsync --delete) no los borre ni se puedan descargar.
+// La configuración (.env) y los datos (storage/) se buscan, en este orden, en:
+//   1) /home/itmgroupmx/roatan-form/      (fuera de public_html, si existe)
+//   2) <sitio>/private/                   (bloqueada con .htaccess y excluida del rsync del despliegue)
 
 declare(strict_types=1);
 
@@ -59,12 +60,18 @@ function respond(int $status, array $payload): void
     exit;
 }
 
-$configDir = dirname(__DIR__, 2) . '/roatan-form';
+$configDir = dirname(__DIR__) . '/private';
+foreach ([dirname(__DIR__, 3) . '/roatan-form', dirname(__DIR__) . '/private'] as $dir) {
+    if (is_readable($dir . '/.env')) {
+        $configDir = $dir;
+        break;
+    }
+}
 
 try {
     $env = load_env($configDir . '/.env');
 } catch (RuntimeException $e) {
-    error_log('[contact] ' . $e->getMessage());
+    error_log('[contact] ' . $e->getMessage() . ' en ' . $configDir);
     respond(500, ['ok' => false, 'error' => $messages['config']]);
 }
 
@@ -140,32 +147,36 @@ $maxHits = (int) ($env['RATE_LIMIT_MAX'] ?? 5);
 $window = (int) ($env['RATE_LIMIT_WINDOW'] ?? 3600);
 $storage = $configDir . '/storage';
 if (!is_dir($storage)) {
-    mkdir($storage, 0775, true);
+    @mkdir($storage, 0775, true);
 }
 
-$rateFile = $storage . '/rate-limit.json';
-$fp = fopen($rateFile, 'c+');
-flock($fp, LOCK_EX);
-$hits = json_decode(stream_get_contents($fp) ?: '{}', true) ?: [];
-$now = time();
-foreach ($hits as $key => $times) {
-    $hits[$key] = array_values(array_filter($times, fn($t) => $t > $now - $window));
-    if (!$hits[$key]) {
-        unset($hits[$key]);
+// Si storage/ no se puede escribir, se registra el problema y el correo se envía igual.
+$fp = @fopen($storage . '/rate-limit.json', 'c+');
+if ($fp === false) {
+    error_log('[contact] No se puede escribir en ' . $storage . ' (límite por IP desactivado)');
+} else {
+    flock($fp, LOCK_EX);
+    $hits = json_decode(stream_get_contents($fp) ?: '{}', true) ?: [];
+    $now = time();
+    foreach ($hits as $key => $times) {
+        $hits[$key] = array_values(array_filter($times, fn($t) => $t > $now - $window));
+        if (!$hits[$key]) {
+            unset($hits[$key]);
+        }
     }
-}
-$ipKey = hash('sha256', $ip);
-if (count($hits[$ipKey] ?? []) >= $maxHits) {
+    $ipKey = hash('sha256', $ip);
+    if (count($hits[$ipKey] ?? []) >= $maxHits) {
+        flock($fp, LOCK_UN);
+        fclose($fp);
+        respond(429, ['ok' => false, 'error' => $messages['rate']]);
+    }
+    $hits[$ipKey][] = $now;
+    ftruncate($fp, 0);
+    rewind($fp);
+    fwrite($fp, json_encode($hits));
     flock($fp, LOCK_UN);
     fclose($fp);
-    respond(429, ['ok' => false, 'error' => $messages['rate']]);
 }
-$hits[$ipKey][] = $now;
-ftruncate($fp, 0);
-rewind($fp);
-fwrite($fp, json_encode($hits));
-flock($fp, LOCK_UN);
-fclose($fp);
 
 // ---------- Validación ----------
 $clean = fn(string $k) => trim(preg_replace('/[\r\n\t]+/', ' ', (string) ($_POST[$k] ?? '')));
@@ -196,7 +207,7 @@ if (mb_strlen($phone) > 30 || !preg_match('/^[0-9+()\-\s.]*$/', $phone)
 }
 
 // ---------- Respaldo en CSV ----------
-$csv = fopen($storage . '/contacts.csv', 'a');
+$csv = @fopen($storage . '/contacts.csv', 'a');
 if ($csv) {
     flock($csv, LOCK_EX);
     $safe = fn($v) => preg_match('/^[=+\-@]/', $v) ? "'" . $v : $v;

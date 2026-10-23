@@ -65,6 +65,8 @@ export async function getStaticPaths(): Promise<APIContext["params"][]> {
 
 <Layout lang={lang}>
   <Menu lang={lang} />
+  <!-- Banda azul detrás del logo y el menú en móvil (igual que en el mapa); en escritorio ya hay barra azul -->
+  <div class="lg:hidden" style="height: 100px; background: var(--primary-color);"></div>
   <article
     class="Article-container bg-[#f2f2f2] w-screen flex flex-col items-center justify-center"
   >

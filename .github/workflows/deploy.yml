@@ -28,9 +28,9 @@ jobs:
       - name: Desplegar dist por SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_deploy
+          printf '%s\n' "${{ secrets.SSH_KEY }}" > ~/.ssh/id_deploy
           chmod 600 ~/.ssh/id_deploy
-          ssh-keyscan -H "${{ secrets.SERVER_HOST }}" >> ~/.ssh/known_hosts
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_deploy" \
+          ssh-keyscan -p "${{ secrets.SSH_PORT }}" -H "${{ secrets.SERVER_HOST }}" >> ~/.ssh/known_hosts
+          rsync -avz --delete -e "ssh -i ~/.ssh/id_deploy -p ${{ secrets.SSH_PORT }}" \
             dist/ \
             "${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.DEPLOY_PATH }}/"
